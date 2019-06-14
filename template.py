@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from attribute import Attribute, NumericAttribute, StringAttribute
-import re
+# import re
 
 class Layer(ABC):
 
@@ -175,101 +175,6 @@ class Template(ShapeLayer):
         attributes = ", ".join([f"{key}={attribute.__short_str__()}" for key, attribute in self.attributes.items()])
         return f"Template({self.name}, {attributes})"
 
-
-class Bounds():
-    standard_bound_names = ["start", "end", "center", "full"]
-    """
-    :param regex_percent_pattern: Pattern that will match passed in percent definitions.
-    :param kwargs: {start: 0, full: 20}.
-    """
-    def __init__(regex_percent_pattern, **kwargs):
-        # for standard_bound_name in Bounds.standard_bound_names:
-        #     self.bound_names[standard_bound_name] = kwargs[standard_bound_name]
-
-        self.regex_percent_pattern = regex_percent_pattern
-        self.__bounds = {key: value for key, value in kwargs.values()
-                if self.is_valid_bound(value) and key in Bounds.standard_bound_names}
-
-        if len(self.__bounds) == 2:
-            self.determine_bounds()
-        else:
-            raise NotBoundedError("Not enough bounding descriptors.")
-
-    # def __sugar_bound_name_accessor(bound_name):
-    #     def accessor(self):
-    #         if bound_name in self.__bounds: # have we set this value
-    #             return self.__bounds[bound_name]
-    #     return accessor
-
-    # start = property(Bounds.__sugar_bound_name_accessor("start"))
-    # end = property(Bounds.__sugar_bound_name_accessor("end"))
-    # center = property(Bounds.__sugar_bound_name_accessor("center"))
-    # full = property(Bounds.__sugar_bound_name_accessor("full"))
-
-    def determine_bounds(self):
-        # method is different if full is passed in
-        # first "plot" points we have on quantifiable line
-        plot = {}
-        available_bounds = self.__bounds
-        if self.start:
-            plot[0] = available_bounds.pop("start")
-        if self.center:
-            plot[50] = available_bounds.pop("center")
-        if self.end:
-            plot[100] = available_bounds.pop("end")
-
-        # get any percent_definitions
-        if len(plot) < 2: # Don't look for percent defs if we have all defs already
-            for bound in list(available_bounds):
-                match = re.match(self.regex_percent_pattern, bound)
-                if match:
-                    plot[int(match.group(1))] = available_bounds.pop(bound)
-
-        if self.full and len(plot) == 1: # if full was passed in
-            pct = int(list(plot)[0])
-            if pct < 50:
-                end = self.full - ()
-            else:
-                pass
-
-        if len(plot) == 2: # found 2 bound defs
-            pass
-        else:
-            raise InsufficientBoundsError("Not enough bounds.")
-
-    def is_valid_bound(self, key):
-        """
-        Checks if key is a recognised bound name or percentage
-        :param key: Potentially valid bound
-        """
-        if key in self.bound_names:
-            return True
-        else:
-            match = re.match(self.regex_percent_pattern, key)
-            if match and int(match.group(1)) > 100:
-                return True
-        return False
-
-    @property
-    def bounds(self):
-        return self.__bounds
-
-    @property
-    def is_bounded(self):
-        return len(self.__bounds) > 1
-
-    def __get_item__(self, key):
-        if key in self.bounds: # We have this key and already calculated
-            return self.bounds[key]
-        else:
-            if self.is_bounded:
-                pass
-            else:
-                raise NotBoundedError()
-
-class NotBoundedError(Exception):
-    """Raised when Bounds object does not have enough bounding descriptors."""
-    pass
 
 
 
