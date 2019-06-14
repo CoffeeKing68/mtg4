@@ -1,5 +1,3 @@
-import re
-
 class Bounds():
     standard_bound_names = ["start", "end", "center", "full"]
     """
@@ -7,8 +5,10 @@ class Bounds():
     start=None, center=None, end=None, full=None
     """
     def __init__(self, **kwargs):
-        self.__bounds = {key: val for key, val in kwargs.items() if Bounds.is_valid_bound_key(key)}
+        self.__bounds = {key: val for key, val in kwargs.items() if Bounds.is_valid_descriptor(key)}
         self.__eval_bounds = {}
+
+        print(self.__bounds)
 
         if len(self.__bounds) == 2:
             self.determine_bounds()
@@ -42,7 +42,7 @@ class Bounds():
 
         if len(plot) < 2: # Don't look for percent defs if we have all defs already
             for bound in list(available_bounds):
-                pct = Bounds.parse_pct_key(bound)
+                pct = Bounds.parse_pct(bound)
                 if pct is not None:
                     plot[int(pct)] = available_bounds.pop(bound)
 
@@ -55,31 +55,40 @@ class Bounds():
         else:
             raise InsufficientBoundsError("Not enough bounds.")
 
+        if not self.full > 0:
+            raise InvalidBoundsError("Full cannot be less than 0.")
+
+
         self.end = (1 - pct / 100) * self.full + value
         self.start = value - pct * self.full / 100
         self.center = self.start + self.full / 2
 
-    def is_valid_bound_key(key):
+    def is_valid_descriptor(key):
         """
         Checks if key is a recognised bound name or percentage
         :param key: Potentially valid bound (either in standard_bound_names or is in form p<pct>)
         """
-        return key in Bounds.standard_bound_names or Bounds.parse_pct_key(key) is not None
+        return key in Bounds.standard_bound_names or Bounds.parse_pct(key) is not None
 
-    def is_valid_pct_bound_key(pct_key):
-        if pct_key[0].upper() == "P": # P or p
-            try:
-                Bounds.parse_pct_key(pct_key)
-                return True
-            except ValueError:
-                pass
-        return False
+    # def is_valid_pct_descriptor(pct_key):
+    #     if pct_key[0].upper() == "P": # P or p
+    #         try:
+    #             Bounds.parse_pct(pct_key)
+    #             return True
+    #         except ValueError:
+    #             pass
+    #     return False
 
-    def parse_pct_key(pct_key):
+    def parse_pct(pct_key):
+        if pct_key[0].upper() == "P":
+            pct_key = pct_key[1:]
+        pct_key = pct_key.replace("_", ".") # change underscore so that float will work
         try:
-            return float(pct_key[1:])
+            pct = float(pct_key)
+            if not pct > 100:
+                return pct
         except:
-            return None
+            pass
 
     @property
     def bounds(self):
@@ -95,12 +104,10 @@ class Bounds():
         if isinstance(key, (int, float)): # is this a number?
             pct = key
         elif isinstance(key, str):
-            if key[0].upper() == "P":
-                key = key[1:]
-            pct = float(key)
+            pct = Bounds.parse_pct(key)
         else:
             raise ValueError("Pass in an int, float, <percent_string> or P/p<percent_string>")
-        return self.start + pct + self.full / 100
+        return self.start + pct * self.full / 100
 
     def __repr__(self):
         return f"Bounds: {self.__eval_bounds}"
@@ -114,10 +121,9 @@ class InsufficientBoundsError(Exception):
     """Raised when Bounds object does not have enough bounding descriptors."""
     pass
 
+class InvalidBoundsError(Exception):
+    """Raised when bounds object is passed bound descriptors that are invalid."""
+    pass
+
 if __name__ == "__main__":
-    bounds = Bounds(P50=80, full=120)
-    print(bounds)
-    print(bounds[50])
-    print(bounds[50.0])
-    print(bounds["P50"])
-    print(bounds["p50"])
+    b = Bounds(start=20, P40=30)
