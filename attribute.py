@@ -84,8 +84,6 @@ class StringAttribute(Attribute):
         if attribute.is_evaluted:
             self.evaluated_value = attribute.evaluated_value
             return self.negate()
-        else:
-            return None
 
     def isValid(attr):
         """
