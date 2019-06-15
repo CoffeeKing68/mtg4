@@ -4,7 +4,6 @@ from bounds import Bounds
 # import re
 
 class Layer(ABC):
-
     x_coords = ["left", "xcenter", "right"]
     y_coords = ["top", "ycenter", "bottom"]
 
@@ -95,29 +94,6 @@ class Layer(ABC):
     def render():
         pass
 
-    # @abstractmethod
-    def setXBounds():
-        """
-        Sets the bounds dictionary for layer objects.
-        Layer.bounds = dict full of evaluted values for each coord.
-        """
-        pass
-
-    def setYBounds():
-        pass
-
-    @property
-    def is_bounded(self):
-        return self.is_x_bounded() and self.is_y_bounded()
-
-    @property
-    def is_x_bounded(self): # are there at least 2 x coords in bounds?
-        pass
-
-    @property
-    def is_y_bounded(self):
-        pass
-
     def __repr__(self):
         return self.__str__()
 
@@ -137,9 +113,6 @@ class PointLayer(Layer):
         self.attributes = {**x_attr, **y_attr}
         super().__init__(*args, **kwargs)
 
-    # def __str__(self):
-        # return f"{self.__class__.__name__}: {self.name}"
-
 class ShapeLayer(Layer):
     """
     A ShapeLayer's bounds are determined by the width and height set at initialization
@@ -154,27 +127,27 @@ class ShapeLayer(Layer):
 
     def setBounds():
         Layer.setBounds()
-    # def __str__(self):
-    #     return f"{self.__class__.__name__}: {self.name}"
-
 
 class PointTextLayer(PointLayer):
     """
     A PointTextLayer is only defined by an xy coord.
     The text width is limited only by it's parent's width
     """
-
-    def __init__(self, name, *args, **kwargs):
+    def __init__(self, name, font, size, color, *args, **kwargs):
+        self.font = font
+        self.size = size
+        self.color = color
         super().__init__(name, *args, **kwargs)
 
     def render(fresh=False):
-        pass
-
-    def setBounds():
+        # chech if content is set
         pass
 
     def content_setter(self, content):
         self._content = content
+        # self._pre_render = self.render(fresh=True)
+        # self._x_bounds = (**self._x_bounds, full=self._pre_render.width)
+        # self._y_bounds = (**self._y_bounds, full=self._pre_render.height)
         # gonna do some more stuff here later
 
     content = property(Layer.content_getter, content_setter)
@@ -182,10 +155,6 @@ class PointTextLayer(PointLayer):
     def __str__(self):
         attributes = ", ".join([f"{key}={attribute.__short_str__()}" for key, attribute in self.attributes.items()])
         return f"{self.__class__.__name__}({self.name}, \"{self.content}\", {attributes})"
-
-
-    # def __repr__(self):
-    #     return super().__str__()
 
 class AreaTextLayer(ShapeLayer):
     """
@@ -228,13 +197,8 @@ class Template(ShapeLayer):
         return f"Template({self.name}, {attributes})"
 
 if __name__ == "__main__":
-    layer = PointTextLayer("title", content="Doom Whisperer", XP40=NumericAttribute(40), top=NumericAttribute(40))
+    layer = PointTextLayer("title", "Arial", 13, content="Doom Whisperer", XP40=NumericAttribute(40), top=NumericAttribute(40))
     print(layer)
-    print(layer.__dict__)
-    print(layer.content)
-    layer.content = "New content"
-    print(layer.content)
-    print(PointTextLayer.content)
 #     layers = [layer]
 #     temp = Template("test", *layers, left=NumericAttribute(0), width=NumericAttribute(750), top=NumericAttribute(0),
 #             height=NumericAttribute(1050))
