@@ -63,6 +63,7 @@ class Bounds():
         self.start = value - pct * self.full / 100
         self.center = self.start + self.full / 2
 
+    @staticmethod
     def is_valid_descriptor(key):
         """
         Checks if key is a recognised bound name or percentage
@@ -79,6 +80,7 @@ class Bounds():
     #             pass
     #     return False
 
+    @staticmethod
     def parse_pct(pct_key):
         if pct_key[0].upper() == "P":
             pct_key = pct_key[1:]
@@ -125,5 +127,5 @@ class InvalidBoundsError(Exception):
     """Raised when bounds object is passed bound descriptors that are invalid."""
     pass
 
-if __name__ == "__main__":
-    b = Bounds(start=20, P40=30)
+# if __name__ == "__main__":
+#     b = Bounds(start=20, P40=30)
