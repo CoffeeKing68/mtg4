@@ -16,6 +16,7 @@ class Attribute(ABC):
 
     @abstractmethod
     def __init__(self, attr, negative=False):
+        self.evaluated_value = None
         if attr[0] == '-':
             self.attr = attr[1:]
             self.negative = True
@@ -29,8 +30,8 @@ class Attribute(ABC):
         return self.evaluated_value
 
     @property
-    def is_evaluted(self):
-        return hasattr(self, "evaluated_value")
+    def is_evaluated(self):
+        return self.evaluated_value is not None
 
     def __repr__(self):
         return self.__str__()
@@ -80,7 +81,7 @@ class StringAttribute(Attribute):
 
     def evaluate(self, template):
         layer, attr = self.attr.split(".")
-        attribute = template.getLayer(layer).attribute
+        attribute = template[layer][attribute]
         if attribute.is_evaluted:
             self.evaluated_value = attribute.evaluated_value
             return self.negate()

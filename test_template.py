@@ -23,7 +23,7 @@ class TestPointTextLayer():
         l = PointTextLayer("layer", "Arial", 12, "Black", content="hello world", left=NumAttr(30), top=StrAttr("45"))
         temp = Template("temp", l, left=NumAttr(0), width=NumAttr(50), top=NumAttr(0), height=NumAttr(50))
         l.render(True)
-        assert l._pre_render is not None
+        assert l.pre_render is not None
 
     def test_can_make_a_text_layer_with_percent_bounds(self):
         l = PointTextLayer("layer", "Arial", 12, "Black", YP40=NumAttr(30), XP50_50=StrAttr("title.left"))

@@ -1,5 +1,5 @@
 class Bounds():
-    standard_bound_names = ["start", "end", "center", "full"]
+    standard_bound_names = ["start", "center", "end", "full"]
     """
     :param kwargs: {start: 0, full: 20}.
     start=None, center=None, end=None, full=None
