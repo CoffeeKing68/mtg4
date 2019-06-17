@@ -1,5 +1,6 @@
 from attribute import StringAttribute, NumericAttribute
-from template import Template, PointTextLayer, ColorLayer
+from template import Template, ColorLayer
+from text_layers import PointTextLayer
 import pytest
 
 # GetAttribute("")
