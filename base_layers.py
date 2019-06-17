@@ -15,6 +15,9 @@ class Layer(ABC):
         self.y_attributes_required = y_attr
         self.pre_render = None
         self.content = kwargs.get("content")
+        self.order = 0
+        if "order" in kwargs:
+            self.order = kwargs["order"]
         self.parent = None
         self.template = None
         self.dimensions = {}
@@ -93,13 +96,11 @@ class PointLayer(Layer):
         super().__init__(name, 1, 1, *args, **kwargs)
         old_update_x_bounds = self.x.update_bounds
         def _new_update_x_bounds():
-            # print("new x method")
             self.render(False)
             return old_update_x_bounds(full=self.pre_render.width)
 
         old_update_y_bounds = self.y.update_bounds
         def _new_update_y_bounds():
-            # print("new y method")
             self.render(False)
             return old_update_y_bounds(full=self.pre_render.height)
 

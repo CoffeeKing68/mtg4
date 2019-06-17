@@ -32,6 +32,8 @@ class ColorBackgroundLayer(ShapeLayer):
         kwargs["right"] = StringAttribute("parent.right")
         kwargs["top"] = StringAttribute("parent.top")
         kwargs["bottom"] = StringAttribute("parent.bottom")
+        if "order" not in kwargs:
+            kwargs["order"] = -99
         super().__init__(name, **kwargs)
 
     def render(self, fresh=False):
@@ -46,6 +48,8 @@ class ColorBackgroundLayer(ShapeLayer):
             raise NotReadyToRenderError("Content is needed to render ColorBackgroundLayer.")
 
 class Template(ShapeLayer):
+    """Layers that appear first in *layers arg are rendered first if order is
+    not specified (order = 0 by default)."""
     def __init__(self, name, *layers, **kwargs):
         self.layers = layers
         super().__init__(name, **kwargs)
@@ -79,7 +83,7 @@ class Template(ShapeLayer):
 
     def render(self, fresh=False):
         image = Image(width=int(self["width"]), height=int(self["height"]))
-        for layer in self.layers:
+        for layer in sorted(self.layers, key=lambda l: l.order):
             img = layer.render()
             if img is not None:
                 image.composite(img, left=int(layer["left"]), top=int(layer["top"]))
@@ -109,7 +113,7 @@ if __name__ == "__main__":
     pt = PointTextLayer("point_text_layer", content="Point Text Layer", font="Arial", size=35, color="Black",
             left=NumericAttribute(0), top=NumericAttribute(0))
     bg = ColorBackgroundLayer("bg", content="Red")
-    temp = Template("temp", bg, pt, left=NumericAttribute(0), right=StringAttribute("point_text_layer.right"),
+    temp = Template("temp", pt, bg, left=NumericAttribute(0), right=StringAttribute("point_text_layer.right"),
             top=NumericAttribute(0), height=NumericAttribute(100))
     temp2 = Template("temp2", temp, left=NumericAttribute(0), right=StringAttribute("point_text_layer.right"),
             top=NumericAttribute(0), height=NumericAttribute(500))
