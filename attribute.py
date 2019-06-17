@@ -135,15 +135,4 @@ class NumericAttribute(Attribute):
         return "NumAttr"
 
 
-# if __name__ == "__main__":
-#     attr = "parent.width"
-#     sAt = StringAttribute(attr)
-#     nAt = NumericAttribute("45", negative=True)
-#     print(sAt)
-#     print(nAt.evaluate(1))
 
-# GetAttribute("")
-# SumAttribute("parent.width", NegateAttribute("text.height"))
-# "template.width,-45", "fill:template.width,template.height"
-# "get:template.width|negate:45" ""
-# SumAttributes(StringAttribute("template.width"), NumericAttribute(45, negative=True))
