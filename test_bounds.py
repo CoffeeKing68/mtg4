@@ -1,4 +1,5 @@
-from bounds import Bounds, InsufficientBoundsError, InvalidBoundsError
+from bounds import Bounds
+from exceptions import InsufficientBoundsError, InvalidBoundsError
 from pytest import raises
 
 class TestInstaniatingBounds():

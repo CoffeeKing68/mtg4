@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from re import match
+from exceptions import NotBoundedError
 
 class Attribute(ABC):
     @abstractmethod
@@ -80,11 +81,10 @@ class StringAttribute(Attribute):
             else:
                 layer = template.get_layer(l)
             try:
-                # TODO might not work
                 self.evaluated_value = layer[attr]
                 return self.negate()
-            except:
-                pass
+            except NotBoundedError: # Don't complain if not bounded
+                pass # complain if bad key (see Layer.__getitem__)
         else:
             return self.evaluated_value
 

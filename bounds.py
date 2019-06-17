@@ -1,3 +1,5 @@
+from exceptions import InsufficientBoundsError, InvalidBoundsError
+
 class Bounds():
     standard_bound_names = ["start", "center", "end", "full"]
     """
@@ -116,14 +118,6 @@ class Bounds():
         self.start += value
         self.center += value
         self.end += value
-
-class InsufficientBoundsError(Exception):
-    """Raised when Bounds object does not have enough bounding descriptors."""
-    pass
-
-class InvalidBoundsError(Exception):
-    """Raised when bounds object is passed bound descriptors that are invalid."""
-    pass
 
 # if __name__ == "__main__":
 #     b = Bounds(start=20, P40=30)

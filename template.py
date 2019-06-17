@@ -1,10 +1,14 @@
 from abc import ABC, abstractmethod
 from attribute import Attribute, NumericAttribute, StringAttribute
-from bounds import Bounds, InvalidBoundsError
+from bounds import Bounds
+from exceptions import InvalidBoundsError, NotEvaluatedError, NotBoundedError
+from exceptions import NotReadyToRenderError
 
 from wand.image import Image
 from wand.color import Color
 from wand.drawing import Drawing
+
+# TODO adaptive_sharpen for ImageLayers
 
 class Layer(ABC):
     x_coords = ["left", "xcenter", "right", "width"]
@@ -82,19 +86,17 @@ class Layer(ABC):
         :returns: dict of standardized bounds
         """
         attributes = {}
-        bounds = {}
         for key, argument in kwargs.items():
             mapped_key = mapper(key)
             if mapped_key is not None: # is valid bound descriptor
-                bounds[mapped_key] = argument
                 attributes[key] = argument
 
-        if len(bounds) > amount:
+        if len(attributes) > amount:
             raise ValueError("You passed in too many coordinates")
-        elif len(bounds) < amount:
+        elif len(attributes) < amount:
             raise ValueError("You passed in too few coordinates")
         else:
-            return bounds, attributes
+            return attributes
 
     def attributes_to_bounds(self, attributes, mapper):
         for attribute in attributes.values():
@@ -125,26 +127,6 @@ class Layer(ABC):
     def is_y_bounded(self):
         return self.y_bounds is not None
 
-    # @abstractmethod
-    # def attributes_to_bounds(self, x_amount, y_amount):
-    #     x_bounds, _ = self.validate_attributes(self.attributes, layer.map_x_bound, x_amount)
-    #     y_bounds, _ = self.validate_attributes(self.attributes, layer.map_y_bound, y_amount)
-    #     for descriptor, attribute in x_bounds.items():
-    #         x_bounds[descriptor] = attribute.evaluated_value
-    #     for descriptor, attribute in y_bounds.items():
-    #         y_bounds[descriptor] = attribute.evaluated_value
-    #     return x_bounds, y_bounds
-
-    # def update_x_bounds(self):
-    #     self.pre_render = self.render(fresh=False)
-    #     x_bounds, _ = self.attributes_to_bounds()
-    #     self._x_bounds = Bounds(**x_bounds, full=self.pre_render.width)
-
-    # def update_y_bounds(self):
-    #     self.pre_render = self.render(fresh=False)
-    #     _, y_bounds = self.attributes_to_bounds()
-    #     self._y_bounds = Bounds(**y_bounds, full=self.pre_render.height)
-
     @abstractmethod
     def render(self, fresh=True):
         pass
@@ -166,11 +148,17 @@ class Layer(ABC):
         mapped_x_key = self.map_x_bound(key)
         mapped_y_key = self.map_y_bound(key)
         if mapped_x_key is not None:
-            return self.x_bounds[mapped_x_key]
+            if self.is_x_bounded:
+                return self.x_bounds[mapped_x_key]
+            else:
+                raise NotBoundedError(f"{self.name}.x_bounds have not been initialised.")
         elif mapped_y_key is not None:
-            return self.y_bounds[mapped_y_key]
+            if self.is_y_bounded:
+                return self.y_bounds[mapped_y_key]
+            else:
+                raise NotBoundedError(f"{self.name}.y_bounds have not been initialised.")
         else:
-            raise ValueError("Invalid key") #TODO might want to disambiguate Bad key and not bounded
+            raise ValueError("Invalid key")
 
 class PointLayer(Layer):
     """
@@ -179,8 +167,8 @@ class PointLayer(Layer):
     """
     def __init__(self, name, *args, **kwargs):
         self.name = name
-        _, self.x_attributes = self.validate_attributes(kwargs, self.map_x_bound, 1)
-        _, self.y_attributes = self.validate_attributes(kwargs, self.map_y_bound, 1)
+        self.x_attributes = self.validate_attributes(kwargs, self.map_x_bound, 1)
+        self.y_attributes = self.validate_attributes(kwargs, self.map_y_bound, 1)
         super().__init__(*args, **kwargs)
 
     def update_x_bounds(self):
@@ -210,8 +198,8 @@ class ShapeLayer(Layer):
     def __init__(self, name, *args, **kwargs):
         self.name = name
         # TODO: remove bounds return from validate_attributes
-        _, self.x_attributes = self.validate_attributes(kwargs, self.map_x_bound, 2)
-        _, self.y_attributes = self.validate_attributes(kwargs, self.map_y_bound, 2)
+        self.x_attributes = self.validate_attributes(kwargs, self.map_x_bound, 2)
+        self.y_attributes = self.validate_attributes(kwargs, self.map_y_bound, 2)
         super().__init__(*args, **kwargs)
 
     def update_x_bounds(self):
@@ -245,7 +233,6 @@ class PointTextLayer(PointLayer):
         super().__init__(name, *args, **kwargs)
 
     def render(self, fresh=False):
-        # TODO adaptive_sharpen
         if not fresh and self.pre_render is not None: # if fresh is false and there is a pre_render
             return self.pre_render
         if self.content is not None:
@@ -296,7 +283,6 @@ class ColorLayer(ShapeLayer):
             img = Image(width=int(self["width"]), height=int(self["height"]), background=self.content)
             return img
         else:
-            # TODO make error messages better in general
             raise NotReadyToRenderError("Content is needed to render ColorLayer.")
 
 
@@ -358,12 +344,6 @@ class Template(ShapeLayer):
         else:
             raise ValueError("You can only pass in layer names or layers.")
 
-class NotReadyToRenderError(Exception):
-    pass
-
-class NotEvaluatedError(Exception):
-    pass
-
 if __name__ == "__main__":
     # at = AreaTextLayer("area_text_layer", content="Area Text Layer", font="Arial", size=35, color="Black",
             # left=NumericAttribute(0), width=NumericAttribute(40), top=NumericAttribute(0), height=NumericAttribute(50))
@@ -385,5 +365,5 @@ if __name__ == "__main__":
     image = temp2.render()
     with Image(width=image.width, height=image.height, background=Color("White")) as temp_image:
         temp_image.composite(image)
-        temp_image.save(filename="testing_3.png")
+        # temp_image.save(filename="testing_3.png")
 
