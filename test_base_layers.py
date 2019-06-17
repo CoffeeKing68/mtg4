@@ -15,28 +15,28 @@ class TestShapeLayer():
     def test_can_update_x_bounds(self):
         layer = self.area_text_layer()
         temp = Template("temp", layer, left=NumAttr(0), width=NumAttr(50), top=NumAttr(0), height=NumAttr(50))
-        layer.update_x_bounds()
+        layer.x.update_bounds()
 
     def test_can_update_y_bounds(self):
         layer = self.area_text_layer()
         temp = Template("temp", layer, left=NumAttr(0), width=NumAttr(50), top=NumAttr(0), height=NumAttr(50))
-        layer.update_y_bounds()
+        layer.y.update_bounds()
 
 class TestPointLayer():
     # PointLayer is abstract so testing on concrete object PointTextLayer
     def point_text_layer(self):
-        return PointTextLayer("area_text_layer", "Arial", 12, "Black", left=NumAttr(0), bottom=NumAttr(50))
+        return PointTextLayer("area_text_layer", "Arial", 12, "Black", content="test", left=NumAttr(0), bottom=NumAttr(50))
 
     def test_can_make_a_point_layer(self):
         layer = self.point_text_layer()
 
-    # def test_can_update_x_bounds(self):
-    #     layer = self.point_text_layer()
-    #     temp = Template("temp", layer, left=NumAttr(0), width=NumAttr(50), top=NumAttr(0), height=NumAttr(50))
-    #     layer.update_x_bounds()
+    def test_can_update_x_bounds_when_attributes_are_evaluatable_and_content_is_set(self):
+        layer = self.point_text_layer()
+        temp = Template("temp", layer, left=NumAttr(0), width=NumAttr(50), top=NumAttr(0), height=NumAttr(50))
+        layer.x.update_bounds()
 
-    # def test_can_update_y_bounds(self):
-    #     layer = self.point_text_layer()
-    #     temp = Template("temp", layer, left=NumAttr(0), width=NumAttr(50), top=NumAttr(0), height=NumAttr(50))
-    #     layer.update_y_bounds()
+    def test_can_update_y_bounds_when_attributes_are_evaluatable_and_content_is_set(self):
+        layer = self.point_text_layer()
+        temp = Template("temp", layer, left=NumAttr(0), width=NumAttr(50), top=NumAttr(0), height=NumAttr(50))
+        layer.y.update_bounds()
 

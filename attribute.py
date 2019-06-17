@@ -134,5 +134,3 @@ class NumericAttribute(Attribute):
     def __short_class_name__(self):
         return "NumAttr"
 
-
-

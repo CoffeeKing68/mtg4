@@ -3,110 +3,49 @@ from attribute import Attribute, NumericAttribute, StringAttribute
 from bounds import Bounds
 from exceptions import InvalidBoundsError, NotEvaluatedError, NotBoundedError
 from exceptions import NotReadyToRenderError
+from dimensions import XDimension, YDimension
 
 class Layer(ABC):
     """Base Layer for all Layers to inherit from. Does most of the heavy
     lifting."""
-    x_coords = ["left", "xcenter", "right", "width"]
-    y_coords = ["top", "ycenter", "bottom", "height"]
-
-    def __init__(self, *args, **kwargs):
+    def __init__(self, name, x_attr, y_attr, *args, **kwargs):
+        self.name = name
+        self.x_attributes_required = x_attr
+        self.y_attributes_required = y_attr
         self.pre_render = None
+        self.content = kwargs.get("content")
         self.parent = None
-        self.content = None
         self.template = None
-        self.x_bounds = None
-        self.y_bounds = None
-        if "content" in kwargs:
-            self.content = kwargs["content"]
+        self.dimensions = {}
+        self.dimensions["x"] = XDimension(self.x_attributes_required, self, **kwargs)
+        self.dimensions["y"] = YDimension(self.y_attributes_required, self, **kwargs)
+
+    @property
+    def x(self):
+        return self.dimensions["x"]
+
+    @x.setter
+    def x(self, value):
+        self.dimensions["x"] = value
+
+    @property
+    def y(self):
+        return self.dimensions["y"]
+
+    @y.setter
+    def y(self, value):
+        self.dimensions["y"] = value
 
     @property
     def is_evaluated(self):
-        return self.is_x_evaluated and self.is_y_evaluated
-
-    @property
-    def is_x_evaluated(self):
-        return all(attr.is_evaluated for attr in self.x_attributes.values())
-
-    @property
-    def is_y_evaluated(self):
-        return all(attr.is_evaluated for attr in self.y_attributes.values())
-
-    @staticmethod
-    def map_y_bound(bd):
-        return Layer.map_bound(bd, {yb:bd for yb, bd in zip(Layer.y_coords, Bounds.standard_bound_names)}, "YP")
-
-    @staticmethod
-    def map_x_bound(bd):
-        return Layer.map_bound(bd, {xb:bd for xb, bd in zip(Layer.x_coords, Bounds.standard_bound_names)}, "XP")
-
-    @staticmethod
-    def map_bound(bd, mapping, pct):
-        if bd in mapping: # is sugar
-            return mapping[bd]
-        elif bd[:2].upper() == pct.upper(): # is pct
-            parsed_pct = str(Bounds.parse_pct(bd[1:])).replace(".", "_") # change . to _ for bounds method
-            return f"P{parsed_pct}"
-        # else:
-        #     raise InvalidBoundsError
-
-    @staticmethod
-    def validate_x_attributes(kwargs, amount):
-        return Layer.validate_attributes(kwargs, Layer.map_x_bound, amount)
-
-    @staticmethod
-    def validate_y_attributes(kwargs, amount):
-        return Layer.validate_attributes(kwargs, Layer.map_y_bound, amount)
-
-    @staticmethod
-    def validate_attributes(kwargs, mapper, amount):
-        """
-        :param kwargs: The kwargs passed into the init method for the layer (only the coordinate
-        arguments are neccessary).
-        :param amount: The amount of bound descriptors to define Layer.
-        :returns: dict of standardized bounds
-        """
-        attributes = {}
-        for key, argument in kwargs.items():
-            mapped_key = mapper(key)
-            if mapped_key is not None: # is valid bound descriptor
-                attributes[key] = argument
-
-        if len(attributes) > amount:
-            raise ValueError("You passed in too many coordinates")
-        elif len(attributes) < amount:
-            raise ValueError("You passed in too few coordinates")
-        else:
-            return attributes
-
-    def attributes_to_bounds(self, attributes, mapper):
-        for attribute in attributes.values():
-            attribute.evaluate(self.template, self.parent)
-        if all(a.is_evaluated for a in attributes.values()): # all attributes evaled?
-            bounds = {}
-            for descriptor, attribute in attributes.items():
-                bounds[mapper(descriptor)] = attribute.evaluated_value
-            return bounds
-        else:
-            raise NotEvaluatedError(f"Layer {self.name}'s attributes can't be evaluated right now")
-
-    def x_attributes_to_bounds(self):
-        return self.attributes_to_bounds(self.x_attributes, self.map_x_bound)
-
-    def y_attributes_to_bounds(self):
-        return self.attributes_to_bounds(self.y_attributes, self.map_y_bound)
+        return all(dim.is_evaluated for dim in self.dimensions.values())
 
     @property
     def is_bounded(self):
-        return self.is_x_bounded and self.is_y_bounded
+        return all(dim.is_bounded for dim in self.dimensions.values())
 
-    @property
-    def is_x_bounded(self):
-        return self.x_bounds is not None
-
-    @property
-    def is_y_bounded(self):
-        return self.y_bounds is not None
+    def update_bounds(self):
+        return [dim.update_bounds() for dim in self.dimensions.values()]
 
     @abstractmethod
     def render(self, fresh=False):
@@ -114,7 +53,10 @@ class Layer(ABC):
 
     @property
     def attributes(self):
-        return {**self.x_attributes, **self.y_attributes}
+        attributes = {}
+        for dimension in self.dimensions.values():
+            attributes.update(dimension.attributes)
+        return attributes
 
     def __repr__(self):
         return self.__str__()
@@ -126,18 +68,18 @@ class Layer(ABC):
 
     def __getitem__(self, key):
         # identify x or y
-        mapped_x_key = self.map_x_bound(key)
-        mapped_y_key = self.map_y_bound(key)
+        mapped_x_key = self.x.map_bound(key)
+        mapped_y_key = self.y.map_bound(key)
         if mapped_x_key is not None:
-            if self.is_x_bounded:
-                return self.x_bounds[mapped_x_key]
+            if self.x.is_bounded:
+                return self.x.bounds[mapped_x_key]
             else:
-                raise NotBoundedError(f"{self.name}.x_bounds have not been initialised.")
+                raise NotBoundedError(f"{self.name}.x.bounds have not been initialised.")
         elif mapped_y_key is not None:
-            if self.is_y_bounded:
-                return self.y_bounds[mapped_y_key]
+            if self.y.is_bounded:
+                return self.y.bounds[mapped_y_key]
             else:
-                raise NotBoundedError(f"{self.name}.y_bounds have not been initialised.")
+                raise NotBoundedError(f"{self.name}.y.bounds have not been initialised.")
         else:
             raise ValueError("Invalid key")
 
@@ -147,59 +89,25 @@ class PointLayer(Layer):
     therefore only require 1 x and y bounding descriptor.
     """
     def __init__(self, name, *args, **kwargs):
-        self.name = name
-        self.x_attributes = self.validate_attributes(kwargs, self.map_x_bound, 1)
-        self.y_attributes = self.validate_attributes(kwargs, self.map_y_bound, 1)
-        super().__init__(*args, **kwargs)
+        super().__init__(name, 1, 1, *args, **kwargs)
+        old_update_x_bounds = self.x.update_bounds
+        def _new_update_x_bounds():
+            # print("new x method")
+            self.render(False)
+            return old_update_x_bounds(full=self.pre_render.width)
 
-    def update_x_bounds(self):
-        self.render() # generate a pre_render
-        try:
-            bounds = self.x_attributes_to_bounds()
-            self.x_bounds = Bounds(**bounds, full=self.pre_render.width)
-            return self.x_bounds
-        except NotEvaluatedError:
-            pass
+        old_update_y_bounds = self.y.update_bounds
+        def _new_update_y_bounds():
+            # print("new y method")
+            self.render(False)
+            return old_update_y_bounds(full=self.pre_render.height)
 
-    def update_y_bounds(self):
-        self.render() # generate a pre_render
-        try:
-            bounds = self.y_attributes_to_bounds()
-            self.y_bounds = Bounds(**bounds, full=self.pre_render.height)
-            return self.y_bounds
-        except NotEvaluatedError:
-            pass
-
-    def update_bounds(self):
-        return self.update_x_bounds(), self.update_y_bounds()
+        self.x.update_bounds = _new_update_x_bounds
+        self.y.update_bounds = _new_update_y_bounds
 
 class ShapeLayer(Layer):
     """A ShapeLayer's bounds are determined by the width and height set at initialization
     and therefore requires 2 x and y bounding descriptors."""
     def __init__(self, name, *args, **kwargs):
-        self.name = name
-        # TODO: remove bounds return from validate_attributes
-        self.x_attributes = self.validate_attributes(kwargs, self.map_x_bound, 2)
-        self.y_attributes = self.validate_attributes(kwargs, self.map_y_bound, 2)
-        super().__init__(*args, **kwargs)
-
-    def update_x_bounds(self):
-        try:
-            bounds = self.x_attributes_to_bounds()
-            self.x_bounds = Bounds(**bounds)
-            return self.x_bounds
-        except NotEvaluatedError:
-            pass
-
-    def update_y_bounds(self):
-        try:
-            bounds = self.y_attributes_to_bounds()
-            self.y_bounds = Bounds(**bounds)
-            return self.y_bounds
-        except NotEvaluatedError:
-            pass
-
-    def update_bounds(self):
-        return self.update_x_bounds(), self.update_y_bounds()
-
+        super().__init__(name, 2, 2, *args, **kwargs)
 

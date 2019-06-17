@@ -6,6 +6,8 @@ from wand.image import Image
 from wand.color import Color
 from wand.drawing import Drawing
 
+from pprint import pprint
+
 # TODO adaptive_sharpen for ImageLayers
 
 class ColorLayer(ShapeLayer):
@@ -46,14 +48,14 @@ class Template(ShapeLayer):
         tries = 0
         while tries < 3:
             tries += 1
-            snbx, snby = not self.is_x_bounded, not self.is_y_bounded
+            snbx, snby = not self.x.is_bounded, not self.y.is_bounded
             super().update_bounds()
-            if snbx and self.is_x_bounded or snby and self.is_y_bounded:
+            if snbx and self.x.is_bounded or snby and self.x.is_bounded:
                 tries = 0 # started not bounded, but now x/y bounded
             for l in self.layers:
-                nbx, nby = not l.is_x_bounded, not l.is_y_bounded
+                nbx, nby = not l.x.is_bounded, not l.y.is_bounded
                 l.update_bounds()
-                if nbx and l.is_x_bounded or nby and l.is_y_bounded:
+                if nbx and l.x.is_bounded or nby and l.x.is_bounded:
                     tries = 0
 
     def render(self, fresh=False):
@@ -84,22 +86,17 @@ class Template(ShapeLayer):
 
 if __name__ == "__main__":
     # at = AreaTextLayer("area_text_layer", content="Area Text Layer", font="Arial", size=35, color="Black",
-            # left=NumericAttribute(0), width=NumericAttribute(40), top=NumericAttribute(0), height=NumericAttribute(50))
+    #         left=NumericAttribute(0), width=NumericAttribute(40), top=NumericAttribute(0), height=NumericAttribute(50))
     pt = PointTextLayer("point_text_layer", content="Point Text Layer", font="Arial", size=35, color="Black",
             left=NumericAttribute(0), top=NumericAttribute(0))
     bg = ColorLayer("bg", content="Red", left=NumericAttribute(0),
             width=StringAttribute("parent.width"), height=StringAttribute("parent.height"), top=NumericAttribute(0))
     temp = Template("temp", bg, pt, left=NumericAttribute(0), right=StringAttribute("point_text_layer.right"),
             top=NumericAttribute(0), height=NumericAttribute(100))
-    temp2 = Template("temp", temp, left=NumericAttribute(0), right=StringAttribute("point_text_layer.right"),
+    temp2 = Template("temp2", temp, left=NumericAttribute(0), right=StringAttribute("point_text_layer.right"),
             top=NumericAttribute(0), height=NumericAttribute(500))
 
-    # print(temp.template)
     temp2.update_bounds()
-    # print("x", temp.x_bounds)
-    # print("y", temp.y_bounds)
-    # print("x", pt.x_bounds)
-    # print("y", pt.y_bounds)
     image = temp2.render()
     with Image(width=image.width, height=image.height, background=Color("White")) as temp_image:
         temp_image.composite(image)
