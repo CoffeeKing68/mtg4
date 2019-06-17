@@ -10,12 +10,6 @@ class Layer(ABC):
     x_coords = ["left", "xcenter", "right", "width"]
     y_coords = ["top", "ycenter", "bottom", "height"]
 
-    # x_width = ["width"]
-    # y_height = ["height"]
-
-    # xpct = "XP"
-    # ypct = "YP"
-
     def __init__(self, *args, **kwargs):
         self.pre_render = None
         self.parent = None
@@ -37,15 +31,6 @@ class Layer(ABC):
     @property
     def is_y_evaluated(self):
         return all(attr.is_evaluated for attr in self.y_attributes.values())
-
-    def content_getter(self):
-        return self._content
-
-    def content_setter(self, content):
-        self._content = content
-
-    # have to do it like this for PointTextLayer, who will override setter
-    content = property(content_getter, content_setter)
 
     @staticmethod
     def map_y_bound(bd):
@@ -113,7 +98,7 @@ class Layer(ABC):
 
     @property
     def is_bounded(self):
-        return all([self.is_x_bounded, self.is_y_bounded])
+        return self.is_x_bounded and self.is_y_bounded
 
     @property
     def is_x_bounded(self):
@@ -124,7 +109,7 @@ class Layer(ABC):
         return self.y_bounds is not None
 
     @abstractmethod
-    def render(self, fresh=True):
+    def render(self, fresh=False):
         pass
 
     @property
