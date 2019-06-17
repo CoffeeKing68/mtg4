@@ -8,8 +8,6 @@ class Bounds():
         self.__bounds = {key: val for key, val in kwargs.items() if Bounds.is_valid_descriptor(key)}
         self.__eval_bounds = {}
 
-        print(self.__bounds)
-
         if len(self.__bounds) == 2:
             self.determine_bounds()
         else:

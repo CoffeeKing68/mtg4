@@ -35,11 +35,6 @@ class Attribute(ABC):
 
     def __repr__(self):
         return self.__str__()
-        # try:
-        #     evaluate = self.evaluated_value
-        # except:
-        #     evaluate = "NULL"
-        # return f"{self.__class__.__name__}: {'-' if self.negative else ''}{self.attr}, evaluated_value: {evaluate}"
 
     def __str__(self):
         try:
@@ -60,31 +55,38 @@ class Attribute(ABC):
     def __short_class_name__(self):
         pass
 
-
 class FunctionAttribute(Attribute):
     pass
-    # def __init__(self, attrs):
-    #     self.attrs = []
-    #     for attr in attrs:
-    #         self.attrs.append(Attribute.childSort(attr))
-
-    # def evaluate(self, template):
-    #     for attr in self.attrs:
-    #         attr.evaluate(template)
-
-    # def isValid(attr):
-
 
 class StringAttribute(Attribute):
+    """
+    eg. <>.<left/xcenter/right/width/
+    :accepted layers: layer.name, template, parent
+    :accepted attributes:
+        left, xcenter, right, width
+        top, ycenter, bottom, height
+        XP<pct>, YP<pct>
+    """
     def __init__(self, attr, *args, **kwargs):
         super().__init__(attr, *args, **kwargs)
 
-    def evaluate(self, template):
-        layer, attr = self.attr.split(".")
-        attribute = template[layer][attribute]
-        if attribute.is_evaluted:
-            self.evaluated_value = attribute.evaluated_value
-            return self.negate()
+    def evaluate(self, template, parent):
+        if self.evaluated_value is None:
+            l, attr = self.attr.split(".")
+            if l == "parent":
+                layer = parent
+            elif l == "template":
+                layer = template
+            else:
+                layer = template.get_layer(l)
+            try:
+                # TODO might not work
+                self.evaluated_value = layer[attr]
+                return self.negate()
+            except:
+                pass
+        else:
+            return self.evaluated_value
 
     def isValid(attr):
         """
@@ -92,7 +94,7 @@ class StringAttribute(Attribute):
         """
         try:
             layer, attribute = attr.split('.')
-            return isinstance(attr, str) and match("\D+", layer) and match("\D+", attribute) and "," in attr
+            return isinstance(attr, str) and match(r"\D+", layer) and match(r"\D+", attribute) and "," in attr
         except:
             return False
 
@@ -112,9 +114,12 @@ class NumericAttribute(Attribute):
                 attr = str(attr)
         super().__init__(attr, *args, **kwargs)
 
-    def evaluate(self, template):
-        self.evaluated_value = int(self.attr)
-        return self.negate()
+    def evaluate(self, template, parent):
+        if self.evaluated_value is None:
+            self.evaluated_value = int(self.attr)
+            return self.negate()
+        else:
+            return self.evaluated_value
 
     def isValid(attr):
         """
@@ -130,12 +135,12 @@ class NumericAttribute(Attribute):
         return "NumAttr"
 
 
-if __name__ == "__main__":
-    attr = "parent.width"
-    sAt = StringAttribute(attr)
-    nAt = NumericAttribute("45", negative=True)
-    print(sAt)
-    print(nAt.evaluate(1))
+# if __name__ == "__main__":
+#     attr = "parent.width"
+#     sAt = StringAttribute(attr)
+#     nAt = NumericAttribute("45", negative=True)
+#     print(sAt)
+#     print(nAt.evaluate(1))
 
 # GetAttribute("")
 # SumAttribute("parent.width", NegateAttribute("text.height"))

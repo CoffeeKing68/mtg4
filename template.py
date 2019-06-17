@@ -5,7 +5,6 @@ from bounds import Bounds, InvalidBoundsError
 from wand.image import Image
 from wand.color import Color
 from wand.drawing import Drawing
-# import re
 
 class Layer(ABC):
     x_coords = ["left", "xcenter", "right", "width"]
@@ -20,11 +19,10 @@ class Layer(ABC):
     def __init__(self, *args, **kwargs):
         self.pre_render = None
         self.parent = None
+        self.content = None
         self.template = None
         self.x_bounds = None
         self.y_bounds = None
-        self.x_attributes = None
-        self.y_attributes = None
         if "content" in kwargs:
             self.content = kwargs["content"]
 
@@ -98,49 +96,58 @@ class Layer(ABC):
         else:
             return bounds, attributes
 
-    @abstractmethod
-    def attributes_to_bounds(self, x_amount, y_amount):
-        x_bounds, _ = self.validate_attributes(self.attributes, layer.map_x_bound, x_amount)
-        y_bounds, _ = self.validate_attributes(self.attributes, layer.map_y_bound, y_amount)
-        for descriptor, attribute in x_bounds.items():
-            x_bounds[descriptor] = attribute.evaluated_value
-        for descriptor, attribute in y_bounds.items():
-            y_bounds[descriptor] = attribute.evaluated_value
-        return x_bounds, y_bounds
+    def attributes_to_bounds(self, attributes, mapper):
+        for attribute in attributes.values():
+            attribute.evaluate(self.template, self.parent)
+        if all(a.is_evaluated for a in attributes.values()): # all attributes evaled?
+            bounds = {}
+            for descriptor, attribute in attributes.items():
+                bounds[mapper(descriptor)] = attribute.evaluated_value
+            return bounds
+        else:
+            raise NotEvaluatedError(f"Layer {self.name}'s attributes can't be evaluated right now")
 
-    def update_x_bounds(self):
-        self.pre_render = self.render(fresh=False)
-        x_bounds, _ = self.attributes_to_bounds()
-        self._x_bounds = Bounds(**x_bounds, full=self.pre_render.width)
+    def x_attributes_to_bounds(self):
+        return self.attributes_to_bounds(self.x_attributes, self.map_x_bound)
 
-    def update_y_bounds(self):
-        self.pre_render = self.render(fresh=False)
-        _, y_bounds = self.attributes_to_bounds()
-        self._y_bounds = Bounds(**y_bounds, full=self.pre_render.height)
+    def y_attributes_to_bounds(self):
+        return self.attributes_to_bounds(self.y_attributes, self.map_y_bound)
+
+    @property
+    def is_bounded(self):
+        return all([self.is_x_bounded, self.is_y_bounded])
+
+    @property
+    def is_x_bounded(self):
+        return self.x_bounds is not None
+
+    @property
+    def is_y_bounded(self):
+        return self.y_bounds is not None
+
+    # @abstractmethod
+    # def attributes_to_bounds(self, x_amount, y_amount):
+    #     x_bounds, _ = self.validate_attributes(self.attributes, layer.map_x_bound, x_amount)
+    #     y_bounds, _ = self.validate_attributes(self.attributes, layer.map_y_bound, y_amount)
+    #     for descriptor, attribute in x_bounds.items():
+    #         x_bounds[descriptor] = attribute.evaluated_value
+    #     for descriptor, attribute in y_bounds.items():
+    #         y_bounds[descriptor] = attribute.evaluated_value
+    #     return x_bounds, y_bounds
+
+    # def update_x_bounds(self):
+    #     self.pre_render = self.render(fresh=False)
+    #     x_bounds, _ = self.attributes_to_bounds()
+    #     self._x_bounds = Bounds(**x_bounds, full=self.pre_render.width)
+
+    # def update_y_bounds(self):
+    #     self.pre_render = self.render(fresh=False)
+    #     _, y_bounds = self.attributes_to_bounds()
+    #     self._y_bounds = Bounds(**y_bounds, full=self.pre_render.height)
 
     @abstractmethod
     def render(self, fresh=True):
         pass
-
-    # @abstractmethod
-    # def determine_width_height(self):
-    #     pass
-
-    # @property
-    # def left(self):
-    #     return self.x_bounds.start
-
-    # @property
-    # def xcenter(self):
-    #     return self.x_bounds.center
-
-    # @property
-    # def right(self):
-    #     return self.x_bounds.end
-
-    # @property
-    # def width(self):
-    #     return self.x_bounds.full
 
     @property
     def attributes(self):
@@ -158,12 +165,12 @@ class Layer(ABC):
         # identify x or y
         mapped_x_key = self.map_x_bound(key)
         mapped_y_key = self.map_y_bound(key)
-        if map_x_bound is not None:
-            return self.x_bounds[map_x_bound]
-        elif map_y_bound is not None:
-            return self.y_bounds[map_y_bound]
+        if mapped_x_key is not None:
+            return self.x_bounds[mapped_x_key]
+        elif mapped_y_key is not None:
+            return self.y_bounds[mapped_y_key]
         else:
-            raise ValueError("Invalid key")
+            raise ValueError("Invalid key") #TODO might want to disambiguate Bad key and not bounded
 
 class PointLayer(Layer):
     """
@@ -176,33 +183,55 @@ class PointLayer(Layer):
         _, self.y_attributes = self.validate_attributes(kwargs, self.map_y_bound, 1)
         super().__init__(*args, **kwargs)
 
-    def attributes_to_bounds(self):
-        return super().attributes_to_bounds(1, 1)
+    def update_x_bounds(self):
+        self.render() # generate a pre_render
+        try:
+            bounds = self.x_attributes_to_bounds()
+            self.x_bounds = Bounds(**bounds, full=self.pre_render.width)
+            return self.x_bounds
+        except NotEvaluatedError:
+            pass
 
-    # def determine_width_height(self):
-    #     if self.pre_render is None:
-    #         self.render
-    #     return self.pre_render.width, self.pre_render.height
+    def update_y_bounds(self):
+        self.render() # generate a pre_render
+        try:
+            bounds = self.y_attributes_to_bounds()
+            self.y_bounds = Bounds(**bounds, full=self.pre_render.height)
+            return self.y_bounds
+        except NotEvaluatedError:
+            pass
+
+    def update_bounds(self):
+        return self.update_x_bounds(), self.update_y_bounds()
 
 class ShapeLayer(Layer):
-    """
-    A ShapeLayer's bounds are determined by the width and height set at initialization
-    and therefore requires 2 x and y bounding descriptors.
-    """
+    """A ShapeLayer's bounds are determined by the width and height set at initialization
+    and therefore requires 2 x and y bounding descriptors."""
     def __init__(self, name, *args, **kwargs):
         self.name = name
+        # TODO: remove bounds return from validate_attributes
         _, self.x_attributes = self.validate_attributes(kwargs, self.map_x_bound, 2)
         _, self.y_attributes = self.validate_attributes(kwargs, self.map_y_bound, 2)
-        # self.attributes = {**x_attr, **y_attr}
-        # self.x_bounds = Bounds(**x_bounds)
-        # self.y_bounds = Bounds(**y_bounds)
         super().__init__(*args, **kwargs)
 
-    def attributes_to_bounds(self):
-        return super().attributes_to_bounds(2, 2)
+    def update_x_bounds(self):
+        try:
+            bounds = self.x_attributes_to_bounds()
+            self.x_bounds = Bounds(**bounds)
+            return self.x_bounds
+        except NotEvaluatedError:
+            pass
 
-    # def determine_width_height(self):
-    #     return self.width, self.height # get from bounds
+    def update_y_bounds(self):
+        try:
+            bounds = self.y_attributes_to_bounds()
+            self.y_bounds = Bounds(**bounds)
+            return self.y_bounds
+        except NotEvaluatedError:
+            pass
+
+    def update_bounds(self):
+        return self.update_x_bounds(), self.update_y_bounds()
 
 class PointTextLayer(PointLayer):
     """
@@ -216,51 +245,67 @@ class PointTextLayer(PointLayer):
         super().__init__(name, *args, **kwargs)
 
     def render(self, fresh=False):
-        pass
-        # chech if content is set
-        # won't check content, because wand will draw a small pixel if content is None
         # TODO adaptive_sharpen
-        # if not fresh and self.pre_render is not None: # if fresh is false and there is a pre_render
-        #     return self.pre_render
-        # else:
-        #     img = Image()
-        #     with Drawing() as draw:
-        #         draw.font = self.font
-        #         draw.font_size = self.size
-        #         if not isinstance(self.color, Color):
-        #             self.color = Color(self.color)
-        #         draw.color = self.color
-        #         draw.text_antialias = True
-        #         draw.text(self.parent.width, self.parent.height, self.content)
-        #         draw(img)
-        #     img.trim()
-        #     self.pre_render = img
-        #     return img
+        if not fresh and self.pre_render is not None: # if fresh is false and there is a pre_render
+            return self.pre_render
+        if self.content is not None:
+            with Drawing() as draw:
+                draw.font = self.font
+                draw.font_size = self.size
+                if not isinstance(self.color, Color):
+                    self.color = Color(self.color)
+                draw.color = self.color
+                draw.text_antialias = True
+                # get estimated width and height
+                with Image(width=1, height=1) as temp_image:
+                    metrics = draw.get_font_metrics(temp_image, self.content)
+                    width = int(metrics.text_width)
+                    height = int(metrics.text_height)
 
-    # def content_setter(self, content):
-    #     self._content = content
-    #     if self.parent is not None:
-    #         self.update_bounds()
+                img = Image(width=width + 100, height=height + 100)
+                draw.text(10, height + 10, self.content)
+                draw(img)
+            img.trim()
+            self.pre_render = img
+            return img
+        else:
+            raise NotReadyToRenderError(f"{self.name} is not ready to render right now.")
 
-    # content = property(Layer.content_getter, content_setter)
+class AreaTextLayer(ShapeLayer):
+    """TextLayer that has a rect (Shape)."""
+    def __init__(self, name, font, size, color, *args, **kwargs):
+        self.font = font
+        self.size = size
+        self.color = color
+        super().__init__(name, *args, **kwargs)
 
-    def __str__(self):
-        attributes = ", ".join([f"{key}={attribute.__short_str__()}" for
-            key, attribute in self.attributes.items()])
-        return f"{self.__class__.__name__}({self.name}, \"{self.content}\", {attributes})"
+    def render(self, fresh=False):
+        pass
 
-# class AreaTextLayer(ShapeLayer):
-#     """
-#     An AreaTextLayer is defined by it's area.
-#     """
-#     def __init__(self, name, content, *args, **kwargs):
-#         self.content = content
-#         super().__init__(name, *args, **kwargs)
+class ColorLayer(ShapeLayer):
+    """"""
+    def __init__(self, name, *args, **kwargs):
+        super().__init__(name, **kwargs)
+
+    def render(self, fresh=False):
+        if fresh and self.pre_render is not None:
+            return self.pre_render
+        elif self.content is not None:
+            if not isinstance(self.content, Color):
+                self.content = Color(self.content)
+            img = Image(width=int(self["width"]), height=int(self["height"]), background=self.content)
+            return img
+        else:
+            # TODO make error messages better in general
+            raise NotReadyToRenderError("Content is needed to render ColorLayer.")
+
 
 class Template(ShapeLayer):
     def __init__(self, name, *layers, **kwargs):
         self.layers = layers
         super().__init__(name, **kwargs)
+        self.template = self
+        self.parent = self
 
     @property
     def layers(self):
@@ -273,84 +318,72 @@ class Template(ShapeLayer):
             l.template = self
         self._layers = layers
 
-    def render(self, fresh=True):
-        pass
+    def update_bounds(self):
+        tries = 0
+        while tries < 3:
+            tries += 1
+            snbx, snby = not self.is_x_bounded, not self.is_y_bounded
+            super().update_bounds()
+            if snbx and self.is_x_bounded or snby and self.is_y_bounded:
+                tries = 0 # started not bounded, but now x/y bounded
+            for l in self.layers:
+                nbx, nby = not l.is_x_bounded, not l.is_y_bounded
+                l.update_bounds()
+                if nbx and l.is_x_bounded or nby and l.is_y_bounded:
+                    tries = 0
 
-    # def evaluate_attributes(self):
-    #     self.evaluate_x_attributes()
-    #     self.evaluate_y_attributes()
-
-    # def evaluate_x_attributes(self):
-    #     evaluation_tries = 0
-    #     while evaluation_tries < 10:
-    #         for x_attribute in self.x_attributes.values():
-    #             if not x_attribute.is_evaluated:
-    #                 x_attribute.evaluate(self)
-    #                 if x_attribute.is_evaluated:
-    #                     evaluation_tries = 0
-
-    #         if self.is_x_evaluated:
-    #             self.update_x_bounds()
-
-    #         for layer in self.layers:
-    #             for x_attribute in layer.x_attributes.values():
-    #                 if not x_attribute.is_evaluated:
-    #                     x_attribute.evaluate(layer.template)
-    #                     if x_attribute.is_evaluated:
-    #                         evaluation_tries = 0
-    #             if layer.is_x_evaluted:
-    #                 layer.update_x_bounds()
-    #             if isinstance(layer, Template):
-    #                 layer.evaluate_x_attributes()
-
-    #         evaluation_tries += 1
-
-    # def evaluate_y_attributes(self):
-    #     evaluation_tries = 0
-    #     while evaluation_tries < 10:
-    #         for y_attribute in self.y_attributes.values():
-    #             if not y_attribute.is_evaluated:
-    #                 y_attribute.evaluate(self)
-    #                 if y_attribute.is_evaluated:
-    #                     evaluation_tries = 0
-
-    #         for layer in self.layers:
-    #             for y_attribute in layer.y_attributes.values():
-    #                 if not y_attribute.is_evaluted:
-    #                     y_attribute.evaluate(layer.template)
-    #                     if y_attribute.is_evaluted:
-    #                         evaluation_tries = 0
-    #             if isinstance(layer, Template):
-    #                 layer.evaluate_y_attributes()
-
-    #         evaluation_tries += 1
+    def render(self, fresh=False):
+        image = Image(width=int(self["width"]), height=int(self["height"]))
+        for layer in self.layers:
+            img = layer.render()
+            if img is not None:
+                image.composite(img, left=int(layer["left"]), top=int(layer["top"]))
+        return image
 
     def __str__(self):
         attributes = ", ".join([f"{key}={attribute.__short_str__()}" for key, attribute in self.attributes.items()])
         return f"Template({self.name}, {attributes})"
 
-    def __getitem__(self, key):
+    def get_layer(self, key):
         if isinstance(key, Layer):
             key = key.name
         if isinstance(key, str):
-            for layer in self.layer:
+            for layer in self.layers:
                 if layer.name == key:
                     return layer
                 elif isinstance(layer, Template):
-                    l = layer.__getitem__(key)
+                    l = layer.get_layer(key)
                     if l is not None:
                         return l
         else:
             raise ValueError("You can only pass in layer names or layers.")
 
+class NotReadyToRenderError(Exception):
+    pass
+
+class NotEvaluatedError(Exception):
+    pass
+
 if __name__ == "__main__":
-    layer = PointTextLayer("title", "Arial", 13, "Black", content="Doom Whisperer", XP40=NumericAttribute(40), top=NumericAttribute(40))
-    # print(layer)
-#     layers = [layer]
-    temp = Template("test", layer, left=NumericAttribute(0), width=NumericAttribute(750), top=NumericAttribute(0),
-            height=NumericAttribute(1050))
-    image = layer.render()
-    # image.save(filename="testing.png")
-#     print(layer)
-#     print(temp)
-#     temp.setBounds()
+    # at = AreaTextLayer("area_text_layer", content="Area Text Layer", font="Arial", size=35, color="Black",
+            # left=NumericAttribute(0), width=NumericAttribute(40), top=NumericAttribute(0), height=NumericAttribute(50))
+    pt = PointTextLayer("point_text_layer", content="Point Text Layer", font="Arial", size=35, color="Black",
+            left=NumericAttribute(0), top=NumericAttribute(0))
+    bg = ColorLayer("bg", content="Red", left=NumericAttribute(0),
+            width=StringAttribute("parent.width"), height=StringAttribute("parent.height"), top=NumericAttribute(0))
+    temp = Template("temp", bg, pt, left=NumericAttribute(0), right=StringAttribute("point_text_layer.right"),
+            top=NumericAttribute(0), height=NumericAttribute(100))
+    temp2 = Template("temp", temp, left=NumericAttribute(0), right=StringAttribute("point_text_layer.right"),
+            top=NumericAttribute(0), height=NumericAttribute(500))
+
+    # print(temp.template)
+    temp2.update_bounds()
+    # print("x", temp.x_bounds)
+    # print("y", temp.y_bounds)
+    # print("x", pt.x_bounds)
+    # print("y", pt.y_bounds)
+    image = temp2.render()
+    with Image(width=image.width, height=image.height, background=Color("White")) as temp_image:
+        temp_image.composite(image)
+        temp_image.save(filename="testing_3.png")
+
