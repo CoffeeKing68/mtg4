@@ -45,7 +45,7 @@ class Dimension():
         """If all attributes are evaluated, will return a dict with Standard
         Bound names and the attributes evaluated_value."""
         for attribute in self.attributes.values():
-            attribute.evaluate(self.layer.template, self.layer.parent)
+            attribute.evaluate(self.layer)
         if all(a.is_evaluated for a in self.attributes.values()): # all attributes evaled?
             bounds = {}
             for descriptor, attribute in self.attributes.items():

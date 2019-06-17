@@ -71,15 +71,15 @@ class StringAttribute(Attribute):
     def __init__(self, attr, *args, **kwargs):
         super().__init__(attr, *args, **kwargs)
 
-    def evaluate(self, template, parent):
+    def evaluate(self, this_attributes_layer):
         if self.evaluated_value is None:
             l, attr = self.attr.split(".")
             if l == "parent":
-                layer = parent
+                layer = this_attributes_layer.parent
             elif l == "template":
-                layer = template
+                layer = this_attributes_layer.template
             else:
-                layer = template.get_layer(l)
+                layer = this_attributes_layer.template.get_layer(l)
             try:
                 self.evaluated_value = layer[attr]
                 return self.negate()
@@ -114,7 +114,7 @@ class NumericAttribute(Attribute):
                 attr = str(attr)
         super().__init__(attr, *args, **kwargs)
 
-    def evaluate(self, template, parent):
+    def evaluate(self, layer):
         if self.evaluated_value is None:
             self.evaluated_value = int(self.attr)
             return self.negate()
