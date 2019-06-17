@@ -11,9 +11,9 @@ from pprint import pprint
 # TODO adaptive_sharpen for ImageLayers
 
 class ColorLayer(ShapeLayer):
-    """"""
-    def __init__(self, name, *args, **kwargs):
-        super().__init__(name, **kwargs)
+    """A ShapeLayer that has 1 solid color."""
+    # def __init__(self, name, *args, **kwargs):
+    #     super().__init__(name, **kwargs)
 
     def render(self, fresh=False):
         if fresh and self.pre_render is not None:
@@ -25,6 +25,25 @@ class ColorLayer(ShapeLayer):
             return img
         else:
             raise NotReadyToRenderError("Content is needed to render ColorLayer.")
+
+class ColorBackgroundLayer(ShapeLayer):
+    def __init__(self, name, *args, **kwargs):
+        kwargs["left"] = StringAttribute("parent.left")
+        kwargs["right"] = StringAttribute("parent.right")
+        kwargs["top"] = StringAttribute("parent.top")
+        kwargs["bottom"] = StringAttribute("parent.bottom")
+        super().__init__(name, **kwargs)
+
+    def render(self, fresh=False):
+        if fresh and self.pre_render is not None:
+            return self.pre_render
+        elif self.content is not None:
+            if not isinstance(self.content, Color):
+                self.content = Color(self.content)
+            img = Image(width=int(self["width"]), height=int(self["height"]), background=self.content)
+            return img
+        else:
+            raise NotReadyToRenderError("Content is needed to render ColorBackgroundLayer.")
 
 class Template(ShapeLayer):
     def __init__(self, name, *layers, **kwargs):
@@ -89,8 +108,7 @@ if __name__ == "__main__":
     #         left=NumericAttribute(0), width=NumericAttribute(40), top=NumericAttribute(0), height=NumericAttribute(50))
     pt = PointTextLayer("point_text_layer", content="Point Text Layer", font="Arial", size=35, color="Black",
             left=NumericAttribute(0), top=NumericAttribute(0))
-    bg = ColorLayer("bg", content="Red", left=NumericAttribute(0),
-            width=StringAttribute("parent.width"), height=StringAttribute("parent.height"), top=NumericAttribute(0))
+    bg = ColorBackgroundLayer("bg", content="Red")
     temp = Template("temp", bg, pt, left=NumericAttribute(0), right=StringAttribute("point_text_layer.right"),
             top=NumericAttribute(0), height=NumericAttribute(100))
     temp2 = Template("temp2", temp, left=NumericAttribute(0), right=StringAttribute("point_text_layer.right"),

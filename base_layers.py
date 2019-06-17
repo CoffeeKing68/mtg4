@@ -8,6 +8,7 @@ from dimensions import XDimension, YDimension
 class Layer(ABC):
     """Base Layer for all Layers to inherit from. Does most of the heavy
     lifting."""
+
     def __init__(self, name, x_attr, y_attr, *args, **kwargs):
         self.name = name
         self.x_attributes_required = x_attr
