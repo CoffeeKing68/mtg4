@@ -3,6 +3,26 @@ from re import match
 from exceptions import NotBoundedError
 
 class Attribute(ABC):
+    negative_char = "-"
+    absolute_char = "!" # #/^/*/&
+
+    def __init__(self, attr, negative=False, absolute=False):
+        self.evaluated_value = None
+        self.dimension = None
+        while True:
+            if attr[0] == Attribute.negative_char:
+                attr = attr[1:]
+                negative = True
+            elif attr[0] == Attribute.absolute_char:
+                attr = attr[1:]
+                absolute = True
+            else:
+                break
+
+        self.attr = attr
+        self.negative = negative
+        self.absolute = absolute
+
     @abstractmethod
     def isValid(attr):
         """
@@ -15,20 +35,30 @@ class Attribute(ABC):
     def evaluate(self, template):
         pass
 
-    @abstractmethod
-    def __init__(self, attr, negative=False):
-        self.evaluated_value = None
-        if attr[0] == '-':
-            self.attr = attr[1:]
-            self.negative = True
-        else:
-            self.attr = attr
-            self.negative = negative
+    @property
+    def evaluated_value(self):
+        return self.last_pass()
 
-    def negate(self):
+    @evaluated_value.setter
+    def evaluated_value(self, value):
+        self._evaluated_value = value
+
+    def last_pass(self):
+        ev = self._evaluated_value
+        if ev is not None:
+            ev = self.negate(ev)
+            ev = self.absolutify(ev)
+        return ev
+
+    def negate(self, value):
         if self.negative:
-            self.evaluated_value = -self.evaluated_value
-        return self.evaluated_value
+            value = -value
+        return value
+
+    def absolutify(self, value):
+        if not self.absolute: # is relative
+            pass
+        return value
 
     @property
     def is_evaluated(self):
@@ -51,7 +81,6 @@ class Attribute(ABC):
             evaluate = "NULL"
         return f"{self.__short_class_name__()}({'-' if self.negative else ''}{self.attr}, {evaluate})"
 
-
     @abstractmethod
     def __short_class_name__(self):
         pass
@@ -68,21 +97,21 @@ class StringAttribute(Attribute):
         top, ycenter, bottom, height
         XP<pct>, YP<pct>
     """
-    def __init__(self, attr, *args, **kwargs):
-        super().__init__(attr, *args, **kwargs)
+    # def __init__(self, attr, *args, **kwargs):
+    #     super().__init__(attr, *args, **kwargs)
 
-    def evaluate(self, this_attributes_layer):
+    def evaluate(self):
         if self.evaluated_value is None:
             l, attr = self.attr.split(".")
             if l == "parent":
-                layer = this_attributes_layer.parent
+                layer = self.dimension.layer.parent
             elif l == "template":
-                layer = this_attributes_layer.template
+                layer = self.dimension.layer.template
             else:
-                layer = this_attributes_layer.template.get_layer(l)
+                layer = self.dimension.layer.template.get_layer(l)
             try:
                 self.evaluated_value = layer[attr]
-                return self.negate()
+                return self.evaluated_value
             except NotBoundedError: # Don't complain if not bounded
                 pass # complain if bad key (see Layer.__getitem__)
         else:
@@ -114,10 +143,10 @@ class NumericAttribute(Attribute):
                 attr = str(attr)
         super().__init__(attr, *args, **kwargs)
 
-    def evaluate(self, layer):
+    def evaluate(self):
         if self.evaluated_value is None:
             self.evaluated_value = int(self.attr)
-            return self.negate()
+            return self.evaluated_value
         else:
             return self.evaluated_value
 

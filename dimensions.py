@@ -1,5 +1,6 @@
 from bounds import Bounds
 from exceptions import NotEvaluatedError
+from attribute import Attribute
 
 class Dimension():
     def __init__(self, pct, mapping, amount, layer, bounds=None, **kwargs):
@@ -7,7 +8,7 @@ class Dimension():
         self.pct = pct # YP/XP
         self.mapping = mapping # {top: start, right: end, height: full}
         self.layer = layer
-        self.attributes = self.validate_attributes(kwargs)
+        self.attributes = self.validate_attributes(kwargs, self.layer)
         self.bounds = bounds # None if bounds is not present
 
     @property
@@ -25,13 +26,15 @@ class Dimension():
             parsed_pct = str(Bounds.parse_pct(descriptor[1:])).replace(".", "_")
             return f"P{parsed_pct}"
 
-    def validate_attributes(self, kwargs):
+    def validate_attributes(self, kwargs, layer):
         """Validates attribute keys to make sure they are valid and that the
         correct amount have been passed in."""
         attributes = {}
         for key, argument in kwargs.items():
             mapped_key = self.map_bound(key)
-            if mapped_key is not None: # is valid bound descriptor
+            # is valid bound descriptor and arg is Attribute
+            if mapped_key is not None and isinstance(argument, Attribute):
+                argument.dimension = self
                 attributes[key] = argument
 
         if len(attributes) > self.amount:
@@ -45,7 +48,7 @@ class Dimension():
         """If all attributes are evaluated, will return a dict with Standard
         Bound names and the attributes evaluated_value."""
         for attribute in self.attributes.values():
-            attribute.evaluate(self.layer)
+            attribute.evaluate()
         if all(a.is_evaluated for a in self.attributes.values()): # all attributes evaled?
             bounds = {}
             for descriptor, attribute in self.attributes.items():

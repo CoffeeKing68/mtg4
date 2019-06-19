@@ -8,16 +8,13 @@ from dimensions import XDimension, YDimension
 class Layer(ABC):
     """Base Layer for all Layers to inherit from. Does most of the heavy
     lifting."""
-
-    def __init__(self, name, x_attr, y_attr, *args, **kwargs):
+    def __init__(self, name, x_attrs_req, y_attrs_req, *args, **kwargs):
         self.name = name
-        self.x_attributes_required = x_attr
-        self.y_attributes_required = y_attr
+        self.x_attributes_required = x_attrs_req
+        self.y_attributes_required = y_attrs_req
         self.pre_render = None
-        self.content = kwargs.get("content")
-        self.order = 0
-        if "order" in kwargs:
-            self.order = kwargs["order"]
+        self.content = kwargs.get("content") # default is None
+        self.order = kwargs.get("order", 0) # default is 0
         self.parent = None
         self.template = None
         self.dimensions = {}

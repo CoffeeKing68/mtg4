@@ -55,6 +55,8 @@ class TestLayer():
 
         color_of_top_left_most_pixel = red_above.export_pixels(width=1, height=1)
         assert color_of_top_left_most_pixel[:3] == [255, 0, 0]
+        green_above.save(filename="test_images/green_above.png")
+        red_above.save(filename="test_images/red_above.png")
 
 class TestShapeLayer():
     # ShapeLayer is abstract so testing using AreaTextLayer
