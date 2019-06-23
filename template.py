@@ -53,8 +53,8 @@ class Template(ShapeLayer):
     def __init__(self, name, *layers, **kwargs):
         self.layers = layers
         super().__init__(name, **kwargs)
-        self.template = self
-        self.parent = self
+        # self.template = self
+        # self.parent = self
 
     @property
     def layers(self):
@@ -108,19 +108,5 @@ class Template(ShapeLayer):
             raise ValueError("You can only pass in layer names or layers.")
 
 if __name__ == "__main__":
-    # at = AreaTextLayer("area_text_layer", content="Area Text Layer", font="Arial", size=35, color="Black",
-    #         left=NumericAttribute(0), width=NumericAttribute(40), top=NumericAttribute(0), height=NumericAttribute(50))
-    pt = PointTextLayer("point_text_layer", content="Point Text Layer", font="Arial", size=35, color="Black",
-            left=NumericAttribute(0), top=NumericAttribute(0))
-    bg = ColorBackgroundLayer("bg", content="Red")
-    temp = Template("temp", pt, bg, left=NumericAttribute(0), right=StringAttribute("point_text_layer.right"),
-            top=NumericAttribute(0), height=NumericAttribute(100))
-    temp2 = Template("temp2", temp, left=NumericAttribute(0), right=StringAttribute("point_text_layer.right"),
-            top=NumericAttribute(0), height=NumericAttribute(500))
-
-    temp2.update_bounds()
-    image = temp2.render()
-    with Image(width=image.width, height=image.height, background=Color("White")) as temp_image:
-        temp_image.composite(image)
-        temp_image.save(filename="test_images/testing_3.png")
+    pass
 

@@ -21,3 +21,7 @@ class NotBoundedError(Exception):
     bounded yet."""
     pass
 
+class NotReadyToEvaluate(Exception):
+    """Raised when trying to evaluate an attribute and it does not have
+    sufficient information to return an evaluated_value"""
+    pass

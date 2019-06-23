@@ -3,9 +3,10 @@ from exceptions import NotEvaluatedError
 from attribute import Attribute
 
 class Dimension():
-    def __init__(self, pct, mapping, amount, layer, bounds=None, **kwargs):
+    def __init__(self, name, pct, mapping, amount, layer, bounds=None, **kwargs):
         self.amount = amount
         self.pct = pct # YP/XP
+        self.name = name
         self.mapping = mapping # {top: start, right: end, height: full}
         self.layer = layer
         self.attributes = self.validate_attributes(kwargs, self.layer)
@@ -78,7 +79,7 @@ class XDimension(Dimension):
             "right": "end",
             "width": "full",
         }
-        super().__init__("XP", mapping, amount, layer, bounds, **attributes)
+        super().__init__("x", "XP", mapping, amount, layer, bounds, **attributes)
 
 class YDimension(Dimension):
     def __init__(self, amount, layer, bounds=None, **attributes):
@@ -88,5 +89,5 @@ class YDimension(Dimension):
             "bottom": "end",
             "height": "full",
         }
-        super().__init__("YP", mapping, amount, layer, bounds, **attributes)
+        super().__init__("y", "YP", mapping, amount, layer, bounds, **attributes)
 

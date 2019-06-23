@@ -43,6 +43,7 @@ class Layer(ABC):
 
     @property
     def is_bounded(self):
+        print(dim.is_bounded for dim in self.dimensions.values())
         return all(dim.is_bounded for dim in self.dimensions.values())
 
     def update_bounds(self):

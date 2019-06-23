@@ -2,7 +2,7 @@ from bounds import Bounds
 from exceptions import InsufficientBoundsError, InvalidBoundsError
 from pytest import raises
 
-class TestInstaniatingBounds():
+class TestBounds():
     def test_cannot_make_bounds_with_1_bounding_value(self):
         with raises(InsufficientBoundsError):
             b = Bounds(start=1)
@@ -39,5 +39,4 @@ class TestInstaniatingBounds():
         b = Bounds(start=20, P40=30)
         assert b.start == b["start"] == b[0] == b["0"] == b["p0"] == b["P0"] == 20
         assert b[40] == b["P40"] == b["p40"]== b["40"] == 30
-
 

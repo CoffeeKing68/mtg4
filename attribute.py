@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from re import match
-from exceptions import NotBoundedError
+from exceptions import NotBoundedError, NotReadyToEvaluate
 
 class Attribute(ABC):
     negative_char = "-"
@@ -46,8 +46,11 @@ class Attribute(ABC):
     def last_pass(self):
         ev = self._evaluated_value
         if ev is not None:
-            ev = self.negate(ev)
-            ev = self.absolutify(ev)
+            try:
+                ev = self.negate(ev)
+                ev = self.absolutify(ev)
+            except NotReadyToEvaluate:
+                return None
         return ev
 
     def negate(self, value):
@@ -56,8 +59,14 @@ class Attribute(ABC):
         return value
 
     def absolutify(self, value):
-        if not self.absolute: # is relative
-            pass
+        # print("bounds", self.dimension.layer.name)
+        # if not self.absolute and self.dimension.layer.parent is not None: # is relative
+        #     try:
+        #         pd = self.dimension.layer.parent.dimensions[self.dimension.name]
+        #         # print(pd.layer)
+        #         value += pd.bounds["start"]
+        #     except:
+        #         raise NotReadyToEvaluate
         return value
 
     @property
@@ -85,8 +94,47 @@ class Attribute(ABC):
     def __short_class_name__(self):
         pass
 
-class FunctionAttribute(Attribute):
-    pass
+# class FunctionAttribute(Attribute):
+#     def __init__(self, *attrs, negative=False, absolute=False):
+#         self.attrs = attrs
+#         for attr in self.attrs:
+#             self.dimension = None
+#         super().__init__(None, negative, absolute)
+
+#     @property
+#     def dimension(self):
+#         return self._dimension
+
+#     @dimension.setter
+#     def dimension(self, value):
+#         self._dimension = value
+#         for attr in self.attrs:
+#             attr.dimension = value
+
+#     def evaluate(self):
+#         for attr in self.attrs:
+#             attr.evaluate()
+
+#     @property
+#     def is_evaluated(self):
+#         return all(attr.is_evaluated for attr in self.attrs)
+
+#     def isValid(attr):
+#         """
+#         :attr: Be a string and in <layer>.<attribute> format.
+#         """
+#         return isinstance(attr, Attribute)
+
+# class AddAttribute(FunctionAttribute):
+#     @property
+#     def evaulated_value(self):
+#         try:
+#             return sum(attr.evaluated_value for attr in self.attrs)
+#         except:
+#             return None
+
+#     def __short_class_name__(self):
+#         return "AddAttr"
 
 class StringAttribute(Attribute):
     """
@@ -97,18 +145,19 @@ class StringAttribute(Attribute):
         top, ycenter, bottom, height
         XP<pct>, YP<pct>
     """
-    # def __init__(self, attr, *args, **kwargs):
-    #     super().__init__(attr, *args, **kwargs)
-
     def evaluate(self):
         if self.evaluated_value is None:
             l, attr = self.attr.split(".")
-            if l == "parent":
-                layer = self.dimension.layer.parent
-            elif l == "template":
-                layer = self.dimension.layer.template
+            llayer = self.dimension.layer
+            if l == "parent" and llayer.parent is not None:
+                layer = llayer.parent
+            elif l == "template" and llayer.template is not None:
+                layer = llayer.template
             else:
-                layer = self.dimension.layer.template.get_layer(l)
+                template = llayer.template
+                if llayer.template is None:
+                    template = llayer
+                layer = template.get_layer(l)
             try:
                 self.evaluated_value = layer[attr]
                 return self.evaluated_value

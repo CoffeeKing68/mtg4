@@ -1,5 +1,5 @@
 import pytest
-from template import Template, ColorLayer
+from template import Template, ColorLayer, ColorBackgroundLayer
 from text_layers import PointTextLayer, AreaTextLayer
 from attribute import StringAttribute as StrAttr
 from attribute import NumericAttribute as NumAttr
@@ -21,4 +21,15 @@ class TestTemplateLayer():
 
         temp2.update_bounds()
 
+    # def test_this_configuration_can_render(self):
+    #     pt = ColorLayer("color_layer", content="Red", left=StrAttr("parent.left"),
+    #         top=StrAttr("parent.top"), height=NumAttr(50), width=NumAttr(50))
+    #     bg = ColorBackgroundLayer("bg_layer", content="Green")
+    #     temp = Template("temp",  pt, bg, XP40=NumAttr(30), right=StrAttr("color_layer.right"),
+    #             top=StrAttr("parent.top"), height=NumAttr(100))
+    #     temp2 = Template("temp2", temp, left=NumAttr(0), right=NumAttr(200),
+    #             top=NumAttr(0), height=NumAttr(200))
+
+    #     temp2.update_bounds()
+    #     image = temp2.render()
 
