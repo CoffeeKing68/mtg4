@@ -1,5 +1,8 @@
-from attribute import StringAttribute, NumericAttribute
-from template import Template, ColorLayer
+from attribute import StringAttribute as SA
+from attribute import NumericAttribute as NA
+from attribute import AddAttribute as AA
+from attribute import MaxAttribute as MA
+from template import Template, ColorLayer, ColorBackgroundLayer
 from text_layers import PointTextLayer
 import pytest
 
@@ -7,67 +10,103 @@ import pytest
 # SumAttribute("parent.width", NegateAttribute("text.height"))
 # "template.width,-45", "fill:template.width,template.height"
 # "get:template.width|negate:45" ""
-# SumAttributes(StringAttribute("template.width"), NumericAttribute(45, negative=True))
+# SumAttributes(SA("template.width"), NA(45, negative=True))
 
 class TestStringAttribute():
     def test_can_make_string_attribute(self):
-        StringAttribute("layer.width")
-        StringAttribute("parent.XP40")
-        StringAttribute("template.right")
+        SA("layer.width")
+        SA("parent.XP40")
+        SA("template.right")
 
     def test_can_make_negative_string_attribute(self):
-        """Tests if negative StringAttributes can be initialised
+        """Tests if negative SAs can be initialised
         and if the different conventions will produce the same result"""
-        negative_str_attr_1 = StringAttribute("-title.right")
-        negative_str_attr_2 = StringAttribute("title.right", True)
+        negative_str_attr_1 = SA("-title.right")
+        negative_str_attr_2 = SA("title.right", True)
 
         # test_layer_1 and test_layer_2 will have same left value
         title = PointTextLayer("title", "Arial", 15, "Black", content="Hello World",
-            left=NumericAttribute(0), top=NumericAttribute(0))
+            left=NA(0), top=NA(0))
 
         test_layer_1 = ColorLayer("test_layer_1", content="Blue",
-            left=negative_str_attr_1, right=StringAttribute("parent.right"),
-            top=StringAttribute("title.top"), height=NumericAttribute(20))
+            left=negative_str_attr_1, right=SA("parent.right"),
+            top=SA("title.top"), height=NA(20))
 
         test_layer_2 = ColorLayer("test_layer_2", content="Green",
-            left=negative_str_attr_2, right=StringAttribute("parent.right"),
-            top=StringAttribute("test_layer_1.top"), height=NumericAttribute(20))
+            left=negative_str_attr_2, right=SA("parent.right"),
+            top=SA("test_layer_1.top"), height=NA(20))
 
         temp = Template("temp", title, test_layer_1, test_layer_2,
-            left=NumericAttribute(0), width=NumericAttribute(100),
-            top=NumericAttribute(0), height=NumericAttribute(100))
+            left=NA(0), width=NA(100),
+            top=NA(0), height=NA(100))
 
         temp.update_bounds()
         assert test_layer_1["left"] == test_layer_2["left"]
 
 class TestNumericAttribute():
-    def test_can_make_nueric_attribute(self):
-        NumericAttribute(40)
-        NumericAttribute(-30)
-        NumericAttribute(12, True)
+    def test_can_make_numeric_attribute(self):
+        NA(40)
+        NA(-30)
+        NA(12, True)
 
     def test_can_make_negative_numeric_attribute(self):
-        """Tests if negative NumericAttributes can be initialised
+        """Tests if negative NAs can be initialised
         and if the different conventions will produce the same result"""
-        negative_num_attr_1 = NumericAttribute(-30)
-        negative_num_attr_2 = NumericAttribute(30, True)
+        negative_num_attr_1 = NA(-30)
+        negative_num_attr_2 = NA(30, True)
 
         # test_layer_1 and test_layer_2 will have same left value
         title = PointTextLayer("title", "Arial", 15, "Black", content="Hello World",
-            left=NumericAttribute(0), top=NumericAttribute(0))
+            left=NA(0), top=NA(0))
 
         test_layer_1 = ColorLayer("test_layer_1", content="Blue",
-            left=negative_num_attr_1, right=StringAttribute("parent.right"),
-            top=StringAttribute("title.top"), height=NumericAttribute(20))
+            left=negative_num_attr_1, right=SA("parent.right"),
+            top=SA("title.top"), height=NA(20))
 
         test_layer_2 = ColorLayer("test_layer_2", content="Green",
-            left=negative_num_attr_2, right=StringAttribute("parent.right"),
-            top=StringAttribute("test_layer_1.top"), height=NumericAttribute(20))
+            left=negative_num_attr_2, right=SA("parent.right"),
+            top=SA("test_layer_1.top"), height=NA(20))
 
         temp = Template("temp", title, test_layer_1, test_layer_2,
-            left=NumericAttribute(0), width=NumericAttribute(100),
-            top=NumericAttribute(0), height=NumericAttribute(100))
+            left=NA(0), width=NA(100),
+            top=NA(0), height=NA(100))
 
         temp.update_bounds()
         assert test_layer_1["left"] == test_layer_2["left"]
 
+class TestAddAttribute():
+    def test_can_make_add_attribute(self):
+        add_attr = AA(SA("template.height"), NA(-45))
+
+    def test_template_with_add_attribute_can_render(self):
+        title = PointTextLayer("title", "Arial", 15, "Black", content="Hello World",
+            left=NA(0), top=NA(0))
+        sub_title = PointTextLayer("sub_title", "Arial", 15, "Black", content="Bottom Text",
+            left=NA(10), bottom=AA(SA("template.height"), NA(45, negative=True)))
+        bg = ColorBackgroundLayer("bg", content="White")
+        temp = Template("temp", title, sub_title, bg, left=NA(0), top=NA(0),
+            width=NA(200), height=NA(200))
+
+        temp.update_bounds()
+        image = temp.render()
+        image.save(filename=f"test_images/test_template_with_add_attribute_can_render.jpg")
+
+class TestMaxAttribute():
+    def test_can_make_a_max_attribute(self):
+        mmax = MA(NA(50), NA(60))
+
+    def test_template_with_max_attribute_can_render(self):
+        c1 = ColorLayer("color1", content="Green", left=NA(0), width=NA(50),
+            top=NA(0), height=NA(50))
+        c2 = ColorLayer("color2", content="Blue", left=NA(0), width=NA(60),
+            top=SA("color1.bottom"), height=NA(50))
+        text = PointTextLayer("test", "Arial", 15, "Black", content="Hello World",
+            left=MA(SA("color1.right"), SA("color2.right")), top=SA("color2.bottom"))
+        bg = ColorBackgroundLayer("name", content="White")
+        layers = [c1, c2, bg, text]
+        temp = Template("temp", *layers, left=NA(0), top=NA(0), width=NA(300),
+            height=NA(300))
+        temp.update_bounds()
+        assert text["left"] == 60
+        # image = temp.render()
+        # image.save(filename="test_images/test_template_with_max_attribute_can_render.jpg")

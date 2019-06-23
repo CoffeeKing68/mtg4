@@ -26,7 +26,7 @@ class ColorLayer(ShapeLayer):
         else:
             raise NotReadyToRenderError("Content is needed to render ColorLayer.")
 
-class ColorBackgroundLayer(ShapeLayer):
+class ColorBackgroundLayer(ColorLayer):
     def __init__(self, name, *args, **kwargs):
         kwargs["left"] = StringAttribute("parent.left")
         kwargs["right"] = StringAttribute("parent.right")
@@ -36,16 +36,16 @@ class ColorBackgroundLayer(ShapeLayer):
             kwargs["order"] = -99
         super().__init__(name, **kwargs)
 
-    def render(self, fresh=False):
-        if fresh and self.pre_render is not None:
-            return self.pre_render
-        elif self.content is not None:
-            if not isinstance(self.content, Color):
-                self.content = Color(self.content)
-            img = Image(width=int(self["width"]), height=int(self["height"]), background=self.content)
-            return img
-        else:
-            raise NotReadyToRenderError("Content is needed to render ColorBackgroundLayer.")
+    # def render(self, fresh=False):
+    #     if fresh and self.pre_render is not None:
+    #         return self.pre_render
+    #     elif self.content is not None:
+    #         if not isinstance(self.content, Color):
+    #             self.content = Color(self.content)
+    #         img = Image(width=int(self["width"]), height=int(self["height"]), background=self.content)
+    #         return img
+    #     else:
+    #         raise NotReadyToRenderError("Content is needed to render ColorBackgroundLayer.")
 
 class Template(ShapeLayer):
     """Layers that appear first in *layers arg are rendered first if order is

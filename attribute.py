@@ -7,6 +7,8 @@ class Attribute(ABC):
     absolute_char = "!" # #/^/*/&
 
     def __init__(self, attr, negative=False, absolute=False):
+        if not self.isValid(attr):
+            raise ValueError("Invalid attribute.")
         self.evaluated_value = None
         self.dimension = None
         while True:
@@ -23,6 +25,7 @@ class Attribute(ABC):
         self.negative = negative
         self.absolute = absolute
 
+    @staticmethod
     @abstractmethod
     def isValid(attr):
         """
@@ -94,47 +97,85 @@ class Attribute(ABC):
     def __short_class_name__(self):
         pass
 
-# class FunctionAttribute(Attribute):
-#     def __init__(self, *attrs, negative=False, absolute=False):
-#         self.attrs = attrs
-#         for attr in self.attrs:
-#             self.dimension = None
-#         super().__init__(None, negative, absolute)
+class FunctionAttribute(Attribute):
+    def __init__(self, *attrs, negative=False, absolute=False):
+        self.attrs = attrs
+        self.dimension = None
+        for attr in self.attrs:
+            self.dimension = None
+        self.negative = negative
+        self.absolute = absolute
 
-#     @property
-#     def dimension(self):
-#         return self._dimension
+    @property
+    def dimension(self):
+        return self._dimension
 
-#     @dimension.setter
-#     def dimension(self, value):
-#         self._dimension = value
-#         for attr in self.attrs:
-#             attr.dimension = value
+    @dimension.setter
+    def dimension(self, value):
+        self._dimension = value
+        for attr in self.attrs:
+            attr.dimension = value
 
-#     def evaluate(self):
-#         for attr in self.attrs:
-#             attr.evaluate()
+    @property
+    def evaluated_value(self):
+        return self.last_pass()
 
-#     @property
-#     def is_evaluated(self):
-#         return all(attr.is_evaluated for attr in self.attrs)
+    @evaluated_value.setter
+    def evaluated_value(self, value):
+        self._evaluated_value = value
 
-#     def isValid(attr):
-#         """
-#         :attr: Be a string and in <layer>.<attribute> format.
-#         """
-#         return isinstance(attr, Attribute)
+    def evaluate(self):
+        for attr in self.attrs:
+            attr.evaluate()
 
-# class AddAttribute(FunctionAttribute):
-#     @property
-#     def evaulated_value(self):
-#         try:
-#             return sum(attr.evaluated_value for attr in self.attrs)
-#         except:
-#             return None
+    @property
+    def is_evaluated(self):
+        return all(attr.is_evaluated for attr in self.attrs)
 
-#     def __short_class_name__(self):
-#         return "AddAttr"
+    @staticmethod
+    def isValid(attr):
+        """
+        :attr: Be a string and in <layer>.<attribute> format.
+        """
+        return isinstance(attr, Attribute)
+
+    def __str__(self):
+        try:
+            evaluate = self.evaluated_value
+        except:
+            evaluate = "NULL"
+        return f"{self.__class__.__name__}({'-' if self.negative else ''}..., {evaluate})"
+
+    def __short_str__(self):
+        try:
+            evaluate = self.evaluated_value
+        except:
+            evaluate = "NULL"
+        return f"{self.__short_class_name__()}({'-' if self.negative else ''}..., {evaluate})"
+
+class AddAttribute(FunctionAttribute):
+    def evaluate(self):
+        try:
+            super().evaluate()
+        except:
+            return None
+        self.evaluated_value = sum(attr.evaluated_value for attr in self.attrs)
+        return self.last_pass()
+
+    def __short_class_name__(self):
+        return "AddAttr"
+
+class MaxAttribute(FunctionAttribute):
+    def evaluate(self):
+        try:
+            super().evaluate()
+        except:
+            return None
+        self.evaluated_value = max(attr.evaluated_value for attr in self.attrs)
+        return self.last_pass()
+
+    def __short_class_name__(self):
+        return "MaxAttr"
 
 class StringAttribute(Attribute):
     """
@@ -166,13 +207,14 @@ class StringAttribute(Attribute):
         else:
             return self.evaluated_value
 
+    @staticmethod
     def isValid(attr):
         """
         :attr: Be a string and in <layer>.<attribute> format.
         """
         try:
             layer, attribute = attr.split('.')
-            return isinstance(attr, str) and match(r"\D+", layer) and match(r"\D+", attribute) and "," in attr
+            return isinstance(attr, str) and match(r"\D+", layer) and match(r"\D+", attribute) and "." in attr
         except:
             return False
 
@@ -199,6 +241,7 @@ class NumericAttribute(Attribute):
         else:
             return self.evaluated_value
 
+    @staticmethod
     def isValid(attr):
         """
         :attr: Be numeric

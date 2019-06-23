@@ -25,7 +25,7 @@ class PointTextLayer(PointLayer):
                 draw.font_size = self.size
                 if not isinstance(self.color, Color):
                     self.color = Color(self.color)
-                draw.color = self.color
+                draw.fill_color = self.color
                 draw.text_antialias = True
                 # get estimated width and height
                 with Image(width=1, height=1) as temp_image:
