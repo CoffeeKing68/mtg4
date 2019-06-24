@@ -40,15 +40,18 @@ if os.path.isfile(SETS):
 else:
     raise ValueError("sets.json not found.")
 
-# TODO colors on PTLs aren't working
 # TODO Get Relay Medium font
-# TODO NA("name") should raise Exception -> infinite looping somewhere
 # TODO left = l, bottom = b, top = t, right = r
 # TODO write render_boundary method for template
 # TODO Ascender, Descender for text height, etc.
 # TODO Get current year
 # TODO Shadows for template layers
 # TODO ImageLayers (move ColorLayers into new file with Image layers)
+# TODO ({0!r})
+# TODO composite images over transparent (see boundary template test)
+# TODO fit > adjust till image fits within boundary
+# TODO fill > adjust so that image leaves no gaps
+# TODO strech fill > adjust so that no gaps (ratio not respected)
 # TODO
 
 card = [c for c in cards if c["name"] == "Dust Stalker"][0]

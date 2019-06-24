@@ -36,25 +36,12 @@ class ColorBackgroundLayer(ColorLayer):
             kwargs["order"] = -99
         super().__init__(name, **kwargs)
 
-    # def render(self, fresh=False):
-    #     if fresh and self.pre_render is not None:
-    #         return self.pre_render
-    #     elif self.content is not None:
-    #         if not isinstance(self.content, Color):
-    #             self.content = Color(self.content)
-    #         img = Image(width=int(self["width"]), height=int(self["height"]), background=self.content)
-    #         return img
-    #     else:
-    #         raise NotReadyToRenderError("Content is needed to render ColorBackgroundLayer.")
-
 class Template(ShapeLayer):
     """Layers that appear first in *layers arg are rendered first if order is
     not specified (order = 0 by default)."""
     def __init__(self, name, *layers, **kwargs):
         self.layers = layers
         super().__init__(name, **kwargs)
-        # self.template = self
-        # self.parent = self
 
     @property
     def layers(self):
@@ -85,6 +72,14 @@ class Template(ShapeLayer):
         image = Image(width=int(self["width"]), height=int(self["height"]))
         for layer in sorted(self.layers, key=lambda l: l.order):
             img = layer.render()
+            if img is not None:
+                image.composite(img, left=int(layer["left"]), top=int(layer["top"]))
+        return image
+
+    def render_boundary(self):
+        image = Image(width=int(self["width"]), height=int(self["height"]))
+        for layer in sorted(self.layers, key=lambda l: l.order):
+            img = layer.render_boundary()
             if img is not None:
                 image.composite(img, left=int(layer["left"]), top=int(layer["top"]))
         return image

@@ -4,6 +4,9 @@ from bounds import Bounds
 from exceptions import InvalidBoundsError, NotEvaluatedError, NotBoundedError
 from exceptions import NotReadyToRenderError
 from dimensions import XDimension, YDimension
+from wand.image import Image
+from wand.drawing import Drawing
+from wand.color import Color
 
 class Layer(ABC):
     """Base Layer for all Layers to inherit from. Does most of the heavy
@@ -52,6 +55,20 @@ class Layer(ABC):
     @abstractmethod
     def render(self, fresh=False):
         pass
+
+    def render_boundary(self):
+        """Draws a rectangle around bounds."""
+        img = Image(width=int(self.parent["width"]), background=Color("None"),
+            height=int(self.parent["height"]))
+        with Drawing() as draw:
+            draw.stroke_width = 1
+            draw.stroke_color = Color("Red")
+            draw.fill_color = Color("None")
+            draw.rectangle(left=self["left"], width=self["width"],
+                top=self["top"], height=self["height"])
+            draw(img)
+        img.trim()
+        return img
 
     @property
     def attributes(self):
