@@ -52,6 +52,7 @@ else:
 # TODO fit > adjust till image fits within boundary
 # TODO fill > adjust so that image leaves no gaps
 # TODO strech fill > adjust so that no gaps (ratio not respected)
+# TODO test to see if pre_render function is worth the hassle
 # TODO
 
 card = [c for c in cards if c["name"] == "Dust Stalker"][0]
@@ -101,8 +102,8 @@ rarity_colors = {
     "C": FC
 }
 rarity = card["rarity"][0].upper()
-layers["rarity"].content = rarity
 layers["rarity"].color = rarity_colors[rarity]
+layers["rarity"].content = rarity
 current_year = 2019
 layers["copyright"].content = f"™ & © {current_year} Wizards of the Coast"
 

@@ -3,6 +3,7 @@ from template import Template, ColorLayer, ColorBackgroundLayer
 from text_layers import PointTextLayer, AreaTextLayer
 from attribute import StringAttribute as SA
 from attribute import NumericAttribute as NA
+from attribute import AddAttribute as AA
 
 class TestTemplateLayer():
     def test_can_make_template_layer(self):
@@ -21,17 +22,19 @@ class TestTemplateLayer():
 
         temp2.update_bounds()
 
-    # def test_this_configuration_can_render(self):
-    #     pt = ColorLayer("color_layer", content="Red", left=SA("parent.left"),
-    #         top=SA("parent.top"), height=NA(50), width=NA(50))
-    #     bg = ColorBackgroundLayer("bg_layer", content="Green")
-    #     temp = Template("temp",  pt, bg, XP40=NA(30), right=SA("color_layer.right"),
-    #             top=SA("parent.top"), height=NA(100))
-    #     temp2 = Template("temp2", temp, left=NA(0), right=NA(200),
-    #             top=NA(0), height=NA(200))
+    def test_this_configuration_can_render(self):
+        pt = PointTextLayer("ptl", "Arial", 15, "Black", content="Hello World", left=AA(SA("parent.left"), NA(5)),
+            top=SA("parent.top"))
+        bg = ColorBackgroundLayer("bg", content="Green")
+        temp = Template("temp",  pt, bg, left=NA(10), right=SA("ptl.right"),
+                top=SA("parent.top"), height=NA(100))
 
-    #     temp2.update_bounds()
-    #     image = temp2.render()
+        temp2 = Template("temp2", temp, left=NA(0), right=NA(100),
+                top=NA(0), height=NA(100))
+
+        temp2.update_bounds()
+        image = temp2.render()
+
     def test_template_can_render_boundary(self):
         pt = PointTextLayer("pt", "Arial", 15, "Black", content="Hello World",
             left=NA(0), top=NA(0))

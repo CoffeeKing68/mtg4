@@ -105,6 +105,7 @@ class FunctionAttribute(Attribute):
             self.dimension = None
         self.negative = negative
         self.absolute = absolute
+        self.evaluated_value = None
 
     @property
     def dimension(self):
@@ -157,9 +158,9 @@ class AddAttribute(FunctionAttribute):
     def evaluate(self):
         try:
             super().evaluate()
+            self.evaluated_value = sum(attr.evaluated_value for attr in self.attrs)
         except:
             return None
-        self.evaluated_value = sum(attr.evaluated_value for attr in self.attrs)
         return self.last_pass()
 
     def __short_class_name__(self):
@@ -203,7 +204,12 @@ class StringAttribute(Attribute):
                 self.evaluated_value = layer[attr]
                 return self.evaluated_value
             except NotBoundedError: # Don't complain if not bounded
-                pass # complain if bad key (see Layer.__getitem__)
+                # pass # complain if bad key (see Layer.__getitem__)
+                for dim in layer.dimensions.values():
+                    for key, attribute in dim.attributes.items():
+                        if key == attr and attribute.is_evaluated:
+                            self.evaluated_value = attribute.evaluated_value
+                            return self.evaluated_value
         else:
             return self.evaluated_value
 

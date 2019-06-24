@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
-from attribute import Attribute, NumericAttribute, StringAttribute
+from attribute import Attribute
+from attribute import NumericAttribute as NA
+from attribute import StringAttribute as SA
 from bounds import Bounds
 from exceptions import InvalidBoundsError, NotEvaluatedError, NotBoundedError
 from exceptions import NotReadyToRenderError
@@ -16,13 +18,13 @@ class Layer(ABC):
         self.x_attributes_required = x_attrs_req
         self.y_attributes_required = y_attrs_req
         self.pre_render = None
-        self.content = kwargs.get("content") # default is None
         self.order = kwargs.get("order", 0) # default is 0
         self.parent = None
         self.template = None
         self.dimensions = {}
         self.dimensions["x"] = XDimension(self.x_attributes_required, self, **kwargs)
         self.dimensions["y"] = YDimension(self.y_attributes_required, self, **kwargs)
+        self.content = kwargs.get("content") # default is None
 
     @property
     def x(self):
@@ -109,18 +111,34 @@ class PointLayer(Layer):
     """
     def __init__(self, name, *args, **kwargs):
         super().__init__(name, 1, 1, *args, **kwargs)
-        old_update_x_bounds = self.x.update_bounds
-        def _new_update_x_bounds():
-            self.render(False)
-            return old_update_x_bounds(full=self.pre_render.width)
+        # old_update_x_bounds = self.x.update_bounds
+        # def _new_update_x_bounds():
+        #     self.render(False)
+        #     return old_update_x_bounds(full=self.pre_render.width)
 
-        old_update_y_bounds = self.y.update_bounds
-        def _new_update_y_bounds():
-            self.render(False)
-            return old_update_y_bounds(full=self.pre_render.height)
+        # old_update_y_bounds = self.y.update_bounds
+        # def _new_update_y_bounds():
+        #     self.render(False)
+        #     return old_update_y_bounds(full=self.pre_render.height)
 
-        self.x.update_bounds = _new_update_x_bounds
-        self.y.update_bounds = _new_update_y_bounds
+        # self.x.update_bounds = _new_update_x_bounds
+        # self.y.update_bounds = _new_update_y_bounds
+
+    @property
+    def content(self):
+        return self._content
+
+    @content.setter
+    def content(self, value):
+        self._content = value
+        if value is not None:
+            self.pre_render = self.render(True)
+            self.dimensions["x"].attributes["width"] = NA(self.pre_render.width)
+            self.dimensions["y"].attributes["height"] = NA(self.pre_render.height)
+        else:
+            self.pre_render = None
+            self.dimensions["x"].attributes["width"] = None
+            self.dimensions["y"].attributes["height"] = None
 
 class ShapeLayer(Layer):
     """A ShapeLayer's bounds are determined by the width and height set at initialization
