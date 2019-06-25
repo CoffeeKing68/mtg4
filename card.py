@@ -1,4 +1,4 @@
-from template import Template, ColorBackgroundLayer, ColorLayer
+from template import Template, ColorBackgroundLayer, ColorLayer, ManaCost
 from text_layers import PointTextLayer as PTL
 from attribute import StringAttribute as SA
 from attribute import NumericAttribute as NA
@@ -53,6 +53,12 @@ else:
 # TODO fill > adjust so that image leaves no gaps
 # TODO strech fill > adjust so that no gaps (ratio not respected)
 # TODO test to see if pre_render function is worth the hassle
+# TODO remove pre_render probably because some layers' render depend variables other than content
+# TODO What I could do is wrap some variables eg. font, color, size (PTL) with decorator that will set layer to dirty
+# TODO If layer is dirty at render, re-render else return pre_render if it exists.
+# TODO Regex: how to split {3}{B}{B} -> "{3}", "{B}", "{B}"
+# TODO Test if svgs are better than png/jpg/bmp
+# TODO rebuild Magick with svg delegates
 # TODO
 
 card = [c for c in cards if c["name"] == "Dust Stalker"][0]
@@ -82,7 +88,8 @@ layers = {
     "artist": PTL("artist", RELAY, INFO_SIZE, FC, left=AA(SA("artist_brush.right"), NA(3)),
         bottom=SA("set.bottom")),
     "copyright": PTL("copyright", MPLANTIN, INFO_SIZE - 5, FC, right=NA(WIDTH-BORDER),
-        bottom=SA("set.bottom"))
+        bottom=SA("set.bottom")),
+    "mana_cost": ManaCost("mana_cost", right=NA(WIDTH-BORDER), top=NA(BORDER)),
 }
 
 for layer in layers.values():

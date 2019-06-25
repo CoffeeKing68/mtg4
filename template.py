@@ -1,10 +1,13 @@
-from base_layers import Layer, ShapeLayer
+from base_layers import Layer, ShapeLayer, PointLayer
 from text_layers import PointTextLayer
-from attribute import StringAttribute, NumericAttribute
+from attribute import StringAttribute as SA
+from attribute import NumericAttribute as NA
+from attribute import AddAttribute as AA
 
 from wand.image import Image
 from wand.color import Color
 from wand.drawing import Drawing
+from mtgpy import ManaText
 
 from pprint import pprint
 
@@ -28,10 +31,10 @@ class ColorLayer(ShapeLayer):
 
 class ColorBackgroundLayer(ColorLayer):
     def __init__(self, name, *args, **kwargs):
-        kwargs["left"] = StringAttribute("parent.left")
-        kwargs["right"] = StringAttribute("parent.right")
-        kwargs["top"] = StringAttribute("parent.top")
-        kwargs["bottom"] = StringAttribute("parent.bottom")
+        kwargs["left"] = SA("parent.left")
+        kwargs["right"] = SA("parent.right")
+        kwargs["top"] = SA("parent.top")
+        kwargs["bottom"] = SA("parent.bottom")
         if "order" not in kwargs:
             kwargs["order"] = -99
         super().__init__(name, **kwargs)
@@ -101,6 +104,43 @@ class Template(ShapeLayer):
                         return l
         else:
             raise ValueError("You can only pass in layer names or layers.")
+
+class ManaCost(PointLayer):
+    def __init__(self, name, *args, **kwargs):
+        super().__init__(name, *args, **kwargs)
+
+    def render(self, fresh=False):
+        mana_size = 35
+        mana_gap = 2
+        if not fresh and self.pre_render is not None: # if fresh is false and there is a pre_render
+            return self.pre_render
+        if self.content is not None:
+            self.mana = ManaText.getManaList(self.content)
+            width = (len(self.mana) * (mana_gap + mana_size)) - mana_gap
+            height = mana_size
+            img = Image(width=width, height=height)
+            offset = mana_size
+            for mana in self.mana:
+                mana_image = Image(filename=f"resources/svg/{mana.mana_string}.svg",
+                    background=Color("Transparent"), width=mana_size, height=mana_size)
+                img.composite(mana_image, left=width-offset, top=0)
+                offset += mana_size + mana_gap
+            self.pre_render = img
+            img.save(filename="test_images/mana_cost.bmp")
+            return img
+        else:
+            raise NotReadyToRenderError(f"{self.name} is not ready to render right now.")
+
+class ImageLayer(PointLayer):
+    def render(self, fresh=False):
+        if not fresh and self.pre_render is not None: # if fresh is false and there is a pre_render
+            return self.pre_render
+        if self.content is not None:
+            img = Image(filename=self.content)
+            self.pre_render = img
+            return img
+        else:
+            raise NotReadyToRenderError(f"{self.name} is not ready to render right now.")
 
 if __name__ == "__main__":
     pass

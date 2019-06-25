@@ -1,25 +1,11 @@
-class node(object):
-    def __init__(self, value, children = []):
-        self.value = value
-        self.children = children
+from wand.image import Image
+from wand.color import Color
 
-tree = [node("grandmother", [ node("daughter", [ node("granddaughter"), node("grandson")]), node("son", [ node("granddaughter"), node("grandson")]) ])];
+img = Image(width=100, height=100, filename="resources/svg/BR.svg",
+    background=Color("Transparent"))
+# export = img.export_pixels(x=0, width=1, y=0, height=1)
+# print(export)
 
-def familyValues(targetName, siblings = []):
-    family = []
-    for sibling in siblings:
-        if sibling.value == targetName:
-            family.append(sibling)
-            family = family + sibling.children
-            break
-        else:
-            children = familyValues(targetName, sibling.children)
-            if len(children) > 0:
-                children.append(sibling)
-                family = children
-
-    return family
-
-myFamily = familyValues('daughter', tree)
-for sibling in myFamily:
-    print(sibling.value)
+print(img.size)
+img.trim()
+img.save(filename="test_images/svg_test.png")

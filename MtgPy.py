@@ -85,11 +85,12 @@ class ManaText(Text):
         super().__init__(string)
         self.mana_string = string[1:-1]
 
-    def getManaString(self):
-        return self.mana_string
+    # def getManaString(self):
+    #     return self.mana_string
 
     def getManaList(mana_list):
-        return [ManaText(m) for m in re.split]
+        l = filter(lambda m: len(m) > 0, re.split("({.+?})", mana_list))
+        return [ManaText(m) for m in list(l)]
 
 if __name__ == "__main__":
     r = "Hexproof\nDevoid <i>(This creature has no color.)</i>\n{3}, {T}: <i>Add {U}{R} to</i> your mana pool."
