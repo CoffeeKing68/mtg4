@@ -95,6 +95,6 @@ class ManaText(Text):
 if __name__ == "__main__":
     r = "Hexproof\nDevoid <i>(This creature has no color.)</i>\n{3}, {T}: <i>Add {U}{R} to</i> your mana pool."
     rules = Rules(r)
-    print(rules)
+    # print(rules)
 
 

@@ -131,7 +131,7 @@
         "name": "Adverse Conditions",
         "names": [],
         "number": "54",
-        "original_text": "Devoid (This card has no color.)Tap up to two target creatures. Those creatures don't untap during their controller's next untap step. Put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nTap up to two target creatures. Those creatures don't untap during their controller's next untap step. Put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -335,7 +335,7 @@
         "name": "Akoum Firebird",
         "names": null,
         "number": "138",
-        "original_text": "Flying, hasteAkoum Firebird attacks each turn if able.Landfall \u2014 Whenever a land enters the battlefield under your control, you may pay {4}{R}{R}. If you do, return Akoum Firebird from your graveyard to the battlefield.",
+        "original_text": "Flying, haste\nAkoum Firebird attacks each turn if able.Landfall \u2014 Whenever a land enters the battlefield under your control, you may pay {4}{R}{R}. If you do, return Akoum Firebird from your graveyard to the battlefield.",
         "original_type": "Creature \u2014 Phoenix",
         "power": "3",
         "printings": [
@@ -522,7 +522,7 @@
         "name": "Akoum Hellkite",
         "names": null,
         "number": "139",
-        "original_text": "FlyingLandfall \u2014 Whenever a land enters the battlefield under your control, Akoum Hellkite deals 1 damage to target creature or player. If that land is a Mountain, Akoum Hellkite deals 2 damage to that creature or player instead.",
+        "original_text": "Flying\nLandfall \u2014 Whenever a land enters the battlefield under your control, Akoum Hellkite deals 1 damage to target creature or player. If that land is a Mountain, Akoum Hellkite deals 2 damage to that creature or player instead.",
         "original_type": "Creature \u2014 Dragon",
         "power": "4",
         "printings": [
@@ -1406,7 +1406,7 @@
         "name": "Angel of Renewal",
         "names": null,
         "number": "18",
-        "original_text": "FlyingWhen Angel of Renewal enters the battlefield, you gain 1 life for each creature you control.",
+        "original_text": "Flying\nWhen Angel of Renewal enters the battlefield, you gain 1 life for each creature you control.",
         "original_type": "Creature \u2014 Angel Ally",
         "power": "4",
         "printings": [
@@ -1575,7 +1575,7 @@
         "name": "Angelic Captain",
         "names": null,
         "number": "208",
-        "original_text": "FlyingWhenever Angelic Captain attacks, it gets +1/+1 until end of turn for each other attacking Ally.",
+        "original_text": "Flying\nWhenever Angelic Captain attacks, it gets +1/+1 until end of turn for each other attacking Ally.",
         "original_type": "Creature \u2014 Angel Ally",
         "power": "4",
         "printings": [
@@ -2261,7 +2261,7 @@
         "name": "Barrage Tyrant",
         "names": null,
         "number": "127",
-        "original_text": "Devoid (This card has no color.){2}{R}, Sacrifice another colorless creature: Barrage Tyrant deals damage equal to the sacrificed creature's power to target creature or player.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\n{2}{R}, Sacrifice another colorless creature: Barrage Tyrant deals damage equal to the sacrificed creature's power to target creature or player.",
         "original_type": "Creature \u2014 Eldrazi",
         "power": "5",
         "printings": [
@@ -2449,7 +2449,7 @@
         "name": "Beastcaller Savant",
         "names": null,
         "number": "170",
-        "original_text": "Haste{T}: Add one mana of any color to your mana pool. Spend this mana only to cast a creature spell.",
+        "original_text": "Haste\n{T}: Add one mana of any color to your mana pool. Spend this mana only to cast a creature spell.",
         "original_type": "Creature \u2014 Elf Shaman Ally",
         "power": "1",
         "printings": [
@@ -2802,7 +2802,7 @@
         "name": "Benthic Infiltrator",
         "names": null,
         "number": "55",
-        "original_text": "Devoid (This card has no color.)Ingest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)Benthic Infiltrator can't be blocked.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)Benthic Infiltrator can't be blocked.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "1",
         "printings": [
@@ -3984,7 +3984,7 @@
         "name": "Blisterpod",
         "names": [],
         "number": "163",
-        "original_text": "Devoid (This card has no color.)When Blisterpod dies, put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhen Blisterpod dies, put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "1",
         "printings": [
@@ -5286,7 +5286,7 @@
         "name": "Brood Butcher",
         "names": [],
         "number": "199",
-        "original_text": "Devoid (This card has no color.)When Brood Butcher enters the battlefield, put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"{B}{G}, Sacrifice a creature: Target creature gets -2/-2 until end of turn.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhen Brood Butcher enters the battlefield, put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"{B}{G}, Sacrifice a creature: Target creature gets -2/-2 until end of turn.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "3",
         "printings": [
@@ -5484,7 +5484,7 @@
         "name": "Brood Monitor",
         "names": [],
         "number": "164",
-        "original_text": "Devoid (This card has no color.)When Brood Monitor enters the battlefield, put three 1/1 colorless Eldrazi Scion creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhen Brood Monitor enters the battlefield, put three 1/1 colorless Eldrazi Scion creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "3",
         "printings": [
@@ -5847,7 +5847,7 @@
         "name": "Brutal Expulsion",
         "names": null,
         "number": "200",
-        "original_text": "Devoid (This card has no color.)Choose one or both \u2014\u2022 Return target spell or creature to its owner's hand.\u2022 Brutal Expulsion deals 2 damage to target creature or planeswalker. If that permanent would be put into a graveyard this turn, exile it instead.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nChoose one or both \u2014\u2022 Return target spell or creature to its owner's hand.\u2022 Brutal Expulsion deals 2 damage to target creature or planeswalker. If that permanent would be put into a graveyard this turn, exile it instead.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -6038,7 +6038,7 @@
         "name": "Call the Scions",
         "names": [],
         "number": "165",
-        "original_text": "Devoid (This card has no color.)Put two 1/1 colorless Eldrazi Scion creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nPut two 1/1 colorless Eldrazi Scion creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -6585,7 +6585,7 @@
         "name": "Catacomb Sifter",
         "names": [],
         "number": "201",
-        "original_text": "Devoid (This card has no color.)When Catacomb Sifter enters the battlefield, put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"Whenever another creature you control dies, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhen Catacomb Sifter enters the battlefield, put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"Whenever another creature you control dies, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "2",
         "printings": [
@@ -7831,7 +7831,7 @@
         "name": "Complete Disregard",
         "names": null,
         "number": "90",
-        "original_text": "Devoid (This card has no color.)Exile target creature with power 3 or less.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nExile target creature with power 3 or less.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -8384,7 +8384,7 @@
         "name": "Courier Griffin",
         "names": null,
         "number": "21",
-        "original_text": "FlyingWhen Courier Griffin enters the battlefield, you gain 2 life.",
+        "original_text": "Flying\nWhen Courier Griffin enters the battlefield, you gain 2 life.",
         "original_type": "Creature \u2014 Griffin",
         "power": "2",
         "printings": [
@@ -8543,7 +8543,7 @@
         "name": "Crumble to Dust",
         "names": null,
         "number": "128",
-        "original_text": "Devoid (This card has no color.)Exile target nonbasic land. Search its controller's graveyard, hand, and library for any number of cards with the same name as that land and exile them. Then that player shuffles his or her library.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nExile target nonbasic land. Search its controller's graveyard, hand, and library for any number of cards with the same name as that land and exile them. Then that player shuffles his or her library.",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -8725,7 +8725,7 @@
         "name": "Cryptic Cruiser",
         "names": null,
         "number": "56",
-        "original_text": "Devoid (This card has no color.){2}{U}, Put a card an opponent owns from exile into that player's graveyard: Tap target creature.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\n{2}{U}, Put a card an opponent owns from exile into that player's graveyard: Tap target creature.",
         "original_type": "Creature \u2014 Eldrazi Processor",
         "power": "3",
         "printings": [
@@ -8926,7 +8926,7 @@
         "name": "Culling Drone",
         "names": null,
         "number": "91",
-        "original_text": "Devoid (This card has no color.)Ingest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "2",
         "printings": [
@@ -9446,7 +9446,7 @@
         "name": "Defiant Bloodlord",
         "names": null,
         "number": "107",
-        "original_text": "FlyingWhenever you gain life, target opponent loses that much life.",
+        "original_text": "Flying\nWhenever you gain life, target opponent loses that much life.",
         "original_type": "Creature \u2014 Vampire",
         "power": "4",
         "printings": [
@@ -10107,7 +10107,7 @@
         "name": "Dominator Drone",
         "names": null,
         "number": "92",
-        "original_text": "Devoid (This card has no color.)Ingest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)When Dominator Drone enters the battlefield, if you control another colorless creature, each opponent loses 2 life.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)When Dominator Drone enters the battlefield, if you control another colorless creature, each opponent loses 2 life.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "3",
         "printings": [
@@ -10465,7 +10465,7 @@
         "name": "Drana's Emissary",
         "names": null,
         "number": "210",
-        "original_text": "FlyingAt the beginning of your upkeep, each opponent loses 1 life and you gain 1 life.",
+        "original_text": "Flying\nAt the beginning of your upkeep, each opponent loses 1 life and you gain 1 life.",
         "original_type": "Creature \u2014 Vampire Cleric Ally",
         "power": "2",
         "printings": [
@@ -10624,7 +10624,7 @@
         "name": "Drana, Liberator of Malakir",
         "names": null,
         "number": "109",
-        "original_text": "Flying, first strikeWhenever Drana, Liberator of Malakir deals combat damage to a player, put a +1/+1 counter on each attacking creature you control.",
+        "original_text": "Flying, first strike\nWhenever Drana, Liberator of Malakir deals combat damage to a player, put a +1/+1 counter on each attacking creature you control.",
         "original_type": "Legendary Creature \u2014 Vampire Ally",
         "power": "2",
         "printings": [
@@ -10796,7 +10796,7 @@
         "name": "Drowner of Hope",
         "names": [],
         "number": "57",
-        "original_text": "Devoid (This card has no color.)When Drowner of Hope enters the battlefield, put two 1/1 colorless Eldrazi Scion creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"Sacrifice an Eldrazi Scion: Tap target creature.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhen Drowner of Hope enters the battlefield, put two 1/1 colorless Eldrazi Scion creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"Sacrifice an Eldrazi Scion: Tap target creature.",
         "original_type": "Creature \u2014 Eldrazi",
         "power": "5",
         "printings": [
@@ -11003,7 +11003,7 @@
         "name": "Dust Stalker",
         "names": null,
         "number": "202",
-        "original_text": "Devoid (This card has no color.)HasteAt the beginning of each end step, if you control no other colorless creatures, return Dust Stalker to its owner's hand.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nHaste\nAt the beginning of each end step, if you control no other colorless creatures, return Dust Stalker to its owner's hand.",
         "original_type": "Creature \u2014 Eldrazi",
         "power": "5",
         "printings": [
@@ -11721,7 +11721,7 @@
         "name": "Eldrazi Skyspawner",
         "names": [],
         "number": "58",
-        "original_text": "Devoid (This card has no color.)FlyingWhen Eldrazi Skyspawner enters the battlefield, put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nFlyingWhen Eldrazi Skyspawner enters the battlefield, put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "2",
         "printings": [
@@ -11920,7 +11920,7 @@
         "name": "Emeria Shepherd",
         "names": null,
         "number": "22",
-        "original_text": "FlyingLandfall \u2014 Whenever a land enters the battlefield under your control, you may return target nonland permanent card from your graveyard to your hand. If that land is a Plains, you may return that nonland permanent card to the battlefield instead.",
+        "original_text": "Flying\nLandfall \u2014 Whenever a land enters the battlefield under your control, you may return target nonland permanent card from your graveyard to your hand. If that land is a Plains, you may return that nonland permanent card to the battlefield instead.",
         "original_type": "Creature \u2014 Angel",
         "power": "4",
         "printings": [
@@ -12999,7 +12999,7 @@
         "name": "Eyeless Watcher",
         "names": [],
         "number": "166",
-        "original_text": "Devoid (This card has no color.)When Eyeless Watcher enters the battlefield, put two 1/1 colorless Eldrazi Scion creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhen Eyeless Watcher enters the battlefield, put two 1/1 colorless Eldrazi Scion creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "1",
         "printings": [
@@ -13197,7 +13197,7 @@
         "name": "Fathom Feeder",
         "names": null,
         "number": "203",
-        "original_text": "Devoid (This card has no color.)DeathtouchIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.){3}{U}{B}: Draw a card. Each opponent exiles the top card of his or her library.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nDeathtouchIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.){3}{U}{B}: Draw a card. Each opponent exiles the top card of his or her library.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "1",
         "printings": [
@@ -14071,7 +14071,7 @@
         "name": "Forerunner of Slaughter",
         "names": null,
         "number": "204",
-        "original_text": "Devoid (This card has no color.){1}: Target colorless creature gains haste until end of turn.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\n{1}: Target colorless creature gains haste until end of turn.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "3",
         "printings": [
@@ -15978,7 +15978,7 @@
         "name": "From Beyond",
         "names": [],
         "number": "167",
-        "original_text": "Devoid (This card has no color.)At the beginning of your upkeep, put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"{1}{G}, Sacrifice From Beyond: Search your library for an Eldrazi card, reveal it, put it into your hand, then shuffle your library.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nAt the beginning of your upkeep, put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"{1}{G}, Sacrifice From Beyond: Search your library for an Eldrazi card, reveal it, put it into your hand, then shuffle your library.",
         "original_type": "Enchantment",
         "power": null,
         "printings": [
@@ -17210,7 +17210,7 @@
         "name": "Grave Birthing",
         "names": [],
         "number": "93",
-        "original_text": "Devoid (This card has no color.)Target opponent exiles a card from his or her graveyard. You put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"Draw a card.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nTarget opponent exiles a card from his or her graveyard. You put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"Draw a card.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -17579,7 +17579,7 @@
         "name": "Grip of Desolation",
         "names": null,
         "number": "94",
-        "original_text": "Devoid (This card has no color.)Exile target creature and target land.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nExile target creature and target land.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -18269,7 +18269,7 @@
         "name": "Guardian of Tazeem",
         "names": null,
         "number": "78",
-        "original_text": "FlyingLandfall \u2014 Whenever a land enters the battlefield under your control, tap target creature an opponent controls. If that land is an Island, that creature doesn't untap during its controller's next untap step.",
+        "original_text": "Flying\nLandfall \u2014 Whenever a land enters the battlefield under your control, tap target creature an opponent controls. If that land is an Island, that creature doesn't untap during its controller's next untap step.",
         "original_type": "Creature \u2014 Sphinx",
         "power": "4",
         "printings": [
@@ -18452,7 +18452,7 @@
         "name": "Guul Draz Overseer",
         "names": null,
         "number": "112",
-        "original_text": "FlyingLandfall \u2014 Whenever a land enters the battlefield under your control, other creatures you control get +1/+0 until end of turn. If that land is a Swamp, those creatures get +2/+0 until end of turn instead.",
+        "original_text": "Flying\nLandfall \u2014 Whenever a land enters the battlefield under your control, other creatures you control get +1/+0 until end of turn. If that land is a Swamp, those creatures get +2/+0 until end of turn instead.",
         "original_type": "Creature \u2014 Vampire",
         "power": "3",
         "printings": [
@@ -19271,7 +19271,7 @@
         "name": "Herald of Kozilek",
         "names": null,
         "number": "205",
-        "original_text": "Devoid (This card has no color.)Colorless spells you cast cost {1} less to cast.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nColorless spells you cast cost {1} less to cast.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "2",
         "printings": [
@@ -19646,7 +19646,7 @@
         "name": "Horribly Awry",
         "names": null,
         "number": "59",
-        "original_text": "Devoid (This card has no color.)Counter target creature spell with converted mana cost 4 or less. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nCounter target creature spell with converted mana cost 4 or less. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -19832,7 +19832,7 @@
         "name": "Incubator Drone",
         "names": [],
         "number": "60",
-        "original_text": "Devoid (This card has no color.)When Incubator Drone enters the battlefield, put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhen Incubator Drone enters the battlefield, put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "2",
         "printings": [
@@ -23533,7 +23533,7 @@
         "name": "Kozilek's Sentinel",
         "names": null,
         "number": "129",
-        "original_text": "Devoid (This card has no color.)Whenever you cast a colorless spell, Kozilek's Sentinel gets +1/+0 until end of turn.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhenever you cast a colorless spell, Kozilek's Sentinel gets +1/+0 until end of turn.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "1",
         "printings": [
@@ -25422,7 +25422,7 @@
         "name": "Mind Raker",
         "names": null,
         "number": "95",
-        "original_text": "Devoid (This card has no color.)When Mind Raker enters the battlefield, you may put a card an opponent owns from exile into that player's graveyard. If you do, each opponent discards a card.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhen Mind Raker enters the battlefield, you may put a card an opponent owns from exile into that player's graveyard. If you do, each opponent discards a card.",
         "original_type": "Creature \u2014 Eldrazi Processor",
         "power": "3",
         "printings": [
@@ -25811,7 +25811,7 @@
         "name": "Mist Intruder",
         "names": null,
         "number": "61",
-        "original_text": "Devoid (This card has no color.)FlyingIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nFlyingIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "1",
         "printings": [
@@ -26000,7 +26000,7 @@
         "name": "Molten Nursery",
         "names": null,
         "number": "130",
-        "original_text": "Devoid (This card has no color.)Whenever you cast a colorless spell, Molten Nursery deals 1 damage to target creature or player.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhenever you cast a colorless spell, Molten Nursery deals 1 damage to target creature or player.",
         "original_type": "Enchantment",
         "power": null,
         "printings": [
@@ -27924,7 +27924,7 @@
         "name": "Munda, Ambush Leader",
         "names": null,
         "number": "215",
-        "original_text": "HasteRally \u2014 Whenever Munda, Ambush Leader or another Ally enters the battlefield under your control, you may look at the top four cards of your library. If you do, reveal any number of Ally cards from among them, then put those cards on top of your library in any order and the rest on the bottom in any order.",
+        "original_text": "Haste\nRally \u2014 Whenever Munda, Ambush Leader or another Ally enters the battlefield under your control, you may look at the top four cards of your library. If you do, reveal any number of Ally cards from among them, then put those cards on top of your library in any order and the rest on the bottom in any order.",
         "original_type": "Legendary Creature \u2014 Kor Ally",
         "power": "3",
         "printings": [
@@ -28275,7 +28275,7 @@
         "name": "Murk Strider",
         "names": null,
         "number": "62",
-        "original_text": "Devoid (This card has no color.)When Murk Strider enters the battlefield, you may put a card an opponent owns from exile into that player's graveyard. If you do, return target creature to its owner's hand.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhen Murk Strider enters the battlefield, you may put a card an opponent owns from exile into that player's graveyard. If you do, return target creature to its owner's hand.",
         "original_type": "Creature \u2014 Eldrazi Processor",
         "power": "3",
         "printings": [
@@ -28648,7 +28648,7 @@
         "name": "Nettle Drone",
         "names": null,
         "number": "131",
-        "original_text": "Devoid (This card has no color.){T}: Nettle Drone deals 1 damage to each opponent.Whenever you cast a colorless spell, untap Nettle Drone.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\n{T}: Nettle Drone deals 1 damage to each opponent.Whenever you cast a colorless spell, untap Nettle Drone.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "3",
         "printings": [
@@ -30402,7 +30402,7 @@
         "name": "Oracle of Dust",
         "names": null,
         "number": "63",
-        "original_text": "Devoid (This card has no color.){2}, Put a card an opponent owns from exile into that player's graveyard: Draw a card, then discard a card.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\n{2}, Put a card an opponent owns from exile into that player's graveyard: Draw a card, then discard a card.",
         "original_type": "Creature \u2014 Eldrazi Processor",
         "power": "3",
         "printings": [
@@ -31638,7 +31638,7 @@
         "name": "Pilgrim's Eye",
         "names": null,
         "number": "226",
-        "original_text": "FlyingWhen Pilgrim's Eye enters the battlefield, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.",
+        "original_text": "Flying\nWhen Pilgrim's Eye enters the battlefield, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.",
         "original_type": "Artifact Creature \u2014 Thopter",
         "power": "1",
         "printings": [
@@ -34290,7 +34290,7 @@
         "name": "Processor Assault",
         "names": null,
         "number": "132",
-        "original_text": "Devoid (This card has no color.)As an additional cost to cast Processor Assault, put a card an opponent owns from exile into that player's graveyard.Processor Assault deals 5 damage to target creature.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nAs an additional cost to cast Processor Assault, put a card an opponent owns from exile into that player's graveyard.Processor Assault deals 5 damage to target creature.",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -37494,7 +37494,7 @@
         "name": "Ruination Guide",
         "names": null,
         "number": "64",
-        "original_text": "Devoid (This card has no color.)Ingest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)Other colorless creatures you control get +1/+0.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)Other colorless creatures you control get +1/+0.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "3",
         "printings": [
@@ -38070,7 +38070,7 @@
         "name": "Salvage Drone",
         "names": null,
         "number": "65",
-        "original_text": "Devoid (This card has no color.)Ingest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)When Salvage Drone dies, you may draw a card. If you do, discard a card.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)When Salvage Drone dies, you may draw a card. If you do, discard a card.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "1",
         "printings": [
@@ -39429,7 +39429,7 @@
         "name": "Serpentine Spike",
         "names": null,
         "number": "133",
-        "original_text": "Devoid (This card has no color.)Serpentine Spike deals 2 damage to target creature, 3 damage to another target creature, and 4 damage to a third target creature. If a creature dealt damage this way would die this turn, exile it instead.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nSerpentine Spike deals 2 damage to target creature, 3 damage to another target creature, and 4 damage to a third target creature. If a creature dealt damage this way would die this turn, exile it instead.",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -40478,7 +40478,7 @@
         "name": "Silent Skimmer",
         "names": null,
         "number": "96",
-        "original_text": "Devoid (This card has no color.)FlyingWhenever Silent Skimmer attacks, defending player loses 2 life.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nFlyingWhenever Silent Skimmer attacks, defending player loses 2 life.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "0",
         "printings": [
@@ -40656,7 +40656,7 @@
         "name": "Sire of Stagnation",
         "names": null,
         "number": "206",
-        "original_text": "Devoid (This card has no color.)Whenever a land enters the battlefield under an opponent's control, that player exiles the top two cards of his or her library and you draw two cards.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhenever a land enters the battlefield under an opponent's control, that player exiles the top two cards of his or her library and you draw two cards.",
         "original_type": "Creature \u2014 Eldrazi",
         "power": "5",
         "printings": [
@@ -40845,7 +40845,7 @@
         "name": "Skitterskin",
         "names": null,
         "number": "97",
-        "original_text": "Devoid (This card has no color.)Skitterskin can't block.{1}{B}: Regenerate Skitterskin. Activate this ability only if you control another colorless creature.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nSkitterskin can't block.{1}{B}: Regenerate Skitterskin. Activate this ability only if you control another colorless creature.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "4",
         "printings": [
@@ -41208,7 +41208,7 @@
         "name": "Skyrider Elf",
         "names": null,
         "number": "220",
-        "original_text": "FlyingConverge \u2014 Skyrider Elf enters the battlefield with a +1/+1 counter on it for each color of mana spent to cast it.",
+        "original_text": "Flying\nConverge \u2014 Skyrider Elf enters the battlefield with a +1/+1 counter on it for each color of mana spent to cast it.",
         "original_type": "Creature \u2014 Elf Warrior Ally",
         "power": "0",
         "printings": [
@@ -41555,7 +41555,7 @@
         "name": "Sludge Crawler",
         "names": null,
         "number": "98",
-        "original_text": "Devoid (This card has no color.)Ingest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.){2}: Sludge Crawler gets +1/+1 until end of turn.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.){2}: Sludge Crawler gets +1/+1 until end of turn.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "1",
         "printings": [
@@ -42085,7 +42085,7 @@
         "name": "Smothering Abomination",
         "names": null,
         "number": "99",
-        "original_text": "Devoid (This card has no color.)FlyingAt the beginning of your upkeep, sacrifice a creature.Whenever you sacrifice a creature, draw a card.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nFlyingAt the beginning of your upkeep, sacrifice a creature.Whenever you sacrifice a creature, draw a card.",
         "original_type": "Creature \u2014 Eldrazi",
         "power": "4",
         "printings": [
@@ -42632,7 +42632,7 @@
         "name": "Spell Shrivel",
         "names": null,
         "number": "66",
-        "original_text": "Devoid (This card has no color.)Counter target spell unless its controller pays {4}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nCounter target spell unless its controller pays {4}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -45237,7 +45237,7 @@
         "name": "Swarm Surge",
         "names": null,
         "number": "100",
-        "original_text": "Devoid (This card has no color.)Creatures you control get +2/+0 until end of turn. Colorless creatures you control also gain first strike until end of turn.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nCreatures you control get +2/+0 until end of turn. Colorless creatures you control also gain first strike until end of turn.",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -46639,7 +46639,7 @@
         "name": "Tide Drifter",
         "names": null,
         "number": "67",
-        "original_text": "Devoid (This card has no color.)Other colorless creatures you control get +0/+1.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nOther colorless creatures you control get +0/+1.",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "0",
         "printings": [
@@ -47162,7 +47162,7 @@
         "name": "Touch of the Void",
         "names": null,
         "number": "134",
-        "original_text": "Devoid (This card has no color.)Touch of the Void deals 3 damage to target creature or player. If a creature dealt damage this way would die this turn, exile it instead.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nTouch of the Void deals 3 damage to target creature or player. If a creature dealt damage this way would die this turn, exile it instead.",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -47344,7 +47344,7 @@
         "name": "Transgress the Mind",
         "names": null,
         "number": "101",
-        "original_text": "Devoid (This card has no color.)Target player reveals his or her hand. You choose a card from it with converted mana cost 3 or greater and exile that card.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nTarget player reveals his or her hand. You choose a card from it with converted mana cost 3 or greater and exile that card.",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -47696,7 +47696,7 @@
         "name": "Turn Against",
         "names": null,
         "number": "135",
-        "original_text": "Devoid (This card has no color.)Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nGain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -48227,7 +48227,7 @@
         "name": "Ulamog's Nullifier",
         "names": null,
         "number": "207",
-        "original_text": "Devoid (This card has no color.)FlashFlyingWhen Ulamog's Nullifier enters the battlefield, you may put two cards your opponents own from exile into their owners' graveyards. If you do, counter target spell.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nFlashFlyingWhen Ulamog's Nullifier enters the battlefield, you may put two cards your opponents own from exile into their owners' graveyards. If you do, counter target spell.",
         "original_type": "Creature \u2014 Eldrazi Processor",
         "power": "2",
         "printings": [
@@ -48424,7 +48424,7 @@
         "name": "Ulamog's Reclaimer",
         "names": null,
         "number": "68",
-        "original_text": "Devoid (This card has no color.)When Ulamog's Reclaimer enters the battlefield, you may put a card an opponent owns from exile into that player's graveyard. If you do, return target instant or sorcery card from your graveyard to your hand.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhen Ulamog's Reclaimer enters the battlefield, you may put a card an opponent owns from exile into that player's graveyard. If you do, return target instant or sorcery card from your graveyard to your hand.",
         "original_type": "Creature \u2014 Eldrazi Processor",
         "power": "2",
         "printings": [
@@ -49153,7 +49153,7 @@
         "name": "Unnatural Aggression",
         "names": null,
         "number": "168",
-        "original_text": "Devoid (This card has no color.)Target creature you control fights target creature an opponent controls. If the creature an opponent controls would die this turn, exile it instead.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nTarget creature you control fights target creature an opponent controls. If the creature an opponent controls would die this turn, exile it instead.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -49846,7 +49846,7 @@
         "name": "Vestige of Emrakul",
         "names": null,
         "number": "136",
-        "original_text": "Devoid (This card has no color.)Trample",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nTrample",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "3",
         "printings": [
@@ -50211,7 +50211,7 @@
         "name": "Vile Aggregate",
         "names": null,
         "number": "137",
-        "original_text": "Devoid (This card has no color.)Vile Aggregate's power is equal to the number of colorless creatures you control.TrampleIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nVile Aggregate's power is equal to the number of colorless creatures you control.TrampleIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)",
         "original_type": "Creature \u2014 Eldrazi Drone",
         "power": "*",
         "printings": [
@@ -50404,7 +50404,7 @@
         "name": "Void Attendant",
         "names": [],
         "number": "169",
-        "original_text": "Devoid (This card has no color.){1}{G}, Put a card an opponent owns from exile into that player's graveyard: Put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"",
+        "original_text": "Devoid <i>(This card has no color.)</i>\n{1}{G}, Put a card an opponent owns from exile into that player's graveyard: Put a 1/1 colorless Eldrazi Scion creature token onto the battlefield. It has \"Sacrifice this creature: Add {1} to your mana pool.\"",
         "original_type": "Creature \u2014 Eldrazi Processor",
         "power": "2",
         "printings": [
@@ -51124,7 +51124,7 @@
         "name": "Wasteland Strangler",
         "names": null,
         "number": "102",
-        "original_text": "Devoid (This card has no color.)When Wasteland Strangler enters the battlefield, you may put a card an opponent owns from exile into that player's graveyard. If you do, target creature gets -3/-3 until end of turn.",
+        "original_text": "Devoid <i>(This card has no color.)</i>\nWhen Wasteland Strangler enters the battlefield, you may put a card an opponent owns from exile into that player's graveyard. If you do, target creature gets -3/-3 until end of turn.",
         "original_type": "Creature \u2014 Eldrazi Processor",
         "power": "3",
         "printings": [
@@ -51328,7 +51328,7 @@
         "name": "Wave-Wing Elemental",
         "names": null,
         "number": "88",
-        "original_text": "FlyingLandfall \u2014 Whenever a land enters the battlefield under your control, Wave-Wing Elemental gets +2/+2 until end of turn.",
+        "original_text": "Flying\nLandfall \u2014 Whenever a land enters the battlefield under your control, Wave-Wing Elemental gets +2/+2 until end of turn.",
         "original_type": "Creature \u2014 Elemental",
         "power": "3",
         "printings": [
@@ -51502,7 +51502,7 @@
         "name": "Windrider Patrol",
         "names": null,
         "number": "89",
-        "original_text": "FlyingWhenever Windrider Patrol deals combat damage to a player, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)",
+        "original_text": "Flying\nWhenever Windrider Patrol deals combat damage to a player, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)",
         "original_type": "Creature \u2014 Merfolk Wizard",
         "power": "4",
         "printings": [

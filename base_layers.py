@@ -111,18 +111,6 @@ class PointLayer(Layer):
     """
     def __init__(self, name, *args, **kwargs):
         super().__init__(name, 1, 1, *args, **kwargs)
-        # old_update_x_bounds = self.x.update_bounds
-        # def _new_update_x_bounds():
-        #     self.render(False)
-        #     return old_update_x_bounds(full=self.pre_render.width)
-
-        # old_update_y_bounds = self.y.update_bounds
-        # def _new_update_y_bounds():
-        #     self.render(False)
-        #     return old_update_y_bounds(full=self.pre_render.height)
-
-        # self.x.update_bounds = _new_update_x_bounds
-        # self.y.update_bounds = _new_update_y_bounds
 
     @property
     def content(self):
@@ -141,8 +129,30 @@ class PointLayer(Layer):
             self.dimensions["y"].attributes["height"] = None
 
 class ShapeLayer(Layer):
-    """A ShapeLayer's bounds are determined by the width and height set at initialization
-    and therefore requires 2 x and y bounding descriptors."""
+    """A ShapeLayer's bounds are determined by the width and height set at
+    initialization and therefore requires 2 x and y bounding descriptors."""
     def __init__(self, name, *args, **kwargs):
         super().__init__(name, 2, 2, *args, **kwargs)
+
+class XDefinedLayer(Layer):
+    """An XDefinedLayer's x coords are defined (2 are neccessary), but only y
+    coord is required."""
+    def __init__(self, name, *args, **kwargs):
+        super().__init__(name, 2, 1, *args, **kwargs)
+        self.dimensions["x"].update_bounds()
+
+    @property
+    def content(self):
+        return self._content
+
+    @content.setter
+    def content(self, value):
+        self._content = value
+        if value is not None:
+            self.pre_render = self.render(True)
+            self.dimensions["y"].attributes["height"] = NA(self.pre_render.height)
+        else:
+            self.pre_render = None
+            self.dimensions["y"].attributes["height"] = None
+
 

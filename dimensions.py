@@ -9,7 +9,7 @@ class Dimension():
         self.name = name
         self.mapping = mapping # {top: start, right: end, height: full}
         self.layer = layer
-        self.attributes = self.validate_attributes(kwargs, self.layer)
+        self.attributes = self.validate_attributes(kwargs)
         self.bounds = bounds # None if bounds is not present
 
     @property
@@ -27,7 +27,7 @@ class Dimension():
             parsed_pct = str(Bounds.parse_pct(descriptor[1:])).replace(".", "_")
             return f"P{parsed_pct}"
 
-    def validate_attributes(self, kwargs, layer):
+    def validate_attributes(self, kwargs):
         """Validates attribute keys to make sure they are valid and that the
         correct amount have been passed in."""
         attributes = {}
