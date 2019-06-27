@@ -55,7 +55,7 @@ class Bounds():
         else:
             raise InsufficientBoundsError("Not enough bounds.")
 
-        if not self.full > 0:
+        if self.full < 0:
             raise InvalidBoundsError("Full cannot be less than 0.")
 
 

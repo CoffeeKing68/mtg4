@@ -83,14 +83,10 @@ class ItalicsText(Text):
 class ManaText(Text):
     def __init__(self, string):
         super().__init__(string)
-        self.mana_string = string[1:-1]
-
-    # def getManaString(self):
-    #     return self.mana_string
+        self.mana_string = string[1:-1].replace("/", "")
 
     def getManaList(mana_list):
-        l = filter(lambda m: len(m) > 0, re.split("({.+?})", mana_list))
-        return [ManaText(m) for m in list(l)]
+        return [ManaText(m) for m in re.findall("({.+?})", mana_list)]
 
 if __name__ == "__main__":
     r = "Hexproof\nDevoid <i>(This creature has no color.)</i>\n{3}, {T}: <i>Add {U}{R} to</i> your mana pool."

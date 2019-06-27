@@ -22,11 +22,11 @@ class TestBounds():
             Bounds(start=54, end=50) # start greater than end
             Bounds(P23=40, p70=30) # 23% less than 70%
 
-    def test_descriptors_must_be_different(self):
-        with raises(InvalidBoundsError):
-            Bounds(start=23, P40_5=23) # start equal to end
-            Bounds(center=67, end=67) # center equal to end
-            Bounds(P50=40, end=40) # start equal to end
+    def test_bounds_may_have_0_full(self):
+        """Changed Bounds so that 0 width is allowed (< 0 is still illegal)."""
+        Bounds(start=23, P40_5=23) # start equal to end
+        Bounds(center=67, end=67) # center equal to end
+        Bounds(P50=40, end=40) # start equal to end
 
     def test_percent_with_decimals_after_underscore_is_valid(self):
         test_pct = "P40_5"

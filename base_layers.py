@@ -125,8 +125,8 @@ class PointLayer(Layer):
             self.dimensions["y"].attributes["height"] = NA(self.pre_render.height)
         else:
             self.pre_render = None
-            self.dimensions["x"].attributes["width"] = None
-            self.dimensions["y"].attributes["height"] = None
+            self.dimensions["x"].attributes["width"] = NA(0)
+            self.dimensions["y"].attributes["height"] = NA(0)
 
 class ShapeLayer(Layer):
     """A ShapeLayer's bounds are determined by the width and height set at
@@ -153,6 +153,6 @@ class XDefinedLayer(Layer):
             self.dimensions["y"].attributes["height"] = NA(self.pre_render.height)
         else:
             self.pre_render = None
-            self.dimensions["y"].attributes["height"] = None
+            self.dimensions["y"].attributes["height"] = NA(0)
 
 

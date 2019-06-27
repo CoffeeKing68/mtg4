@@ -11,8 +11,6 @@ from mtgpy import ManaText, Rules, Text
 
 from pprint import pprint
 
-# TODO adaptive_sharpen for ImageLayers
-
 class ColorLayer(ShapeLayer):
     """A ShapeLayer that has 1 solid color."""
     # def __init__(self, name, *args, **kwargs):
@@ -74,9 +72,10 @@ class Template(ShapeLayer):
     def render(self, fresh=False):
         image = Image(width=int(self["width"]), height=int(self["height"]))
         for layer in sorted(self.layers, key=lambda l: l.order):
-            img = layer.render()
-            if img is not None:
-                image.composite(img, left=int(layer["left"]), top=int(layer["top"]))
+            if layer.content is not None:
+                img = layer.render()
+                if img is not None:
+                    image.composite(img, left=int(layer["left"]), top=int(layer["top"]))
         return image
 
     def render_boundary(self):
@@ -110,21 +109,21 @@ class ManaCost(PointLayer):
         super().__init__(name, *args, **kwargs)
 
     def render(self, fresh=False):
-        mana_size = 35
-        mana_gap = 2
+        self.mana_size = 35
+        self.mana_gap = 2
         if not fresh and self.pre_render is not None: # if fresh is false and there is a pre_render
             return self.pre_render
         if self.content is not None:
             self.mana = ManaText.getManaList(self.content)
-            width = (len(self.mana) * (mana_gap + mana_size)) - mana_gap
-            height = mana_size
+            width = (len(self.mana) * (self.mana_gap + self.mana_size)) - self.mana_gap
+            height = self.mana_size
             img = Image(width=width, height=height)
-            offset = mana_size
+            offset = self.mana_size
             for mana in self.mana[::-1]:
                 mana_image = Image(filename=f"resources/svg/{mana.mana_string}.svg",
-                    background=Color("Transparent"), width=mana_size, height=mana_size)
+                    background=Color("Transparent"), width=self.mana_size, height=self.mana_size)
                 img.composite(mana_image, left=width-offset, top=0)
-                offset += mana_size + mana_gap
+                offset += self.mana_size + self.mana_gap
             self.pre_render = img
             img.save(filename="test_images/mana_cost.bmp")
             return img
@@ -179,9 +178,10 @@ class RulesText(XDefinedLayer):
         if self.content is None:
             raise NotReadyToRenderError(f"{self.name} is not ready to render right now.")
         self.rules = Rules(self.content)
-        self.word_gap = 3
+        self.word_gap = 5
         self.line_gap = self.size
         self.paragraph_gap = 2
+        self.mana_gap = 2
         self.x.update_bounds() # set width
         r = []
         Y = 0
@@ -218,7 +218,7 @@ class RulesText(XDefinedLayer):
                             mana_image = Image(width=self.mana_size, height=self.mana_size,
                                 filename=f"resources/svg/{text.mana_string}.svg",
                                 background=Color("Transparent"))
-                            image.composite(mana_image, left=CX, top=CY - self.mana_size)
+                            image.composite(mana_image, left=CX, top=CY - self.mana_size + 2)
                             if i < len(w) - 1 and isinstance(w[i + 1], ManaText):
                                 CX += 2
                             CX += self.mana_size

@@ -6229,7 +6229,7 @@
         "name": "Canopy Vista",
         "names": null,
         "number": "234",
-        "original_text": "({T}: Add {G} or {W} to your mana pool.)Canopy Vista enters the battlefield tapped unless you control two or more basic lands.",
+        "original_text": "<i>({T}: Add {G} or {W} to your mana pool.)</i>\nCanopy Vista enters the battlefield tapped unless you control two or more basic lands.",
         "original_type": "Land \u2014 Forest Plains",
         "power": null,
         "printings": [
