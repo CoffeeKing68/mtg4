@@ -25,7 +25,9 @@ def main():
     BELEREN = join(RESOURCE_DIR, "fonts", "Jace_Beleren_bold.ttf")
     MPLANTIN_BOLD = join(RESOURCE_DIR, "fonts", "MPlantin_bold.ttf")
     MPLANTIN_ITAL = join(RESOURCE_DIR, "fonts", "MPlantin_italic.ttf")
-    RELAY = BELEREN_SC # TODO change this to Relay Medium
+    # RELAY = BELEREN_SC = join(RESOURCE_DIR, "fonts", "Gotham_book.ttf")
+    # RELAY = BELEREN_SC = join(RESOURCE_DIR, "fonts", "Gotham.ttf")
+    RELAY = join(RESOURCE_DIR, "fonts", "Relay_medium.ttf")
     FC = "White"
 
     if os.path.isfile(JSON):
@@ -44,10 +46,7 @@ def main():
         raise ValueError("sets.json not found.")
 
     # TODO adaptive_sharpen for ImageLayers
-    # TODO Get Relay Medium font
     # TODO left = l, bottom = b, top = t, right = r
-    # TODO write render_boundary method for template
-    # TODO Ascender, Descender for text height, etc.
     # TODO Shadows for template layers
     # TODO ImageLayers (move ColorLayers into new file with Image layers)
     # TODO ({0!r}) format()
@@ -62,11 +61,16 @@ def main():
     # TODO remove pre_render probably because some layers' render depend variables other than content
     # TODO What I could do is wrap some variables eg. font, color, size (PTL) with decorator that will set layer to dirty
     # TODO If layer is dirty at render, re-render else return pre_render if it exists.
+    # TODO Don't pre_render at content set, call render when updating_bounds
+    # TODO render is a means to get width+/height and pre_render was implemented to make the process less expensive
+    # TODO pre_render doesn't actually work with TextLayers due to the nature of asc/descender
+    # TODO Ascender+Descender option for PointTextLayers
 
-    # TODO Implement template variables
     # TODO Implement predict / work_out width + height for layers as opposed to pre_render
+
     # TODO Infinite while loop when SA references layer that doesn't exist
     # TODO Template.update_bounds() infinite loop layer.x.is_bounded error
+
     # TODO Justify rules text
     # TODO RulesLayer does not join path's correctly
     # TODO Gradient, Image and Color overlay
@@ -84,7 +88,7 @@ def main():
 
     no_content_reset = {
         "bg": ColorBackgroundLayer("bg", content=Color("Black")),
-        "dot": PTL("dot", RELAY, 25, FC, content=u"\u2022", left=AA(SA("set.right"),
+        "dot": PTL("dot", RELAY, 25, FC, content=".", left=AA(SA("set.right"),
             NA(SET_DOT_LANG_WIDTH)), ycenter=SA("set.ycenter")),
         "language": PTL("language", RELAY, INFO_SIZE, FC, content="EN",
             left=AA(SA("dot.right"), NA(SET_DOT_LANG_WIDTH)), bottom=NA(HEIGHT - BORDER)),
@@ -102,7 +106,7 @@ def main():
         "number": PTL("number", RELAY, INFO_SIZE, FC, left=NA(BORDER), bottom=AA(SA("set.top"), NA(-3))),
         "rarity": PTL("rarity", RELAY, INFO_SIZE, FC, left=SA("artist_brush.left"),
             bottom=SA("number.bottom")),
-        "artist": PTL("artist", RELAY, INFO_SIZE, FC, left=AA(SA("artist_brush.right"),
+        "artist": PTL("artist", BELEREN_SC, INFO_SIZE, FC, left=AA(SA("artist_brush.right"),
             NA(3)), bottom=SA("set.bottom")),
         "mana_cost": ManaCost("mana_cost", right=NA(WIDTH-BORDER), top=NA(BORDER)),
         "rules": RulesText("rules", MPLANTIN, MPLANTIN_ITAL, RULES_TEXT_SIZE, FC,
@@ -131,9 +135,9 @@ def main():
             count = sset[0]["count"]
         layers["number"].content = f"{card['number']}/{count}"
         rarity_colors = {
-            "M": "Red",
-            "R": "Yellow",
-            "U": "Grey",
+            "M": "#D15003",
+            "R": "#DFBD6C",
+            "U": "#C8C8C8",
             "C": FC
         }
         rarity = card["rarity"][0].upper()
