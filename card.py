@@ -1,4 +1,4 @@
-from template import Template, ColorBackgroundLayer, ColorLayer, ManaCost, RulesText
+from template import Template, ColorBackgroundLayer, ColorLayer, ManaCost, RulesText, ResizeImageLayer
 from text_layers import PointTextLayer as PTL
 from attribute import StringAttribute as SA
 from attribute import NumericAttribute as NA
@@ -69,10 +69,10 @@ def main():
     # TODO Template.update_bounds() infinite loop layer.x.is_bounded error
     # TODO Justify rules text
     # TODO RulesLayer does not join path's correctly
+    # TODO Gradient, Image and Color overlay
     # TODO
 
     cards = [c for c in cards if c["name"] == "Dust Stalker"]
-    # card = [c for c in cards if c["name"] == "Dust Stalker"][0]
     BORDER = 45
     RULES_BORDER = 60
     HEIGHT = 1050
@@ -88,11 +88,11 @@ def main():
             NA(SET_DOT_LANG_WIDTH)), ycenter=SA("set.ycenter")),
         "language": PTL("language", RELAY, INFO_SIZE, FC, content="EN",
             left=AA(SA("dot.right"), NA(SET_DOT_LANG_WIDTH)), bottom=NA(HEIGHT - BORDER)),
-        "artist_brush": ColorLayer("artist_brush", content="Red", width=NA(20),
-            left=AA(MA(SA("language.right"), SA("number.right")), NA(3)), height=SA("set.height"),
-            bottom=NA(HEIGHT - BORDER)),
-        "copyright": PTL("copyright", MPLANTIN, INFO_SIZE - 5, FC, right=NA(WIDTH-BORDER),
-            bottom=SA("set.bottom")),
+        "artist_brush": ResizeImageLayer("artist_brush", content=join(RESOURCE_DIR,
+            "artist_brush_white.png"), width=NA(20), left=AA(MA(SA("language.right"),
+            SA("number.right")), NA(3)), height=SA("set.height"), bottom=NA(HEIGHT - BORDER)),
+        "copyright": PTL("copyright", MPLANTIN, INFO_SIZE - 5, FC,
+            right=NA(WIDTH-BORDER), bottom=SA("set.bottom")),
     }
     layers = {
         "name": PTL("name", BELEREN, FONT_SIZE, FC, left=NA(BORDER), top=NA(BORDER)),
@@ -102,8 +102,8 @@ def main():
         "number": PTL("number", RELAY, INFO_SIZE, FC, left=NA(BORDER), bottom=AA(SA("set.top"), NA(-3))),
         "rarity": PTL("rarity", RELAY, INFO_SIZE, FC, left=SA("artist_brush.left"),
             bottom=SA("number.bottom")),
-        "artist": PTL("artist", RELAY, INFO_SIZE, FC, left=AA(SA("artist_brush.right"), NA(3)),
-            bottom=SA("set.bottom")),
+        "artist": PTL("artist", RELAY, INFO_SIZE, FC, left=AA(SA("artist_brush.right"),
+            NA(3)), bottom=SA("set.bottom")),
         "mana_cost": ManaCost("mana_cost", right=NA(WIDTH-BORDER), top=NA(BORDER)),
         "rules": RulesText("rules", MPLANTIN, MPLANTIN_ITAL, RULES_TEXT_SIZE, FC,
             RULES_TEXT_SIZE - 4, left=NA(RULES_BORDER), right=NA(WIDTH-RULES_BORDER),
@@ -111,8 +111,8 @@ def main():
     }
     no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"
     loga = math.ceil(math.log10(len(cards)))
-    temp = Template("template", *layers.values(), *no_content_reset.values(), left=NA(0), width=NA(WIDTH),
-        top=NA(0), height=NA(HEIGHT))
+    temp = Template("template", *layers.values(), *no_content_reset.values(),
+        left=NA(0), width=NA(WIDTH), top=NA(0), height=NA(HEIGHT))
     temp.mana_image_format = "svg"
     temp.resource_dir = RESOURCE_DIR
     for i, card in enumerate(cards):

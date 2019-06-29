@@ -144,6 +144,18 @@ class ImageLayer(PointLayer):
         else:
             raise NotReadyToRenderError(f"{self.name} is not ready to render right now.")
 
+class ResizeImageLayer(ShapeLayer):
+    def render(self, fresh=False):
+        if not fresh and self.pre_render is not None: # if fresh is false and there is a pre_render
+            return self.pre_render
+        if self.content is not None:
+            img = Image(filename=self.content, background=Color("Transparent"))
+            img.resize(self["width"], self["height"])
+            self.pre_render = img
+            return img
+        else:
+            raise NotReadyToRenderError(f"{self.name} is not ready to render right now.")
+
 class RulesText(XDefinedLayer):
     def __init__(self, name, font=None, italics_font=None, size=None,
             color=None, mana_size=None, *args, **kwargs):
