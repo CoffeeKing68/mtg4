@@ -12,6 +12,7 @@ import os
 from mtgsdk import Card
 import math
 import time
+from datetime import datetime
 
 def main():
     RESOURCE_DIR = join(os.getcwd(), "resources")
@@ -47,7 +48,6 @@ def main():
     # TODO left = l, bottom = b, top = t, right = r
     # TODO write render_boundary method for template
     # TODO Ascender, Descender for text height, etc.
-    # TODO Get current year
     # TODO Shadows for template layers
     # TODO ImageLayers (move ColorLayers into new file with Image layers)
     # TODO ({0!r}) format()
@@ -63,19 +63,15 @@ def main():
     # TODO What I could do is wrap some variables eg. font, color, size (PTL) with decorator that will set layer to dirty
     # TODO If layer is dirty at render, re-render else return pre_render if it exists.
 
-    # TODO Test if svgs are better than png/jpg/bmp
-    # TODO rebuild Magick with svg delegates
     # TODO Implement template variables
     # TODO Implement predict / work_out width + height for layers as opposed to pre_render
-    # TODO If content is None, set pre_render = Image(width=0, height=0)
-    # TODO OR set bounds to {0, 0}
     # TODO Infinite while loop when SA references layer that doesn't exist
     # TODO Template.update_bounds() infinite loop layer.x.is_bounded error
     # TODO Justify rules text
     # TODO RulesLayer does not join path's correctly
     # TODO
 
-    # cards = [c for c in cards if c["name"] == "Dust Stalker"]
+    cards = [c for c in cards if c["name"] == "Dust Stalker"]
     # card = [c for c in cards if c["name"] == "Dust Stalker"][0]
     BORDER = 45
     RULES_BORDER = 60
@@ -113,10 +109,13 @@ def main():
             RULES_TEXT_SIZE - 4, left=NA(RULES_BORDER), right=NA(WIDTH-RULES_BORDER),
             bottom=AA(SA("PT.bottom"), NA(-FONT_SIZE), NA(-5))),
     }
-    current_year = 2019
-    no_content_reset["copyright"].content = f"™ & © {current_year} Wizards of the Coast"
+    no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"
     loga = math.ceil(math.log10(len(cards)))
-    for i, card in enumerate(cards[:2]):
+    temp = Template("template", *layers.values(), *no_content_reset.values(), left=NA(0), width=NA(WIDTH),
+        top=NA(0), height=NA(HEIGHT))
+    temp.mana_image_format = "svg"
+    temp.resource_dir = RESOURCE_DIR
+    for i, card in enumerate(cards):
         print(f"{i:0{loga}}/{len(cards):0{loga}} - {card['name']}", end=" ")
         start_time = time.time()
         for layer in layers.values():
@@ -143,10 +142,10 @@ def main():
 
         layers["rules"].content = card["original_text"]
 
-        temp = Template("template", *layers.values(), *no_content_reset.values(), left=NA(0), width=NA(WIDTH),
-            top=NA(0), height=NA(HEIGHT))
+
 
         temp.update_bounds()
         image = temp.render()
+        # image.composite(temp.render_boundary())
         image.save(filename=join("test_images", f"{card['name']}.bmp"))
         print(f"{time.time() - start_time:3.3f}")

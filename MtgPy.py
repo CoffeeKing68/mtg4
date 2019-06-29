@@ -88,9 +88,7 @@ class ManaText(Text):
     def getManaList(mana_list):
         return [ManaText(m) for m in re.findall("({.+?})", mana_list)]
 
-if __name__ == "__main__":
-    r = "Hexproof\nDevoid <i>(This creature has no color.)</i>\n{3}, {T}: <i>Add {U}{R} to</i> your mana pool."
-    rules = Rules(r)
-    # print(rules)
-
+# if __name__ == "__main__":
+#     r = "Hexproof\nDevoid <i>(This creature has no color.)</i>\n{3}, {T}: <i>Add {U}{R} to</i> your mana pool."
+#     rules = Rules(r)
 

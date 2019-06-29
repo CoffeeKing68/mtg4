@@ -9,7 +9,7 @@ from wand.color import Color
 from wand.drawing import Drawing
 from mtgpy import ManaText, Rules, Text
 
-from pprint import pprint
+from os.path import join
 
 class ColorLayer(ShapeLayer):
     """A ShapeLayer that has 1 solid color."""
@@ -79,7 +79,8 @@ class Template(ShapeLayer):
         return image
 
     def render_boundary(self):
-        image = Image(width=int(self["width"]), height=int(self["height"]))
+        image = Image(width=int(self["width"]), height=int(self["height"]),
+            background=Color("Transparent"))
         for layer in sorted(self.layers, key=lambda l: l.order):
             img = layer.render_boundary()
             if img is not None:
@@ -105,9 +106,6 @@ class Template(ShapeLayer):
             raise ValueError("You can only pass in layer names or layers.")
 
 class ManaCost(PointLayer):
-    def __init__(self, name, *args, **kwargs):
-        super().__init__(name, *args, **kwargs)
-
     def render(self, fresh=False):
         self.mana_size = 35
         self.mana_gap = 2
@@ -118,14 +116,19 @@ class ManaCost(PointLayer):
             width = (len(self.mana) * (self.mana_gap + self.mana_size)) - self.mana_gap
             height = self.mana_size
             img = Image(width=width, height=height)
+            antialias = False
+            img.antialias = antialias
             offset = self.mana_size
             for mana in self.mana[::-1]:
-                mana_image = Image(filename=f"resources/svg/{mana.mana_string}.svg",
-                    background=Color("Transparent"), width=self.mana_size, height=self.mana_size)
+                msrc = join(self.template.resource_dir, self.template.mana_image_format,
+                    f"{mana.mana_string}.{self.template.mana_image_format}")
+                mana_image = Image(width=self.mana_size, height=self.mana_size,
+                    background=Color("Transparent"), filename=msrc, resolution=300)
+                mana_image.antialias = antialias
                 img.composite(mana_image, left=width-offset, top=0)
                 offset += self.mana_size + self.mana_gap
+            img.save(filename=join("test_images", "no_antialias.bmp"))
             self.pre_render = img
-            img.save(filename="test_images/mana_cost.bmp")
             return img
         else:
             raise NotReadyToRenderError(f"{self.name} is not ready to render right now.")
@@ -218,6 +221,7 @@ class RulesText(XDefinedLayer):
                             mana_image = Image(width=self.mana_size, height=self.mana_size,
                                 filename=f"resources/svg/{text.mana_string}.svg",
                                 background=Color("Transparent"))
+                            mana_image.antialias = True
                             image.composite(mana_image, left=CX, top=CY - self.mana_size + 2)
                             if i < len(w) - 1 and isinstance(w[i + 1], ManaText):
                                 CX += 2

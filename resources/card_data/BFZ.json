@@ -335,7 +335,7 @@
         "name": "Akoum Firebird",
         "names": null,
         "number": "138",
-        "original_text": "Flying, haste\nAkoum Firebird attacks each turn if able.Landfall \u2014 Whenever a land enters the battlefield under your control, you may pay {4}{R}{R}. If you do, return Akoum Firebird from your graveyard to the battlefield.",
+        "original_text": "Flying, haste\nAkoum Firebird attacks each turn if able.\nLandfall \u2014 Whenever a land enters the battlefield under your control, you may pay {4}{R}{R}. If you do, return Akoum Firebird from your graveyard to the battlefield.",
         "original_type": "Creature \u2014 Phoenix",
         "power": "3",
         "printings": [
@@ -16183,7 +16183,7 @@
         "name": "Geyserfield Stalker",
         "names": null,
         "number": "111",
-        "original_text": "Menace (This creature can't be blocked except by two or more creatures.)Landfall \u2014 Whenever a land enters the battlefield under your control, Geyserfield Stalker gets +2/+2 until end of turn.",
+        "original_text": "Menace <i>(This creature can't be blocked except by two or more creatures.)</i>\nLandfall \u2014 Whenever a land enters the battlefield under your control, Geyserfield Stalker gets +2/+2 until end of turn.",
         "original_type": "Creature \u2014 Elemental",
         "power": "3",
         "printings": [
@@ -16213,7 +16213,7 @@
             "Elemental"
         ],
         "supertypes": [],
-        "text": "Menace (This creature can't be blocked except by two or more creatures.)\nLandfall \u2014 Whenever a land enters the battlefield under your control, Geyserfield Stalker gets +2/+2 until end of turn.",
+        "text": "Menace <i>(This creature can't be blocked except by two or more creatures.)</i>\nLandfall \u2014 Whenever a land enters the battlefield under your control, Geyserfield Stalker gets +2/+2 until end of turn.",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Elemental",
@@ -17765,7 +17765,7 @@
         "name": "Grove Rumbler",
         "names": null,
         "number": "211",
-        "original_text": "TrampleLandfall \u2014 Whenever a land enters the battlefield under your control, Grove Rumbler gets +2/+2 until end of turn.",
+        "original_text": "Trample\nLandfall \u2014 Whenever a land enters the battlefield under your control, Grove Rumbler gets +2/+2 until end of turn.",
         "original_type": "Creature \u2014 Elemental",
         "power": "3",
         "printings": [
@@ -21986,7 +21986,7 @@
         "name": "Jaddi Offshoot",
         "names": null,
         "number": "176",
-        "original_text": "DefenderLandfall \u2014 Whenever a land enters the battlefield under your control, you gain 1 life.",
+        "original_text": "Defender\nLandfall \u2014 Whenever a land enters the battlefield under your control, you gain 1 life.",
         "original_type": "Creature \u2014 Plant",
         "power": "0",
         "printings": [
@@ -24910,7 +24910,7 @@
         "name": "Makindi Sliderunner",
         "names": null,
         "number": "148",
-        "original_text": "TrampleLandfall \u2014 Whenever a land enters the battlefield under your control, Makindi Sliderunner gets +1/+1 until end of turn.",
+        "original_text": "Trample\nLandfall \u2014 Whenever a land enters the battlefield under your control, Makindi Sliderunner gets +1/+1 until end of turn.",
         "original_type": "Creature \u2014 Beast",
         "power": "2",
         "printings": [
@@ -30042,7 +30042,7 @@
         "name": "Ondu Greathorn",
         "names": null,
         "number": "40",
-        "original_text": "First strikeLandfall \u2014 Whenever a land enters the battlefield under your control, Ondu Greathorn gets +2/+2 until end of turn.",
+        "original_text": "First strike\nLandfall \u2014 Whenever a land enters the battlefield under your control, Ondu Greathorn gets +2/+2 until end of turn.",
         "original_type": "Creature \u2014 Beast",
         "power": "2",
         "printings": [
@@ -30601,7 +30601,7 @@
         "name": "Oran-Rief Hydra",
         "names": null,
         "number": "181",
-        "original_text": "TrampleLandfall \u2014 Whenever a land enters the battlefield under your control, put a +1/+1 counter on Oran-Rief Hydra. If that land is a Forest, put two +1/+1 counters on Oran-Rief Hydra instead.",
+        "original_text": "Trample\nLandfall \u2014 Whenever a land enters the battlefield under your control, put a +1/+1 counter on Oran-Rief Hydra. If that land is a Forest, put two +1/+1 counters on Oran-Rief Hydra instead.",
         "original_type": "Creature \u2014 Hydra",
         "power": "5",
         "printings": [
@@ -39968,7 +39968,7 @@
         "name": "Shatterskull Recruit",
         "names": null,
         "number": "155",
-        "original_text": "Menace (This creature can't be blocked except by two or more creatures.)",
+        "original_text": "Menace <i>(This creature can't be blocked except by two or more creatures.)</i>",
         "original_type": "Creature \u2014 Giant Warrior Ally",
         "power": "4",
         "printings": [
@@ -39987,7 +39987,7 @@
             "Ally"
         ],
         "supertypes": [],
-        "text": "Menace (This creature can't be blocked except by two or more creatures.)",
+        "text": "Menace <i>(This creature can't be blocked except by two or more creatures.)</i>",
         "timeshifted": null,
         "toughness": "4",
         "type": "Creature \u2014 Giant Warrior Ally",

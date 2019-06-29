@@ -60,14 +60,19 @@ class Layer(ABC):
 
     def render_boundary(self):
         """Draws a rectangle around bounds."""
-        img = Image(width=int(self.parent["width"]), background=Color("None"),
-            height=int(self.parent["height"]))
+        img = Image(width=int(self.parent["width"]),
+            height=int(self.parent["height"]), background=Color("Transparent"))
         with Drawing() as draw:
             draw.stroke_width = 1
             draw.stroke_color = Color("Red")
             draw.fill_color = Color("None")
-            draw.rectangle(left=self["left"], width=self["width"],
-                top=self["top"], height=self["height"])
+            draw.rectangle(left=int(self["left"]), width=int(self["width"]),
+                top=int(self["top"]), height=int(self["height"]))
+            draw(img)
+        with Drawing() as draw:
+            draw.fill_color = Color("Black")
+            draw.font_size = 14
+            draw.text(int(self["left"] + 1), int(self["top"] + self["height"] + 1), self.name)
             draw(img)
         img.trim()
         return img
