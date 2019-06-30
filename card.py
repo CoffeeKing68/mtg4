@@ -1,4 +1,4 @@
-from template import Template, ColorBackgroundLayer, ColorLayer, ManaCost, RulesText
+from template import Template, ColorBackgroundLayer, ColorLayer, ManaCost, RulesText, ImageLayer
 from template import ResizeImageLayer as ResizeIL
 from template import FillImageLayer as FillIL
 # from template import FitImageLayer as FitIL
@@ -30,8 +30,6 @@ def main():
     BELEREN = join(RESOURCE_DIR, "fonts", "Jace_Beleren_bold.ttf")
     MPLANTIN_BOLD = join(RESOURCE_DIR, "fonts", "MPlantin_bold.ttf")
     MPLANTIN_ITAL = join(RESOURCE_DIR, "fonts", "MPlantin_italic.ttf")
-    # RELAY = BELEREN_SC = join(RESOURCE_DIR, "fonts", "Gotham_book.ttf")
-    # RELAY = BELEREN_SC = join(RESOURCE_DIR, "fonts", "Gotham.ttf")
     RELAY = join(RESOURCE_DIR, "fonts", "Relay_medium.ttf")
     FC = "White"
 
@@ -53,10 +51,13 @@ def main():
     """Nice to haves"""
     # TODO adaptive_sharpen for ImageLayers
     # TODO left = l, bottom = b, top = t, right = r
+    # TODO Justify rules text
+    # TODO Gradient, Image and Color overlay
 
     # TODO Shadows for template layers
     # TODO ImageLayers (move ColorLayers into new file with Image layers)
     # TODO Change Text to use caption in render_boundary()
+    # TODO Realtime time counter
     # TODO
 
     """Need to do"""
@@ -75,17 +76,23 @@ def main():
 
     # TODO Implement predict / work_out width + height for layers as opposed to pre_render
 
+    # TODO Bug with RulesText see Blighted Gorge
+
     """Can't replicate"""
     # TODO Infinite while loop when SA references layer that doesn't exist
     # TODO Template.update_bounds() infinite loop layer.x.is_bounded error
-
-    # TODO Justify rules text
-    # TODO Gradient, Image and Color overlay
-    # TODO Lands confuse algo, no manacost
+    """ AddAttribute
+    Weird behaviour here, with other FunctionAttributes setting ev should
+    take place outside of try.except, but not AddAttribute.Pytest passes
+    either way, so should write some more tests.
+    """
     # TODO
 
-    # cards = [c for c in cards if c["name"] == "Deathless Behemoth"]
-    cards = [c for c in cards if c["name"] == "Grovetender Druids"]
+    # cards = cards[:20]
+    # cards = [c for c in cards if c["name"] == "Dust Stalker"]
+    # cards = [c for c in cards if c["name"] == "Canopy Vista"]
+    cards = [c for c in cards if c["name"] == "Blighted Gorge"]
+    # cards = [c for c in cards if c["name"] == "Mountain"]
     BORDER = 45
     RULES_BORDER = 60
     HEIGHT = 1050
@@ -132,7 +139,7 @@ def main():
     temp.mana_image_format = "svg"
     temp.resource_dir = RESOURCE_DIR
     for i, card in enumerate(cards):
-        print(f"{i:0{loga}}/{len(cards):0{loga}} - {card['name']}", end=" ")
+        print(f"{i:0{loga}}/{len(cards)-1:0{loga}} - {card['name']}", end=" ")
         start_time = time.time()
         for layer in layers.values():
             layer.content = None
@@ -169,5 +176,6 @@ def main():
         temp.update_bounds()
         image = temp.render()
         # image.composite(temp.render_boundary())
-        image.save(filename=join("test_images", f"{card['name']}.bmp"))
+        # image.save(filename=join("test_images", f"{card['name']}.bmp"))
+        image.save(filename=join("test_images", f"proto.bmp"))
         print(f"{time.time() - start_time:3.3f}")

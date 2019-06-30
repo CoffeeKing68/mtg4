@@ -54,10 +54,8 @@ class Bounds():
             self.full = (bval - value) / (bpct - pct) * 100
         else:
             raise InsufficientBoundsError("Not enough bounds.")
-
         if self.full < 0:
             raise InvalidBoundsError("Full cannot be less than 0.")
-
 
         self.end = (1 - pct / 100) * self.full + value
         self.start = value - pct * self.full / 100

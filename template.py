@@ -157,6 +157,7 @@ class ResizeImageLayer(ShapeLayer):
     @content.setter
     def content(self, value):
         self._content = value
+        # super(ShapeLayer, type(self)).content.fset(self, value)
         if value is None:
             self.initial_width = self.initial_height = 0
         else:

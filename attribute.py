@@ -108,6 +108,16 @@ class FunctionAttribute(Attribute):
         self.absolute = absolute
         self.evaluated_value = None
 
+    def print_map(self):
+        l = []
+        for attr in self.attrs:
+            attr.evaluate()
+            if isinstance(attr, FunctionAttribute):
+                l.append([attr, attr.print_map()])
+            else:
+                l.append(attr)
+        return l
+
     @property
     def dimension(self):
         return self._dimension
@@ -157,12 +167,15 @@ class FunctionAttribute(Attribute):
 
 class AddAttribute(FunctionAttribute):
     def evaluate(self):
+        """Weird behaviour here, with other FunctionAttributes setting ev should
+        take place outside of try.except, but not AddAttribute.Pytest passes
+        either way, so should write some more tests."""
         try:
             super().evaluate()
             self.evaluated_value = sum(attr.evaluated_value for attr in self.attrs)
+            return self.last_pass()
         except:
             return None
-        return self.last_pass()
 
     def __short_class_name__(self):
         return "AddAttr"
@@ -171,10 +184,10 @@ class MaxAttribute(FunctionAttribute):
     def evaluate(self):
         try:
             super().evaluate()
+            self.evaluated_value = max(attr.evaluated_value for attr in self.attrs)
+            return self.last_pass()
         except:
             return None
-        self.evaluated_value = max(attr.evaluated_value for attr in self.attrs)
-        return self.last_pass()
 
     def __short_class_name__(self):
         return "MaxAttr"
@@ -183,10 +196,10 @@ class MinAttribute(FunctionAttribute):
     def evaluate(self):
         try:
             super().evaluate()
+            self.evaluated_value = min(attr.evaluated_value for attr in self.attrs)
+            return self.last_pass()
         except:
             return None
-        self.evaluated_value = min(attr.evaluated_value for attr in self.attrs)
-        return self.last_pass()
 
     def __short_class_name__(self):
         return "MinAttr"
@@ -195,11 +208,14 @@ class DivideAttribute(FunctionAttribute):
     def evaluate(self):
         try:
             super().evaluate()
+            if any(a.evaluated_value == 0 for a in self.attrs): # avoid div / 0
+                self.evaluated_value = 0
+            else:
+                self.evaluated_value = reduce((lambda x, y: x / y),
+                    [a.evaluated_value for a in self.attrs])
+            return self.last_pass()
         except:
             return None
-        self.evaluated_value = reduce((lambda x, y: x / y),
-            [a.evaluated_value for a in self.attrs])
-        return self.last_pass()
 
     def __short_class_name__(self):
         return "DivAttr"
@@ -208,11 +224,11 @@ class MultiplyAttribute(FunctionAttribute):
     def evaluate(self):
         try:
             super().evaluate()
+            self.evaluated_value = reduce((lambda x, y: x * y),
+                [a.evaluated_value for a in self.attrs])
+            return self.last_pass()
         except:
             return None
-        self.evaluated_value = reduce((lambda x, y: x * y),
-            [a.evaluated_value for a in self.attrs])
-        return self.last_pass()
 
     def __short_class_name__(self):
         return "MulAttr"
