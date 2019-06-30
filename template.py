@@ -3,6 +3,10 @@ from text_layers import PointTextLayer
 from attribute import StringAttribute as SA
 from attribute import NumericAttribute as NA
 from attribute import AddAttribute as AA
+from attribute import MaxAttribute as MaxA
+from attribute import MinAttribute as MinA
+from attribute import MultiplyAttribute as MulA
+from attribute import DivideAttribute as DivA
 
 from wand.image import Image
 from wand.color import Color
@@ -13,9 +17,6 @@ from os.path import join
 
 class ColorLayer(ShapeLayer):
     """A ShapeLayer that has 1 solid color."""
-    # def __init__(self, name, *args, **kwargs):
-    #     super().__init__(name, **kwargs)
-
     def render(self, fresh=False):
         if fresh and self.pre_render is not None:
             return self.pre_render
@@ -145,6 +146,7 @@ class ImageLayer(PointLayer):
             raise NotReadyToRenderError(f"{self.name} is not ready to render right now.")
 
 class ResizeImageLayer(ShapeLayer):
+    """Image will be resized to the provided width and height."""
     @property
     def content(self):
         return self._content
@@ -176,6 +178,26 @@ class ResizeImageLayer(ShapeLayer):
             return self.initial_height
         else:
             return super().__getitem__(key)
+
+class FitImageLayer(ResizeImageLayer):
+    """Sets width and height to fit in shape defined by width and height.
+    The ratio of the image is respected."""
+    def __init__(self, name, *args, width=None, height=None, **kwargs):
+        initial_width = SA("self.initial_width")
+        initial_height = SA("self.initial_height")
+        ratio_attr = MinA(DivA(width, initial_width), DivA(height, initial_height))
+        super().__init__(name, *args, width=MulA(initial_width, ratio_attr),
+            height=MulA(initial_height, ratio_attr), **kwargs)
+
+class FillImageLayer(ResizeImageLayer):
+    """Sets width and height to fill shape defined by width and height.
+    The ratio of the image is respected."""
+    def __init__(self, name, *args, width=None, height=None, **kwargs):
+        initial_width = SA("self.initial_width")
+        initial_height = SA("self.initial_height")
+        ratio_attr = MaxA(DivA(width, initial_width), DivA(height, initial_height))
+        super().__init__(name, *args, width=MulA(initial_width, ratio_attr),
+            height=MulA(initial_height, ratio_attr), **kwargs)
 
 class RulesText(XDefinedLayer):
     def __init__(self, name, font=None, italics_font=None, size=None,

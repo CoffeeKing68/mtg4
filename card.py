@@ -1,5 +1,7 @@
 from template import Template, ColorBackgroundLayer, ColorLayer, ManaCost, RulesText
 from template import ResizeImageLayer as ResizeIL
+from template import FillImageLayer as FillIL
+# from template import FitImageLayer as FitIL
 from text_layers import PointTextLayer as PTL
 from attribute import StringAttribute as SA
 from attribute import NumericAttribute as NA
@@ -58,10 +60,6 @@ def main():
     # TODO
 
     """Need to do"""
-    # TODO fit > adjust till image fits within boundary
-    # TODO fill > adjust so that image leaves no gaps
-    # TODO strech fill > adjust so that no gaps (ratio not respected)
-
     # TODO test to see if pre_render function is worth the hassle
 
     # TODO remove pre_render probably because some layers' render depend variables other than content
@@ -70,8 +68,8 @@ def main():
     # TODO Don't pre_render at content set, call render when updating_bounds
     # TODO render is a means to get width+/height and pre_render was implemented to make the process less expensive
     # TODO pre_render doesn't actually work with TextLayers due to the nature of asc/descender
-    # TODO Ascender+Descender option for PointTextLayers
-    # TODO layer.dirty_boundary would be necessary for render_shadow + color/gradient/image overlay
+    # TODO Ascender + Descender option for PointTextLayers
+    # TODO layer.dirty_bounds would be necessary for render_shadow + color/gradient/image overlay
     # TODO layer.dirty_bounds and layer.dirty_content
     # TODO How will dirty work with templates + parents
 
@@ -121,12 +119,9 @@ def main():
         "rules": RulesText("rules", MPLANTIN, MPLANTIN_ITAL, RULES_TEXT_SIZE, FC,
             RULES_TEXT_SIZE - 4, left=NA(RULES_BORDER), right=NA(WIDTH-RULES_BORDER),
             bottom=AA(SA("PT.bottom"), NA(-FONT_SIZE), NA(-5))),
+        "art": FillIL("art", order=-1, XP50=NA(WIDTH / 2), top=NA(0),
+            width=NA(WIDTH), height=NA(HEIGHT))
     }
-    initial_width = SA("self.initial_width")
-    initial_height = SA("self.initial_height")
-    ratio_attr = MA(DA(NA(WIDTH), initial_width), DA(NA(HEIGHT), initial_height))
-    layers["art"] = ResizeIL("art", order=-1, XP50=NA(WIDTH / 2), top=NA(0),
-        width=MUA(initial_width, ratio_attr), height=MUA(initial_height, ratio_attr))
 
     no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"
     loga = math.ceil(math.log10(len(cards)))
