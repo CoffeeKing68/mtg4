@@ -79,11 +79,12 @@ def main():
     # TODO Template.update_bounds() infinite loop layer.x.is_bounded error
 
     # TODO Justify rules text
-    # TODO RulesLayer does not join path's correctly
     # TODO Gradient, Image and Color overlay
+    # TODO Lands confuse algo, no manacost
     # TODO
 
-    cards = [c for c in cards if c["name"] == "Dust Stalker"]
+    # cards = [c for c in cards if c["name"] == "Deathless Behemoth"]
+    cards = [c for c in cards if c["name"] == "Grovetender Druids"]
     BORDER = 45
     RULES_BORDER = 60
     HEIGHT = 1050

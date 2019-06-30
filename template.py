@@ -107,9 +107,12 @@ class Template(ShapeLayer):
             raise ValueError("You can only pass in layer names or layers.")
 
 class ManaCost(PointLayer):
+    def __init__(self, name, *args, mana_size=35, mana_gap=2, **kwargs):
+        self.mana_size = mana_size
+        self.mana_gap = mana_gap
+        super().__init__(name, *args, **kwargs)
+
     def render(self, fresh=False):
-        self.mana_size = 35
-        self.mana_gap = 2
         if not fresh and self.pre_render is not None: # if fresh is false and there is a pre_render
             return self.pre_render
         if self.content is not None:
@@ -201,12 +204,17 @@ class FillImageLayer(ResizeImageLayer):
 
 class RulesText(XDefinedLayer):
     def __init__(self, name, font=None, italics_font=None, size=None,
-            color=None, mana_size=None, *args, **kwargs):
+            color=None, mana_size=None, line_gap=None, word_gap=5, mana_gap=2,
+            paragraph_gap=2, *args, **kwargs):
         self.font = font
         self.italics_font = italics_font
         self.size = size
         self.color = color
         self.mana_size = mana_size
+        self.word_gap = word_gap
+        self.line_gap = size if line_gap is None else line_gap
+        self.paragraph_gap = paragraph_gap
+        self.mana_gap = mana_gap
         super().__init__(name, *args, **kwargs)
 
     def get_word_width(self, word):
@@ -236,10 +244,6 @@ class RulesText(XDefinedLayer):
         if self.content is None:
             raise NotReadyToRenderError(f"{self.name} is not ready to render right now.")
         self.rules = Rules(self.content)
-        self.word_gap = 5
-        self.line_gap = self.size
-        self.paragraph_gap = 2
-        self.mana_gap = 2
         self.x.update_bounds() # set width
         r = []
         Y = 0
@@ -274,7 +278,9 @@ class RulesText(XDefinedLayer):
                         if isinstance(text, ManaText):
                             # not last text item in word and next text is mana
                             mana_image = Image(width=self.mana_size, height=self.mana_size,
-                                filename=f"resources/svg/{text.mana_string}.svg",
+                                filename=join(self.template.resource_dir,
+                                    self.template.mana_image_format,
+                                    f"{text.mana_string}.{self.template.mana_image_format}"),
                                 background=Color("Transparent"))
                             mana_image.antialias = True
                             image.composite(mana_image, left=CX, top=CY - self.mana_size + 2)

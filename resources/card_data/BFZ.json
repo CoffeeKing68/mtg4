@@ -6784,7 +6784,7 @@
         "name": "Chasm Guide",
         "names": null,
         "number": "143",
-        "original_text": "Rally \u2014 Whenever Chasm Guide or another Ally enters the battlefield under your control, creatures you control gain haste until end of turn.",
+        "original_text": "<i>Rally</i> \u2014 Whenever Chasm Guide or another Ally enters the battlefield under your control, creatures you control gain haste until end of turn.",
         "original_type": "Creature \u2014 Goblin Scout Ally",
         "power": "3",
         "printings": [
@@ -9168,7 +9168,7 @@
                 "language": "French",
                 "multiverseid": 403050,
                 "name": "B\u00e9h\u00e9moth imp\u00e9rissable",
-                "text": "VigilanceSacrifiez deux eldrazi et scion : Renvoyez le B\u00e9h\u00e9moth imp\u00e9rissable depuis votre cimeti\u00e8re dans votre main. N'activez cette capacit\u00e9 que lorsque vous pourriez lancer un rituel."
+                "text": "Vigilance\nSacrifiez deux eldrazi et scion : Renvoyez le B\u00e9h\u00e9moth imp\u00e9rissable depuis votre cimeti\u00e8re dans votre main. N'activez cette capacit\u00e9 que lorsque vous pourriez lancer un rituel."
             },
             {
                 "flavor": "\"Di volta in volta continuava a rialzarsi. Di volta in volta continuavamo a cadere.\"\u2014Ganda, disertore di Goma Fada",
@@ -9268,7 +9268,7 @@
         "name": "Deathless Behemoth",
         "names": null,
         "number": "5",
-        "original_text": "VigilanceSacrifice two Eldrazi Scions: Return Deathless Behemoth from your graveyard to your hand. Activate this ability only any time you could cast a sorcery.",
+        "original_text": "Vigilance\nSacrifice two Eldrazi Scions: Return Deathless Behemoth from your graveyard to your hand. Activate this ability only any time you could cast a sorcery.",
         "original_type": "Creature \u2014 Eldrazi",
         "power": "6",
         "printings": [
@@ -13555,7 +13555,7 @@
         "name": "Felidar Sovereign",
         "names": null,
         "number": "26",
-        "original_text": "Vigilance, lifelinkAt the beginning of your upkeep, if you have 40 or more life, you win the game.",
+        "original_text": "Vigilance, lifelink\nAt the beginning of your upkeep, if you have 40 or more life, you win the game.",
         "original_type": "Creature \u2014 Cat Beast",
         "power": "4",
         "printings": [
@@ -13896,7 +13896,7 @@
         "name": "Firemantle Mage",
         "names": null,
         "number": "145",
-        "original_text": "Rally \u2014 Whenever Firemantle Mage or another Ally enters the battlefield under your control, creatures you control gain menace until end of turn. (A creature with menace can't be blocked except by two or more creatures.)",
+        "original_text": "<i>Rally</i> \u2014 Whenever Firemantle Mage or another Ally enters the battlefield under your control, creatures you control gain menace until end of turn. (A creature with menace can't be blocked except by two or more creatures.)",
         "original_type": "Creature \u2014 Human Shaman Ally",
         "power": "2",
         "printings": [
@@ -17941,7 +17941,7 @@
         "name": "Grovetender Druids",
         "names": [],
         "number": "212",
-        "original_text": "Rally \u2014 Whenever Grovetender Druids or another Ally enters the battlefield under your control, you may pay {1}. If you do, put a 1/1 green Plant creature token onto the battlefield.",
+        "original_text": "<i>Rally</i> \u2014 Whenever Grovetender Druids or another Ally enters the battlefield under your control, you may pay {1}. If you do, put a 1/1 green Plant creature token onto the battlefield.",
         "original_type": "Creature \u2014 Elf Druid Ally",
         "power": "3",
         "printings": [
@@ -19474,7 +19474,7 @@
         "name": "Hero of Goma Fada",
         "names": null,
         "number": "31",
-        "original_text": "Rally \u2014 Whenever Hero of Goma Fada or another Ally enters the battlefield under your control, creatures you control gain indestructible until end of turn.",
+        "original_text": "<i>Rally</i> \u2014 Whenever Hero of Goma Fada or another Ally enters the battlefield under your control, creatures you control gain indestructible until end of turn.",
         "original_type": "Creature \u2014 Human Knight Ally",
         "power": "4",
         "printings": [
@@ -22165,7 +22165,7 @@
         "name": "Kalastria Healer",
         "names": null,
         "number": "114",
-        "original_text": "Rally \u2014 Whenever Kalastria Healer or another Ally enters the battlefield under your control, each opponent loses 1 life and you gain 1 life.",
+        "original_text": "<i>Rally</i> \u2014 Whenever Kalastria Healer or another Ally enters the battlefield under your control, each opponent loses 1 life and you gain 1 life.",
         "original_type": "Creature \u2014 Vampire Cleric Ally",
         "power": "1",
         "printings": [
@@ -22858,7 +22858,7 @@
         "name": "Kor Bladewhirl",
         "names": null,
         "number": "34",
-        "original_text": "Rally \u2014 Whenever Kor Bladewhirl or another Ally enters the battlefield under your control, creatures you control gain first strike until end of turn.",
+        "original_text": "<i>Rally</i> \u2014 Whenever Kor Bladewhirl or another Ally enters the battlefield under your control, creatures you control gain first strike until end of turn.",
         "original_type": "Creature \u2014 Kor Soldier Ally",
         "power": "2",
         "printings": [
@@ -23198,7 +23198,7 @@
         "name": "Kor Entanglers",
         "names": null,
         "number": "36",
-        "original_text": "Rally \u2014 Whenever Kor Entanglers or another Ally enters the battlefield under your control, tap target creature an opponent controls.",
+        "original_text": "<i>Rally</i> \u2014 Whenever Kor Entanglers or another Ally enters the battlefield under your control, tap target creature an opponent controls.",
         "original_type": "Creature \u2014 Kor Soldier Ally",
         "power": "3",
         "printings": [
@@ -23716,7 +23716,7 @@
         "name": "Lantern Scout",
         "names": null,
         "number": "37",
-        "original_text": "Rally \u2014 Whenever Lantern Scout or another Ally enters the battlefield under your control, creatures you control gain lifelink until end of turn.",
+        "original_text": "<i>Rally</i> \u2014 Whenever Lantern Scout or another Ally enters the battlefield under your control, creatures you control gain lifelink until end of turn.",
         "original_type": "Creature \u2014 Human Scout Ally",
         "power": "3",
         "printings": [
@@ -24730,7 +24730,7 @@
         "name": "Makindi Patrol",
         "names": null,
         "number": "39",
-        "original_text": "Rally \u2014 Whenever Makindi Patrol or another Ally enters the battlefield under your control, creatures you control gain vigilance until end of turn.",
+        "original_text": "<i>Rally</i> \u2014 Whenever Makindi Patrol or another Ally enters the battlefield under your control, creatures you control gain vigilance until end of turn.",
         "original_type": "Creature \u2014 Human Knight Ally",
         "power": "2",
         "printings": [
@@ -29866,7 +29866,7 @@
         "name": "Ondu Champion",
         "names": null,
         "number": "149",
-        "original_text": "Rally \u2014 Whenever Ondu Champion or another Ally enters the battlefield under your control, creatures you control gain trample until end of turn.",
+        "original_text": "<i>Rally</i> \u2014 Whenever Ondu Champion or another Ally enters the battlefield under your control, creatures you control gain trample until end of turn.",
         "original_type": "Creature \u2014 Minotaur Warrior Ally",
         "power": "4",
         "printings": [
@@ -35210,7 +35210,7 @@
         "name": "Resolute Blademaster",
         "names": null,
         "number": "218",
-        "original_text": "Rally \u2014 Whenever Resolute Blademaster or another Ally enters the battlefield under your control, creatures you control gain double strike until end of turn.",
+        "original_text": "<i>Rally</i> \u2014 Whenever Resolute Blademaster or another Ally enters the battlefield under your control, creatures you control gain double strike until end of turn.",
         "original_type": "Creature \u2014 Human Soldier Ally",
         "power": "2",
         "printings": [
@@ -45752,7 +45752,7 @@
         "name": "Tajuru Beastmaster",
         "names": null,
         "number": "193",
-        "original_text": "Rally \u2014 Whenever Tajuru Beastmaster or another Ally enters the battlefield under your control, creatures you control get +1/+1 until end of turn.",
+        "original_text": "<i>Rally</i> \u2014 Whenever Tajuru Beastmaster or another Ally enters the battlefield under your control, creatures you control get +1/+1 until end of turn.",
         "original_type": "Creature \u2014 Elf Warrior Ally",
         "power": "5",
         "printings": [
@@ -46112,7 +46112,7 @@
         "name": "Tajuru Warcaller",
         "names": null,
         "number": "195",
-        "original_text": "Rally \u2014 Whenever Tajuru Warcaller or another Ally enters the battlefield under your control, creatures you control get +2/+2 until end of turn.",
+        "original_text": "<i>Rally</i> \u2014 Whenever Tajuru Warcaller or another Ally enters the battlefield under your control, creatures you control get +2/+2 until end of turn.",
         "original_type": "Creature \u2014 Elf Warrior Ally",
         "power": "2",
         "printings": [
