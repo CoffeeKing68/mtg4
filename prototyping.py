@@ -1,15 +1,14 @@
 from wand.image import Image
 from wand.color import Color
+from wand.drawing import Drawing
 
 WIDTH = 100
 
-image = Image(filename="resources/svg/B.svg", background=Color("Transparent"),
-        width=WIDTH, height=WIDTH)
-image2 = Image(filename="resources/svg/B.svg", background=Color("Transparent"),
-        resolution=300, width=WIDTH, height=WIDTH)
-image.antialias = True
-image2.antialias = True
-print(image.size)
-print(image2.size)
-image.save(filename="test.png")
-image2.save(filename="test_res_300.png")
+# image = Image(filename="resources/art/BFZ/Dust Stalker.jpg", background=Color("Transparent"),
+#         width=WIDTH, height=WIDTH)
+image = Image(width=WIDTH, height=WIDTH, background=Color("Red"))
+with Drawing() as draw:
+    draw.fill_color = Color("Green")
+    draw.rectangle(left=5, right=94, top=5, bottom=94)
+    draw(image)
+image.save(filename="prototype.png")

@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from re import match
+from functools import reduce
 from exceptions import NotBoundedError, NotReadyToEvaluate
 
 class Attribute(ABC):
@@ -178,6 +179,44 @@ class MaxAttribute(FunctionAttribute):
     def __short_class_name__(self):
         return "MaxAttr"
 
+class MinAttribute(FunctionAttribute):
+    def evaluate(self):
+        try:
+            super().evaluate()
+        except:
+            return None
+        self.evaluated_value = min(attr.evaluated_value for attr in self.attrs)
+        return self.last_pass()
+
+    def __short_class_name__(self):
+        return "MinAttr"
+
+class DivideAttribute(FunctionAttribute):
+    def evaluate(self):
+        try:
+            super().evaluate()
+        except:
+            return None
+        self.evaluated_value = reduce((lambda x, y: x / y),
+            [a.evaluated_value for a in self.attrs])
+        return self.last_pass()
+
+    def __short_class_name__(self):
+        return "DivAttr"
+
+class MultiplyAttribute(FunctionAttribute):
+    def evaluate(self):
+        try:
+            super().evaluate()
+        except:
+            return None
+        self.evaluated_value = reduce((lambda x, y: x * y),
+            [a.evaluated_value for a in self.attrs])
+        return self.last_pass()
+
+    def __short_class_name__(self):
+        return "MulAttr"
+
 class StringAttribute(Attribute):
     """
     eg. <>.<left/xcenter/right/width/
@@ -195,6 +234,8 @@ class StringAttribute(Attribute):
                 layer = llayer.parent
             elif l == "template" and llayer.template is not None:
                 layer = llayer.template
+            elif l == "self":
+                layer = self.dimension.layer
             else:
                 template = llayer.template
                 if llayer.template is None:
@@ -238,11 +279,13 @@ class NumericAttribute(Attribute):
                 attr = str(abs(attr))
             else:
                 attr = str(attr)
+        elif isinstance(attr, float):
+            attr = str(attr)
         super().__init__(attr, *args, **kwargs)
 
     def evaluate(self):
         if self.evaluated_value is None:
-            self.evaluated_value = int(self.attr)
+            self.evaluated_value = float(self.attr)
             return self.evaluated_value
         else:
             return self.evaluated_value

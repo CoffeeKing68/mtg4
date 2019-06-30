@@ -1,9 +1,12 @@
-from template import Template, ColorBackgroundLayer, ColorLayer, ManaCost, RulesText, ResizeImageLayer
+from template import Template, ColorBackgroundLayer, ColorLayer, ManaCost, RulesText
+from template import ResizeImageLayer as ResizeIL
 from text_layers import PointTextLayer as PTL
 from attribute import StringAttribute as SA
 from attribute import NumericAttribute as NA
 from attribute import AddAttribute as AA
 from attribute import MaxAttribute as MA
+from attribute import DivideAttribute as DA
+from attribute import MultiplyAttribute as MUA
 from wand.color import Color
 
 import json
@@ -45,13 +48,16 @@ def main():
     else:
         raise ValueError("sets.json not found.")
 
+    """Nice to haves"""
     # TODO adaptive_sharpen for ImageLayers
     # TODO left = l, bottom = b, top = t, right = r
+
     # TODO Shadows for template layers
     # TODO ImageLayers (move ColorLayers into new file with Image layers)
-    # TODO ({0!r}) format()
-    # TODO composite images over transparent (see boundary template test)
+    # TODO Change Text to use caption in render_boundary()
+    # TODO
 
+    """Need to do"""
     # TODO fit > adjust till image fits within boundary
     # TODO fill > adjust so that image leaves no gaps
     # TODO strech fill > adjust so that no gaps (ratio not respected)
@@ -65,6 +71,9 @@ def main():
     # TODO render is a means to get width+/height and pre_render was implemented to make the process less expensive
     # TODO pre_render doesn't actually work with TextLayers due to the nature of asc/descender
     # TODO Ascender+Descender option for PointTextLayers
+    # TODO layer.dirty_boundary would be necessary for render_shadow + color/gradient/image overlay
+    # TODO layer.dirty_bounds and layer.dirty_content
+    # TODO How will dirty work with templates + parents
 
     # TODO Implement predict / work_out width + height for layers as opposed to pre_render
 
@@ -84,7 +93,7 @@ def main():
     SET_DOT_LANG_WIDTH = 5
     INFO_SIZE = 18
     FONT_SIZE = 40
-    RULES_TEXT_SIZE = 22
+    RULES_TEXT_SIZE = 25
 
     no_content_reset = {
         "bg": ColorBackgroundLayer("bg", content=Color("Black")),
@@ -92,7 +101,7 @@ def main():
             NA(SET_DOT_LANG_WIDTH)), ycenter=SA("set.ycenter")),
         "language": PTL("language", RELAY, INFO_SIZE, FC, content="EN",
             left=AA(SA("dot.right"), NA(SET_DOT_LANG_WIDTH)), bottom=NA(HEIGHT - BORDER)),
-        "artist_brush": ResizeImageLayer("artist_brush", content=join(RESOURCE_DIR,
+        "artist_brush": ResizeIL("artist_brush", content=join(RESOURCE_DIR,
             "artist_brush_white.png"), width=NA(20), left=AA(MA(SA("language.right"),
             SA("number.right")), NA(3)), height=SA("set.height"), bottom=NA(HEIGHT - BORDER)),
         "copyright": PTL("copyright", MPLANTIN, INFO_SIZE - 5, FC,
@@ -113,6 +122,12 @@ def main():
             RULES_TEXT_SIZE - 4, left=NA(RULES_BORDER), right=NA(WIDTH-RULES_BORDER),
             bottom=AA(SA("PT.bottom"), NA(-FONT_SIZE), NA(-5))),
     }
+    initial_width = SA("self.initial_width")
+    initial_height = SA("self.initial_height")
+    ratio_attr = MA(DA(NA(WIDTH), initial_width), DA(NA(HEIGHT), initial_height))
+    layers["art"] = ResizeIL("art", order=-1, XP50=NA(WIDTH / 2), top=NA(0),
+        width=MUA(initial_width, ratio_attr), height=MUA(initial_height, ratio_attr))
+
     no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"
     loga = math.ceil(math.log10(len(cards)))
     temp = Template("template", *layers.values(), *no_content_reset.values(),
@@ -144,9 +159,15 @@ def main():
         layers["rarity"].color = rarity_colors[rarity]
         layers["rarity"].content = rarity
 
-        layers["rules"].content = card["original_text"]
+        rules = ""
+        if card["original_text"] is not None:
+            rules = card["original_text"]
+        if card["flavor"] is not None:
+            rules += f"\n<i>{card['flavor']}</i>"
 
-
+        layers["rules"].content = rules
+        art_path = join(RESOURCE_DIR, "art", card["set"], f"{card['name']}.jpg")
+        layers["art"].content = art_path if os.path.isfile(art_path) else None
 
         temp.update_bounds()
         image = temp.render()
