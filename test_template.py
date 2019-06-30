@@ -47,7 +47,4 @@ class TestTemplateLayer():
         boundary = temp.render_boundary()
         # boundary.save(filename="test_images/test_template_can_render_boundary_b.png")
         image = temp.render()
-        # image.save(filename="test_images/test_template_can_render_boundary_r.png")
-        # boundary.composite(image)
-        # image.save(filename="test_images/test_template_can_render_boundary_c.png")
 

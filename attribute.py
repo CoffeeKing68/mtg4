@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from re import match
 from functools import reduce
-from exceptions import NotBoundedError, NotReadyToEvaluate
+from exceptions import NotBoundedError, NotReadyToEvaluateError, LayerDoesNotExistError
 
 class Attribute(ABC):
     negative_char = "-"
@@ -251,6 +251,8 @@ class StringAttribute(Attribute):
                         if key == attr and attribute.is_evaluated:
                             self.evaluated_value = attribute.evaluated_value
                             return self.evaluated_value
+            except TypeError:
+                raise LayerDoesNotExistError(f"{l} does not exist in template {template.name}")
         else:
             return self.evaluated_value
 

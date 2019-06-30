@@ -75,6 +75,7 @@ def main():
 
     # TODO Implement predict / work_out width + height for layers as opposed to pre_render
 
+    """Can't replicate"""
     # TODO Infinite while loop when SA references layer that doesn't exist
     # TODO Template.update_bounds() infinite loop layer.x.is_bounded error
 
@@ -120,7 +121,7 @@ def main():
         "rules": RulesText("rules", MPLANTIN, MPLANTIN_ITAL, RULES_TEXT_SIZE, FC,
             RULES_TEXT_SIZE - 4, left=NA(RULES_BORDER), right=NA(WIDTH-RULES_BORDER),
             bottom=AA(SA("PT.bottom"), NA(-FONT_SIZE), NA(-5))),
-        "art": FillIL("art", order=-1, XP50=NA(WIDTH / 2), top=NA(0),
+        "art": FillIL("art", order=-5, XP50=NA(WIDTH / 2), top=NA(0),
             width=NA(WIDTH), height=NA(HEIGHT))
     }
 
