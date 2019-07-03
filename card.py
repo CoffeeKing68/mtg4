@@ -18,6 +18,8 @@ from mtgsdk import Card
 import math
 import time
 from datetime import datetime
+from elapsed_time import ElapsedTimeThread
+from termcolor import colored
 
 def main():
     RESOURCE_DIR = join(os.getcwd(), "resources")
@@ -38,7 +40,7 @@ def main():
     else:
         raise ValueError("sets.json not found.")
 
-    myset = "UST"
+    myset = "GRN"
     JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
 
     """make directory in art"""
@@ -75,7 +77,6 @@ def main():
     # TODO Shadows for template layers
     # TODO ImageLayers (move ColorLayers into new file with Image layers)
     # TODO Change Text to use caption in render_boundary()
-    # TODO Realtime time counter
     # TODO change he or she to they
     # TODO check each card if text == original_text
     # TODO Experiment with method to unset attributes evaluated_values
@@ -165,9 +166,15 @@ def main():
         left=NA(0), width=NA(WIDTH), top=NA(0), height=NA(HEIGHT))
     temp.mana_image_format = "svg"
     temp.resource_dir = RESOURCE_DIR
+    max_card_length = max([len(c) for c in cards])
+    row = f"| {{:0{loga}}}/{{:0{loga}}} | {{: <{max_card_length}}} | {{}} | {{:07.3f}} |"
+    total = 0
+
     for i, card in enumerate(cards):
-        print(f"{i:0{loga}}/{len(cards)-1:0{loga}} - {card['name']}", end=" ")
         start_time = time.time()
+        # thread = ElapsedTimeThread(i, len(cards) - 1, card['name'], row)
+        # thread.start()
+
         for layer in layers.values():
             layer.content = None
             layer.pre_render = None
@@ -180,9 +187,6 @@ def main():
         sset = [s for s in sets if s['code'] == card['set']]
         if len(sset) == 1:
             count = sset[0]["count"]
-        # try:
-        #     number = int(card['number'])
-        # except:
         number = card['number'].upper().zfill(loga)
         layers["number"].content = f"{number}/{count}"
         rarity_colors = {
@@ -209,7 +213,17 @@ def main():
 
         temp.update_bounds()
         image = temp.render(fresh=False)
-        # image.composite(temp.render_boundary())
-        # image.save(filename=join("test_images", f"{card['name']}.bmp"))
         image.save(filename=join("test_images", "all_render", card['set'], f"{card['name']}.bmp"))
-        print(f"{time.time() - start_time:3.3f}")
+        # thread.stop()
+        # thread.join()
+        delta = time.time() - start_time
+        total += delta
+        if delta < .250:
+            color = "green"
+        elif delta < .500:
+            color = "yellow"
+        else:
+            color = "red"
+        print(f"\r{row}".format(i, len(cards) - 1, colored(card['name'], color),
+            colored(f"{delta:03.3f}", color), total))
+
