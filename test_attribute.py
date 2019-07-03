@@ -46,15 +46,20 @@ class TestStringAttribute():
 
     def test_exception_raised_if_no_existant_layer_is_referenced_in_SA(self):
         with pytest.raises(LayerDoesNotExistError):
-            pt = PTL("test", "Arial", 15, "Black", content="Hello", left=NA(0), top=NA(0))
+            pt = PTL("test", "Arial", 15, "Black", content="Hello", left=NA(0),
+                top=NA(0))
             sq = ColorLayer("square", content="Red", left=NA(0),
-                top=SA("doesnotexist.bottom"), width=NA(20), height=NA(20))
+                top=SA("test.bottom"), width=NA(20), height=NA(20))
             bg = ColorBackgroundLayer("bg", content="Green")
-            temp2 = Template("temp2", sq, bg, left=NA(0), width=NA(25), top=NA(0),
-                height=NA(25))
-            temp = Template("temp", pt, temp2, left=NA(0), width=NA(30), top=NA(0), height=NA(30))
+            bg2 = ColorBackgroundLayer("bg2", content="White")
+            temp2 = Template("temp2", sq, bg, left=NA(0), width=NA(25),
+                top=NA(0), height=NA(25))
+            temp = Template("temp", pt, bg2, temp2, left=NA(0), width=NA(100),
+                top=NA(0), height=NA(100))
             temp.update_bounds()
-            # temp
+            # from pprint import pprint
+            # pprint(temp.get_layer("temp2").__dict__)
+            temp.render().save(filename="test_images/test_exception_raised_if_no_existant_layer_is_referenced_in_SA.png")
 
 class TestNumericAttribute():
     def test_can_make_numeric_attribute(self):

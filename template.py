@@ -56,25 +56,38 @@ class Template(ShapeLayer):
             l.template = self
         self._layers = layers
 
+    @property
+    def are_layers_bounded(self):
+        return all(l.is_bounded for l in self.layers)
+
     def update_bounds(self):
         tries = 0
+        def update_dimensions(layer):
+            should_reset = False
+            for dim in layer.dimensions.values():
+                bounded_before = dim.is_bounded
+                # if not bounded_before:
+                dim.update_bounds()
+                if dim.is_bounded and not bounded_before:
+                    should_reset = True
+            return should_reset
+
         while tries < 3:
             tries += 1
-            snbx, snby = not self.x.is_bounded, not self.y.is_bounded
-            super().update_bounds()
-            if snbx and self.x.is_bounded or snby and self.x.is_bounded:
-                tries = 0 # started not bounded, but now x/y bounded
+            if update_dimensions(self):
+                tries = 0
             for l in self.layers:
-                nbx, nby = not l.x.is_bounded, not l.y.is_bounded
-                l.update_bounds()
-                if nbx and l.x.is_bounded or nby and l.x.is_bounded:
-                    tries = 0
+                if isinstance(l, Template):
+                    l.update_bounds()
+                else:
+                    if update_dimensions(l):
+                        tries = 0
 
     def render(self, fresh=False):
         image = Image(width=int(self["width"]), height=int(self["height"]))
         for layer in sorted(self.layers, key=lambda l: l.order):
             if layer.content is not None:
-                img = layer.render()
+                img = layer.render(fresh)
                 if img is not None:
                     image.composite(img, left=int(layer["left"]), top=int(layer["top"]))
         return image
@@ -228,7 +241,7 @@ class RulesText(XDefinedLayer):
                     WW += self.mana_gap
             else:
                 WW += self.get_text_width(text)
-            return WW
+        return WW
 
     def get_text_width(self, text):
         with Drawing() as draw:
@@ -302,7 +315,9 @@ class RulesText(XDefinedLayer):
                                 CX += tw
                 CY += self.line_gap
             CY += self.paragraph_gap
+        image.save(filename="test_images/proto_bef_trim.png")
         image.trim()
+        image.save(filename="test_images/proto_aft_trim.png")
         self.pre_render = image
         return image
 

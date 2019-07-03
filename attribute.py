@@ -53,7 +53,7 @@ class Attribute(ABC):
             try:
                 ev = self.negate(ev)
                 ev = self.absolutify(ev)
-            except NotReadyToEvaluate:
+            except NotReadyToEvaluateError:
                 return None
         return ev
 
@@ -137,6 +137,7 @@ class FunctionAttribute(Attribute):
         self._evaluated_value = value
 
     def evaluate(self):
+        self.evaluated_value = None
         for attr in self.attrs:
             attr.evaluate()
 
@@ -243,7 +244,8 @@ class StringAttribute(Attribute):
         XP<pct>, YP<pct>
     """
     def evaluate(self):
-        if self.evaluated_value is None:
+        # if self.evaluated_value is None:
+        if True: # TODO this change may be very expensive
             l, attr = self.attr.split(".")
             llayer = self.dimension.layer
             if l == "parent" and llayer.parent is not None:
@@ -302,7 +304,8 @@ class NumericAttribute(Attribute):
         super().__init__(attr, *args, **kwargs)
 
     def evaluate(self):
-        if self.evaluated_value is None:
+        # if self.evaluated_value is None:
+        if True: # TODO this change my be expensive
             self.evaluated_value = float(self.attr)
             return self.evaluated_value
         else:

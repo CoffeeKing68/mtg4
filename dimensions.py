@@ -59,6 +59,9 @@ class Dimension():
             raise NotEvaluatedError(f"Layer {self.layer.name}'s attributes can't be evaluated right now")
 
     def update_bounds(self, **kwargs):
+        # for attr in self.attributes.values(): # unset attribute_ev
+        #     attr.evaluated_value = None
+        self.bounds = None
         try:
             bounds = self.attributes_to_bounds()
             self.bounds = Bounds(**bounds, **kwargs)

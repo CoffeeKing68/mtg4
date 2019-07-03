@@ -3,5 +3,13 @@
         "code": "BFZ",
         "name": "Battle for Zendikar",
         "count": 299
+    },
+    {
+        "code": "GRN",
+        "count": 259
+    },
+    {
+        "code": "UST",
+        "count": 268
     }
 ]

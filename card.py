@@ -21,7 +21,6 @@ from datetime import datetime
 
 def main():
     RESOURCE_DIR = join(os.getcwd(), "resources")
-    JSON = join(RESOURCE_DIR, "card_data", "BFZ.json")
     SETS = join(RESOURCE_DIR, "card_data", "sets.json")
     TEST_DIR = "test_images"
 
@@ -33,31 +32,58 @@ def main():
     RELAY = join(RESOURCE_DIR, "fonts", "Relay_medium.ttf")
     FC = "White"
 
-    if os.path.isfile(JSON):
-        with open(JSON, "r") as f:
-            cards = json.load(f)
-    else:
-        raise ValueError("No json found.")
-        # print("Downloading cards")
-        # cards = [c.__dict__ for c in Card.where(name="Doom Whisperer").all()]
-        # with open(JSON, "w") as f:
-        #     json.dump(cards, f, sort_keys=True, indent=4)
     if os.path.isfile(SETS):
         with open(SETS, "r") as f:
             sets = json.load(f)
     else:
         raise ValueError("sets.json not found.")
 
+    myset = "UST"
+    JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
+
+    """make directory in art"""
+    if not os.path.isdir(join(RESOURCE_DIR, "art", myset)): # dir does not exist
+        os.mkdir(join(RESOURCE_DIR, "art", myset))
+    """make directory in render dir"""
+    if not os.path.isdir(join("test_images", "all_render", myset)): # dir does not exist
+        os.mkdir(join("test_images", "all_render", myset))
+    """download set data"""
+    if os.path.isfile(JSON): # load cards if card data exists
+        with open(JSON, "r") as f:
+            cards = json.load(f)
+    else:
+        # raise ValueError("No json found.")
+        print(f"Downloading cards for {myset}")
+        cards = [c.__dict__ for c in Card.where(set=myset).all()]
+        with open(JSON, "w") as f:
+            json.dump(cards, f, sort_keys=True, indent=4)
+    """Add set count to sets.json if it does not exist"""
+    if myset not in [s["code"] for s in sets]:
+        sets.append({
+            "code": myset,
+            "count": len(set(card['id'] for card in cards))
+        })
+        with open(SETS, "w") as f:
+            json.dump(sets, f, indent=4)
+
     """Nice to haves"""
     # TODO adaptive_sharpen for ImageLayers
     # TODO left = l, bottom = b, top = t, right = r
-    # TODO Justify rules text
+    # TODO Justify rules text (MTG stretches text so that it fits better)
     # TODO Gradient, Image and Color overlay
 
     # TODO Shadows for template layers
     # TODO ImageLayers (move ColorLayers into new file with Image layers)
     # TODO Change Text to use caption in render_boundary()
     # TODO Realtime time counter
+    # TODO change he or she to they
+    # TODO check each card if text == original_text
+    # TODO Experiment with method to unset attributes evaluated_values
+    # TODO \u0106 does not have a character in BELEREN_SMALL_CAPS
+    # TODO
+    """The evaluate method on FunctionAttribute does not know when to return
+    evaluated_value and when not. A function to clear them (bounds not neccessary
+    but can be treated the same for extra efficiency)"""
     # TODO
 
     """Need to do"""
@@ -76,8 +102,6 @@ def main():
 
     # TODO Implement predict / work_out width + height for layers as opposed to pre_render
 
-    # TODO Bug with RulesText see Blighted Gorge
-
     """Can't replicate"""
     # TODO Infinite while loop when SA references layer that doesn't exist
     # TODO Template.update_bounds() infinite loop layer.x.is_bounded error
@@ -88,10 +112,12 @@ def main():
     """
     # TODO
 
-    # cards = cards[:20]
-    # cards = [c for c in cards if c["name"] == "Dust Stalker"]
+    # gap = 20
+    # i = 3
+    # cards = cards[gap * i:gap * i + 20]
+    # cards = [c for c in cards if c["name"] == "Complete Disregard"]
     # cards = [c for c in cards if c["name"] == "Canopy Vista"]
-    cards = [c for c in cards if c["name"] == "Blighted Gorge"]
+    # cards = [c for c in cards if c["name"] == "Blighted Gorge"]
     # cards = [c for c in cards if c["name"] == "Mountain"]
     BORDER = 45
     RULES_BORDER = 60
@@ -118,6 +144,7 @@ def main():
         "name": PTL("name", BELEREN, FONT_SIZE, FC, left=NA(BORDER), top=NA(BORDER)),
         "type": PTL("type", BELEREN, FONT_SIZE, FC, left=NA(BORDER), bottom=AA(SA("rules.top"), NA(-5))),
         "PT": PTL("PT", BELEREN, FONT_SIZE, FC, right=NA(WIDTH - BORDER), bottom=SA("rarity.bottom")),
+        "loyalty": PTL("loyalty", BELEREN, FONT_SIZE, FC, right=NA(WIDTH - BORDER), bottom=SA("rarity.bottom")),
         "set": PTL("set", RELAY, INFO_SIZE, FC, left=NA(BORDER), bottom=NA(HEIGHT - BORDER)),
         "number": PTL("number", RELAY, INFO_SIZE, FC, left=NA(BORDER), bottom=AA(SA("set.top"), NA(-3))),
         "rarity": PTL("rarity", RELAY, INFO_SIZE, FC, left=SA("artist_brush.left"),
@@ -143,6 +170,7 @@ def main():
         start_time = time.time()
         for layer in layers.values():
             layer.content = None
+            layer.pre_render = None
             if layer.name in card:
                 layer.content = card[layer.name]
 
@@ -152,30 +180,36 @@ def main():
         sset = [s for s in sets if s['code'] == card['set']]
         if len(sset) == 1:
             count = sset[0]["count"]
-        layers["number"].content = f"{card['number']}/{count}"
+        # try:
+        #     number = int(card['number'])
+        # except:
+        number = card['number'].upper().zfill(loga)
+        layers["number"].content = f"{number}/{count}"
         rarity_colors = {
             "M": "#D15003",
             "R": "#DFBD6C",
             "U": "#C8C8C8",
-            "C": FC
+            "C": FC,
+            "L": FC,
         }
         rarity = card["rarity"][0].upper()
         layers["rarity"].color = rarity_colors[rarity]
         layers["rarity"].content = rarity
 
         rules = ""
-        if card["original_text"] is not None:
-            rules = card["original_text"]
+        text_to_use = "original_text"
+        if card[text_to_use] is not None:
+            rules = card[text_to_use]
         if card["flavor"] is not None:
-            rules += f"\n<i>{card['flavor']}</i>"
+            rules += "".join([f"\n<i>{f}</i>" for f in card['flavor'].split('\n')])
 
         layers["rules"].content = rules
         art_path = join(RESOURCE_DIR, "art", card["set"], f"{card['name']}.jpg")
         layers["art"].content = art_path if os.path.isfile(art_path) else None
 
         temp.update_bounds()
-        image = temp.render()
+        image = temp.render(fresh=False)
         # image.composite(temp.render_boundary())
         # image.save(filename=join("test_images", f"{card['name']}.bmp"))
-        image.save(filename=join("test_images", f"proto.bmp"))
+        image.save(filename=join("test_images", "all_render", card['set'], f"{card['name']}.bmp"))
         print(f"{time.time() - start_time:3.3f}")
