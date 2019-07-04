@@ -83,6 +83,11 @@ class Template(ShapeLayer):
                     if update_dimensions(l):
                         tries = 0
 
+    def unset_bounds_and_attributes(self):
+        super().unset_bounds_and_attributes()
+        for l in self.layers:
+            l.unset_bounds_and_attributes()
+
     def render(self, fresh=False):
         image = Image(width=int(self["width"]), height=int(self["height"]))
         for layer in sorted(self.layers, key=lambda l: l.order):

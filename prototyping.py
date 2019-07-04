@@ -6,45 +6,21 @@ import time
 import threading
 from terminaltables import AsciiTable
 from elapsed_time import ElapsedTimeThread
-
-import os
-cards = os.listdir(os.path.join(os.getcwd(), "resources", "targets", "cards"))
+from template import Template
+from template import ColorBackgroundLayer as CBL
+from template import ResizeImageLayer as ResizeIL
+from text_layers import PointTextLayer as PTL
+from attributes import StringAttribute as SA
+from attributes import NumericAttribute as NA
+from attributes import AddAttribute as AA
 
 if __name__ == "__main__":
-    loga = 3
-    max_card_length = max([len(c) for c in cards])
-    row = f"| {{:0{loga}}}/{{:0{loga}}} | {{: <{max_card_length}}} | {{:.3f}} |"
-    for i, card in enumerate(cards):
-        # print(f"Iteration: {i} ", end="", flush=True)
-        start = time.time()
-        thread = ElapsedTimeThread(i, len(cards) - 1, card, row)
-        thread.start()
-        # do something
-        time.sleep(1)
-        # something is finished so stop the thread
-        thread.stop()
-        thread.join()
-        print() # empty print() to output a newline
-# WIDTH = 100
-
-# import json
-# JSON = "resources/card_data/GRN.json"
-# with open(JSON, "r") as f:
-#     cards = json.load(f)
-
-# print(len(cards))
-# print(len(set(card['name'] for card in cards)))
-# print(len(set(card['id'] for card in cards)))
-
-# with open(JSON, "r") as f:
-#     cards = json.load(f)
-
-# gap = 50
-# i = 0
-# for i, card in enumerate(cards[i * gap:(i + 1) * gap]):
-#     if card["text"] != card["original_text"]:
-#         print(i, card["name"])
-#         print(card["text"])
-#         print(card["original_text"])
-
-
+    # WIDTH = 200
+    # HEIGHT = 200
+    # artist_brush = ResizeIL("artist_brush", content=join(RESOURCE_DIR, "artist_brush_white.png"),
+    #     width=NA(20), left=NA(0), height=SA("set.height"), bottom=SA("parent.bottom"),
+    # artist = PTL("artist", BELEREN_SC, INFO_SIZE, FC, left=AA(SA("artist_brush.right"),
+    #         NA(3)), bottom=SA("parent.bottom")),
+    # bg = CBL("bg", content="Red")
+    # artist_temp = Template("artist_temp", artist_brush, artist, xcenter=NA(WIDTH/2)
+    #     )

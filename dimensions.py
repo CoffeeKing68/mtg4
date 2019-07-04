@@ -59,15 +59,24 @@ class Dimension():
             raise NotEvaluatedError(f"Layer {self.layer.name}'s attributes can't be evaluated right now")
 
     def update_bounds(self, **kwargs):
-        # for attr in self.attributes.values(): # unset attribute_ev
-        #     attr.evaluated_value = None
-        self.bounds = None
-        try:
-            bounds = self.attributes_to_bounds()
-            self.bounds = Bounds(**bounds, **kwargs)
+        if not self.is_bounded:
+            try:
+                bounds = self.attributes_to_bounds()
+                self.bounds = Bounds(**bounds, **kwargs)
+                return self.bounds
+            except NotEvaluatedError:
+                pass
+        else:
             return self.bounds
-        except NotEvaluatedError:
-            pass
+
+    # def update_bounds_if_neccessary(self, **kwargs):
+    #     self.update_bounds(**kwargs)
+
+    # def full_reset_bounds(self, **kwargs):
+    #     for attr in self.attributes.values(): # unset attribute_ev
+    #         attr.unset_evaluated_value()
+    #     self.bounds = None
+    #     self.update_bounds(**kwargs)
 
     @property
     def is_bounded(self):

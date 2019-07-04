@@ -7,7 +7,7 @@ from attribute import StringAttribute as SA
 from attribute import NumericAttribute as NA
 from attribute import AddAttribute as AA
 from attribute import MaxAttribute as MA
-from attribute import DivideAttribute as DA
+from attribute import DivideAttribute as DivA
 from attribute import MultiplyAttribute as MUA
 from wand.color import Color
 
@@ -40,7 +40,7 @@ def main():
     else:
         raise ValueError("sets.json not found.")
 
-    myset = "GRN"
+    myset = "BFZ"
     JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
 
     """make directory in art"""
@@ -77,8 +77,6 @@ def main():
     # TODO Shadows for template layers
     # TODO ImageLayers (move ColorLayers into new file with Image layers)
     # TODO Change Text to use caption in render_boundary()
-    # TODO change he or she to they
-    # TODO check each card if text == original_text
     # TODO Experiment with method to unset attributes evaluated_values
     # TODO \u0106 does not have a character in BELEREN_SMALL_CAPS
     # TODO
@@ -101,8 +99,6 @@ def main():
     # TODO layer.dirty_bounds and layer.dirty_content
     # TODO How will dirty work with templates + parents
 
-    # TODO Implement predict / work_out width + height for layers as opposed to pre_render
-
     """Can't replicate"""
     # TODO Infinite while loop when SA references layer that doesn't exist
     # TODO Template.update_bounds() infinite loop layer.x.is_bounded error
@@ -113,9 +109,9 @@ def main():
     """
     # TODO
 
-    # gap = 20
-    # i = 3
-    # cards = cards[gap * i:gap * i + 20]
+    gap = 20
+    i = 0
+    cards = cards[gap * i:gap * i + gap]
     # cards = [c for c in cards if c["name"] == "Complete Disregard"]
     # cards = [c for c in cards if c["name"] == "Canopy Vista"]
     # cards = [c for c in cards if c["name"] == "Blighted Gorge"]
@@ -129,15 +125,18 @@ def main():
     FONT_SIZE = 40
     RULES_TEXT_SIZE = 25
 
+    la = AA(MA(SA("language.right"), SA("number.right")), NA(3))
+    lmiddle = AA(NA(WIDTH/2),
+        DivA(AA(SA("artist_brush.width"), NA(3), SA("artist.width")), NA(2),
+            negative=True))
     no_content_reset = {
         "bg": ColorBackgroundLayer("bg", content=Color("Black")),
         "dot": PTL("dot", RELAY, 25, FC, content=".", left=AA(SA("set.right"),
             NA(SET_DOT_LANG_WIDTH)), ycenter=SA("set.ycenter")),
         "language": PTL("language", RELAY, INFO_SIZE, FC, content="EN",
             left=AA(SA("dot.right"), NA(SET_DOT_LANG_WIDTH)), bottom=NA(HEIGHT - BORDER)),
-        "artist_brush": ResizeIL("artist_brush", content=join(RESOURCE_DIR,
-            "artist_brush_white.png"), width=NA(20), left=AA(MA(SA("language.right"),
-            SA("number.right")), NA(3)), height=SA("set.height"), bottom=NA(HEIGHT - BORDER)),
+        "artist_brush": ResizeIL("artist_brush", content=join(RESOURCE_DIR, "artist_brush_white.png"),
+            width=NA(20), left=lmiddle, height=SA("set.height"), bottom=NA(HEIGHT - BORDER)),
         "copyright": PTL("copyright", MPLANTIN, INFO_SIZE - 5, FC,
             right=NA(WIDTH-BORDER), bottom=SA("set.bottom")),
     }
@@ -161,13 +160,14 @@ def main():
     }
 
     no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"
+    # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} WOTC"
     loga = math.ceil(math.log10(len(cards)))
     temp = Template("template", *layers.values(), *no_content_reset.values(),
         left=NA(0), width=NA(WIDTH), top=NA(0), height=NA(HEIGHT))
     temp.mana_image_format = "svg"
     temp.resource_dir = RESOURCE_DIR
-    max_card_length = max([len(c) for c in cards])
-    row = f"| {{:0{loga}}}/{{:0{loga}}} | {{: <{max_card_length}}} | {{}} | {{:07.3f}} |"
+    max_card_length = max(len(c['name']) for c in cards)
+    row = f"| {{:0{loga}}}/{{:0{loga}}} | {{}} | {{}} | {{:07.3f}} |"
     total = 0
 
     for i, card in enumerate(cards):
@@ -175,7 +175,8 @@ def main():
         # thread = ElapsedTimeThread(i, len(cards) - 1, card['name'], row)
         # thread.start()
 
-        for layer in layers.values():
+        for name in layers:
+            layer = temp.get_layer(name)
             layer.content = None
             layer.pre_render = None
             if layer.name in card:
@@ -188,7 +189,7 @@ def main():
         if len(sset) == 1:
             count = sset[0]["count"]
         number = card['number'].upper().zfill(loga)
-        layers["number"].content = f"{number}/{count}"
+        layers["number"].content = f"{number}/{count:0{loga}}"
         rarity_colors = {
             "M": "#D15003",
             "R": "#DFBD6C",
@@ -214,8 +215,10 @@ def main():
         temp.update_bounds()
         image = temp.render(fresh=False)
         image.save(filename=join("test_images", "all_render", card['set'], f"{card['name']}.bmp"))
+        temp.unset_bounds_and_attributes()
         # thread.stop()
         # thread.join()
+
         delta = time.time() - start_time
         total += delta
         if delta < .250:
@@ -224,6 +227,6 @@ def main():
             color = "yellow"
         else:
             color = "red"
-        print(f"\r{row}".format(i, len(cards) - 1, colored(card['name'], color),
+        print(f"\r{row}".format(i, len(cards) - 1, colored(f"{card['name']: <{max_card_length}}", color),
             colored(f"{delta:03.3f}", color), total))
 

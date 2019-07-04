@@ -48,8 +48,14 @@ class Layer(ABC):
 
     @property
     def is_bounded(self):
-        print(dim.is_bounded for dim in self.dimensions.values())
         return all(dim.is_bounded for dim in self.dimensions.values())
+
+    def unset_bounds_and_attributes(self):
+        """Method responsible for unsetting evaluated values."""
+        for dim in self.dimensions.values():
+            dim.bounds = None
+            for attributes in dim.attributes.values():
+                attributes.unset_evaluated_value()
 
     def update_bounds(self):
         return [dim.update_bounds() for dim in self.dimensions.values()]

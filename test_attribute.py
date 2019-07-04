@@ -1,6 +1,6 @@
 from attribute import StringAttribute as SA
 from attribute import NumericAttribute as NA
-from attribute import AddAttribute as AddA
+from attribute import AddAttribute as AA
 from attribute import MaxAttribute as MinA
 from template import Template, ColorLayer, ColorBackgroundLayer
 from text_layers import PointTextLayer as PTL
@@ -61,6 +61,27 @@ class TestStringAttribute():
             # pprint(temp.get_layer("temp2").__dict__)
             temp.render().save(filename="test_images/test_exception_raised_if_no_existant_layer_is_referenced_in_SA.png")
 
+    def test_can_unset_an_attributes_evaluated_value(self):
+        """
+        This test won't work because the bounds of pt are not reset before l1's
+        attribute is evaluated. The Layer.reset_bounds must reset bounds and unset
+        attributes.
+        """
+        pt = PTL("ptl", "", 15, "", content="H", left=NA(0), top=NA(0))
+        l1 = ColorLayer("l1", content="Blue", left=AA(SA("ptl.right"), NA(1)), height=NA(20),
+            right=SA("parent.right"), top=SA("parent.top"))
+        temp = Template("temp", l1, pt,  left=NA(0), top=NA(0), width=NA(50), height=NA(50))
+        temp.update_bounds() # get evaluated values for attributes
+        first_left = l1.x.attributes["left"].evaluated_value
+        temp.render().save(filename="test_images/test_can_unset_an_attributes_evaluated_value_1.png")
+        pt.content = "Wor" # changing content of pt should change width -> l1.left
+        l1.x.attributes["left"].unset_evaluated_value() # unset's ev, cannot use saved value
+        pt.update_bounds()
+        temp.update_bounds()
+        second_left = l1.x.attributes["left"].evaluated_value
+        temp.render().save(filename="test_images/test_can_unset_an_attributes_evaluated_value_2.png")
+        assert first_left != second_left
+
 class TestNumericAttribute():
     def test_can_make_numeric_attribute(self):
         NA(40)
@@ -92,15 +113,15 @@ class TestNumericAttribute():
         temp.update_bounds()
         assert test_layer_1["left"] == test_layer_2["left"]
 
-class TestAddAttribute():
+class TestAAttribute():
     def test_can_make_add_attribute(self):
-        add_attr = AddA(SA("template.height"), NA(-45))
+        add_attr = AA(SA("template.height"), NA(-45))
 
     def test_template_with_add_attribute_can_render(self):
         title = PTL("title", "Arial", 15, "Black", content="Hello World",
             left=NA(0), top=NA(0))
         sub_title = PTL("sub_title", "Arial", 15, "Black", content="Bottom Text",
-            left=NA(10), bottom=AddA(SA("template.height"), NA(45, negative=True)))
+            left=NA(10), bottom=AA(SA("template.height"), NA(45, negative=True)))
         bg = ColorBackgroundLayer("bg", content="White")
         temp = Template("temp", title, sub_title, bg, left=NA(0), top=NA(0),
             width=NA(200), height=NA(200))

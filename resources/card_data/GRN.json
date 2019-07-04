@@ -3812,7 +3812,7 @@
         "name": "Boros Locket",
         "names": null,
         "number": "231",
-        "original_text": "{T}: Add {R} or {W}.\n{GU}{GU}{GU}{GU}, {T}, Sacrifice Boros Locket: Draw two cards.",
+        "original_text": "{T}: Add {R} or {W}.\n{RW}{RW}{RW}{RW}, {T}, Sacrifice Boros Locket: Draw two cards.",
         "original_type": "Artifact",
         "power": null,
         "printings": [

@@ -73,6 +73,9 @@ class Attribute(ABC):
         #         raise NotReadyToEvaluate
         return value
 
+    def unset_evaluated_value(self):
+        self.evaluated_value = None
+
     @property
     def is_evaluated(self):
         return self.evaluated_value is not None
@@ -140,6 +143,12 @@ class FunctionAttribute(Attribute):
         self.evaluated_value = None
         for attr in self.attrs:
             attr.evaluate()
+
+    def unset_evaluated_value(self):
+        super().unset_evaluated_value()
+        # self.evaluated_value = None
+        for attr in self.attrs:
+            attr.unset_evaluated_value()
 
     @property
     def is_evaluated(self):
@@ -244,8 +253,8 @@ class StringAttribute(Attribute):
         XP<pct>, YP<pct>
     """
     def evaluate(self):
-        # if self.evaluated_value is None:
-        if True: # TODO this change may be very expensive
+        if self.evaluated_value is None:
+        # if True: # TODO this change may be very expensive
             l, attr = self.attr.split(".")
             llayer = self.dimension.layer
             if l == "parent" and llayer.parent is not None:
@@ -304,12 +313,15 @@ class NumericAttribute(Attribute):
         super().__init__(attr, *args, **kwargs)
 
     def evaluate(self):
-        # if self.evaluated_value is None:
-        if True: # TODO this change my be expensive
+        if self.evaluated_value is None:
+        # if True: # TODO this change my be expensive
             self.evaluated_value = float(self.attr)
             return self.evaluated_value
         else:
             return self.evaluated_value
+
+    def unset_evaluated_value(self):
+        pass
 
     @staticmethod
     def isValid(attr):

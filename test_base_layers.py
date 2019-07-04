@@ -92,6 +92,7 @@ class TestShapeLayer():
             height=NA(100), width=NA(100))
         for i, content in enumerate(content_list):
             pt.content = content
+            temp.unset_bounds_and_attributes()
             temp.update_bounds()
             temp.render().save(filename=f"test_images/{i}_test_can_unset_attributes_evaluated_values.png")
             square_lefts.append(temp.get_layer("square")["left"])
