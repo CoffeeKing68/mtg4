@@ -76,13 +76,11 @@ def main():
 
     # TODO Shadows for template layers
     # TODO ImageLayers (move ColorLayers into new file with Image layers)
-    # TODO Change Text to use caption in render_boundary()
-    # TODO Experiment with method to unset attributes evaluated_values
     # TODO \u0106 does not have a character in BELEREN_SMALL_CAPS
     # TODO
     """The evaluate method on FunctionAttribute does not know when to return
-    evaluated_value and when not. A function to clear them (bounds not neccessary
-    but can be treated the same for extra efficiency)"""
+    evaluated_value and when not. A function to clear them (bounds not
+    neccessary but can be treated the same for extra efficiency)"""
     # TODO
 
     """Need to do"""
@@ -109,9 +107,9 @@ def main():
     """
     # TODO
 
-    gap = 20
-    i = 0
-    cards = cards[gap * i:gap * i + gap]
+    # gap = 20
+    # i = 0
+    # cards = cards[gap * i:gap * i + gap]
     # cards = [c for c in cards if c["name"] == "Complete Disregard"]
     # cards = [c for c in cards if c["name"] == "Canopy Vista"]
     # cards = [c for c in cards if c["name"] == "Blighted Gorge"]

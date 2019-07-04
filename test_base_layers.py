@@ -59,6 +59,55 @@ class TestLayer():
         assert color_of_top_left_most_pixel[:3] == [255, 0, 0]
         green_above.save(filename="test_images/green_above.png")
         red_above.save(filename="test_images/red_above.png")
+    def test_can_unset_attributes_evaluated_values(self):
+        """Because the content of pt is changing per iteration, the left of
+        square should change as well (top should change due to p in people)."""
+        content_list = ["hello world", "people"]
+        square_lefts = [] # stores left values per iteration
+        square_tops = []
+        pt = PTL("pt", "Arial", 15, "Black", left=NA(0), top=NA(0))
+        square = ColorLayer("square", content="Red", left=AA(SA("pt.right")),
+            top=SA("pt.bottom"), width=NA(20), height=NA(20))
+        bg = ColorBackgroundLayer("bg", content="White")
+        temp = Template("temp", pt, square, bg, left=NA(0), top=NA(0),
+            height=NA(100), width=NA(100))
+        for i, content in enumerate(content_list):
+            pt.content = content
+            temp.unset_bounds_and_attributes()
+            temp.update_bounds()
+            temp.render().save(filename=f"test_images/{i}_test_can_unset_attributes_evaluated_values.png")
+            square_lefts.append(temp.get_layer("square")["left"])
+            square_tops.append(temp.get_layer("square")["top"])
+        assert square_lefts[0] != square_lefts[1]
+        assert square_tops[0] != square_tops[1]
+
+    def test_can_render_color_overlay(self):
+        pt = PTL("pt", "Arial", 15, "Black", content="PT", left=NA(0), top=NA(0))
+        pt2 = PTL("pt2", "Arial", 15, "Black", content="PT2", left=NA(0),
+            top=AA(SA("pt.bottom"), NA(5)))
+        bg = ColorBackgroundLayer("bg", content="Red")
+        temp = Template("temp", pt, pt2, bg, left=NA(0), width=NA(50), top=NA(0),
+            height=NA(50))
+        temp.update_bounds()
+        image = temp.render()
+        image.save(filename="test_images/test_can_render_color_overlay_1.png")
+        overlay = pt2.color_overlay("Blue")
+        image.composite(overlay, int(pt2["left"]), int(pt2["top"]))
+        image.save(filename="test_images/test_can_render_color_overlay_2.png")
+
+    def test_can_render_shadow(self):
+        pt = PTL("pt", "Arial", 15, "Black", content="PT", left=NA(0), top=NA(0))
+        pt2 = PTL("pt2", "Arial", 15, "Black", content="PT2", left=NA(0),
+            top=AA(SA("pt.bottom"), NA(5)))
+        bg = ColorBackgroundLayer("bg", content="White")
+        temp = Template("temp", pt, pt2, bg, left=NA(0), width=NA(50), top=NA(0),
+            height=NA(50))
+        temp.update_bounds()
+        image = temp.render()
+        image.save(filename="test_images/test_can_render_shadow_1.png")
+        shadow = pt2.shadow(2, 2, radius=4, sigma=2)
+        image.composite(shadow, 0, 0)
+        image.save(filename="test_images/test_can_render_shadow_2.png")
 
 class TestShapeLayer():
     # ShapeLayer is abstract so testing using AreaTextLayer
@@ -78,27 +127,6 @@ class TestShapeLayer():
         temp = Template("temp", layer, left=NA(0), width=NA(50), top=NA(0), height=NA(50))
         layer.y.update_bounds()
 
-    def test_can_unset_attributes_evaluated_values(self):
-        """Because the content of pt is changing per iteration, the left of
-        square should change as well (top should change due to p in people)."""
-        content_list = ["hello world", "people"]
-        square_lefts = [] # stores left values per iteration
-        square_tops = []
-        pt = PTL("pt", "", 15, "Black", left=NA(0), top=NA(0))
-        square = ColorLayer("square", content="Red", left=AA(SA("pt.right")),
-            top=SA("pt.bottom"), width=NA(20), height=NA(20))
-        bg = ColorBackgroundLayer("bg", content="White")
-        temp = Template("temp", pt, square, bg, left=NA(0), top=NA(0),
-            height=NA(100), width=NA(100))
-        for i, content in enumerate(content_list):
-            pt.content = content
-            temp.unset_bounds_and_attributes()
-            temp.update_bounds()
-            temp.render().save(filename=f"test_images/{i}_test_can_unset_attributes_evaluated_values.png")
-            square_lefts.append(temp.get_layer("square")["left"])
-            square_tops.append(temp.get_layer("square")["top"])
-        assert square_lefts[0] != square_lefts[1]
-        assert square_tops[0] != square_tops[1]
 
 class TestPointLayer():
     # PointLayer is abstract so testing on concrete object PTL

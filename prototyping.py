@@ -15,12 +15,14 @@ from attributes import NumericAttribute as NA
 from attributes import AddAttribute as AA
 
 if __name__ == "__main__":
-    # WIDTH = 200
-    # HEIGHT = 200
-    # artist_brush = ResizeIL("artist_brush", content=join(RESOURCE_DIR, "artist_brush_white.png"),
-    #     width=NA(20), left=NA(0), height=SA("set.height"), bottom=SA("parent.bottom"),
-    # artist = PTL("artist", BELEREN_SC, INFO_SIZE, FC, left=AA(SA("artist_brush.right"),
-    #         NA(3)), bottom=SA("parent.bottom")),
-    # bg = CBL("bg", content="Red")
-    # artist_temp = Template("artist_temp", artist_brush, artist, xcenter=NA(WIDTH/2)
-    #     )
+    # w = 100
+    # h = 100
+
+    # image = Image(width=w, height=h, background=Color("Transparent"))
+
+    # with Drawing() as draw:
+    #     draw.rectangle(left=0, width=w, top=0, height=h)
+    #     draw(image)
+
+
+

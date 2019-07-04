@@ -83,6 +83,27 @@ class Layer(ABC):
         img.trim()
         return img
 
+    def color_overlay(self, color, fresh=False):
+        # re-render is Fresh == True, you don't own pre_color_overlay or it's None
+        if fresh or not hasattr(self, "pre_color_overlay") or self.pre_color_overlay is None:
+            if self.pre_render is None:
+                pre_render = self.render(fresh=fresh)
+            else:
+                pre_render = self.pre_render
+            color_overlay = pre_render.clone()
+            color_overlay.opaque_paint(Color("Transparent"), Color(color), invert=True, channel="RGB")
+            self.pre_color_overlay = color_overlay
+        return self.pre_color_overlay
+
+    def shadow(self, x, y, radius=2, sigma=4, fresh=False, color="Black"):
+        if fresh or not hasattr(self, "pre_shadow") or self.pre_shadow is None:
+            shadow = self.color_overlay(color, fresh=False).clone()
+            image = Image(width=int(self.template["width"]), height=int(self.template["height"]))
+            image.composite(shadow, int(self["left"]) + x, int(self["top"]) + y)
+            image.blur(radius, sigma)
+            self.pre_shadow = image
+        return self.pre_shadow
+
     @property
     def attributes(self):
         attributes = {}

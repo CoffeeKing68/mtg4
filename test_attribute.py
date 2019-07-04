@@ -68,16 +68,22 @@ class TestStringAttribute():
         attributes.
         """
         pt = PTL("ptl", "", 15, "", content="H", left=NA(0), top=NA(0))
+        # pt.content = "Wor" # changing content of pt should change width -> l1.left
         l1 = ColorLayer("l1", content="Blue", left=AA(SA("ptl.right"), NA(1)), height=NA(20),
             right=SA("parent.right"), top=SA("parent.top"))
         temp = Template("temp", l1, pt,  left=NA(0), top=NA(0), width=NA(50), height=NA(50))
         temp.update_bounds() # get evaluated values for attributes
         first_left = l1.x.attributes["left"].evaluated_value
         temp.render().save(filename="test_images/test_can_unset_an_attributes_evaluated_value_1.png")
-        pt.content = "Wor" # changing content of pt should change width -> l1.left
-        l1.x.attributes["left"].unset_evaluated_value() # unset's ev, cannot use saved value
-        pt.update_bounds()
+        pt.content = "Wor"
+        # l1.x.attributes["left"].unset_evaluated_value() # unset's ev, cannot use saved value
+        # l1.x.bounds = None
+        # print(l1.x.attributes["left"].evaluated_value)
+        # pt.update_bounds()
+        # print(l1.x.attributes["left"].evaluated_value)
+        temp.unset_bounds_and_attributes()
         temp.update_bounds()
+        # print(l1.x.attributes["left"].evaluated_value)
         second_left = l1.x.attributes["left"].evaluated_value
         temp.render().save(filename="test_images/test_can_unset_an_attributes_evaluated_value_2.png")
         assert first_left != second_left
