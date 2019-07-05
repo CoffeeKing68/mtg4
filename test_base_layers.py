@@ -72,6 +72,7 @@ class TestLayer():
         temp = Template("temp", pt, square, bg, left=NA(0), top=NA(0),
             height=NA(100), width=NA(100))
         for i, content in enumerate(content_list):
+            pt.pre_render = None
             pt.content = content
             temp.unset_bounds_and_attributes()
             temp.update_bounds()

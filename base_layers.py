@@ -10,6 +10,9 @@ from wand.image import Image
 from wand.drawing import Drawing
 from wand.color import Color
 
+import wrapt
+from copy import copy
+
 class Layer(ABC):
     """Base Layer for all Layers to inherit from. Does most of the heavy
     lifting."""
@@ -84,12 +87,13 @@ class Layer(ABC):
         return img
 
     def color_overlay(self, color, fresh=False):
+        # TODO Need a way to figure out if Layer should re-render or not
         # re-render is Fresh == True, you don't own pre_color_overlay or it's None
         if fresh or not hasattr(self, "pre_color_overlay") or self.pre_color_overlay is None:
-            if self.pre_render is None:
-                pre_render = self.render(fresh=fresh)
-            else:
-                pre_render = self.pre_render
+            # if self.pre_render is None:
+            #     pre_render = self.render(fresh=fresh)
+            # else:
+            pre_render = self.render()
             color_overlay = pre_render.clone()
             color_overlay.opaque_paint(Color("Transparent"), Color(color), invert=True, channel="RGB")
             self.pre_color_overlay = color_overlay
@@ -143,22 +147,65 @@ class PointLayer(Layer):
     """
     def __init__(self, name, *args, **kwargs):
         super().__init__(name, 1, 1, *args, **kwargs)
+        # fulls = {"x": "width", "y": "height"}
+        # for d, dim in self.dimensions.items():
+        #     dd = copy(d)
+        #     ddim = copy(dim)
 
-    @property
-    def content(self):
-        return self._content
+        #     @wrapt.patch_function_wrapper(self.dimensions[dd], "update_bounds")
+        #     def new_update_bounds(wrapped, instance, *args, **kwargs):
+        #         if self.content is None:
+        #             instance.attributes[fulls[dd]] = NA(0)
+        #         else:
+        #             self.render(True) # TODO experiment with this
+        #             instance.attributes[fulls[dd]] = NA(getattr(self.pre_render, fulls[dd]))
+        #         wrapped()
+        @wrapt.patch_function_wrapper(self.dimensions["x"], "update_bounds")
+        def new_update_bounds(wrapped, instance, *args, **kwargs):
+            if self.content is None:
+                instance.attributes["width"] = NA(0)
+            else:
+                self.render() # TODO experiment with this
+                instance.attributes["width"] = NA(self.pre_render.width)
+            wrapped()
 
-    @content.setter
-    def content(self, value):
-        self._content = value
-        if value is not None:
-            self.pre_render = self.render(True)
-            self.dimensions["x"].attributes["width"] = NA(self.pre_render.width)
-            self.dimensions["y"].attributes["height"] = NA(self.pre_render.height)
-        else:
-            self.pre_render = None
-            self.dimensions["x"].attributes["width"] = NA(0)
-            self.dimensions["y"].attributes["height"] = NA(0)
+        @wrapt.patch_function_wrapper(self.dimensions["y"], "update_bounds")
+        def new_update_bounds(wrapped, instance, *args, **kwargs):
+            if self.content is None:
+                instance.attributes["height"] = NA(0)
+            else:
+                self.render() # TODO experiment with this
+                instance.attributes["height"] = NA(self.pre_render.height)
+            wrapped()
+
+
+    # @property
+    # def content(self):
+    #     return self._content
+
+    # @content.setter
+    # def content(self, value):
+    #     self._content = value
+
+    # @property
+    # def pre_render(self):
+    #     return self._pre_render
+
+    # @pre_render.setter
+    # def pre_render(self, value):
+    #     self._pre_render = value
+
+    # def update_bounds(self):
+    #     if self.content is not None:
+    #         self.pre_render = self.render(True)
+            # self.dimensions["x"].attributes["width"] = NA(self.pre_render.width)
+            # self.dimensions["y"].attributes["height"] = NA(self.pre_render.height)
+    #     else:
+    #         self.pre_render = None
+    #         self.dimensions["x"].attributes["width"] = NA(0)
+    #         self.dimensions["y"].attributes["height"] = NA(0)
+    #     print(self.attributes)
+    #     super().update_bounds()
 
 class ShapeLayer(Layer):
     """A ShapeLayer's bounds are determined by the width and height set at
@@ -173,18 +220,29 @@ class XDefinedLayer(Layer):
         super().__init__(name, 2, 1, *args, **kwargs)
         self.dimensions["x"].update_bounds()
 
-    @property
-    def content(self):
-        return self._content
+        @wrapt.patch_function_wrapper(self.dimensions["y"], "update_bounds")
+        def new_update_bounds(wrapped, instance, *args, **kwargs):
+            if self.content is None:
+                instance.attributes["height"] = NA(0)
+            else:
+                self.render() # TODO experiment with this
+                instance.attributes["height"] = NA(self.pre_render.height)
+            wrapped()
+    # @property
+    # def content(self):
+    #     return self._content
 
-    @content.setter
-    def content(self, value):
-        self._content = value
-        if value is not None:
-            self.pre_render = self.render(True)
-            self.dimensions["y"].attributes["height"] = NA(self.pre_render.height)
-        else:
-            self.pre_render = None
-            self.dimensions["y"].attributes["height"] = NA(0)
+    # @content.setter
+    # def content(self, value):
+    #     self._content = value
+
+    # def update_bounds(self):
+    #     if self.content is not None:
+    #         self.pre_render = self.render(True)
+    #         self.dimensions["y"].attributes["height"] = NA(self.pre_render.height)
+    #     else:
+    #         self.pre_render = None
+    #         self.dimensions["y"].attributes["height"] = NA(0)
+    #     super().update_bounds()
 
 

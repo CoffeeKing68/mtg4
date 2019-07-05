@@ -149,7 +149,6 @@ class ManaCost(PointLayer):
                 mana_image.antialias = antialias
                 img.composite(mana_image, left=width-offset, top=0)
                 offset += self.mana_size + self.mana_gap
-            img.save(filename=join("test_images", "no_antialias.bmp"))
             self.pre_render = img
             return img
         else:
@@ -263,7 +262,7 @@ class RulesText(XDefinedLayer):
         if self.content is None:
             raise NotReadyToRenderError(f"{self.name} is not ready to render right now.")
         self.rules = Rules(self.content)
-        self.x.update_bounds() # set width
+        self.x.update_bounds() # set width TODO maybe remove this
         r = []
         Y = 0
         for paragraph in self.rules.paragraphs:
@@ -320,9 +319,7 @@ class RulesText(XDefinedLayer):
                                 CX += tw
                 CY += self.line_gap
             CY += self.paragraph_gap
-        image.save(filename="test_images/proto_bef_trim.png")
         image.trim()
-        image.save(filename="test_images/proto_aft_trim.png")
         self.pre_render = image
         return image
 

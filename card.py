@@ -85,6 +85,7 @@ def main():
 
     """Need to do"""
     # TODO test to see if pre_render function is worth the hassle
+    # pre_render is necessary, especially for update_bounds()
 
     # TODO remove pre_render probably because some layers' render depend variables other than content
     # TODO What I could do is wrap some variables eg. font, color, size (PTL) with decorator that will set layer to dirty
@@ -97,6 +98,17 @@ def main():
     # TODO layer.dirty_bounds and layer.dirty_content
     # TODO How will dirty work with templates + parents
 
+    # TODO Each Layer.render() method is responsible for deciding whether or
+    # not to return pre_render.
+    """
+    Managing pre_render was challenging with just render(), but now with
+    - render_boundary
+    - shadow
+    - color_overlay
+    - and image_overlay and gradient_overlay to come
+    it's too difficult. For now, render is called only in render(),
+    render-like-methods (overlays etc) and update_bounds().
+    """
     """Can't replicate"""
     # TODO Infinite while loop when SA references layer that doesn't exist
     # TODO Template.update_bounds() infinite loop layer.x.is_bounded error
@@ -157,7 +169,7 @@ def main():
             width=NA(WIDTH), height=NA(HEIGHT))
     }
 
-    no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"
+    # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} WOTC"
     loga = math.ceil(math.log10(len(cards)))
     temp = Template("template", *layers.values(), *no_content_reset.values(),
@@ -200,7 +212,7 @@ def main():
         layers["rarity"].content = rarity
 
         rules = ""
-        text_to_use = "original_text"
+        text_to_use = "text"
         if card[text_to_use] is not None:
             rules = card[text_to_use]
         if card["flavor"] is not None:

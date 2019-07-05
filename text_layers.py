@@ -16,6 +16,13 @@ class PointTextLayer(PointLayer):
         self.color = color
         super().__init__(name, *args, **kwargs)
 
+    def should_render(self):
+        pass
+        """
+        if any(self.font.has_changed, ...): # has changed
+            self.render()
+        """
+
     def render(self, fresh=False):
         if not fresh and self.pre_render is not None: # if fresh is false and there is a pre_render
             return self.pre_render
