@@ -20,6 +20,7 @@ import time
 from datetime import datetime
 from elapsed_time import ElapsedTimeThread
 from termcolor import colored
+from functools import reduce
 
 def main():
     RESOURCE_DIR = join(os.getcwd(), "resources")
@@ -119,10 +120,10 @@ def main():
     """
     # TODO
 
-    # gap = 20
-    # i = 0
-    # cards = cards[gap * i:gap * i + gap]
-    # cards = [c for c in cards if c["name"] == "Complete Disregard"]
+    gap = 20
+    i = 0
+    cards = cards[gap * i:gap * i + gap]
+    # cards = [c for c in cards if c["name"] == "Akoum Firebird"]
     # cards = [c for c in cards if c["name"] == "Canopy Vista"]
     # cards = [c for c in cards if c["name"] == "Blighted Gorge"]
     # cards = [c for c in cards if c["name"] == "Mountain"]
@@ -139,8 +140,12 @@ def main():
     lmiddle = AA(NA(WIDTH/2),
         DivA(AA(SA("artist_brush.width"), NA(3), SA("artist.width")), NA(2),
             negative=True))
+
+    bg = ColorBackgroundLayer("bg", content=Color("Black"))
+    art = FillIL("art", order=-5, XP50=NA(WIDTH / 2), top=NA(0),
+        width=NA(WIDTH), height=NA(HEIGHT))
+
     no_content_reset = {
-        "bg": ColorBackgroundLayer("bg", content=Color("Black")),
         "dot": PTL("dot", RELAY, 25, FC, content=".", left=AA(SA("set.right"),
             NA(SET_DOT_LANG_WIDTH)), ycenter=SA("set.ycenter")),
         "language": PTL("language", RELAY, INFO_SIZE, FC, content="EN",
@@ -165,14 +170,19 @@ def main():
         "rules": RulesText("rules", MPLANTIN, MPLANTIN_ITAL, RULES_TEXT_SIZE, FC,
             RULES_TEXT_SIZE - 4, left=NA(RULES_BORDER), right=NA(WIDTH-RULES_BORDER),
             bottom=AA(SA("PT.bottom"), NA(-FONT_SIZE), NA(-5))),
-        "art": FillIL("art", order=-5, XP50=NA(WIDTH / 2), top=NA(0),
-            width=NA(WIDTH), height=NA(HEIGHT))
     }
+
+    text_template = Template("text_temp", *layers.values(), *no_content_reset.values(),
+        left=NA(0), width=NA(WIDTH), top=NA(0), height=NA(HEIGHT))
+    art_template = Template("art_temp", bg, art, order=-5, left=NA(0), width=NA(WIDTH),
+        top=NA(0), height=NA(HEIGHT))
+
+    name = text_template.get_layer("name")
 
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} WOTC"
     loga = math.ceil(math.log10(len(cards)))
-    temp = Template("template", *layers.values(), *no_content_reset.values(),
+    temp = Template("template", text_template, art_template,
         left=NA(0), width=NA(WIDTH), top=NA(0), height=NA(HEIGHT))
     temp.mana_image_format = "svg"
     temp.resource_dir = RESOURCE_DIR
@@ -184,13 +194,18 @@ def main():
         start_time = time.time()
         # thread = ElapsedTimeThread(i, len(cards) - 1, card['name'], row)
         # thread.start()
+        # for layer in temp.layers:
+        #     layer.unset_content_and_pre_render()
 
-        for name in layers:
+        reset_layers = list(layers) + ["art"]
+        for name in reset_layers:
             layer = temp.get_layer(name)
-            layer.content = None
-            layer.pre_render = None
+            layer.unset_content_and_pre_render()
+            # layer.content = None
+            # layer.pre_render = None
             if layer.name in card:
                 layer.content = card[layer.name]
+        temp.get_layer("artist_brush").pre_shadow = None
 
         if "Creature" in card["types"]:
             layers["PT"].content = f"{card['power']}/{card['toughness']}"
@@ -218,12 +233,22 @@ def main():
         if card["flavor"] is not None:
             rules += "".join([f"\n<i>{f}</i>" for f in card['flavor'].split('\n')])
 
-        layers["rules"].content = rules
+        temp.get_layer("rules").content = rules
         art_path = join(RESOURCE_DIR, "art", card["set"], f"{card['name']}.jpg")
-        layers["art"].content = art_path if os.path.isfile(art_path) else None
+        temp.get_layer("art").content = art_path if os.path.isfile(art_path) else None
 
         temp.update_bounds()
-        image = temp.render(fresh=False)
+        # for
+        render_bg = temp.get_layer("art_temp").render()
+        render_text_shadow = temp.get_layer("text_temp").shadow(-4, 4, sigma=2,
+            radius=0, color="Black")
+        render_text = temp.get_layer("text_temp").render()
+        image = render_bg.clone()
+        image.composite(render_text_shadow, left=0, top=0)
+        image.composite(render_text, left=0, top=0)
+        # image = reduce(lambda x, y: x.composite(y, left=0, top=0),
+        #     (render_bg, render_text_shadow, render_text))
+        # image = temp.render(fresh=False)
         image.save(filename=join("test_images", "all_render", card['set'], f"{card['name']}.bmp"))
         temp.unset_bounds_and_attributes()
         # thread.stop()

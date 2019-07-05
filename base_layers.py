@@ -108,6 +108,12 @@ class Layer(ABC):
             self.pre_shadow = image
         return self.pre_shadow
 
+    def unset_content_and_pre_render(self):
+        self.content = None
+        self.pre_render = None
+        self.pre_shadow = None
+        self.pre_color_overlay = None
+
     @property
     def attributes(self):
         attributes = {}

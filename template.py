@@ -42,8 +42,9 @@ class Template(ShapeLayer):
     """Layers that appear first in *layers arg are rendered first if order is
     not specified (order = 0 by default)."""
     def __init__(self, name, *layers, **kwargs):
-        self.layers = layers
+        self.layers = []
         super().__init__(name, **kwargs)
+        self.layers = layers
 
     @property
     def layers(self):
@@ -55,6 +56,16 @@ class Template(ShapeLayer):
             l.parent = self
             l.template = self
         self._layers = layers
+
+    @property
+    def template(self):
+        return self._template
+
+    @template.setter
+    def template(self, value):
+        self._template = value
+        for l in self.layers:
+            l.template = value
 
     @property
     def are_layers_bounded(self):
@@ -88,13 +99,27 @@ class Template(ShapeLayer):
         for l in self.layers:
             l.unset_bounds_and_attributes()
 
+    def unset_content_and_pre_render(self):
+        super().unset_content_and_pre_render()
+        for l in self.layers:
+            l.unset_content_and_pre_render()
+
     def render(self, fresh=False):
         image = Image(width=int(self["width"]), height=int(self["height"]))
         for layer in sorted(self.layers, key=lambda l: l.order):
-            if layer.content is not None:
+            if layer.content is not None or isinstance(layer, Template):
                 img = layer.render(fresh)
                 if img is not None:
                     image.composite(img, left=int(layer["left"]), top=int(layer["top"]))
+        return image
+
+    def shadow(self, x, y, radius=2, sigma=4, fresh=False, color="Black"):
+        image = Image(width=int(self["width"]), height=int(self["height"]))
+        for layer in sorted(self.layers, key=lambda l: l.order):
+            if layer.content is not None or isinstance(layer, Template):
+                img = layer.shadow(x, y, radius=radius, sigma=sigma, color=color)
+                if img is not None:
+                    image.composite(img, left=0, top=0)
         return image
 
     def render_boundary(self):

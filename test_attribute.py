@@ -49,7 +49,7 @@ class TestStringAttribute():
             pt = PTL("test", "Arial", 15, "Black", content="Hello", left=NA(0),
                 top=NA(0))
             sq = ColorLayer("square", content="Red", left=NA(0),
-                top=SA("test.bottom"), width=NA(20), height=NA(20))
+                top=SA("doesnotexist.bottom"), width=NA(20), height=NA(20))
             bg = ColorBackgroundLayer("bg", content="Green")
             bg2 = ColorBackgroundLayer("bg2", content="White")
             temp2 = Template("temp2", sq, bg, left=NA(0), width=NA(25),
