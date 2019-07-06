@@ -348,3 +348,21 @@ class RulesText(XDefinedLayer):
         self.pre_render = image
         return image
 
+class GradientLayer(ShapeLayer):
+    def __init__(self, name, start, end, *args, **kwargs):
+        super().__init__(name, *args, **kwargs)
+        if not isinstance(start, Color):
+            start = Color(start)
+        if not isinstance(end, Color):
+            end = Color(end)
+        self.start = start
+        self.end = end
+        self.content = "Temporary fix"
+
+    def render(self, fresh=False):
+        if fresh or self.pre_render is None: # if fresh is false and there is a pre_render
+            img = Image(width=int(self["width"]), height=int(self["height"]),
+                pseudo=f"gradient:{self.start.string}-{self.end.string}")
+            self.pre_render = img
+        return self.pre_render
+

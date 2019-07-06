@@ -1,6 +1,7 @@
 from template import Template, ColorBackgroundLayer, ColorLayer, ManaCost, RulesText, ImageLayer
 from template import ResizeImageLayer as ResizeIL
 from template import FillImageLayer as FillIL
+from template import GradientLayer as GradL
 # from template import FitImageLayer as FitIL
 from text_layers import PointTextLayer as PTL
 from attribute import StringAttribute as SA
@@ -120,11 +121,11 @@ def main():
     """
     # TODO
 
-    gap = 20
-    i = 0
-    cards = cards[gap * i:gap * i + gap]
+    # gap = 20
+    # i = 0
+    # cards = cards[gap * i:gap * i + gap]
     # cards = [c for c in cards if c["name"] == "Akoum Firebird"]
-    # cards = [c for c in cards if c["name"] == "Canopy Vista"]
+    cards = [c for c in cards if c["name"] == "Dust Stalker"]
     # cards = [c for c in cards if c["name"] == "Blighted Gorge"]
     # cards = [c for c in cards if c["name"] == "Mountain"]
     BORDER = 45
@@ -141,10 +142,20 @@ def main():
         DivA(AA(SA("artist_brush.width"), NA(3), SA("artist.width")), NA(2),
             negative=True))
 
-    bg = ColorBackgroundLayer("bg", content=Color("Black"))
-    art = FillIL("art", order=-5, XP50=NA(WIDTH / 2), top=NA(0),
-        width=NA(WIDTH), height=NA(HEIGHT))
-
+    art_layers = {
+        "bg": ColorBackgroundLayer("bg", content=Color("Black")),
+        "art": FillIL("art", order=-5, XP50=NA(WIDTH / 2), top=NA(0),
+            width=NA(WIDTH), height=NA(HEIGHT * 5 / 6)),
+            # width=NA(WIDTH), height=NA(HEIGHT)),
+        "shadow1": GradL("shadow1", start="#0000007F", end="Transparent",
+            left=NA(0), width=NA(WIDTH), top=SA("name.bottom"), height=NA(200)),
+        "shadow2": ColorLayer("shadow2", content="#0000007F", left=NA(0),
+            width=NA(WIDTH), top=NA(0), bottom=SA("shadow1.top")),
+        "shadow3": ColorLayer("shadow3", content="Black", left=NA(0),
+            width=NA(WIDTH), bottom=NA(HEIGHT), top=SA("shadow4.bottom")),
+        "shadow4": GradL("shadow4", start="Transparent", end="Black", left=NA(0),
+            width=NA(WIDTH), bottom=SA("art.YP100"), height=NA(200))
+    }
     no_content_reset = {
         "dot": PTL("dot", RELAY, 25, FC, content=".", left=AA(SA("set.right"),
             NA(SET_DOT_LANG_WIDTH)), ycenter=SA("set.ycenter")),
@@ -174,7 +185,7 @@ def main():
 
     text_template = Template("text_temp", *layers.values(), *no_content_reset.values(),
         left=NA(0), width=NA(WIDTH), top=NA(0), height=NA(HEIGHT))
-    art_template = Template("art_temp", bg, art, order=-5, left=NA(0), width=NA(WIDTH),
+    art_template = Template("art_temp", *art_layers.values(), order=-5, left=NA(0), width=NA(WIDTH),
         top=NA(0), height=NA(HEIGHT))
 
     name = text_template.get_layer("name")
