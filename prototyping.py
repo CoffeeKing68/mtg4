@@ -14,19 +14,36 @@ from attribute import StringAttribute as SA
 from attribute import NumericAttribute as NA
 from attribute import AddAttribute as AA
 
+from os.path import join
+import os
+import json
+from shutil import copy2
+
+# def apply_mask(image, mask, invert=False):
+#     image.alpha_channel = True
+#     mask.alpha_channel = True
+#     if invert:
+#         mask.negate()
+#     with Image(width=image.width, height=image.height, background=Color("transparent")) as alpha_image:
+#         alpha_image.composite_channel("opacity", mask, "copy_alpha")
+#         image.composite_channel("alpha", alpha_image, "screen", 0, 0)
+
 if __name__ == "__main__":
-    # c = Color("RGBA(30, 160, 73, 0.5)")
-    c = Color("#00000000")
-    print(c.normalized_string)
-    print(c.string)
-    # w = 100
-    # h = 100
+    with Image(filename='rose:') as img:
+        img.resize(240, 160)
+        with Image(width=img.width,
+                   height=img.height,
+                   background=Color("white")) as mask:
 
-    # image = Image(width=w, height=h, background=Color("Transparent"))
-
-    # with Drawing() as draw:
-    #     draw.rectangle(left=0, width=w, top=0, height=h)
-    #     draw(image)
-
-
+            with Drawing() as ctx:
+                ctx.fill_color = Color("black")
+                ctx.rectangle(left=0,
+                              top=0,
+                              width=mask.width,
+                              height=mask.height,
+                              radius=mask.width*0.1)  # 10% rounding?
+                ctx(mask)
+            mask.save(filename="test_images/mask.png")
+            img.composite_channel('all_channels', mask, 'screen')
+            img.save(filename='test_images/out.png')
 

@@ -11,6 +11,9 @@ from attribute import MaxAttribute as MA
 from attribute import DivideAttribute as DivA
 from attribute import MultiplyAttribute as MUA
 from wand.color import Color
+from wand.image import Image
+from wand.drawing import Drawing
+from bounds import Bounds
 
 import json
 from os.path import join, isfile
@@ -22,6 +25,19 @@ from datetime import datetime
 from elapsed_time import ElapsedTimeThread
 from termcolor import colored
 from functools import reduce
+import numpy as np
+
+# def apply_mask(image, mask, invert=False):
+#     image.alpha_channel = True
+#     mask.save(filename="test_images/mask.png")
+#     if invert:
+#         mask.negate()
+#     image.composite_channel("readmask", mask, "copy_alpha")
+#     image.save(filename="test_images/image.png")
+    # with Image(width=image.width, height=image.height, background=Color("transparent")) as alpha_image:
+    #     alpha_image.composite(mask, 0, 0)
+    #     alpha_image.save(filename="test_images/alpha_image.png")
+    #     image.composite_channel("alpha", alpha_image, "multiply", 0, 0)
 
 def main():
     RESOURCE_DIR = join(os.getcwd(), "resources")
@@ -74,9 +90,8 @@ def main():
     # TODO adaptive_sharpen for ImageLayers
     # TODO left = l, bottom = b, top = t, right = r
     # TODO Justify rules text (MTG stretches text so that it fits better)
-    # TODO Gradient, Image and Color overlay
+    # TODO Image overlay
 
-    # TODO Shadows for template layers
     # TODO ImageLayers (move ColorLayers into new file with Image layers)
     # TODO \u0106 does not have a character in BELEREN_SMALL_CAPS
     # TODO
@@ -119,13 +134,16 @@ def main():
     take place outside of try.except, but not AddAttribute.Pytest passes
     either way, so should write some more tests.
     """
+    # TODO possibly better land images
+    # https://www.passionmagic.com/illustrations-exclusives-officielles-fournies-par-wizard/
+    # TODO Match lands to EXP
     # TODO
 
-    # gap = 20
+    # gap = 20 + 75
     # i = 0
-    # cards = cards[gap * i:gap * i + gap]
-    # cards = [c for c in cards if c["name"] == "Akoum Firebird"]
-    cards = [c for c in cards if c["name"] == "Dust Stalker"]
+    # cards = cards[gap:]
+    # cards = [c for c in cards if c["name"] == "Evolving Wilds"]
+    # cards = [c for c in cards if c["name"] == "Dust Stalker"]
     # cards = [c for c in cards if c["name"] == "Blighted Gorge"]
     # cards = [c for c in cards if c["name"] == "Mountain"]
     BORDER = 45
@@ -145,16 +163,15 @@ def main():
     art_layers = {
         "bg": ColorBackgroundLayer("bg", content=Color("Black")),
         "art": FillIL("art", order=-5, XP50=NA(WIDTH / 2), top=NA(0),
-            width=NA(WIDTH), height=NA(HEIGHT * 5 / 6)),
-            # width=NA(WIDTH), height=NA(HEIGHT)),
+            width=NA(WIDTH), height=NA(HEIGHT)),
         "shadow1": GradL("shadow1", start="#0000007F", end="Transparent",
             left=NA(0), width=NA(WIDTH), top=SA("name.bottom"), height=NA(200)),
         "shadow2": ColorLayer("shadow2", content="#0000007F", left=NA(0),
             width=NA(WIDTH), top=NA(0), bottom=SA("shadow1.top")),
-        "shadow3": ColorLayer("shadow3", content="Black", left=NA(0),
-            width=NA(WIDTH), bottom=NA(HEIGHT), top=SA("shadow4.bottom")),
-        "shadow4": GradL("shadow4", start="Transparent", end="Black", left=NA(0),
-            width=NA(WIDTH), bottom=SA("art.YP100"), height=NA(200))
+        # "shadow3": ColorLayer("shadow3", content="Black", left=NA(0),
+        #     width=NA(WIDTH), bottom=NA(HEIGHT), top=SA("art.YP100")),
+        # "shadow4": GradL("shadow4", start="Transparent", end="Black", left=NA(0),
+        #     width=NA(WIDTH), bottom=SA("art.YP100"), height=NA(200))
     }
     no_content_reset = {
         "dot": PTL("dot", RELAY, 25, FC, content=".", left=AA(SA("set.right"),
@@ -245,22 +262,40 @@ def main():
             rules += "".join([f"\n<i>{f}</i>" for f in card['flavor'].split('\n')])
 
         temp.get_layer("rules").content = rules
-        art_path = join(RESOURCE_DIR, "art", card["set"], f"{card['name']}.jpg")
+        art_path = join(RESOURCE_DIR, "art", card["set"], f"{card['name']}_{card['id']}.jpg")
         temp.get_layer("art").content = art_path if os.path.isfile(art_path) else None
 
         temp.update_bounds()
         # for
         render_bg = temp.get_layer("art_temp").render()
-        render_text_shadow = temp.get_layer("text_temp").shadow(-4, 4, sigma=2,
-            radius=0, color="Black")
+        # render_text_shadow = temp.get_layer("text_temp").shadow(-4, 4, sigma=2,
+        #     radius=0, color="Black")
         render_text = temp.get_layer("text_temp").render()
         image = render_bg.clone()
-        image.composite(render_text_shadow, left=0, top=0)
+
+        xb = Bounds(start=BORDER - 10, end=WIDTH - BORDER + 10)
+        yb = Bounds(start=temp.get_layer("type")["top"] - 10,
+            end=temp.get_layer("rules")['bottom'] + 10)
+        exp = render_bg.export_pixels(x=int(xb['start']), y=int(yb['start']),
+            width=int(xb['full']), height=int(yb['full']))
+
+        with Image(width=int(xb['full']), height=int(yb['full']),
+                background=Color("Transparent")) as blur_image:
+            blur_image.import_pixels(width=int(xb['full']), height=int(yb['full']),
+               channel_map="RGBA", storage="char", data=exp)
+            with Image(width=blur_image.width, height=blur_image.height,
+                    background=Color("RGBA(0,0,0,0.2)")) as dark:
+                blur_image.composite(dark, 0, 0)
+            blur_image.blur(radius=10, sigma=5)
+            blur_image.save(filename="test_images/blur_image.png")
+            image.composite(blur_image, left=int(xb['start']), top=int(yb['start']))
+
+        # image.composite(render_text_shadow, left=0, top=0)
         image.composite(render_text, left=0, top=0)
         # image = reduce(lambda x, y: x.composite(y, left=0, top=0),
         #     (render_bg, render_text_shadow, render_text))
         # image = temp.render(fresh=False)
-        image.save(filename=join("test_images", "all_render", card['set'], f"{card['name']}.bmp"))
+        image.save(filename=join("test_images", "all_render", card['set'], f"{card['name']}_{card['id']}.bmp"))
         temp.unset_bounds_and_attributes()
         # thread.stop()
         # thread.join()
