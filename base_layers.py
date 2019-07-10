@@ -17,6 +17,11 @@ class Layer(ABC):
     """Base Layer for all Layers to inherit from. Does most of the heavy
     lifting."""
     def __init__(self, name, x_attrs_req, y_attrs_req, *args, **kwargs):
+        self.set_defaults(name, x_attrs_req, y_attrs_req, *args, **kwargs)
+        self.dimensions["x"] = XDimension(self.x_attributes_required, self, **kwargs)
+        self.dimensions["y"] = YDimension(self.y_attributes_required, self, **kwargs)
+
+    def set_defaults(self, name, x_attrs_req, y_attrs_req, *args, **kwargs):
         self.name = name
         self.x_attributes_required = x_attrs_req
         self.y_attributes_required = y_attrs_req
@@ -25,8 +30,6 @@ class Layer(ABC):
         self.parent = None
         self.template = None
         self.dimensions = {}
-        self.dimensions["x"] = XDimension(self.x_attributes_required, self, **kwargs)
-        self.dimensions["y"] = YDimension(self.y_attributes_required, self, **kwargs)
         self.content = kwargs.get("content") # default is None
 
     @property
@@ -166,23 +169,23 @@ class PointLayer(Layer):
         #             self.render(True) # TODO experiment with this
         #             instance.attributes[fulls[dd]] = NA(getattr(self.pre_render, fulls[dd]))
         #         wrapped()
-        @wrapt.patch_function_wrapper(self.dimensions["x"], "update_bounds")
-        def new_update_bounds(wrapped, instance, *args, **kwargs):
-            if self.content is None:
-                instance.attributes["width"] = NA(0)
-            else:
-                self.render() # TODO experiment with this
-                instance.attributes["width"] = NA(self.pre_render.width)
-            wrapped()
+        # @wrapt.patch_function_wrapper(self.dimensions["x"], "update_bounds")
+        # def new_update_bounds(wrapped, instance, *args, **kwargs):
+        #     if self.content is None:
+        #         instance.attributes["width"] = NA(0)
+        #     else:
+        #         self.render() # TODO experiment with this
+        #         instance.attributes["width"] = NA(self.pre_render.width)
+        #     wrapped()
 
-        @wrapt.patch_function_wrapper(self.dimensions["y"], "update_bounds")
-        def new_update_bounds(wrapped, instance, *args, **kwargs):
-            if self.content is None:
-                instance.attributes["height"] = NA(0)
-            else:
-                self.render() # TODO experiment with this
-                instance.attributes["height"] = NA(self.pre_render.height)
-            wrapped()
+        # @wrapt.patch_function_wrapper(self.dimensions["y"], "update_bounds")
+        # def new_update_bounds(wrapped, instance, *args, **kwargs):
+        #     if self.content is None:
+        #         instance.attributes["height"] = NA(0)
+        #     else:
+        #         self.render() # TODO experiment with this
+        #         instance.attributes["height"] = NA(self.pre_render.height)
+        #     wrapped()
 
 
     # @property
@@ -226,14 +229,14 @@ class XDefinedLayer(Layer):
         super().__init__(name, 2, 1, *args, **kwargs)
         self.dimensions["x"].update_bounds()
 
-        @wrapt.patch_function_wrapper(self.dimensions["y"], "update_bounds")
-        def new_update_bounds(wrapped, instance, *args, **kwargs):
-            if self.content is None:
-                instance.attributes["height"] = NA(0)
-            else:
-                self.render() # TODO experiment with this
-                instance.attributes["height"] = NA(self.pre_render.height)
-            wrapped()
+        # @wrapt.patch_function_wrapper(self.dimensions["y"], "update_bounds")
+        # def new_update_bounds(wrapped, instance, *args, **kwargs):
+        #     if self.content is None:
+        #         instance.attributes["height"] = NA(0)
+        #     else:
+        #         self.render() # TODO experiment with this
+        #         instance.attributes["height"] = NA(self.pre_render.height)
+        #     wrapped()
     # @property
     # def content(self):
     #     return self._content

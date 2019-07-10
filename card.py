@@ -27,17 +27,9 @@ from termcolor import colored
 from functools import reduce
 import numpy as np
 
-# def apply_mask(image, mask, invert=False):
-#     image.alpha_channel = True
-#     mask.save(filename="test_images/mask.png")
-#     if invert:
-#         mask.negate()
-#     image.composite_channel("readmask", mask, "copy_alpha")
-#     image.save(filename="test_images/image.png")
-    # with Image(width=image.width, height=image.height, background=Color("transparent")) as alpha_image:
-    #     alpha_image.composite(mask, 0, 0)
-    #     alpha_image.save(filename="test_images/alpha_image.png")
-    #     image.composite_channel("alpha", alpha_image, "multiply", 0, 0)
+def apply_mask(image, mask, invert=False):
+    mask.alpha_channel = 'copy'
+    image.composite_channel('alpha', mask, 'copy_alpha')
 
 def main():
     RESOURCE_DIR = join(os.getcwd(), "resources")
@@ -58,7 +50,7 @@ def main():
     else:
         raise ValueError("sets.json not found.")
 
-    myset = "BFZ"
+    myset = "GRN"
     JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
 
     """make directory in art"""
@@ -141,11 +133,11 @@ def main():
 
     # gap = 20 + 75
     # i = 0
-    # cards = cards[gap:]
+    # cards = cards[:10]
     # cards = [c for c in cards if c["name"] == "Evolving Wilds"]
     # cards = [c for c in cards if c["name"] == "Dust Stalker"]
     # cards = [c for c in cards if c["name"] == "Blighted Gorge"]
-    # cards = [c for c in cards if c["name"] == "Mountain"]
+    cards = [c for c in cards if c["name"] == "Doom Whisperer"]
     BORDER = 45
     RULES_BORDER = 60
     HEIGHT = 1050
@@ -184,10 +176,10 @@ def main():
             right=NA(WIDTH-BORDER), bottom=SA("set.bottom")),
     }
     layers = {
-        "name": PTL("name", BELEREN, FONT_SIZE, FC, left=NA(BORDER), top=NA(BORDER)),
+        "name": PTL("name", BELEREN, FONT_SIZE, FC, left=NA(BORDER), base=NA(BORDER)),
         "type": PTL("type", BELEREN, FONT_SIZE, FC, left=NA(BORDER), bottom=AA(SA("rules.top"), NA(-5))),
-        "PT": PTL("PT", BELEREN, FONT_SIZE, FC, right=NA(WIDTH - BORDER), bottom=SA("rarity.bottom")),
-        "loyalty": PTL("loyalty", BELEREN, FONT_SIZE, FC, right=NA(WIDTH - BORDER), bottom=SA("rarity.bottom")),
+        "PT": PTL("PT", BELEREN, FONT_SIZE, FC, right=NA(WIDTH - BORDER), bottom=SA("set.bottom")),
+        "loyalty": PTL("loyalty", BELEREN, FONT_SIZE, FC, right=NA(WIDTH - BORDER), bottom=SA("set.bottom")),
         "set": PTL("set", RELAY, INFO_SIZE, FC, left=NA(BORDER), bottom=NA(HEIGHT - BORDER)),
         "number": PTL("number", RELAY, INFO_SIZE, FC, left=NA(BORDER), bottom=AA(SA("set.top"), NA(-3))),
         "rarity": PTL("rarity", RELAY, INFO_SIZE, FC, left=SA("artist_brush.left"),
@@ -287,9 +279,15 @@ def main():
                     background=Color("RGBA(0,0,0,0.2)")) as dark:
                 blur_image.composite(dark, 0, 0)
             blur_image.blur(radius=10, sigma=5)
-            blur_image.save(filename="test_images/blur_image.png")
+            with Image(width=blur_image.width, height=blur_image.height,
+                    background=Color("Black")) as mask:
+                with Drawing() as ctx:
+                    ctx.fill_color = Color("White")
+                    ctx.rectangle(0, 0, width=mask.width,
+                            height=mask.height, radius=15)
+                    ctx(mask)
+                apply_mask(blur_image, mask)
             image.composite(blur_image, left=int(xb['start']), top=int(yb['start']))
-
         # image.composite(render_text_shadow, left=0, top=0)
         image.composite(render_text, left=0, top=0)
         # image = reduce(lambda x, y: x.composite(y, left=0, top=0),

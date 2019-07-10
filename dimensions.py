@@ -1,6 +1,9 @@
 from bounds import Bounds
-from exceptions import NotEvaluatedError
+from exceptions import NotEvaluatedError, InsufficientBoundsError
 from attribute import Attribute
+from attribute import StringAttribute as SA
+from attribute import NumericAttribute as NA
+from attribute import AddAttribute as AA
 
 class Dimension():
     def __init__(self, name, pct, mapping, amount, layer, bounds=None, **kwargs):
@@ -20,6 +23,8 @@ class Dimension():
     def map_bound(self, descriptor):
         """Maps dimension specific bound descriptors to standard Bounds
         conventions. eg. left/top -> start, XP40/YP40 -> P40."""
+        # if descriptor in self.mapping.values():
+        #     return descriptor
         if descriptor in self.mapping: # if is left, top, height
             return self.mapping[descriptor]
         elif descriptor[:2].upper() == self.pct.upper(): # is pct
@@ -60,6 +65,12 @@ class Dimension():
 
     def update_bounds(self, **kwargs):
         if not self.is_bounded:
+            if self.amount == 1: # is a point layer
+                full = next(key for key, value in self.mapping.items() if value == 'full')
+                if self.layer.content is None:
+                    self.attributes[full] = NA(0)
+                else:
+                    self.attributes[full] = NA(getattr(self.layer.render(), full))
             try:
                 bounds = self.attributes_to_bounds()
                 self.bounds = Bounds(**bounds, **kwargs)
@@ -84,22 +95,111 @@ class Dimension():
         return self.bounds is not None
 
 class XDimension(Dimension):
+    mapping = {
+        "left": "start",
+        "xcenter": "center",
+        "right": "end",
+        "width": "full",
+    }
     def __init__(self, amount, layer, bounds=None, **attributes):
-        mapping = {
-            "left": "start",
-            "xcenter": "center",
-            "right": "end",
-            "width": "full",
-        }
-        super().__init__("x", "XP", mapping, amount, layer, bounds, **attributes)
+        super().__init__("x", "XP", XDimension.mapping, amount, layer, bounds, **attributes)
 
 class YDimension(Dimension):
+    mapping = {
+        "top": "start",
+        "ycenter": "center",
+        "bottom": "end",
+        "height": "full",
+    }
     def __init__(self, amount, layer, bounds=None, **attributes):
-        mapping = {
-            "top": "start",
-            "ycenter": "center",
-            "bottom": "end",
-            "height": "full",
+        super().__init__("y", "YP", YDimension.mapping, amount, layer, bounds, **attributes)
+
+class PTLYDimension(YDimension):
+    def __init__(self, amount, layer, bounds=None, **attributes):
+        self.ptl_mapping = {
+            "base": "base_temporary_value",
+            "median": "median_temporary_value",
+            "cap": "cap_height_temporary_value",
+            "descender": "descender_temporary_value",
+            "ascender": "ascender_temporary_value",
         }
-        super().__init__("y", "YP", mapping, amount, layer, bounds, **attributes)
+        self.mapping = {**YDimension.mapping, **self.ptl_mapping}
+        super(YDimension, self).__init__("y", "YP", self.mapping, amount, layer, bounds, **attributes)
+
+    def update_bounds(self, **kwargs):
+        """
+        3. find idm bound
+            -
+                - get idm
+                - set bottom
+                - go super()
+            - else
+                - pass
+        """
+        # if self.layer.name == "name":
+        #     print(self.attributes)
+        try: # go super()
+            super().update_bounds(**kwargs)
+        except InsufficientBoundsError: # idm bound is set or real InsufficientBoundsError
+            idm_attrs = {}
+            for key, attr in self.attributes.items():
+                if key in self.ptl_mapping:
+                    idm_attrs[key] = attr
+            if all(a.is_evaluated for a in idm_attrs.values()): # if evaled
+                if self.layer.content is None:
+                    for key in list(self.attributes):
+                        if key in self.ptl_mapping:
+                            kwargs["end"] = key.evaluated_value
+                else:
+                    idm = self.layer.get_in_depth_font_metrics()
+                    for key in list(self.attributes):
+                        ev = self.attributes[key].evaluated_value
+                        if key == "base":
+                            kwargs["end"] = ev + idm["absolute_descender"]
+                        elif key == "median":
+                            kwargs["end"] = ev + idm["absolute_descender"] + idm["median"]
+                        elif key == "cap":
+                            kwargs["end"] = ev + idm["absolute_descender"] + idm["cap"]
+                super().update_bounds(**kwargs)
+            else:
+                return None
+
+        # if not self.is_bounded:
+        #     if self.amount == 1: # is a point layer
+        #         full = next(key for key, value in self.mapping.items() if value == 'full')
+        #         if self.layer.content is None:
+        #             self.attributes[full] = NA(0)
+        #         else:
+        #             self.attributes[full] = NA(getattr(self.layer.render(), full))
+        #     try:
+        #         bounds = self.attributes_to_bounds()
+        #         self.bounds = Bounds(**bounds, **kwargs)
+        #         return self.bounds
+        #     except NotEvaluatedError:
+        #         pass
+        # else:
+        #     return self.bounds
+
+        # if self.layer.content is None:
+        #     self.attributes["height"] = NA(0)
+        # else:
+        #     self.attributes["height"] = self.layer.render().height
+        # print(self.attributes)
+
+        # if self.layer.content is None:
+        #     for key in list(self.attributes):
+        #         if key in self.ptl_mapping:
+        #             self.attributes[bottom] = self.attributes[key]
+        # else:
+        #     idm = self.layer.get_in_depth_font_metrics()
+        #     for key in list(self.attributes):
+        #         if key == "base":
+        #             self.attributes["bottom"] = AA(self.attributes["base"], NA(idm["absolute_descender"]))
+        #         elif key == "median":
+        #             a = NA(idm["absolute_descender"] + idm["median"])
+        #             self.attributes["bottom"] = AA(self.attributes["median"], a)
+        #         elif key == "cap":
+        #             a = NA(idm["absolute_descender"] + idm["cap"])
+        #             self.attributes["bottom"] = AA(self.attributes["cap"], a)
+
 

@@ -1,9 +1,14 @@
 from base_layers import Layer, PointLayer, ShapeLayer
 from exceptions import NotReadyToRenderError
+from dimensions import PTLYDimension, XDimension
 
 from wand.image import Image
 from wand.color import Color
 from wand.drawing import Drawing
+from wand.compat import nested
+from string import ascii_lowercase as al
+from string import ascii_uppercase as au
+from math import ceil
 
 class PointTextLayer(PointLayer):
     """
@@ -14,7 +19,59 @@ class PointTextLayer(PointLayer):
         self.font = font
         self.size = size
         self.color = color
-        super().__init__(name, *args, **kwargs)
+        self.set_defaults(name, 1, 1, *args, **kwargs)
+        self.dimensions["x"] = XDimension(self.x_attributes_required, self, **kwargs)
+        self.dimensions["y"] = PTLYDimension(self.y_attributes_required, self, **kwargs)
+
+    def get_in_depth_font_metrics(self):
+        # if self.content is None:
+        #     return {
+        #         "median" : 0,
+        #         "descender" : 0,
+        #         "cap" : 0,
+        #         "ascender": 0,
+        #         "absolute_ascender": 0
+        #         "absolute_descender": 0
+        #     }
+        # else:
+        with nested(Image(width=1, height=1), Drawing()) as (temp_image, draw):
+            draw.font = self.font
+            draw.font_size = self.size
+
+            max_descender = 0
+            max_ascender = 0
+            alpha_metrics = {}
+            for l in al + au:
+                alpha_metrics[l] = draw.get_font_metrics(temp_image, l, False)
+                if alpha_metrics[l].y2 > max_ascender:
+                    max_ascender = alpha_metrics[l].y2
+                if alpha_metrics[l].y1 < max_descender:
+                    max_descender = alpha_metrics[l].y1
+
+            a_asc = 0
+            a_desc = 0
+            for l in self.content:
+                if l not in alpha_metrics:
+                    alpha_metrics[l] = draw.get_font_metrics(temp_image, l, False)
+                if alpha_metrics[l].y2 > a_asc:
+                    a_asc = alpha_metrics[l].y2
+                if alpha_metrics[l].y1 < a_desc:
+                    a_desc = alpha_metrics[l].y1
+
+            ml = draw.get_font_metrics(temp_image, al)
+            mu = draw.get_font_metrics(temp_image, au)
+
+            max_ascender = ceil(abs(max_ascender - max(ml.y2, mu.y2)))
+            # absolute_height = ceil(a_asc) + ceil(- a_desc)
+
+        return { # TODO maybe make cap relative to base
+            "median" : ceil(ml.y2),
+            "cap" : ceil(mu.y2),
+            "ascender": ceil(max_ascender),
+            "descender" : ceil(- max_descender),
+            "absolute_ascender": ceil(a_asc),
+            "absolute_descender": ceil(- a_desc),
+        }
 
     def should_render(self):
         pass
