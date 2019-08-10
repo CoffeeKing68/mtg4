@@ -169,24 +169,24 @@ def main():
         "dot": PTL("dot", RELAY, 25, FC, content=".", left=AA(SA("set.right"),
             NA(SET_DOT_LANG_WIDTH)), ycenter=SA("set.ycenter")),
         "language": PTL("language", RELAY, INFO_SIZE, FC, content="EN",
-            left=AA(SA("dot.right"), NA(SET_DOT_LANG_WIDTH)), bottom=NA(HEIGHT - BORDER)),
+            left=AA(SA("dot.right"), NA(SET_DOT_LANG_WIDTH)), base=NA(HEIGHT - BORDER)),
         "artist_brush": ResizeIL("artist_brush", content=join(RESOURCE_DIR, "artist_brush_white.png"),
             width=NA(20), left=lmiddle, height=SA("set.height"), bottom=NA(HEIGHT - BORDER)),
         "copyright": PTL("copyright", MPLANTIN, INFO_SIZE - 5, FC,
             right=NA(WIDTH-BORDER), bottom=SA("set.bottom")),
     }
     layers = {
-        "name": PTL("name", BELEREN, FONT_SIZE, FC, left=NA(BORDER), base=NA(BORDER)),
-        "type": PTL("type", BELEREN, FONT_SIZE, FC, left=NA(BORDER), bottom=AA(SA("rules.top"), NA(-5))),
-        "PT": PTL("PT", BELEREN, FONT_SIZE, FC, right=NA(WIDTH - BORDER), bottom=SA("set.bottom")),
-        "loyalty": PTL("loyalty", BELEREN, FONT_SIZE, FC, right=NA(WIDTH - BORDER), bottom=SA("set.bottom")),
-        "set": PTL("set", RELAY, INFO_SIZE, FC, left=NA(BORDER), bottom=NA(HEIGHT - BORDER)),
-        "number": PTL("number", RELAY, INFO_SIZE, FC, left=NA(BORDER), bottom=AA(SA("set.top"), NA(-3))),
+        "name": PTL("name", BELEREN, FONT_SIZE, FC, left=NA(BORDER), base=NA(95)),
+        "type": PTL("type", BELEREN, FONT_SIZE, FC, left=NA(BORDER), base=AA(SA("rules.top"), NA(-5))),
+        "PT": PTL("PT", BELEREN, FONT_SIZE, FC, right=NA(WIDTH - BORDER), base=SA("set.base")),
+        "loyalty": PTL("loyalty", BELEREN, FONT_SIZE, FC, right=NA(WIDTH - BORDER), base=SA("set.base")),
+        "set": PTL("set", RELAY, INFO_SIZE, FC, left=NA(BORDER), base=NA(HEIGHT - BORDER)),
+        "number": PTL("number", RELAY, INFO_SIZE, FC, left=NA(BORDER), base=AA(SA("set.cap"), NA(-3))),
         "rarity": PTL("rarity", RELAY, INFO_SIZE, FC, left=SA("artist_brush.left"),
-            bottom=SA("number.bottom")),
+            base=SA("number.base")),
         "artist": PTL("artist", BELEREN_SC, INFO_SIZE, FC, left=AA(SA("artist_brush.right"),
-            NA(3)), bottom=SA("set.bottom")),
-        "mana_cost": ManaCost("mana_cost", right=NA(WIDTH-BORDER), top=NA(BORDER)),
+            NA(3)), base=SA("set.base")),
+        "mana_cost": ManaCost("mana_cost", right=NA(WIDTH-BORDER), bottom=SA("name.base")),
         "rules": RulesText("rules", MPLANTIN, MPLANTIN_ITAL, RULES_TEXT_SIZE, FC,
             RULES_TEXT_SIZE - 4, left=NA(RULES_BORDER), right=NA(WIDTH-RULES_BORDER),
             bottom=AA(SA("PT.bottom"), NA(-FONT_SIZE), NA(-5))),
@@ -233,8 +233,8 @@ def main():
         sset = [s for s in sets if s['code'] == card['set']]
         if len(sset) == 1:
             count = sset[0]["count"]
-        number = card['number'].upper().zfill(loga)
-        layers["number"].content = f"{number}/{count:0{loga}}"
+        number = card['number'].upper().zfill(math.ceil(math.log10(count)))
+        layers["number"].content = f"{number}/{count}"
         rarity_colors = {
             "M": "#D15003",
             "R": "#DFBD6C",

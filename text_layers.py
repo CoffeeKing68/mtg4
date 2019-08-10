@@ -73,6 +73,19 @@ class PointTextLayer(PointLayer):
             "absolute_descender": ceil(- a_desc),
         }
 
+    def __getitem__(self, key):
+        if key in self.y.ptl_mapping:
+            if self.y.is_bounded: # y must be bounded for idm
+                idm = self.get_in_depth_font_metrics()
+                if key == "base":
+                    return self["bottom"] - idm["absolute_descender"]
+                elif key == "median":
+                    return self["bottom"] - idm["absolute_descender"] - idm["median"]
+                elif key == "cap":
+                    return self["bottom"] - idm["absolute_descender"] - idm["cap"]
+        else:
+            return super().__getitem__(key)
+
     def should_render(self):
         pass
         """

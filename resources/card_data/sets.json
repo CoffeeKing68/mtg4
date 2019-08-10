@@ -6,10 +6,30 @@
     },
     {
         "code": "GRN",
-        "count": 0
+        "count": 259
     },
     {
         "code": "UST",
         "count": 268
+    },
+    {
+        "code": "RNA",
+        "count": 259
+    },
+    {
+        "code": "DOM",
+        "count": 269
+    },
+    {
+        "code": "WAR",
+        "count": 264
+    },
+    {
+        "code": "XLN",
+        "count": 279
+    },
+    {
+        "code": "M19",
+        "count": 280
     }
 ]

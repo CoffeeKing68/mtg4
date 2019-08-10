@@ -147,12 +147,13 @@ class PTLYDimension(YDimension):
                     idm_attrs[key] = attr
             if all(a.is_evaluated for a in idm_attrs.values()): # if evaled
                 if self.layer.content is None:
-                    for key in list(self.attributes):
+                    for key, attribute in self.attributes.items():
                         if key in self.ptl_mapping:
-                            kwargs["end"] = key.evaluated_value
+                            # print(key, self.layer.name)
+                            kwargs["end"] = attribute.evaluated_value
                 else:
                     idm = self.layer.get_in_depth_font_metrics()
-                    for key in list(self.attributes):
+                    for key in self.attributes:
                         ev = self.attributes[key].evaluated_value
                         if key == "base":
                             kwargs["end"] = ev + idm["absolute_descender"]
