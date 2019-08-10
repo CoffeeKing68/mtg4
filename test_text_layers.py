@@ -49,6 +49,17 @@ class TestPointTextLayer():
         temp.update_bounds()
         temp.render().save(filename="test_images/test_can_get_mean_indepth_font_metrics_for_ptl.png")
 
+    def test_idm_works_for_text_layer_without_content(self):
+        bg = ColorBackgroundLayer("bg", content="White")
+        # content is None
+        layer = PointTextLayer("layer", "Arial", 12, "Black", left=NA(0), base=NA(40))
+        square = ColorLayer("sqr", content="Red", width=NA(20), height=NA(20),
+                bottom=SA("layer.cap"), left=NA(25))
+        temp = Template("temp", layer, square, bg, left=NA(0),
+                width=NA(50), top=NA(0), height=NA(50))
+        temp.update_bounds()
+        temp.render().save(filename="test_images/test_idm_works_for_text_layer_without_content.png")
+
     def test_setting_base_on_ptl_is_same_as_drawing_text(self):
         width = 100
         text = "Hpqrs"

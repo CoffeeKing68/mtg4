@@ -50,13 +50,17 @@ class PointTextLayer(PointLayer):
 
             a_asc = 0
             a_desc = 0
-            for l in self.content:
-                if l not in alpha_metrics:
-                    alpha_metrics[l] = draw.get_font_metrics(temp_image, l, False)
-                if alpha_metrics[l].y2 > a_asc:
-                    a_asc = alpha_metrics[l].y2
-                if alpha_metrics[l].y1 < a_desc:
-                    a_desc = alpha_metrics[l].y1
+            if self.content is None or self.content == "":
+                a_asc = max_ascender
+                a_asc = max_descender
+            else:
+                for l in self.content:
+                    if l not in alpha_metrics:
+                        alpha_metrics[l] = draw.get_font_metrics(temp_image, l, False)
+                    if alpha_metrics[l].y2 > a_asc:
+                        a_asc = alpha_metrics[l].y2
+                    if alpha_metrics[l].y1 < a_desc:
+                        a_desc = alpha_metrics[l].y1
 
             ml = draw.get_font_metrics(temp_image, al)
             mu = draw.get_font_metrics(temp_image, au)
