@@ -1,4 +1,5 @@
 from exceptions import InsufficientBoundsError, InvalidBoundsError
+from decimal import Decimal as Dec
 
 class Bounds():
     standard_bound_names = ["start", "center", "end", "full"]
@@ -34,21 +35,24 @@ class Bounds():
         plot = {}
         available_bounds = self.__bounds
         if "start" in self.__bounds:
-            plot[0] = available_bounds.pop("start")
+            plot[Dec('0')] = Dec(repr(available_bounds.pop("start")))
         if "center" in self.__bounds:
-            plot[50] = available_bounds.pop("center")
+            plot[Dec('50')] = Dec(repr(available_bounds.pop("center")))
         if "end" in self.__bounds:
-            plot[100] = available_bounds.pop("end")
+            plot[Dec('100')] = Dec(repr(available_bounds.pop("end")))
 
         if len(plot) < 2: # Don't look for percent defs if we have all defs already
             for bound in list(available_bounds):
+                # print(Bounds.parse_pct(bound), type(Bounds.parse_pct(bound)))
                 pct = Bounds.parse_pct(bound)
                 if pct is not None:
-                    plot[int(pct)] = available_bounds.pop(bound)
+                    plot[Dec(repr(pct))] = Dec(repr(available_bounds.pop(bound)))
 
         if "full" in self.__bounds and len(plot) == 1: # if full was passed in
             pct, value = list(plot.items())[0]
-            self.full = self.__bounds["full"]
+            # pct = Dec(repr(pct))
+            # value = Dec(repr(value))
+            self.full = Dec(repr(self.__bounds["full"]))
         elif len(plot) == 2: # found 2 bound defs
             (pct, value), (bpct, bval) = sorted(plot.items())
             self.full = (bval - value) / (bpct - pct) * 100
@@ -57,9 +61,19 @@ class Bounds():
         if self.full < 0:
             raise InvalidBoundsError("Full cannot be less than 0.")
 
+        # print(repr(pct), repr(self.full), repr(value))
         self.end = (1 - pct / 100) * self.full + value
         self.start = value - pct * self.full / 100
         self.center = self.start + self.full / 2
+        # print(self.start, type(self.start))
+        # print(self.full, type(self.full))
+        # self.convert_attributes_to_floats()
+
+    def convert_attributes_to_floats(self):
+        self.start = float(self.start)
+        self.center = float(self.center)
+        self.end = float(self.end)
+        self.full = float(self.full)
 
     @staticmethod
     def is_valid_descriptor(key):
@@ -96,9 +110,9 @@ class Bounds():
 
     def __getitem__(self, key):
         if key in self.__eval_bounds:
-            return self.__eval_bounds[key]
+            return float(self.__eval_bounds[key])
         else:
-            return self.get_percent(key)
+            return float(self.get_percent(key))
 
     def get_percent(self, key):
         if isinstance(key, (int, float)): # is this a number?
@@ -107,7 +121,11 @@ class Bounds():
             pct = Bounds.parse_pct(key)
         else:
             raise ValueError("Pass in an int, float, <percent_string> or P/p<percent_string>")
-        return self.start + pct * self.full / 100
+        # print("get_percent")
+        # print(self.start, type(self.start))
+        # print(self.full, type(self.full))
+        # print(pct, type(pct))
+        return self.start + Dec(repr(pct)) * self.full / 100
 
     def __repr__(self):
         return f"Bounds: {self.__eval_bounds}"

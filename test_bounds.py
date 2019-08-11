@@ -40,3 +40,10 @@ class TestBounds():
         assert b.start == b["start"] == b[0] == b["0"] == b["p0"] == b["P0"] == 20
         assert b[40] == b["P40"] == b["p40"]== b["40"] == 30
 
+    def test_full_attribute_will_be_a_nice_round_number(self):
+        attributes = {'end': 1050.0, 'start': 916.4}
+        full_should_be = 133.6
+
+        b = Bounds(**attributes)
+        assert b["full"] == full_should_be
+
