@@ -150,9 +150,15 @@ class Template(ShapeLayer):
             raise ValueError("You can only pass in layer names or layers.")
 
 class ManaCost(PointLayer):
-    def __init__(self, name, *args, mana_size=35, mana_gap=2, **kwargs):
+    def __init__(self, name, *args, mana_size=35, mana_gap=2, font=None,
+            font_size=None, font_color=None, **kwargs):
         self.mana_size = mana_size
         self.mana_gap = mana_gap
+        self.font = font
+        self.font_size = font_size
+        self.font_color = font_color
+        if isinstance(self.font_color, Color):
+            self.font_color = Color(self.font_color)
         super().__init__(name, *args, **kwargs)
 
     def render(self, fresh=False):
@@ -160,22 +166,37 @@ class ManaCost(PointLayer):
             return self.pre_render
         if self.content is not None:
             self.mana = ManaText.getManaList(self.content)
-            width = (len(self.mana) * (self.mana_gap + self.mana_size)) - self.mana_gap
-            height = self.mana_size
-            img = Image(width=width, height=height)
-            antialias = False
-            img.antialias = antialias
-            offset = self.mana_size
-            for mana in self.mana[::-1]:
-                msrc = join(self.template.resource_dir, self.template.mana_image_format,
-                    f"{mana.mana_string}.{self.template.mana_image_format}")
-                mana_image = Image(width=self.mana_size, height=self.mana_size,
-                    background=Color("Transparent"), filename=msrc, resolution=300)
-                mana_image.antialias = antialias
-                img.composite(mana_image, left=width-offset, top=0)
-                offset += self.mana_size + self.mana_gap
-            self.pre_render = img
-            return img
+            # width = (len(self.mana) * (self.mana_gap + self.mana_size)) - self.mana_gap
+            width = int(len(self.mana) * (self.mana_gap + self.mana_size)) + 100
+            height = int(self.mana_size) + 100
+            image = Image(width=width, height=height)
+            # antialias = False
+            # img.antialias = antialias
+            offset = 0
+            for mana in self.mana:
+                if mana.mana_string == "DoubleSlash":
+                     with Drawing() as draw:
+                        # draw.font = "Arial"
+                        # draw.font_size = self.mana_size * 1.4
+                        # draw.fill_color = Color("White")
+                        draw.font = self.font
+                        draw.font_size = self.font_size
+                        draw.fill_color = self.font_color
+                        with Image(width=1, height=1) as img:
+                            tw = int(draw.get_font_metrics(img, "//").text_width)
+                        draw.text(offset - 1, self.mana_size, "//")
+                        draw(image)
+                        offset += tw - 1
+                else:
+                    msrc = join(self.template.resource_dir, self.template.mana_image_format,
+                        f"{mana.mana_string}.{self.template.mana_image_format}")
+                    mana_image = Image(width=self.mana_size, height=self.mana_size,
+                        background=Color("Transparent"), filename=msrc, resolution=300)
+                    image.composite(mana_image, left=offset, top=0)
+                    offset += self.mana_size + self.mana_gap
+            image.trim()
+            self.pre_render = image
+            return image
         else:
             raise NotReadyToRenderError(f"{self.name} is not ready to render right now.")
 
@@ -344,9 +365,16 @@ class RulesText(XDefinedLayer):
                                 CX += tw
                 CY += self.line_gap
             CY += self.paragraph_gap
+        self.bottom_base = CY
         image.trim()
         self.pre_render = image
         return image
+
+    def __getitem__(self, key):
+        if key == "bottom_base":
+            pass
+        else:
+            return super().__getitem__(key)
 
 class GradientLayer(ShapeLayer):
     def __init__(self, name, start, end, *args, **kwargs):

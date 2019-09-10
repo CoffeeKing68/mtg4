@@ -101,6 +101,7 @@ class PointTextLayer(PointLayer):
         if not fresh and self.pre_render is not None: # if fresh is false and there is a pre_render
             return self.pre_render
         if self.content is not None:
+            # print(self.name, self.template.get_layer("name").content)
             with Drawing() as draw:
                 draw.font = self.font
                 draw.font_size = self.size

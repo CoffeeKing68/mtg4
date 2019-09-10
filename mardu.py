@@ -43,6 +43,8 @@ def main():
     MPLANTIN_ITAL = join(RESOURCE_DIR, "fonts", "MPlantin_italic.ttf")
     RELAY = join(RESOURCE_DIR, "fonts", "Relay_medium.ttf")
     FC = "White"
+    FLAVOR_SPLIT_COLOR = "RGBA(255, 255, 255, 0.6)"
+    FLAVOR_SPLIT_OFFSET = 40
 
     if os.path.isfile(SETS):
         with open(SETS, "r") as f:
@@ -50,25 +52,37 @@ def main():
     else:
         raise ValueError("sets.json not found.")
 
-    myset = "mardu"
-    JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
+    # myset = "mardu"
+    # JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
+    # JSON = join(RESOURCE_DIR, "card_data", f"mardu_aristocrats_M20.json")
+    TOKENS = join(RESOURCE_DIR, "card_data", f"tokens.json")
+    ANGELS = join(RESOURCE_DIR, "card_data", f"mardu_angels_M20.json")
+    DINOS = join(RESOURCE_DIR, "card_data", f"RG_Dinos.json")
+
+    # SAVE_LOCATION = myset
+    SAVE_LOCATION = "RG_Dinos"
+
+    JSON = DINOS
+    # JSON = TOKENS
 
     """make directory in art"""
-    if not os.path.isdir(join(RESOURCE_DIR, "art", myset)): # dir does not exist
-        os.mkdir(join(RESOURCE_DIR, "art", myset))
+    # if not os.path.isdir(join(RESOURCE_DIR, "art", myset)): # dir does not exist
+    #     os.mkdir(join(RESOURCE_DIR, "art", myset))
     """make directory in render dir"""
-    if not os.path.isdir(join("test_images", "all_render", myset)): # dir does not exist
-        os.mkdir(join("test_images", "all_render", myset))
+    if not os.path.isdir(join("test_images", "all_render", SAVE_LOCATION)): # dir does not exist
+        os.mkdir(join("test_images", "all_render", SAVE_LOCATION))
 
     """load cards"""
     with open(JSON, "r") as f:
         cards = json.load(f)
-    # cards = [c for c in cards if c["name"] == "Doom Whisperer"]
+    """load tokens"""
+    # with open(TOKENS, "r") as f:
+    #     tokens = json.load(f)
 
     BORDER = 45
-    RULES_BORDER = 45
+    RULES_BORDER = 52
     HEIGHT = 1050
-    WIDTH = 754
+    WIDTH = 752
     SET_DOT_LANG_WIDTH = 5
     INFO_SIZE = 18
     # FONT_SIZE = 40
@@ -86,14 +100,15 @@ def main():
         "bg": ColorBackgroundLayer("bg", content=Color("Black")),
         "art": FillIL("art", order=-5, XP50=NA(WIDTH / 2), top=NA(0),
             width=NA(WIDTH), height=NA(HEIGHT)),
-        "shadow1": GradL("shadow1", start="#0000007F", end="Transparent",
+        "shadow1": ColorLayer("shadow1", content="RGBA(0,0,0,0.4)", left=NA(0),
+            width=NA(WIDTH), top=NA(0), bottom=SA("shadow2.top")),
+        "shadow2": GradL("shadow2", start="RGBA(0,0,0,0.4)", end="RGBA(0,0,0,0.0)",
             left=NA(0), width=NA(WIDTH), top=SA("name.bottom"), height=NA(200)),
-        "shadow2": ColorLayer("shadow2", content="#0000007F", left=NA(0),
-            width=NA(WIDTH), top=NA(0), bottom=SA("shadow1.top")),
-        "shadow3": ColorLayer("shadow3", content="RGBA(0,0,0,0.7)", left=NA(0),
-            width=NA(WIDTH), bottom=NA(HEIGHT + 1), top=SA("rules.YP30")),
-        "shadow4": GradL("shadow4", start="Transparent", end="RGBA(0,0,0,0.7)",
-            left=NA(0), width=NA(WIDTH), bottom=SA("shadow3.top"), height=NA(200))
+        "shadow3": GradL("shadow3", start="RGBA(0,0,0,0.0)", end="RGBA(0,0,0,0.7)",
+            left=NA(0), width=NA(WIDTH), bottom=SA("shadow4.top"),
+            top=AA(SA("type.cap"), NA(-150))),
+        "shadow4": ColorLayer("shadow4", content="RGBA(0,0,0,0.7)", left=NA(0),
+            width=NA(WIDTH), bottom=NA(HEIGHT + 1), top=SA("rules.YP70"))
     }
     no_content_reset = {
         "dot": PTL("dot", RELAY, 25, FC, content=".", left=AA(SA("set.right"),
@@ -112,14 +127,21 @@ def main():
         "loyalty": PTL("loyalty", BELEREN, PT_LOYAL_SIZE, FC, right=NA(WIDTH - BORDER), base=SA("set.base")),
         "set": PTL("set", RELAY, INFO_SIZE, FC, left=NA(BORDER), base=NA(HEIGHT - BORDER)),
         "number": PTL("number", RELAY, INFO_SIZE, FC, left=NA(BORDER), base=AA(SA("set.cap"), NA(-3))),
-        "rarity": PTL("rarity", RELAY, INFO_SIZE, FC, left=SA("artist_brush.left"),
-            base=SA("number.base")),
+        "rarity": PTL("rarity", RELAY, INFO_SIZE, FC,
+            left=SA("artist_brush.left"), base=SA("number.base")),
         "artist": PTL("artist", BELEREN_SC, INFO_SIZE, FC, left=AA(SA("artist_brush.right"),
             NA(3)), base=SA("set.base")),
-        "mana_cost": ManaCost("mana_cost", right=NA(WIDTH-BORDER), bottom=AA(SA("name.base"), NA(4))),
+        "mana_cost": ManaCost("mana_cost", font=BELEREN, font_size=NAME_SIZE, font_color=FC,
+            right=NA(WIDTH-BORDER), bottom=AA(SA("name.base"), NA(4))),
         "rules": RulesText("rules", MPLANTIN, MPLANTIN_ITAL, RULES_TEXT_SIZE, FC,
             RULES_TEXT_SIZE - 4, left=NA(RULES_BORDER), right=NA(WIDTH-RULES_BORDER),
             bottom=AA(SA("PT.bottom"), NA(-PT_LOYAL_SIZE), NA(-5))),
+        # "flavor_split": ColorLayer("flavor_split", left=NA(RULES_BORDER + FLAVOR_SPLIT_OFFSET),
+        #     right=NA(WIDTH - RULES_BORDER - FLAVOR_SPLIT_OFFSET), height=NA(2),
+        #     bottom=AA(SA("flavor.top"), NA(-5))),
+        # "flavor": RulesText("flavor", MPLANTIN, MPLANTIN_ITAL, RULES_TEXT_SIZE, FC,
+        #     RULES_TEXT_SIZE - 4, left=NA(RULES_BORDER), right=NA(WIDTH-RULES_BORDER),
+        #     bottom=AA(SA("PT.bottom"), NA(-PT_LOYAL_SIZE), NA(-5))),
     }
 
     text_template = Template("text_temp", *layers.values(), *no_content_reset.values(),
@@ -128,6 +150,10 @@ def main():
         top=NA(0), height=NA(HEIGHT))
 
     name = text_template.get_layer("name")
+
+    cards = cards[-3:]
+    # cards = [c for c in cards if c['name'] == "Fanatical Firebrand"]
+    # cards = [c for c in cards if c['name'] == "Shifting Ceratops"]
 
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} WOTC"
@@ -140,10 +166,11 @@ def main():
     row = f"| {{:0{loga}}}/{{:0{loga}}} | {{}} | {{}} | {{:07.3f}} |"
     total = 0
 
-    for i, card in enumerate(cards):
+    for i, card in enumerate(sorted(cards, key=lambda x: x['name'])):
         start_time = time.time()
-        # for layer in temp.layers:
-        #     layer.unset_content_and_pre_render()
+        for shadow in ["shadow3", "shadow4"]:
+            l = temp.get_layer(shadow)
+            l.pre_render = None
 
         reset_layers = list(layers) + ["art"]
         for name in reset_layers:
@@ -161,14 +188,15 @@ def main():
         sset = [s for s in sets if s['code'] == card['set']]
         if len(sset) == 1:
             count = sset[0]["count"]
-        number = card['number'].upper().zfill(math.ceil(math.log10(count)))
-        layers["number"].content = f"{number}/{count}"
+        number = card['number'].upper().zfill(3)
+        layers["number"].content = f"{number}/{count:03}"
         rarity_colors = {
             "M": "#D15003",
             "R": "#DFBD6C",
             "U": "#C8C8C8",
             "C": FC,
             "L": FC,
+            "T": FC,
         }
         rarity = card["rarity"][0].upper()
         layers["rarity"].color = rarity_colors[rarity]
@@ -181,8 +209,10 @@ def main():
         if card["flavor"] is not None:
             rules += "".join([f"\n<i>{f}</i>" for f in card['flavor'].split('\n')])
 
-        temp.get_layer("rules").content = rules
-        art_path = join(RESOURCE_DIR, "art", "Mardu", f"{card['name']}_{card['id']}.jpg")
+        if rules != "":
+            temp.get_layer("rules").content = rules
+        art_path = join(RESOURCE_DIR, "art", card['set'], f"{card['name']}_{card['id']}.jpg") \
+                .replace("//", "__")
         temp.get_layer("art").content = art_path if os.path.isfile(art_path) else None
 
         temp.update_bounds()
@@ -219,7 +249,9 @@ def main():
         image.composite(render_text_shadow, left=0, top=0)
         image.composite(render_text, left=0, top=0)
 
-        image.save(filename=join("test_images", "all_render", myset, f"{card['name']}_{card['id']}.bmp"))
+        image.save(filename=join("test_images", "all_render", f"{SAVE_LOCATION}", f"{card['name']}_{card['id']}.jpg").replace("//", "__"))
+        # image.save(filename=join("test_images", "all_render", "Printing", f"{SAVE_LOCATION}", f"{card['name']}_{card['id']}.jpg").replace("//", "__"))
+        # image.save(filename=join("test_images", "all_render", "Printing", f"{SAVE_LOCATION}", f"{card['name']}.jpg").replace("//", "__"))
         temp.unset_bounds_and_attributes()
 
         delta = time.time() - start_time

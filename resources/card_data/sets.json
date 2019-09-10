@@ -31,5 +31,29 @@
     {
         "code": "M19",
         "count": 280
+    },
+    {
+        "code": "ISD",
+        "count": 264
+    },
+    {
+        "code": "CN2",
+        "count": 221
+    },
+    {
+        "code": "M20", 
+        "count": 280
+    },
+    {
+        "code": "M14",
+        "count": 249
+    },
+    {
+    	"code": "EXP",
+    	"count": 45
+    },
+    {
+        "code": "RIX",
+        "count": 196
     }
 ]
