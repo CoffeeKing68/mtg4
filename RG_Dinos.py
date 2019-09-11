@@ -21,12 +21,13 @@ JeffHoogland = [
     (2, "Forest 3"),
     (4, "Rootbound Crag"),
     (4, "Stomping Ground"),
+    (4,  "Unclaimed Territory"),
 
-    (1, "Fry"),
-    (3, "Veil of Summer"),
+    # (1, "Fry"),
+    (2, "Veil of Summer"),
     (2, "Vivien Reid"),
-    (3, "Cindervines"),
-    # (3, "Sentinel Totem"),
+    (2, "Cindervines"),
+    (3, "Sentinel Totem"),
 ]
 
 mtgdecks = [
@@ -50,22 +51,22 @@ mtgdecks = [
     (3,  "Domri's Ambush"),
     (3,  "Domri, Anarch of Bolas"),
     # (4, "Stomping Ground"),
-    (3,  "Unclaimed Territory"),
+    # (4,  "Unclaimed Territory"),
     # (4, "Mountain"),
     # (5, "Forest"),
-    (1,  "Temple of Triumph"),
+    # (1,  "Temple of Triumph"),
     # (4, "Rootbound Crag"),
 
     (2,  "Carnage Tyrant"),
 ]
 
 extra = [
-    (3, "Dinosaur"),
+    (2, "Dinosaur"),
     (4, "Priest of the Forgotten Gods"),
     (3, "God-Eternal Bontu"),
     # (4, "Fanatical Firebrand"),
     (4, "Mayhem Devil"),
-    (3, "Shock"),
+    (4, "Shock"),
 ]
 
 

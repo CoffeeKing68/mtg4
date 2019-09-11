@@ -1,19 +1,22 @@
-from template import Template, ColorBackgroundLayer, ColorLayer, ManaCost, RulesText, ImageLayer
-from template import ResizeImageLayer as ResizeIL
-from template import FillImageLayer as FillIL
-from template import GradientLayer as GradL
-from template import FitImageLayer as FitIL
-from text_layers import PointTextLayer as PTL
-from attribute import StringAttribute as SA
-from attribute import NumericAttribute as NA
-from attribute import AddAttribute as AA
-from attribute import MaxAttribute as MA
-from attribute import DivideAttribute as DivA
-from attribute import MultiplyAttribute as MUA
+from layers.template import Template
+from layers.color import ColorBackgroundLayer, ColorLayer
+from layers.color import GradientLayer as GradL
+from layers.image import ImageLayer
+from layers.image import ResizeImageLayer as ResizeIL
+from layers.image import FillImageLayer as FillIL
+from layers.image import FitImageLayer as FitIL
+from layers.text import PointTextLayer as PTL
+from layers.attribute import StringAttribute as SA
+from layers.attribute import NumericAttribute as NA
+from layers.attribute import AddAttribute as AA
+from layers.attribute import MaxAttribute as MA
+from layers.attribute import DivideAttribute as DivA
+from layers.attribute import MultiplyAttribute as MUA
 from wand.color import Color
 from wand.image import Image
 from wand.drawing import Drawing
-from bounds import Bounds
+from layers.bounds import Bounds
+from mtgpy import ManaCost, RulesText
 
 import json
 from os.path import join, isfile
@@ -22,7 +25,6 @@ from mtgsdk import Card
 import math
 import time
 from datetime import datetime
-from elapsed_time import ElapsedTimeThread
 from termcolor import colored
 from functools import reduce
 import numpy as np
@@ -55,8 +57,8 @@ def main():
     # myset = "mardu"
     # JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
     # JSON = join(RESOURCE_DIR, "card_data", f"mardu_aristocrats_M20.json")
-    TOKENS = join(RESOURCE_DIR, "card_data", f"tokens.json")
-    ANGELS = join(RESOURCE_DIR, "card_data", f"mardu_angels_M20.json")
+    # TOKENS = join(RESOURCE_DIR, "card_data", f"tokens.json")
+    # ANGELS = join(RESOURCE_DIR, "card_data", f"mardu_angels_M20.json")
     DINOS = join(RESOURCE_DIR, "card_data", f"RG_Dinos.json")
 
     # SAVE_LOCATION = myset
@@ -151,8 +153,8 @@ def main():
 
     name = text_template.get_layer("name")
 
-    cards = cards[-3:]
-    # cards = [c for c in cards if c['name'] == "Fanatical Firebrand"]
+    # cards = cards[-3:]
+    cards = [c for c in cards if c['name'] == "Sentinel Totem"]
     # cards = [c for c in cards if c['name'] == "Shifting Ceratops"]
 
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"

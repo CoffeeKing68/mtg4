@@ -3753,6 +3753,161 @@
         "watermark": "gruul"
     },
     {
+        "artist": "Valentin Scalliet",
+        "border": null,
+        "cmc": 1.0,
+        "color_identity": [],
+        "colors": [],
+        "flavor": null,
+        "foreign_names": [
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435703&type=card",
+                "language": "German",
+                "multiverseid": 435703,
+                "name": "W\u00e4chtertotem",
+                "text": "Wenn das W\u00e4chtertotem ins Spiel kommt, wende Hellsicht 1 an. (Schaue dir die oberste Karte deiner Bibliothek an. Du kannst sie unter deine Bibliothek legen.)\n{T}, schicke das W\u00e4chtertotem ins Exil: Schicke alle Karten aus allen Friedh\u00f6fen ins Exil."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=437796&type=card",
+                "language": "Spanish",
+                "multiverseid": 437796,
+                "name": "T\u00f3tem centinela",
+                "text": "Cuando el T\u00f3tem centinela entre al campo de batalla, adivina 1. (Mira la primera carta de tu biblioteca. Puedes poner esa carta en el fondo de tu biblioteca.)\n{T}, exiliar el T\u00f3tem centinela: Exilia todas las cartas de todos los cementerios."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=436002&type=card",
+                "language": "French",
+                "multiverseid": 436002,
+                "name": "Totem sentinelle",
+                "text": "Quand le Totem sentinelle arrive sur le champ de bataille, regard 1. (Regardez la carte du dessus de votre biblioth\u00e8que. Vous pouvez la mettre au-dessous de votre biblioth\u00e8que.)\n{T}, exilez le Totem sentinelle : Exilez toutes les cartes de tous les cimeti\u00e8res."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=436301&type=card",
+                "language": "Italian",
+                "multiverseid": 436301,
+                "name": "Sentinella Totemica",
+                "text": "Quando la Sentinella Totemica entra nel campo di battaglia, profetizza 1. (Guarda la prima carta del tuo grimorio. Puoi mettere quella carta in fondo al tuo grimorio.)\n{T}, Esilia la Sentinella Totemica: Esilia tutte le carte da tutti i cimiteri."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=436600&type=card",
+                "language": "Japanese",
+                "multiverseid": 436600,
+                "name": "\u6b69\u54e8\u306e\u30c8\u30fc\u30c6\u30e0\u50cf",
+                "text": "\u6b69\u54e8\u306e\u30c8\u30fc\u30c6\u30e0\u50cf\u304c\u6226\u5834\u306b\u51fa\u305f\u3068\u304d\u3001\u5360\u8853\uff11\u3092\u884c\u3046\u3002\uff08\u3042\u306a\u305f\u306e\u30e9\u30a4\u30d6\u30e9\u30ea\u30fc\u306e\u4e00\u756a\u4e0a\u306e\u30ab\u30fc\u30c9\u3092\u898b\u308b\u3002\u3042\u306a\u305f\u306f\u305d\u306e\u30ab\u30fc\u30c9\u3092\u3042\u306a\u305f\u306e\u30e9\u30a4\u30d6\u30e9\u30ea\u30fc\u306e\u4e00\u756a\u4e0b\u306b\u7f6e\u3044\u3066\u3082\u3088\u3044\u3002\uff09\n{T}, \u6b69\u54e8\u306e\u30c8\u30fc\u30c6\u30e0\u50cf\u3092\u8ffd\u653e\u3059\u308b\uff1a\u5893\u5730\u3059\u3079\u3066\u304b\u3089\u30ab\u30fc\u30c9\u3092\u3059\u3079\u3066\u8ffd\u653e\u3059\u308b\u3002"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=436899&type=card",
+                "language": "Korean",
+                "multiverseid": 436899,
+                "name": "\ubcf4\ucd08 \ud1a0\ud15c",
+                "text": "\ubcf4\ucd08 \ud1a0\ud15c\uc774 \uc804\uc7a5\uc5d0 \ub4e4\uc5b4\uc62c \ub54c, \uc810\uc220 1\uc744 \ud55c\ub2e4. (\ub2f9\uc2e0\uc758 \uc11c\uace0 \ub9e8 \uc704\uc758 \uce74\ub4dc \ud55c \uc7a5\uc744 \ubcf8\ub2e4. \ub2f9\uc2e0\uc740 \uadf8 \uce74\ub4dc\ub97c \ub2f9\uc2e0\uc758 \uc11c\uace0 \ub9e8 \ubc11\uc5d0 \ub193\uc744 \uc218 \uc788\ub2e4.)\n{T}, \ubcf4\ucd08\uc758 \ud1a0\ud15c\uc744 \ucd94\ubc29\ud55c\ub2e4: \ubaa8\ub4e0 \ubb34\ub364\uc5d0\uc11c \ubaa8\ub4e0 \uce74\ub4dc\ub97c \ucd94\ubc29\ud55c\ub2e4."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=437198&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 437198,
+                "name": "Totem Sentinela",
+                "text": "Quando Totem Sentinela entrar no campo de batalha, use vid\u00eancia 1. (Olhe o card do topo de seu grim\u00f3rio. Voc\u00ea pode colocar aquele card no fundo de seu grim\u00f3rio.)\n{T}, exile Totem Sentinela: Exile todos os cards de todos os cemit\u00e9rios."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=437497&type=card",
+                "language": "Russian",
+                "multiverseid": 437497,
+                "name": "\u0421\u0442\u043e\u0440\u043e\u0436\u0435\u0432\u043e\u0439 \u0422\u043e\u0442\u0435\u043c",
+                "text": "\u041a\u043e\u0433\u0434\u0430 \u0421\u0442\u043e\u0440\u043e\u0436\u0435\u0432\u043e\u0439 \u0422\u043e\u0442\u0435\u043c \u0432\u044b\u0445\u043e\u0434\u0438\u0442 \u043d\u0430 \u043f\u043e\u043b\u0435 \u0431\u0438\u0442\u0432\u044b, \u043f\u0440\u0435\u0434\u0441\u043a\u0430\u0436\u0438\u0442\u0435 1. (\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0445\u043d\u044e\u044e \u043a\u0430\u0440\u0442\u0443 \u0432\u0430\u0448\u0435\u0439 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0438. \u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043f\u043e\u043b\u043e\u0436\u0438\u0442\u044c \u0442\u0443 \u043a\u0430\u0440\u0442\u0443 \u0432 \u043d\u0438\u0437 \u0432\u0430\u0448\u0435\u0439 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0438.)\n{T}, \u0438\u0437\u0433\u043e\u043d\u0438\u0442\u0435 \u0421\u0442\u043e\u0440\u043e\u0436\u0435\u0432\u043e\u0439 \u0422\u043e\u0442\u0435\u043c: \u0438\u0437\u0433\u043e\u043d\u0438\u0442\u0435 \u0432\u0441\u0435 \u043a\u0430\u0440\u0442\u044b \u0438\u0437 \u0432\u0441\u0435\u0445 \u043a\u043b\u0430\u0434\u0431\u0438\u0449."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=438095&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 438095,
+                "name": "\u54e8\u6212\u56fe\u817e\u50cf",
+                "text": "\u5f53\u54e8\u6212\u56fe\u817e\u50cf\u8fdb\u6218\u573a\u65f6\uff0c\u5360\u535c1\u3002\uff08\u68c0\u89c6\u4f60\u724c\u5e93\u9876\u7684\u724c\u3002\u4f60\u53ef\u4ee5\u5c06\u8be5\u724c\u7f6e\u4e8e\u4f60\u7684\u724c\u5e93\u5e95\u3002\uff09\n{T}\uff0c\u653e\u9010\u54e8\u6212\u56fe\u817e\u50cf\uff1a\u653e\u9010\u6240\u6709\u575f\u5893\u573a\u4e2d\u7684\u6240\u6709\u724c\u3002"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=438394&type=card",
+                "language": "Chinese Traditional",
+                "multiverseid": 438394,
+                "name": "\u54e8\u6212\u5716\u9a30\u50cf",
+                "text": "\u7576\u54e8\u6212\u5716\u9a30\u50cf\u9032\u6230\u5834\u6642\uff0c\u5360\u535c1\u3002\uff08\u6aa2\u8996\u4f60\u724c\u5eab\u9802\u7684\u724c\u3002\u4f60\u53ef\u4ee5\u5c07\u8a72\u724c\u7f6e\u65bc\u4f60\u7684\u724c\u5eab\u5e95\u3002\uff09\n{T}\uff0c\u653e\u9010\u54e8\u6212\u5716\u9a30\u50cf\uff1a\u653e\u9010\u6240\u6709\u58b3\u5893\u5834\u4e2d\u7684\u6240\u6709\u724c\u3002"
+            }
+        ],
+        "hand": null,
+        "id": "98516689-6511-5e6f-847e-0a367b46e8e8_Valentin_Scalliet",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435404&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Brawl",
+                "legality": "Legal"
+            },
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Standard",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{1}",
+        "multiverse_id": 435404,
+        "name": "Sentinel Totem",
+        "names": null,
+        "number": "245",
+        "original_text": "When Sentinel Totem enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\n{T}, Exile Sentinel Totem: Exile all cards from all graveyards.",
+        "original_type": "Artifact",
+        "power": null,
+        "printings": [
+            "XLN"
+        ],
+        "rarity": "Uncommon",
+        "release_date": null,
+        "rulings": [],
+        "set": "XLN",
+        "set_name": "Ixalan",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "When Sentinel Totem enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\n{T}, Exile Sentinel Totem: Exile all cards from all graveyards.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Artifact",
+        "types": [
+            "Artifact"
+        ],
+        "variations": null,
+        "watermark": null
+    },
+    {
         "artist": "Anthony Palumbo",
         "border": null,
         "cmc": 1.0,
