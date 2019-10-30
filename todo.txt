@@ -1,0 +1,9 @@
+- get all sets
+- from last sets
+    - find total amount of images in set
+    - for page in mtgpics.com/art?set=(<set-id>)&page=(<page-number>)
+        - find card_name, artist and image_number
+        - if img does not exist:
+            - download
+        - elif img has different size:
+            - download

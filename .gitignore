@@ -1,3 +1,7 @@
 __pycache__/
 test_images/
 .DS_Store
+/scraped_data/
+/resources/art/
+/resources/extra_art/
+/resources/set_data/

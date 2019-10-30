@@ -54,17 +54,18 @@ def main():
     else:
         raise ValueError("sets.json not found.")
 
-    # myset = "mardu"
+    myset = "MH1"
     # JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
     # JSON = join(RESOURCE_DIR, "card_data", f"mardu_aristocrats_M20.json")
     # TOKENS = join(RESOURCE_DIR, "card_data", f"tokens.json")
     # ANGELS = join(RESOURCE_DIR, "card_data", f"mardu_angels_M20.json")
-    DINOS = join(RESOURCE_DIR, "card_data", f"RG_Dinos.json")
+    JSON = join(RESOURCE_DIR, "set_data", f"{myset}.json")
+    # SULTAI_FLASH = join(RESOURCE_DIR, "card_data", f"sultai_flash.json")
 
-    # SAVE_LOCATION = myset
-    SAVE_LOCATION = "RG_Dinos"
+    SAVE_LOCATION = myset
+    # SAVE_LOCATION = "sultai_flash"
 
-    JSON = DINOS
+    # JSON = SULTAI_FLASH
     # JSON = TOKENS
 
     """make directory in art"""
@@ -100,7 +101,7 @@ def main():
 
     art_layers = {
         "bg": ColorBackgroundLayer("bg", content=Color("Black")),
-        "art": FillIL("art", order=-5, XP50=NA(WIDTH / 2), top=NA(0),
+        "art": FillIL("art", order=-5, XP50=NA(WIDTH / 2), YP50=NA(HEIGHT / 2),
             width=NA(WIDTH), height=NA(HEIGHT)),
         "shadow1": ColorLayer("shadow1", content="RGBA(0,0,0,0.4)", left=NA(0),
             width=NA(WIDTH), top=NA(0), bottom=SA("shadow2.top")),
@@ -153,9 +154,9 @@ def main():
 
     name = text_template.get_layer("name")
 
-    # cards = cards[-3:]
-    cards = [c for c in cards if c['name'] == "Sentinel Totem"]
-    # cards = [c for c in cards if c['name'] == "Shifting Ceratops"]
+    with_art = list(os.listdir(join(RESOURCE_DIR, "art", myset)))
+    cards = [c for c in cards if f"{c['name']}_{c['id']}.jpg" in with_art]
+    # cards = [c for c in cards if c['name'] == "Banefire"]
 
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} WOTC"
@@ -186,6 +187,8 @@ def main():
 
         if "Creature" in card["types"]:
             layers["PT"].content = f"{card['power']}/{card['toughness']}"
+        # print(card)
+        # print(repr(temp.get_layer("name").content))
         count = 999
         sset = [s for s in sets if s['code'] == card['set']]
         if len(sset) == 1:
@@ -205,11 +208,15 @@ def main():
         layers["rarity"].content = rarity
 
         rules = ""
-        text_to_use = "original_text"
+        text_to_use = "text"
         if card[text_to_use] is not None:
             rules = card[text_to_use]
         if card["flavor"] is not None:
-            rules += "".join([f"\n<i>{f}</i>" for f in card['flavor'].split('\n')])
+            flavor = "\n".join([f"<i>{f}</i>" for f in card['flavor'].split('\n')])
+            if rules == "":
+                rules = flavor
+            else:
+                rules += "\n" + flavor
 
         if rules != "":
             temp.get_layer("rules").content = rules
@@ -219,10 +226,13 @@ def main():
 
         temp.update_bounds()
         render_bg = temp.get_layer("art_temp").render()
-        render_text_shadow = temp.get_layer("text_temp").shadow(-4, 4, sigma=2,
-            radius=4, color="Black")
-        render_text = temp.get_layer("text_temp").render()
         image = render_bg.clone()
+        if temp.get_layer("art").content is not None:
+            render_text_shadow = temp.get_layer("text_temp").shadow(-4, 4, sigma=2,
+                radius=4, color="Black")
+            image.composite(render_text_shadow, left=0, top=0)
+        render_text = temp.get_layer("text_temp").render()
+        image.composite(render_text, left=0, top=0)
 
         # xb = Bounds(start=BORDER - 10, end=WIDTH - BORDER + 10)
         # yb = Bounds(start=temp.get_layer("type")["top"] - 10,
@@ -248,8 +258,7 @@ def main():
         #         apply_mask(blur_image, mask)
         #     image.composite(blur_image, left=int(xb['start']), top=int(yb['start']))
 
-        image.composite(render_text_shadow, left=0, top=0)
-        image.composite(render_text, left=0, top=0)
+
 
         image.save(filename=join("test_images", "all_render", f"{SAVE_LOCATION}", f"{card['name']}_{card['id']}.jpg").replace("//", "__"))
         # image.save(filename=join("test_images", "all_render", "Printing", f"{SAVE_LOCATION}", f"{card['name']}_{card['id']}.jpg").replace("//", "__"))
