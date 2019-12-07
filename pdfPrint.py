@@ -54,7 +54,7 @@ def main():
     else:
         raise ValueError("sets.json not found.")
 
-    myset = "XLN"
+    myset = "WAR"
     # JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
     # JSON = join(RESOURCE_DIR, "card_data", f"mardu_aristocrats_M20.json")
     # TOKENS = join(RESOURCE_DIR, "card_data", f"tokens.json")
@@ -128,19 +128,8 @@ def main():
 
     art_layers = {
         "bg": ColorBackgroundLayer("bg", content=Color("#181510")),
-        # "art": FillIL("art", order=-5, XP50=NA(WIDTH / 2), YP50=NA(HEIGHT / 2),
-        #     width=NA(WIDTH), height=NA(HEIGHT)),
         "art": FillIL("art", order=-5, XP50=NA(WIDTH / 2), top=NA(B + TOP_OUTER_BORDER),
             width=NA(B_ART_WIDTH), height=NA(MIN_ART_HEIGHT)),
-        # "shadow1": ColorLayer("shadow1", content="RGBA(0,0,0,0.4)", left=NA(0),
-        #     width=NA(WIDTH), top=NA(0), bottom=SA("shadow2.top")),
-        # "shadow2": GradL("shadow2", start="RGBA(0,0,0,0.4)", end="RGBA(0,0,0,0.0)",
-        #     left=NA(0), width=NA(WIDTH), top=SA("name.bottom"), height=NA(200)),
-        # "shadow3": GradL("shadow3", start="RGBA(0,0,0,0.0)", end="RGBA(0,0,0,0.7)",
-        #     left=NA(0), width=NA(WIDTH), bottom=SA("shadow4.top"),
-        #     top=AA(SA("type.cap"), NA(-150))),
-        # "shadow4": ColorLayer("shadow4", content="RGBA(0,0,0,0.7)", left=NA(0),
-        #     width=NA(WIDTH), bottom=NA(HEIGHT + 1), top=SA("rules.YP70")),
         "border": ImageLayer("border", content=BORDER_PATH, left=NA(0), top=NA(0))
     }
     no_content_reset = {
@@ -171,12 +160,6 @@ def main():
         "rules": RulesText("rules", MPLANTIN, MPLANTIN_ITAL, RULES_TEXT_SIZE, FC,
             RULES_TEXT_SIZE - 4, left=NA(RULES_BORDER), right=NA(WIDTH-RULES_BORDER),
             bottom=NA(950 + OUTER_Y_BOTTOM_BORDER)),
-        # "flavor_split": ColorLayer("flavor_split", left=NA(RULES_BORDER + FLAVOR_SPLIT_OFFSET),
-        #     right=NA(WIDTH - RULES_BORDER - FLAVOR_SPLIT_OFFSET), height=NA(2),
-        #     bottom=AA(SA("flavor.top"), NA(-5))),
-        # "flavor": RulesText("flavor", MPLANTIN, MPLANTIN_ITAL, RULES_TEXT_SIZE, FC,
-        #     RULES_TEXT_SIZE - 4, left=NA(RULES_BORDER), right=NA(WIDTH-RULES_BORDER),
-        #     bottom=AA(SA("PT.bottom"), NA(-PT_LOYAL_SIZE), NA(-5))),
     }
 
     text_template = Template("text_temp", *layers.values(), *no_content_reset.values(),
@@ -184,24 +167,19 @@ def main():
     art_template = Template("art_temp", *art_layers.values(), order=-5, left=NA(0), width=NA(WIDTH),
         top=NA(0), height=NA(HEIGHT))
 
-    name = text_template.get_layer("name")
+    # name = text_template.get_layer("name")
 
+    # chosing what cards we want to render
     with_art = list(os.listdir(join(RESOURCE_DIR, "art", myset)))
     cards = [c for c in cards if f"{c['name']}_{c['id']}.jpg" in with_art]
-    # cards = [c for c in cards if c['name'] == "Ahn-Crop Invader"]
+    cards = [c for c in cards if c['name'] == "Ahn-Crop Invader"]
+    if len(cards) == 0:
+        exit("No cards")
 
+    # set some content values
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} WOTC"
     loga = math.ceil(math.log10(len(cards)))
-    temp = Template("template", text_template, art_template,
-        left=NA(0), width=NA(WIDTH), top=NA(0), height=NA(HEIGHT))
-    temp.mana_image_format = "svg"
-    temp.resource_dir = RESOURCE_DIR
-    max_card_length = max(len(c['name']) for c in cards)
-    row = f"| {{:0{loga}}}/{{:0{loga}}} | {{}} | {{}} | {{:07.3f}} |"
-    total = 0
-
-    pdf = Image(filename=join(RESOURCE_DIR, "PrintPdf.png"))
     count = 999
 
     rarity_colors = {
@@ -218,8 +196,22 @@ def main():
         if len(sset) == 1:
             count = sset[0]["count"]
 
+
+
+    # display purposes
+    max_card_length = max(len(c['name']) for c in cards)
+    row = f"| {{:0{loga}}}/{{:0{loga}}} | {{}} | {{}} | {{:07.3f}} |"
+    total = 0
+
+    pdf = Image(filename=join(RESOURCE_DIR, "PrintPdf.png"))
+
     for i, card in enumerate(sorted(cards, key=lambda x: x['name'])):
         start_time = time.time()
+
+        temp = Template("template", text_template, art_template,
+            left=NA(0), width=NA(WIDTH), top=NA(0), height=NA(HEIGHT))
+        temp.mana_image_format = "svg"
+        temp.resource_dir = RESOURCE_DIR
 
         # remove
         reset_layers = list(layers) + ["art"]
