@@ -28,6 +28,10 @@ from datetime import datetime
 from termcolor import colored
 from functools import reduce
 import numpy as np
+from copy import deepcopy
+from pprint import pprint
+
+from templates.adventure import adventure
 
 def apply_mask(image, mask, invert=False):
     mask.alpha_channel = 'copy'
@@ -54,7 +58,7 @@ def main():
     else:
         raise ValueError("sets.json not found.")
 
-    myset = "WAR"
+    myset = "ELD"
     # JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
     # JSON = join(RESOURCE_DIR, "card_data", f"mardu_aristocrats_M20.json")
     # TOKENS = join(RESOURCE_DIR, "card_data", f"tokens.json")
@@ -62,7 +66,8 @@ def main():
     JSON = join(RESOURCE_DIR, "set_data", f"{myset}.json")
     # SULTAI_FLASH = join(RESOURCE_DIR, "card_data", f"sultai_flash.json")
 
-    SAVE_LOCATION = join("test_images", "print_pdfs", myset)
+    # SAVE_LOCATION = join("test_images", "print_pdfs", myset)
+    SAVE_LOCATION = join("test_images", "adventure_testing", myset)
     PDF_SAVE_LOCATION = join("test_images", "pdfs", myset)
     # SAVE_LOCATION = "sultai_flash"
 
@@ -74,9 +79,9 @@ def main():
     #     os.mkdir(join(RESOURCE_DIR, "art", myset))
     """make directory in render dir"""
     if not os.path.isdir(SAVE_LOCATION): # dir does not exist
-        os.mkdir(SAVE_LOCATION)
+        os.makedirs(SAVE_LOCATION)
     if not os.path.isdir(PDF_SAVE_LOCATION): # dir does not exist
-        os.mkdir(PDF_SAVE_LOCATION)
+        os.makedirs(PDF_SAVE_LOCATION)
 
     """load cards"""
     with open(JSON, "r") as f:
@@ -132,7 +137,7 @@ def main():
             width=NA(B_ART_WIDTH), height=NA(MIN_ART_HEIGHT)),
         "border": ImageLayer("border", content=BORDER_PATH, left=NA(0), top=NA(0))
     }
-    no_content_reset = {
+    layers = {
         "dot": PTL("dot", RELAY, 25, FC, content=".", left=AA(SA("set.right"),
             NA(SET_DOT_LANG_WIDTH)), ycenter=SA("set.ycenter")),
         "language": PTL("language", RELAY, INFO_SIZE, FC, content="EN",
@@ -141,8 +146,6 @@ def main():
             width=NA(20), left=lmiddle, height=SA("set.height"), bottom=BOTTOM_BASE_INFO),
         "copyright": PTL("copyright", MPLANTIN, INFO_SIZE - 5, FC,
             right=NA(WIDTH-BORDER), bottom=BOTTOM_BASE_INFO),
-    }
-    layers = {
         "name": PTL("name", BELEREN, NAME_SIZE, FC, left=NA(BORDER), base=NA(70 + TOP_OUTER_BORDER)),
         "type": PTL("type", BELEREN, TYPE_SIZE, FC, left=NA(BORDER), base=AA(SA("rules.top"), NA(-10))),
         "PT": PTL("PT", BELEREN, PT_LOYAL_SIZE, FC, right=NA(WIDTH - BORDER), base=BOTTOM_BASE_INFO),
@@ -162,17 +165,16 @@ def main():
             bottom=NA(950 + OUTER_Y_BOTTOM_BORDER)),
     }
 
-    text_template = Template("text_temp", *layers.values(), *no_content_reset.values(),
-        left=NA(0), width=NA(WIDTH), top=NA(0), height=NA(HEIGHT))
-    art_template = Template("art_temp", *art_layers.values(), order=-5, left=NA(0), width=NA(WIDTH),
-        top=NA(0), height=NA(HEIGHT))
+
 
     # name = text_template.get_layer("name")
 
     # chosing what cards we want to render
     with_art = list(os.listdir(join(RESOURCE_DIR, "art", myset)))
     cards = [c for c in cards if f"{c['name']}_{c['id']}.jpg" in with_art]
-    cards = [c for c in cards if c['name'] == "Ahn-Crop Invader"]
+    cards = [c for c in cards if c["layout"] == "adventure"]
+    cards = [c for c in cards if c['name'] == "Flaxen Intruder"]
+    # cards = cards[:5]
     if len(cards) == 0:
         exit("No cards")
 
@@ -191,12 +193,29 @@ def main():
         "T": FC,
     }
 
+    text_to_use = "text"
+    def getRules(card, ttu):
+        rules = ""
+        if card[ttu] is not None:
+            rules = card[ttu]
+        if card["flavor"] is not None:
+            flavor = "\n".join([f"<i>{f}</i>" for f in card['flavor'].split('\n')])
+            if rules == "":
+                rules = flavor
+            else:
+                rules += "\n" + flavor
+        return rules
+
+    def noneToEmptyList(maybeList):
+        if maybeList is None:
+            return []
+        else:
+            return maybeList
+
     if len(cards):
         sset = [s for s in sets if s['code'] == cards[0]['set']]
         if len(sset) == 1:
             count = sset[0]["count"]
-
-
 
     # display purposes
     max_card_length = max(len(c['name']) for c in cards)
@@ -208,41 +227,55 @@ def main():
     for i, card in enumerate(sorted(cards, key=lambda x: x['name'])):
         start_time = time.time()
 
+        # standard layout
+        layout = card["layout"]
+        if layout == "adventure":
+            allayers, llayers = adventure()
+        else:
+            llayers = deepcopy(list(layers.values()))
+            allayers = deepcopy(list(art_layers.values()))
+
+        text_template = Template("text_temp", *llayers,
+            left=NA(0), width=NA(WIDTH), top=NA(0), height=NA(HEIGHT))
+        art_template = Template("art_temp", *allayers, order=-5, left=NA(0), width=NA(WIDTH),
+            top=NA(0), height=NA(HEIGHT))
+
         temp = Template("template", text_template, art_template,
             left=NA(0), width=NA(WIDTH), top=NA(0), height=NA(HEIGHT))
+
+        # generic templating
         temp.mana_image_format = "svg"
         temp.resource_dir = RESOURCE_DIR
 
-        # remove
-        reset_layers = list(layers) + ["art"]
-        for name in reset_layers:
+        # START setting content
+        for name in temp.get_layer("text_temp").layers:
             layer = temp.get_layer(name)
-            layer.unset_content_and_pre_render()
             if layer.name in card:
                 layer.content = card[layer.name]
-        temp.get_layer("artist_brush").pre_shadow = None
 
-        # START setting content
+        if layout == "adventure":
+            with open(join(RESOURCE_DIR, "set_data", f"{card['set']}.json")) as f:
+                ccc = json.load(f)
+            adventure_card = [c2 for c2 in ccc if (card['name'] in noneToEmptyList(c2["names"])
+                and (card['name'] != c2['name']))][0]
+
+            temp.get_layer("adventure_rules").content = adventure_card[text_to_use]
+            temp.get_layer("adventure_type").content = adventure_card["type"]
+            temp.get_layer("adventure_name").content = adventure_card["name"]
+            temp.get_layer("adventure_mana_cost").content = adventure_card["mana_cost"]
+
+        # generic
         if "Creature" in card["types"]:
-            layers["PT"].content = f"{card['power']}/{card['toughness']}"
+            temp.get_layer("PT").content = f"{card['power']}/{card['toughness']}"
 
         number = card['number'].upper().zfill(3)
-        layers["number"].content = f"{number}/{count:03}"
+        temp.get_layer("number").content = f"{number}/{count:03}"
 
         rarity = card["rarity"][0].upper()
-        layers["rarity"].color = rarity_colors[rarity]
-        layers["rarity"].content = rarity
+        temp.get_layer("rarity").color = rarity_colors[rarity]
+        temp.get_layer("rarity").content = rarity
 
-        rules = ""
-        text_to_use = "text"
-        if card[text_to_use] is not None:
-            rules = card[text_to_use]
-        if card["flavor"] is not None:
-            flavor = "\n".join([f"<i>{f}</i>" for f in card['flavor'].split('\n')])
-            if rules == "":
-                rules = flavor
-            else:
-                rules += "\n" + flavor
+        rules = getRules(card, text_to_use)
 
         if rules != "":
             temp.get_layer("rules").content = rules
@@ -250,9 +283,17 @@ def main():
                 .replace("//", "__")
         temp.get_layer("art").content = art_path if os.path.isfile(art_path) else None
 
+        # generic
         temp.update_bounds()
+        # pprint(temp.get_layer("adventure_box").x.bounds)
+        ml = ["adventure_box", "rules", "rules_box"]
+        for m in ml:
+            print(m)
+            pprint(temp.get_layer(m).y.bounds)
+
         render_bg = temp.get_layer("art_temp").render()
         image = render_bg.clone()
+        # text = temp.get_layer("text_temp").render()
         if temp.get_layer("art").content is not None:
             render_text_shadow = temp.get_layer("text_temp").shadow(-4, 4, sigma=2,
                 radius=4, color="Black")
@@ -263,6 +304,7 @@ def main():
 
         # SAVING content
         image.save(filename=join(SAVE_LOCATION, f"{card['name']}_{card['id']}.jpg").replace("//", "__"))
+        # image.save(filename=join(SAVE_LOCATION, f"{card['name']}.jpg").replace("//", "__"))
 
         p = pdf.clone()
         p.composite(image, left=73, top=67)

@@ -671,6 +671,22 @@ class Deck():
     def __repr__(self):
         return f"main: {self.mainQuantity}, side: {self.sideQuantity}"
 
+    def layouts(self):
+        layouts = []
+        for card in self.main + self.side:
+            for sset in [s for s in listdir(sset_dir) if s.endswith(".json")]:
+                try:
+                    cards = [s for s in jsonLoadFrom(join(sset_dir, sset)) if s["name"] == card.name]
+                    if len(cards):
+                        layouts.append(cards[0]["layout"])
+                        break
+                except JSONDecodeError:
+                    pass
+            # cards = jsonLoadFrom(join("resources", "set_data", f"{sset}.json"))
+            # c = [cc for cc in cards if cc["name"] == card.name][0]
+            # layouts.append(c["layout"])
+        return list(set(layouts))
+
 LAND_AMOUNT = 1000
 no_print = [
     (3, "Improbable Alliance"),
@@ -714,15 +730,19 @@ def viewMissingArt(deckName, verbose=True):
         return cards_missing_art
 
 def main():
-    for deckName in [d for d in decks if decks[d].get("modern", True)]:
-        missing = viewMissingArt(deckName, False)
-        s = f"{deckName}, {sum([c.quantity for c in missing])}"
-        if len(missing) == 0:
-            cprint(s, "green")
-        elif len(missing) < 5:
-            cprint(s, "yellow")
-        else:
-            cprint(s, "red")
+    deckName = "UB_Fae"
+    ddd = Deck.make(decks[deckName]["main"], decks[deckName]["side"],
+            decks[deckName]["url"], decks[deckName].get("modern", True))
+    ddd.layouts()
+    # for deckName in [d for d in decks if decks[d].get("modern", True)]:
+    #     missing = viewMissingArt(deckName, False)
+    #     s = f"{deckName}, {sum([c.quantity for c in missing])}"
+    #     if len(missing) == 0:
+    #         cprint(s, "green")
+    #     elif len(missing) < 5:
+    #         cprint(s, "yellow")
+    #     else:
+    #         cprint(s, "red")
 
 
 
