@@ -3,6 +3,7 @@ from os.path import join, isdir, expanduser
 from os import makedirs, listdir
 from termcolor import cprint
 from json import load, dump, JSONDecodeError
+from pprint import pprint
 
 TEST_DIR = "test_images"
 PRINTS_DIR = "prints"
@@ -241,7 +242,8 @@ decks = {
             (1, "Rankle, Master of Pranks"),
             (2, "Sorcerous Spyglass"),
         ],
-        "url": "https://www.jeffhoogland.com/decklists/urx-alliance/"
+        "url": "https://www.jeffhoogland.com/decklists/urx-alliance/",
+        "modern": False,
     },
     "rankle_crats": {
         "main": [
@@ -272,7 +274,8 @@ decks = {
             (3, "Theater of Horrors"),
             (1, "Tibalt, Rakish Instigator"),
         ],
-        "url": "https://www.jeffhoogland.com/decklists/ranklecrats/"
+        "url": "https://www.jeffhoogland.com/decklists/ranklecrats/",
+        "modern": False,
     },
     "aggro_knights": {
         "main": [
@@ -306,7 +309,8 @@ decks = {
             (3, "Mortify"),
             (4, "Worthy Knight"),
         ],
-        "url": "https://www.jeffhoogland.com/decklists/aggro-knights/"
+        "url": "https://www.jeffhoogland.com/decklists/aggro-knights/",
+        "modern": False
     },
     "GB_rock": {
         "main": [
@@ -383,7 +387,194 @@ decks = {
             (1, "Thief of Sanity"),
         ],
         "url": "https://www.jeffhoogland.com/decklists/grixis-shadow/"
-    }
+    },
+    "death_taxes": {
+        "main": [
+            (4, "Aether Vial"),
+            (4, "Blade Splicer"),
+            (2, "Caves of Koilos"),
+            (4, "Concealed Courtyard"),
+            (4, "Dark Confidant"),
+            (4, "Flickerwisp"),
+            (4, "Ghost Quarter"),
+            (4, "Godless Shrine"),
+            (4, "Leonin Arbiter"),
+            (4, "Path to Exile"),
+            (2, "Plains"),
+            (2, "Ravenous Chupacabra"),
+            (2, "Shambling Vent"),
+            (2, "Smuggler's Copter"),
+            (2, "Swamp"),
+            (2, "Tectonic Edge"),
+            (4, "Thalia, Guardian of Thraben"),
+            (2, "Thraben Inspector"),
+            (4, "Tidehollow Sculler"),
+        ],
+        "side": [
+            (2, "Disenchant"),
+            (2, "Fatal Push"),
+            (2, "Gonti, Lord of Luxury"),
+            (2, "Kambal, Consul of Allocation"),
+            (3, "Rest in Peace"),
+            (2, "Sin Collector"),
+            (2, "Thoughtseize"),
+        ],
+        "url": "https://www.mtggoldfish.com/deck/912194#paper",
+        "modern": True,
+    },
+    "UR_tempo": {
+        "main": [
+            (4, "Brazen Borrower"),
+            (4, "Burst Lightning"),
+            (4, "Delver of Secrets"),
+            (1, "Faerie Conclave"),
+            (3, "Fiery Islet"),
+            (1, "Flooded Strand"),
+            (3, "Island"),
+            (4, "Lightning Bolt"),
+            (1, "Mana Leak"),
+            (2, "Mountain"),
+            (2, "Mutavault"),
+            (2, "Nimble Obstructionist"),
+            (2, "Opt"),
+            (3, "Remand"),
+            (4, "Scalding Tarn"),
+            (4, "Snapcaster Mage"),
+            (2, "Spell Pierce"),
+            (1, "Spell Snare"),
+            (4, "Spirebluff Canal"),
+            (3, "Steam Vents"),
+            (2, "Vendilion Clique"),
+            (4, "Wizard's Lightning"),
+        ],
+        "side": [
+            (2, "Abrade"),
+            (2, "Alpine Moon"),
+            (2, "Disdainful Stroke"),
+            (2, "Dragon's Claw"),
+            (1, "Izzet Staticaster"),
+            (2, "Magma Spray"),
+            (2, "Magmatic Sinkhole"),
+            (2, "Negate"),
+        ],
+        "url": "https://www.jeffhoogland.com/decklists/ur-delver-fae/",
+        "modern": True
+    },
+    "Jeskai_Nahiri": {
+        "main": [
+            (3, "Anger of the Gods"),
+            (3, "Celestial Colonnade"),
+            (2, "Cryptic Command"),
+            (1, "Emrakul, the Aeons Torn"),
+            (1, "Field of Ruin"),
+            (4, "Flooded Strand"),
+            (2, "Gideon of the Trials"),
+            (1, "Glacial Fortress"),
+            (2, "Hallowed Fountain"),
+            (3, "Island"),
+            (4, "Lightning Bolt"),
+            (3, "Lightning Helix"),
+            (3, "Mana Leak"),
+            (1, "Mountain"),
+            (4, "Nahiri, the Harbinger"),
+            (4, "Path to Exile"),
+            (1, "Plains"),
+            (1, "Sacred Foundry"),
+            (4, "Scalding Tarn"),
+            (2, "Search for Azcanta"),
+            (4, "Serum Visions"),
+            (4, "Snapcaster Mage"),
+            (2, "Steam Vents"),
+            (1, "Sulfur Falls"),
+        ],
+        "side": [
+            (3, "Damping Sphere"),
+            (1, "Disdainful Stroke"),
+            (1, "Dispel"),
+            (1, "Engineered Explosives"),
+            (1, "Izzet Staticaster"),
+            (2, "Negate"),
+            (2, "Rest in Peace"),
+            (1, "Supreme Verdict"),
+            (2, "Wear/Tear"),
+            (1, "Wrath of God"),
+        ],
+        "url": "https://www.jeffhoogland.com/decklists/jeskai-nahiri/",
+        "modern": True
+    },
+    "Mardu_pyromancer": {
+        "main": [
+            (4, "Blackcleave Cliffs"),
+            (3, "Blood Crypt"),
+            (3, "Blood Moon"),
+            (4, "Bloodstained Mire"),
+            (3, "Collective Brutality"),
+            (2, "Dreadbore"),
+            (2, "Fatal Push"),
+            (4, "Inquisition of Kozilek"),
+            (3, "Kolaghan's Command"),
+            (4, "Lightning Bolt"),
+            (4, "Lingering Souls"),
+            (4, "Marsh Flats"),
+            (3, "Mountain"),
+            (1, "Plains"),
+            (1, "Sacred Foundry"),
+            (2, "Swamp"),
+            (3, "Thoughtseize"),
+            (4, "Young Pyromancer"),
+            (4, "Seasoned Pyromancer"),
+            (2, "Bedlam Reveler"),
+        ],
+        "side": [
+            (1, "Collective Brutality"),
+            (3, "Ensnaring Bridge"),
+            (2, "Kambal, Consul of Allocation"),
+            (4, "Leyline of the Void"),
+            (3, "Molten Rain"),
+            (2, "Wear/Tear"),
+        ],
+        "url": "https://www.jeffhoogland.com/decklists/mardu-pyromancer/",
+        "modern": True
+    },
+    "UB_Fae": {
+        "main": [
+            (4, "Bitterblossom"),
+            (1, "Bloodstained Mire"),
+            (2, "Brazen Borrower"),
+            (3, "Creeping Tar Pit"),
+            (1, "Darkslick Shores"),
+            (4, "Drown in the Loch"),
+            (3, "Fatal Push"),
+            (1, "Flooded Strand"),
+            (4, "Inquisition of Kozilek"),
+            (4, "Island"),
+            (3, "Mistbind Clique"),
+            (2, "Murderous Rider"),
+            (2, "Mutavault"),
+            (4, "Polluted Delta"),
+            (4, "Secluded Glen"),
+            (2, "Snapcaster Mage"),
+            (4, "Spellstutter Sprite"),
+            (2, "Swamp"),
+            (3, "Thought Scour"),
+            (2, "Thoughtseize"),
+            (3, "Vendilion Clique"),
+            (2, "Watery Grave"),
+        ],
+        "side": [
+            (2, "Ceremonious Rejection"),
+            (3, "Collective Brutality"),
+            (2, "Damping Sphere"),
+            (2, "Disdainful Stroke"),
+            (1, "Dismember"),
+            (1, "Force of Negation"),
+            (2, "Kalitas, Traitor of Ghet"),
+            (1, "Murderous Rider"),
+            (1, "Negate"),
+        ],
+        "url": "https://www.jeffhoogland.com/decklists/ub-fae/",
+        "modern": True
+    },
 }
 
 art_dir = join("resources", "art")
@@ -440,7 +631,7 @@ class Card():
         return doIHave(self.name)
 
 class Deck():
-    def __init__(self, main, side=[], url=""):
+    def __init__(self, main, side=[], url="", modern=True):
         self.main = main
         self.side = side
         self.url = url
@@ -460,10 +651,10 @@ class Deck():
                 cprint(card.name, "red")
 
     @classmethod
-    def make(cls, deckName):
-        return cls([Card(n, q) for (q, n) in decks[deckName]["main"]],
-                [Card(n, q) for (q, n) in decks[deckName]["side"]],
-                decks[deckName]["url"])
+    def make(cls, main, side=[], url="", modern=True):
+        return cls([Card(n, q) for (q, n) in main],
+                   [Card(n, q) for (q, n) in side],
+                   url, modern)
 
     @staticmethod
     def quantity(deck):
@@ -490,36 +681,50 @@ no_print = [
     (4, "Opt"),
     (4, "Disdainful Stroke"),
 ]
-def main():
-    # dd = ["burn", "jund", "whirza", "selesnya_eldrazi", "wrenn_and_six",
-          # "URB_Alliance", "rankle_crats", "aggro_knights"]
-    dd = list(decks.keys())
-    ddd = Deck.make(dd[9])
-    print(ddd)
-    deck = ddd.side
+
+def viewMissingArt(deckName, verbose=True):
+    ddd = Deck.make(decks[deckName]["main"], decks[deckName]["side"],
+            decks[deckName]["url"], decks[deckName].get("modern", True))
+    deck = ddd.main
     lacking_art = ddd.doesMyDeckHaveArt(deck)
+    cards_missing_art = []
     for c, r in zip(deck, lacking_art):
-        if not r:
-            cprint(f"Art not found for {c.name}", "yellow")
-            in_sets = findSets(c.name)
-            if in_sets:
-                cprint(f"{c.name} can be found in {in_sets}", "green")
-                scraped_sets = findScrapedArt(c.name)
-                if scraped_sets:
-                    cprint(f"Found the scraped art work in {scraped_sets}", "green")
+        if verbose:
+            if not r:
+                cprint(f"Art not found for {c.name}", "yellow")
+                in_sets = findSets(c.name)
+                if in_sets:
+                    cprint(f"{c.name} can be found in {in_sets}", "green")
+                    scraped_sets = findScrapedArt(c.name)
+                    if scraped_sets:
+                        cprint(f"Found the scraped art work in {scraped_sets}", "green")
+                    else:
+                        cprint(f"Could not find scraped art for {c.name}", "red")
                 else:
-                    cprint(f"Could not find scraped art for {c.name}", "red")
+                    cprint(f"Can't find {c.name}", "red")
             else:
-                cprint(f"Can't find {c.name}", "red")
-
+                cprint(f"We have the art for {c.name}")
         else:
-            cprint(f"We have the art for {c.name}")
-    # ddd.printDoesMyDeckHaveArt(ddd.main)
+            if not r:
+                cards_missing_art.append(c)
 
-    # Burn = Deck.make("burn")
-    # Jund = Deck.make("jund")
-    # print(Jund)
-    # print(Burn)
+    if not verbose:
+        # print(sum([c.quantity for c in cards_missing_art]))
+        # pprint([f"{c.name}: {c.quantity}" for c in cards_missing_art])
+        return cards_missing_art
+
+def main():
+    for deckName in [d for d in decks if decks[d].get("modern", True)]:
+        missing = viewMissingArt(deckName, False)
+        s = f"{deckName}, {sum([c.quantity for c in missing])}"
+        if len(missing) == 0:
+            cprint(s, "green")
+        elif len(missing) < 5:
+            cprint(s, "yellow")
+        else:
+            cprint(s, "red")
+
+
 
 if __name__ == "__main__":
     main()
