@@ -54,7 +54,7 @@ def main():
     else:
         raise ValueError("sets.json not found.")
 
-    myset = "MH1"
+    myset = "WAR"
     # JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
     # JSON = join(RESOURCE_DIR, "card_data", f"mardu_aristocrats_M20.json")
     # TOKENS = join(RESOURCE_DIR, "card_data", f"tokens.json")
@@ -156,7 +156,8 @@ def main():
 
     with_art = list(os.listdir(join(RESOURCE_DIR, "art", myset)))
     cards = [c for c in cards if f"{c['name']}_{c['id']}.jpg" in with_art]
-    # cards = [c for c in cards if c['name'] == "Banefire"]
+    cards = [c for c in cards if c['name'] == "Nicol Bolas, Dragon-God"]
+    print(len(cards))
 
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} WOTC"
@@ -232,6 +233,7 @@ def main():
                 radius=4, color="Black")
             image.composite(render_text_shadow, left=0, top=0)
         render_text = temp.get_layer("text_temp").render()
+        render_text.save(filename="test.png")
         image.composite(render_text, left=0, top=0)
 
         # xb = Bounds(start=BORDER - 10, end=WIDTH - BORDER + 10)
