@@ -32,10 +32,15 @@ from copy import deepcopy
 from pprint import pprint
 
 from templates.adventure import adventure
+from subprocess import call
 
 def apply_mask(image, mask, invert=False):
     mask.alpha_channel = 'copy'
     image.composite_channel('alpha', mask, 'copy_alpha')
+
+def openInScryfall(card):
+    call(["open", "-a", "Google Chrome",
+        f"https://scryfall.com/search?q=artist:'{card['artist']}'+set:'{card['set']}'+'{card['name']}'&unique=cards&as=grid&order=name"])
 
 def main():
     RESOURCE_DIR = join(os.getcwd(), "resources")
@@ -58,18 +63,17 @@ def main():
     else:
         raise ValueError("sets.json not found.")
 
-    myset = "ELD"
+    myset = "Jeskai_Nahiri"
     # JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
     # JSON = join(RESOURCE_DIR, "card_data", f"mardu_aristocrats_M20.json")
     # TOKENS = join(RESOURCE_DIR, "card_data", f"tokens.json")
     # ANGELS = join(RESOURCE_DIR, "card_data", f"mardu_angels_M20.json")
-    JSON = join(RESOURCE_DIR, "set_data", f"{myset}.json")
-    # SULTAI_FLASH = join(RESOURCE_DIR, "card_data", f"sultai_flash.json")
+    JSON = join("print_lists", f"{myset}.json")
+    # JSON = join(RESOURCE_DIR, "set_data", f"{myset}.json")
 
     # SAVE_LOCATION = join("test_images", "print_pdfs", myset)
-    SAVE_LOCATION = join("test_images", "adventure_testing", myset)
+    SAVE_LOCATION = join("test_images", "print_lists", myset)
     PDF_SAVE_LOCATION = join("test_images", "pdfs", myset)
-    # SAVE_LOCATION = "sultai_flash"
 
     # JSON = SULTAI_FLASH
     # JSON = TOKENS
@@ -164,16 +168,14 @@ def main():
             RULES_TEXT_SIZE - 4, left=NA(RULES_BORDER), right=NA(WIDTH-RULES_BORDER),
             bottom=NA(950 + OUTER_Y_BOTTOM_BORDER)),
     }
-
-
-
     # name = text_template.get_layer("name")
 
     # chosing what cards we want to render
-    with_art = list(os.listdir(join(RESOURCE_DIR, "art", myset)))
-    cards = [c for c in cards if f"{c['name']}_{c['id']}.jpg" in with_art]
-    cards = [c for c in cards if c["layout"] == "adventure"]
-    cards = [c for c in cards if c['name'] == "Flaxen Intruder"]
+    cards = [c for c in cards if os.path.isdir(join(RESOURCE_DIR, "art", c["set"])) and \
+            f"{c['name']}_{c['id']}.jpg" in list(os.listdir(join(RESOURCE_DIR, "art", c["set"])))]
+
+    # cards = [c for c in cards if c["layout"] == "adventure"]
+    # cards = [c for c in cards if c['name'] == "Flaxen Intruder"]
     # cards = cards[:5]
     if len(cards) == 0:
         exit("No cards")
@@ -182,7 +184,6 @@ def main():
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} Wizards of the Coast"
     # no_content_reset["copyright"].content = f"™ & © {datetime.now().year} WOTC"
     loga = math.ceil(math.log10(len(cards)))
-    count = 999
 
     rarity_colors = {
         "M": "#D15003",
@@ -212,11 +213,6 @@ def main():
         else:
             return maybeList
 
-    if len(cards):
-        sset = [s for s in sets if s['code'] == cards[0]['set']]
-        if len(sset) == 1:
-            count = sset[0]["count"]
-
     # display purposes
     max_card_length = max(len(c['name']) for c in cards)
     row = f"| {{:0{loga}}}/{{:0{loga}}} | {{}} | {{}} | {{:07.3f}} |"
@@ -226,6 +222,12 @@ def main():
 
     for i, card in enumerate(sorted(cards, key=lambda x: x['name'])):
         start_time = time.time()
+
+        count = 999
+        # openInScryfall(card)
+        sset = [s for s in sets if s['code'] == card['set']]
+        if len(sset) == 1:
+            count = sset[0]["count"]
 
         # standard layout
         layout = card["layout"]
@@ -281,15 +283,16 @@ def main():
             temp.get_layer("rules").content = rules
         art_path = join(RESOURCE_DIR, "art", card['set'], f"{card['name']}_{card['id']}.jpg") \
                 .replace("//", "__")
+        print(art_path)
         temp.get_layer("art").content = art_path if os.path.isfile(art_path) else None
 
         # generic
         temp.update_bounds()
         # pprint(temp.get_layer("adventure_box").x.bounds)
-        ml = ["adventure_box", "rules", "rules_box"]
-        for m in ml:
-            print(m)
-            pprint(temp.get_layer(m).y.bounds)
+        # ml = ["adventure_box", "rules", "rules_box"]
+        # for m in ml:
+        #     print(m)
+        #     pprint(temp.get_layer(m).y.bounds)
 
         render_bg = temp.get_layer("art_temp").render()
         image = render_bg.clone()

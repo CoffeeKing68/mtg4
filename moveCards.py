@@ -9,9 +9,7 @@ TEST_DIR = "test_images"
 PRINTS_DIR = "prints"
 LIST = "URB_Alliance"
 SAVE_LOCATION = join(TEST_DIR, PRINTS_DIR, LIST)
-
-cards = [
-]
+LANDS = ["Plains", "Mountain", "Forest", "Island", "Swamp",]
 
 decks = {
     "burn": {
@@ -28,12 +26,13 @@ decks = {
             (4, "Rift Bolt"),
             (4, "Skewer the Critics"),
             (3, "Bloodstained Mire"),
-            (1, "Fiery Islet"),
+            # (1, "Fiery Islet"),
             (4, "Inspiring Vantage"),
             (3, "Mountain"),
             (2, "Sacred Foundry"),
             (4, "Sunbaked Canyon"),
-            (3, "Wooded Foothills"),
+            # (3, "Wooded Foothills"),
+            (4, "Arid Mesa"),
         ],
         "side": [
             (1, "Searing Blaze"),
@@ -321,12 +320,13 @@ decks = {
             (3, "Field of Ruin"),
             (2, "Forest"),
             (3, "Hexdrinker"),
-            (2, "Hissing Quagmire"),
+            # (2, "Hissing Quagmire"),
             (3, "Inquisition of Kozilek"),
             (3, "Liliana of the Veil"),
             (1, "Maelstrom Pulse"),
             (2, "Nurturing Peatland"),
-            (2, "Overgrown Tomb"),
+            # (2, "Overgrown Tomb"),
+            (4, "Overgrown Tomb"),
             (3, "Scavenging Ooze"),
             (4, "Swamp"),
             (4, "Tarmogoyf"),
@@ -362,7 +362,8 @@ decks = {
             (1, "Mausoleum Secrets"),
             (4, "Polluted Delta"),
             (3, "Scalding Tarn"),
-            (2, "Sleight of Hand"),
+            # (2, "Sleight of Hand"),
+            (2, "Serum Visions"),
             (2, "Snapcaster Mage"),
             (2, "Steam Vents"),
             (4, "Street Wraith"),
@@ -630,6 +631,14 @@ class Card():
     def doIExist(self):
         return doIHave(self.name)
 
+    # def getAllCards(self):
+    #     in_sets = findSets(self.name)
+    #     cards = []
+    #     for sset in in_sets:
+    #         json_cards = jsonLoadFrom(join("resources", "set_data", f"{sset}.json"))
+    #         cards += [c for c in json_cards if c['name'] == self.name]
+    #     return cards
+
 class Deck():
     def __init__(self, main, side=[], url="", modern=True):
         self.main = main
@@ -687,7 +696,28 @@ class Deck():
             # layouts.append(c["layout"])
         return list(set(layouts))
 
+    def saveDeckToJson(self, name):
+        in_sets = []
+        save_to = join("print_lists")
+        card_names = []
+        cards = []
+        if not isdir(save_to):
+            makedirs(save_to)
+
+        for card in [c for c in self.main if c.name not in LANDS]:
+            print(card.name)
+            in_sets += findSets(card.name)
+            card_names.append(card.name)
+
+        for sset in list(set(in_sets)):
+            json_cards = jsonLoadFrom(join("resources", "set_data", f"{sset}.json"))
+            cards += [c for c in json_cards if c['name'] in card_names]
+
+        jsonDumpTo(cards, join(save_to, f"{name}.json"))
+        return cards
+
 LAND_AMOUNT = 1000
+
 no_print = [
     (3, "Improbable Alliance"),
     (2, "Witching Well"),
@@ -729,44 +759,35 @@ def viewMissingArt(deckName, verbose=True):
         # pprint([f"{c.name}: {c.quantity}" for c in cards_missing_art])
         return cards_missing_art
 
-def main():
-    deckName = "UB_Fae"
-    ddd = Deck.make(decks[deckName]["main"], decks[deckName]["side"],
-            decks[deckName]["url"], decks[deckName].get("modern", True))
-    ddd.layouts()
-    # for deckName in [d for d in decks if decks[d].get("modern", True)]:
-    #     missing = viewMissingArt(deckName, False)
-    #     s = f"{deckName}, {sum([c.quantity for c in missing])}"
-    #     if len(missing) == 0:
-    #         cprint(s, "green")
-    #     elif len(missing) < 5:
-    #         cprint(s, "yellow")
-    #     else:
-    #         cprint(s, "red")
+def printMissingArt(deckName, verbosity=False):
+    missing = viewMissingArt(deckName, verbosity)
+    if not verbosity:
+        s = f"{deckName}, {sum([c.quantity for c in missing])}"
+        if len(missing) == 0:
+            cprint(s, "green")
+        elif len(missing) < 5:
+            cprint(s, "yellow")
+        else:
+            cprint(s, "red")
 
+def main():
+    single = False
+    if single:
+        i = 8
+        deckName = list(decks.keys())[i]
+        deckName = "burn"
+        print(deckName)
+        printMissingArt(deckName, True)
+    else:
+        for deckName in [d for d in decks if decks[d].get("modern", True)]:
+            printMissingArt(deckName, False)
+            # print(deckName)
+            # ddd = Deck.make(decks[deckName]["main"], decks[deckName]["side"],
+            #         decks[deckName]["url"], decks[deckName].get("modern", True))
+
+            # ddd.saveDeckToJson(deckName)
 
 
 if __name__ == "__main__":
     main()
 
-# for sset, card in cards:
-#     s = f"{sset}: {card}"
-
-#     ss = doIHave(card)
-#     if (ss):
-#         cprint(f"{s}, {ss}", "green")
-#     else:
-#         cprint(s, "red")
-
-#     src_dir = join(TEST_DIR, "pdfs", sset)
-#     if isdir(src_dir):
-#         b = False
-#         for c in listdir(src_dir):
-#             if c.startswith(card): # Found a match
-#                 cprint(s, "green")
-#                 b = True
-#                 break
-#         if not b:
-#             cprint(s, "red")
-#     else:
-#         cprint(f"Not a set: {sset}", "red")

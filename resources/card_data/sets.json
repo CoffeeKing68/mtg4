@@ -59,5 +59,153 @@
     {
         "code": "ELD",
         "count": 356
+    },
+    {
+        "code": "KTK",
+        "count": 269
+    },
+    {
+        "code": "A25",
+        "count": 249
+    },
+    {
+        "code": "ZEN",
+        "count": 249
+    },
+    {
+        "code": "MM3",
+        "count": 249
+    },
+    {
+        "code": "KLD",
+        "count": 264
+    },
+    {
+        "code": "UMA",
+        "count": 254
+    },
+    {
+        "code": "PF19",
+        "count": 7
+    },
+    {
+        "code": "PRM",
+        "count": 99999
+    },
+    {
+        "code": "IMA",
+        "count": 249
+    },
+    {
+        "code": "WWK",
+        "count": 145
+    },
+    {
+        "code": "GTC",
+        "count": 249
+    },
+    {
+        "code": "MH1",
+        "count": 255
+    },
+    {
+        "code": "SOM",
+        "count": 249
+    },
+    {
+        "code": "RTR",
+        "count": 274
+    },
+    {
+        "code": "C16",
+        "count": 351
+    },
+    {
+        "code": "PCA",
+        "count": 156
+    },
+    {
+        "code": "MM2",
+        "count": 249
+    },
+    {
+        "code": "AER",
+        "count": 274
+    },
+    {
+        "code": "ROE",
+        "count": 248
+    },
+    {
+        "code": "DTK",
+        "count": 264
+    },
+    {
+        "code": "THS",
+        "count": 249
+    },
+    {
+        "code": "SOI",
+        "count": 302
+    },
+    {
+        "code": "G09",
+        "count": 10
+    },
+    {
+        "code": "C19",
+        "count": 302
+    },
+    {
+        "code": "EMN",
+        "count": 208
+    },
+    {
+        "code": "ARB",
+        "count": 145
+    },
+    {
+        "code": "MP2",
+        "count": 54
+    },
+    {
+        "code": "FRF",
+        "count": 185
+    },
+    {
+        "code": "DKA",
+        "count": 158
+    },
+    {
+        "code": "PPRO",
+        "count": 13
+    },
+    {
+        "code": "PNAT",
+        "count": 1
+    },
+    {
+        "code": "AKH",
+        "count": 287
+    },
+    {
+        "code": "DIS",
+        "count": 180
+    },
+    {
+        "code": "AKH",
+        "count": 287
+    },
+    {
+        "code": "MED",
+        "count": 24
+    },
+    {
+        "code": "PF20",
+        "count": 6
+    },
+    {
+        "code": "SS2",
+        "count": 8
     }
 ]
