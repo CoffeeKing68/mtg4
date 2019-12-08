@@ -67,7 +67,10 @@ class Paragraph():
                         t = t[match.end():]
                         ital = False
 
-            self.words.append(w)
+            # print()
+            self.words.append([ww for ww in w if ww.string])
+
+
 
 class Text():
     def __init__(self, string):
@@ -260,3 +263,8 @@ class RulesText(XDefinedLayer):
             pass
         else:
             return super().__getitem__(key)
+
+if __name__ == "__main__":
+    s = '<i>({B/P} can be paid with either {B} or 2 life.)</i>\nTarget creature gets -5/-5 until end of turn.\n<i>"You serve Phyrexia. Your pieces would better serve Phyrexia elsewhere."</i>\n<i>—Azax-Azog, the Demon Thane</i>'
+    r = Rules(s)
+    print(r)

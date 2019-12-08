@@ -1,0 +1,22 @@
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/IMA/Monastery Swiftspear_440d32a6-efe1-5392-9fcf-5a23e1c72e77.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/IMA/Rift Bolt_ebf62806-8340-5d43-919d-5d2fd0fe99e8.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/GRN/Sacred Foundry_a55fe4aa-fd82-557c-986b-7861401b5d32.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/WWK/Searing Blaze_4e038342-7b39-5943-a020-66d735b5f1bd.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/RNA/Skewer the Critics_b07cee18-69c7-59b9-b4c3-b9afd07cca9a.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/EMN/Collective Brutality_86adb3f1-a165-5612-99e4-8ff2712ed58f.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/AER/Fatal Push_a5dd8396-709d-5279-980e-2b5021ced787.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/MH1/Hexdrinker_8b51d9a8-2b89-509f-a832-72ca598f11e8.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/THS/Thoughtseize_950dd138-8a80-5c6e-9bf4-a5da94494e69.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/PRM/Treetop Village_01813cc4-7a42-551a-84ed-76e526257926.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/SOI/Tireless Tracker_555ea555-0aa9-5f34-b625-0eb3bee15f4d.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/FRF/Gurmag Angler_50345bd2-1194-5c24-ad2f-e41db961b9c4.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/GRN/Mausoleum Secrets_8a4f3ef5-dd2e-5c7c-b241-676aa4d29433.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/CN2/Serum Visions_0bf87dc1-14e2-5a49-b8d2-6a5d574c9775.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/PRM/Snapcaster Mage_1ba51b7a-33b4-576b-8846-2c119c1bab6d.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/A25/Street Wraith_fb2cfa2f-3bf3-5056-b6fe-d9d3acceb193.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/KTK/Stubborn Denial_72035da2-eda1-5cb6-bc6d-46cb5b11ffe5.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/XLN/Search for Azcanta_2ae54370-11a5-51a8-9aa4-15378ca7f1c8.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/PCA/Bloodbraid Elf_8f7b27b1-4ab0-5769-b370-87048140f6bb.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/THS/Stormbreath Dragon_a242ea35-175c-50fb-b2cf-06e8c107f532.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/ISD/Liliana of the Veil_654cdf16-5c43-5e64-9653-5849d8a6d460.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/PRM/Dismember_56f0effb-a01b-5ee6-a9dd-4f7518b428d5.jpg

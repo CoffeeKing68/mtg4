@@ -63,7 +63,7 @@ def main():
     else:
         raise ValueError("sets.json not found.")
 
-    myset = "wrenn_and_six"
+    myset = "errors_transformed"
     # JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
     # JSON = join(RESOURCE_DIR, "card_data", f"mardu_aristocrats_M20.json")
     # TOKENS = join(RESOURCE_DIR, "card_data", f"tokens.json")
@@ -175,7 +175,7 @@ def main():
             f"{c['name']}_{c['id']}.jpg" in list(os.listdir(join(RESOURCE_DIR, "art", c["set"])))]
 
     # cards = [c for c in cards if c["layout"] == "adventure"]
-    # cards = [c for c in cards if c['name'] == "Flaxen Intruder"]
+    # cards = [c for c in cards if c['name'] == "Dismember"]
     # cards = cards[:5]
     if len(cards) == 0:
         exit("No cards")
@@ -224,7 +224,7 @@ def main():
         start_time = time.time()
 
         count = 999
-        openInScryfall(card)
+        # openInScryfall(card)
         sset = [s for s in sets if s['code'] == card['set']]
         if len(sset) == 1:
             count = sset[0]["count"]
@@ -283,7 +283,7 @@ def main():
             temp.get_layer("rules").content = rules
         art_path = join(RESOURCE_DIR, "art", card['set'], f"{card['name']}_{card['id']}.jpg") \
                 .replace("//", "__")
-        print(art_path)
+        # print(art_path)
         temp.get_layer("art").content = art_path if os.path.isfile(art_path) else None
 
         # generic
