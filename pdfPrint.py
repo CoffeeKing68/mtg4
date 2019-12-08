@@ -63,7 +63,7 @@ def main():
     else:
         raise ValueError("sets.json not found.")
 
-    myset = "errors_transformed"
+    myset = "wrenn_and_six"
     # JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
     # JSON = join(RESOURCE_DIR, "card_data", f"mardu_aristocrats_M20.json")
     # TOKENS = join(RESOURCE_DIR, "card_data", f"tokens.json")

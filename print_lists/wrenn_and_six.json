@@ -99,7 +99,7 @@
             "Berserker"
         ],
         "supertypes": [],
-        "text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Elf Berserker",
@@ -479,7 +479,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {G}.)\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {G}.)</i>\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Forest",
@@ -929,7 +929,7 @@
         "name": "Stormbreath Dragon",
         "names": null,
         "number": "143",
-        "original_text": "Flying, haste, protection from white\n{5}{R}{R}: Monstrosity 3. (If this creature isn't monstrous, put three +1/+1 counters on it and it becomes monstrous.)\nWhen Stormbreath Dragon becomes monstrous, it deals damage to each opponent equal to the number of cards in that player's hand.",
+        "original_text": "Flying, haste, protection from white\n{5}{R}{R}: Monstrosity 3. <i>(If this creature isn't monstrous, put three +1/+1 counters on it and it becomes monstrous.)</i>\nWhen Stormbreath Dragon becomes monstrous, it deals damage to each opponent equal to the number of cards in that player's hand.",
         "original_type": "Creature \u2014 Dragon",
         "power": "4",
         "printings": [
@@ -963,7 +963,7 @@
             "Dragon"
         ],
         "supertypes": [],
-        "text": "Flying, haste, protection from white\n{5}{R}{R}: Monstrosity 3. (If this creature isn't monstrous, put three +1/+1 counters on it and it becomes monstrous.)\nWhen Stormbreath Dragon becomes monstrous, it deals damage to each opponent equal to the number of cards in that player's hand.",
+        "text": "Flying, haste, protection from white\n{5}{R}{R}: Monstrosity 3. <i>(If this creature isn't monstrous, put three +1/+1 counters on it and it becomes monstrous.)</i>\nWhen Stormbreath Dragon becomes monstrous, it deals damage to each opponent equal to the number of cards in that player's hand.",
         "timeshifted": null,
         "toughness": "4",
         "type": "Creature \u2014 Dragon",
@@ -982,7 +982,7 @@
             "R"
         ],
         "colors": [],
-        "flavor": "\"Roots, ruins, and room to fight. All the comforts of home.\" \u2014Domri Rade",
+        "flavor": "\"Roots, ruins, and room to fight. All the comforts of home.\" \n\u2014Domri Rade",
         "foreign_names": [
             {
                 "flavor": "\u201eWurzeln, Ruinen und Raum zum K\u00e4mpfen. Da f\u00fchlt man sich so richtig zu Hause.\" \u2014Domri Rade",
@@ -1142,7 +1142,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {G}.)\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {G}.)</i>\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Forest",
@@ -1783,7 +1783,7 @@
         "name_id": "Forgotten Cave_bdd68d8b-4681-54a5-ac14-cb4ee4ca6962",
         "names": null,
         "number": "296",
-        "original_text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+        "original_text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\nCycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "original_type": "Land",
         "power": null,
         "printings": [
@@ -1818,7 +1818,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -2381,7 +2381,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -2491,7 +2491,7 @@
         "name": "Forgotten Cave",
         "names": null,
         "number": "246",
-        "original_text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+        "original_text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "original_type": "Land",
         "power": null,
         "printings": [
@@ -2525,7 +2525,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -2600,7 +2600,7 @@
         "name_id": "Bloodbraid Elf_c3b24ef3-27bc-58be-9833-0a8962f706c7",
         "names": null,
         "number": "197",
-        "original_text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)",
+        "original_text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)</i>",
         "original_type": "Creature \u2014 Elf Berserker",
         "power": "3",
         "printings": [
@@ -2653,7 +2653,7 @@
             "Berserker"
         ],
         "supertypes": [],
-        "text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Elf Berserker",
@@ -2829,7 +2829,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -2999,7 +2999,7 @@
             "Snake"
         ],
         "supertypes": [],
-        "text": "Level up {1} ({1}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 3-7\n4/4\nProtection from instants\nLEVEL 8+\n6/6\nProtection from everything",
+        "text": "Level up {1} <i>({1}: Put a level counter on this. Level up only as a sorcery.)</i>\nLEVEL 3-7\n4/4\nProtection from instants\nLEVEL 8+\n6/6\nProtection from everything",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Snake",
@@ -3602,7 +3602,7 @@
         "name": "Wrenn and Six",
         "names": null,
         "number": "217",
-        "original_text": "+1: Return up to one target land card from your graveyard to your hand.\n\u22121: Wrenn and Six deals 1 damage to any target.\n\u22127: You get an emblem with \"Instant and sorcery cards in your graveyard have retrace.\"",
+        "original_text": "+1: Return up to one target land card from your graveyard to your hand.\n-1: Wrenn and Six deals 1 damage to any target.\n-7: You get an emblem with \"Instant and sorcery cards in your graveyard have retrace.\"",
         "original_type": "Legendary Planeswalker \u2014 Wrenn",
         "power": null,
         "printings": [
@@ -3626,7 +3626,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Return up to one target land card from your graveyard to your hand.\n[\u22121]: Wrenn and Six deals 1 damage to any target.\n[\u22127]: You get an emblem with \"Instant and sorcery cards in your graveyard have retrace.\" (You may cast instant and sorcery cards from your graveyard by discarding a land card in addition to paying their other costs.)",
+        "text": "+1: Return up to one target land card from your graveyard to your hand.\n-1: Wrenn and Six deals 1 damage to any target.\n-7: You get an emblem with \"Instant and sorcery cards in your graveyard have retrace.\" <i>(You may cast instant and sorcery cards from your graveyard by discarding a land card in addition to paying their other costs.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Wrenn",
@@ -3827,7 +3827,7 @@
         "name_id": "Bloodbraid Elf_8f7b27b1-4ab0-5769-b370-87048140f6bb",
         "names": null,
         "number": "84",
-        "original_text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)",
+        "original_text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)</i>",
         "original_type": "Creature \u2014 Elf Berserker",
         "power": "3",
         "printings": [
@@ -3880,7 +3880,7 @@
             "Berserker"
         ],
         "supertypes": [],
-        "text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Elf Berserker",
@@ -4106,7 +4106,7 @@
         "name_id": "Forgotten Cave_4a6dcf03-457e-587d-aea1-2fc245bc766f",
         "names": null,
         "number": "249",
-        "original_text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+        "original_text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\nCycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "original_type": "Land",
         "power": null,
         "printings": [
@@ -4141,7 +4141,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -4203,7 +4203,7 @@
         "name_id": "Forgotten Cave_5ebe7c61-d49c-5ac7-89ad-24ff10afa852",
         "names": null,
         "number": "57",
-        "original_text": "Forgotten Cave comes into play tapped.\n{T}: Add {R} to your mana pool.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+        "original_text": "Forgotten Cave comes into play tapped.\n{T}: Add {R} to your mana pool.\nCycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "original_type": "Land",
         "power": null,
         "printings": [
@@ -4238,7 +4238,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -4519,7 +4519,7 @@
         "name_id": "Forgotten Cave_ec3a9e57-efb1-5ac5-81ce-5df0e37a051f",
         "names": null,
         "number": "284",
-        "original_text": "Forgotten Cave enters the battlefield tapped.{T}: Add {R} to your mana pool.Cycling {R} ({R}, Discard this card: Draw a card.)",
+        "original_text": "Forgotten Cave enters the battlefield tapped.{T}: Add {R} to your mana pool.Cycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "original_type": "Land",
         "power": null,
         "printings": [
@@ -4554,7 +4554,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -4803,7 +4803,7 @@
             "Scout"
         ],
         "supertypes": [],
-        "text": "Whenever a land enters the battlefield under your control, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
+        "text": "Whenever a land enters the battlefield under your control, investigate. <i>(Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")</i>\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Human Scout",
@@ -5242,7 +5242,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {G}.)\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {G}.)</i>\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Forest",
@@ -5947,7 +5947,7 @@
         "name": "Stomping Ground",
         "names": null,
         "number": "259",
-        "original_text": "({T}: Add {R} or {G}.)\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "original_text": "<i>({T}: Add {R} or {G}.)</i>\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "original_type": "Land \u2014 Mountain Forest",
         "power": null,
         "printings": [
@@ -5978,7 +5978,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {G}.)\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {G}.)</i>\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Forest",
@@ -6081,7 +6081,7 @@
         "name_id": "Forgotten Cave_e9ac56c0-253d-5264-a4ca-f674f476ecbc",
         "names": null,
         "number": "289",
-        "original_text": "Forgotten Cave enters the battlefield tapped.{T}: Add {R} to your mana pool.Cycling {R} ({R}, Discard this card: Draw a card.)",
+        "original_text": "Forgotten Cave enters the battlefield tapped.{T}: Add {R} to your mana pool.Cycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "original_type": "Land",
         "power": null,
         "printings": [
@@ -6116,7 +6116,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+        "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} <i>({R}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -6252,7 +6252,7 @@
         "name": "Tireless Tracker",
         "names": [],
         "number": "233",
-        "original_text": "Whenever a land enters the battlefield under your control, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
+        "original_text": "Whenever a land enters the battlefield under your control, investigate. <i>(Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")</i>\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
         "original_type": "Creature \u2014 Human Scout",
         "power": "3",
         "printings": [
@@ -6284,7 +6284,7 @@
             "Scout"
         ],
         "supertypes": [],
-        "text": "Whenever a land enters the battlefield under your control, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
+        "text": "Whenever a land enters the battlefield under your control, investigate. <i>(Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")</i>\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Human Scout",
@@ -6460,7 +6460,7 @@
             "Berserker"
         ],
         "supertypes": [],
-        "text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Elf Berserker",
@@ -6775,7 +6775,7 @@
         "name_id": "Bloodbraid Elf_7df75c71-9655-5d5b-8052-7785caf90b82",
         "names": null,
         "number": "184",
-        "original_text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "original_text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</i>",
         "original_type": "Creature \u2014 Elf Berserker",
         "power": "3",
         "printings": [
@@ -6828,7 +6828,7 @@
             "Berserker"
         ],
         "supertypes": [],
-        "text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Elf Berserker",

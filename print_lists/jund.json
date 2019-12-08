@@ -86,7 +86,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {R}.)\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {R}.)</i>\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Mountain",
@@ -196,7 +196,7 @@
             "Berserker"
         ],
         "supertypes": [],
-        "text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Elf Berserker",
@@ -364,7 +364,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -660,7 +660,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -757,7 +757,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {G}.)\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {G}.)</i>\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Forest",
@@ -937,7 +937,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {G}.)\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {G}.)</i>\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Forest",
@@ -1104,7 +1104,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -1377,7 +1377,7 @@
         "colors": [
             "Black"
         ],
-        "flavor": "\"Knowledge is such a burden. Release it. Release all your fears to me.\" \u2014Ashiok, Nightmare Weaver",
+        "flavor": "\"Knowledge is such a burden. Release it. Release all your fears to me.\" \n\u2014Ashiok, Nightmare Weaver",
         "foreign_names": [
             {
                 "flavor": "\u201eWissen ist solch eine B\u00fcrde. Mache dich frei davon. Befreie all deine \u00c4ngste und gib sie mir.\" \u2014Ashiok der Albtraumweber",
@@ -1823,7 +1823,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {G}.)\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {G}.)</i>\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Forest",
@@ -1879,7 +1879,7 @@
         "name_id": "Liliana of the Veil_443b815b-013d-58a6-8cbf-0dfb926e6430",
         "names": null,
         "number": "U10",
-        "original_text": "+1: Each player discards a card.\n\u22122: Target player sacrifices a creature.\n\u22126: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "original_text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "original_type": "Legendary Planeswalker \u2014 Liliana",
         "power": null,
         "printings": [
@@ -1920,7 +1920,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -2595,7 +2595,7 @@
         "name_id": "Liliana of the Veil_1de3243c-773e-5e4a-8de5-eb61e44b8431",
         "names": null,
         "number": "76",
-        "original_text": "+1: Each player discards a card.\n\u22122: Target player sacrifices a creature.\n\u22126: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of his or her choice.",
+        "original_text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of his or her choice.",
         "original_type": "Planeswalker \u2014 Liliana",
         "power": null,
         "printings": [
@@ -2636,7 +2636,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -3046,7 +3046,7 @@
         "name_id": "Barren Moor_67612b8b-efdd-5507-bd4e-754b8d69eb68",
         "names": null,
         "number": "284",
-        "original_text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "original_text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\nCycling {B} <i>({B}, Discard this card: Draw a card.)</i>",
         "original_type": "Land",
         "power": null,
         "printings": [
@@ -3082,7 +3082,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} <i>({B}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -3101,7 +3101,7 @@
             "R"
         ],
         "colors": [],
-        "flavor": "\"Roots, ruins, and room to fight. All the comforts of home.\" \u2014Domri Rade",
+        "flavor": "\"Roots, ruins, and room to fight. All the comforts of home.\" \n\u2014Domri Rade",
         "foreign_names": [
             {
                 "flavor": "\u201eWurzeln, Ruinen und Raum zum K\u00e4mpfen. Da f\u00fchlt man sich so richtig zu Hause.\" \u2014Domri Rade",
@@ -3261,7 +3261,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {G}.)\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {G}.)</i>\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Forest",
@@ -3572,7 +3572,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -3682,7 +3682,7 @@
         "name": "Barren Moor",
         "names": null,
         "number": "235",
-        "original_text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "original_text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} <i>({B}, Discard this card: Draw a card.)</i>",
         "original_type": "Land",
         "power": null,
         "printings": [
@@ -3717,7 +3717,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} <i>({B}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -3792,7 +3792,7 @@
         "name_id": "Bloodbraid Elf_c3b24ef3-27bc-58be-9833-0a8962f706c7",
         "names": null,
         "number": "197",
-        "original_text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)",
+        "original_text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)</i>",
         "original_type": "Creature \u2014 Elf Berserker",
         "power": "3",
         "printings": [
@@ -3845,7 +3845,7 @@
             "Berserker"
         ],
         "supertypes": [],
-        "text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Elf Berserker",
@@ -4022,7 +4022,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} <i>({B}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -4310,7 +4310,7 @@
         "name": "Wrenn and Six",
         "names": null,
         "number": "217",
-        "original_text": "+1: Return up to one target land card from your graveyard to your hand.\n\u22121: Wrenn and Six deals 1 damage to any target.\n\u22127: You get an emblem with \"Instant and sorcery cards in your graveyard have retrace.\"",
+        "original_text": "+1: Return up to one target land card from your graveyard to your hand.\n-1: Wrenn and Six deals 1 damage to any target.\n-7: You get an emblem with \"Instant and sorcery cards in your graveyard have retrace.\"",
         "original_type": "Legendary Planeswalker \u2014 Wrenn",
         "power": null,
         "printings": [
@@ -4334,7 +4334,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Return up to one target land card from your graveyard to your hand.\n[\u22121]: Wrenn and Six deals 1 damage to any target.\n[\u22127]: You get an emblem with \"Instant and sorcery cards in your graveyard have retrace.\" (You may cast instant and sorcery cards from your graveyard by discarding a land card in addition to paying their other costs.)",
+        "text": "+1: Return up to one target land card from your graveyard to your hand.\n-1: Wrenn and Six deals 1 damage to any target.\n-7: You get an emblem with \"Instant and sorcery cards in your graveyard have retrace.\" <i>(You may cast instant and sorcery cards from your graveyard by discarding a land card in addition to paying their other costs.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Wrenn",
@@ -4497,7 +4497,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {R}.)\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {R}.)</i>\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Mountain",
@@ -4562,7 +4562,7 @@
         "name_id": "Liliana of the Veil_530366ad-72c9-5ff6-b7e0-9a3e3498fec7",
         "names": null,
         "number": "104",
-        "original_text": "+1: Each player discards a card.\n\u22122: Target player sacrifices a creature.\n\u22126: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "original_text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "original_type": "Legendary Planeswalker \u2014 Liliana",
         "power": null,
         "printings": [
@@ -4603,7 +4603,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -4962,7 +4962,7 @@
         "name_id": "Bloodbraid Elf_8f7b27b1-4ab0-5769-b370-87048140f6bb",
         "names": null,
         "number": "84",
-        "original_text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)",
+        "original_text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)</i>",
         "original_type": "Creature \u2014 Elf Berserker",
         "power": "3",
         "printings": [
@@ -5015,7 +5015,7 @@
             "Berserker"
         ],
         "supertypes": [],
-        "text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Elf Berserker",
@@ -5337,7 +5337,7 @@
         "name_id": "Barren Moor_a9107fc5-fc02-5802-9853-9ccdcefef5e1",
         "names": null,
         "number": "242",
-        "original_text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "original_text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\nCycling {B} <i>({B}, Discard this card: Draw a card.)</i>",
         "original_type": "Land",
         "power": null,
         "printings": [
@@ -5373,7 +5373,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} <i>({B}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -6128,7 +6128,7 @@
         "name_id": "Fatal Push_a5dd8396-709d-5279-980e-2b5021ced787",
         "names": null,
         "number": "57",
-        "original_text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "original_text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -6170,7 +6170,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -6281,7 +6281,7 @@
         "name_id": "Barren Moor_eb6cf4a8-795f-5ab4-ad4f-a548512704a8",
         "names": null,
         "number": "277",
-        "original_text": "Barren Moor enters the battlefield tapped.{T}: Add {B} to your mana pool.Cycling {B} ({B}, Discard this card: Draw a card.)",
+        "original_text": "Barren Moor enters the battlefield tapped.{T}: Add {B} to your mana pool.Cycling {B} <i>({B}, Discard this card: Draw a card.)</i>",
         "original_type": "Land",
         "power": null,
         "printings": [
@@ -6317,7 +6317,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} <i>({B}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -6405,7 +6405,7 @@
             "Scout"
         ],
         "supertypes": [],
-        "text": "Whenever a land enters the battlefield under your control, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
+        "text": "Whenever a land enters the battlefield under your control, investigate. <i>(Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")</i>\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Human Scout",
@@ -7053,7 +7053,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {R}.)\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {R}.)</i>\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Mountain",
@@ -7221,7 +7221,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {G}.)\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {G}.)</i>\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Forest",
@@ -7318,7 +7318,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {G}.)\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {G}.)</i>\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Forest",
@@ -7975,7 +7975,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -8122,7 +8122,7 @@
         "name": "Blood Crypt",
         "names": null,
         "number": "245",
-        "original_text": "({T}: Add {B} or {R}.)\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "original_text": "<i>({T}: Add {B} or {R}.)</i>\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "original_type": "Land \u2014 Swamp Mountain",
         "power": null,
         "printings": [
@@ -8153,7 +8153,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {R}.)\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {R}.)</i>\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Mountain",
@@ -8300,7 +8300,7 @@
         "name": "Stomping Ground",
         "names": null,
         "number": "259",
-        "original_text": "({T}: Add {R} or {G}.)\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "original_text": "<i>({T}: Add {R} or {G}.)</i>\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "original_type": "Land \u2014 Mountain Forest",
         "power": null,
         "printings": [
@@ -8331,7 +8331,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {G}.)\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {G}.)</i>\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Forest",
@@ -8434,7 +8434,7 @@
         "name_id": "Barren Moor_48dfbe92-8e1c-5558-ace7-f3b519e7fa40",
         "names": null,
         "number": "277",
-        "original_text": "Barren Moor enters the battlefield tapped.{T}: Add {B} to your mana pool.Cycling {B} ({B}, Discard this card: Draw a card.)",
+        "original_text": "Barren Moor enters the battlefield tapped.{T}: Add {B} to your mana pool.Cycling {B} <i>({B}, Discard this card: Draw a card.)</i>",
         "original_type": "Land",
         "power": null,
         "printings": [
@@ -8470,7 +8470,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} <i>({B}, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -8606,7 +8606,7 @@
         "name": "Tireless Tracker",
         "names": [],
         "number": "233",
-        "original_text": "Whenever a land enters the battlefield under your control, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
+        "original_text": "Whenever a land enters the battlefield under your control, investigate. <i>(Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")</i>\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
         "original_type": "Creature \u2014 Human Scout",
         "power": "3",
         "printings": [
@@ -8638,7 +8638,7 @@
             "Scout"
         ],
         "supertypes": [],
-        "text": "Whenever a land enters the battlefield under your control, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
+        "text": "Whenever a land enters the battlefield under your control, investigate. <i>(Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")</i>\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Human Scout",
@@ -8814,7 +8814,7 @@
             "Berserker"
         ],
         "supertypes": [],
-        "text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Elf Berserker",
@@ -9171,7 +9171,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {G}.)\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {G}.)</i>\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Forest",
@@ -9350,7 +9350,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {R}.)\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {R}.)</i>\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Mountain",
@@ -9529,7 +9529,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {G}.)\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {G}.)</i>\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Forest",
@@ -9644,7 +9644,7 @@
         "name_id": "Bloodbraid Elf_7df75c71-9655-5d5b-8052-7785caf90b82",
         "names": null,
         "number": "184",
-        "original_text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "original_text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</i>",
         "original_type": "Creature \u2014 Elf Berserker",
         "power": "3",
         "printings": [
@@ -9697,7 +9697,7 @@
             "Berserker"
         ],
         "supertypes": [],
-        "text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Elf Berserker",

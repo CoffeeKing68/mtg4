@@ -635,7 +635,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Until your next turn, prevent all damage target permanent would deal.\n[0]: Until end of turn, Gideon of the Trials becomes a 4/4 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n[0]: You get an emblem with \"As long as you control a Gideon planeswalker, you can't lose the game and your opponents can't win the game.\"",
+        "text": "+1: Until your next turn, prevent all damage target permanent would deal.\n0: Until end of turn, Gideon of the Trials becomes a 4/4 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n0: You get an emblem with \"As long as you control a Gideon planeswalker, you can't lose the game and your opponents can't win the game.\"",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Gideon",
@@ -732,7 +732,7 @@
             "Island"
         ],
         "supertypes": [],
-        "text": "({T}: Add {W} or {U}.)\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {W} or {U}.)</i>\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Plains Island",
@@ -1396,7 +1396,7 @@
             "Plains"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {W}.)\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {W}.)</i>\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Plains",
@@ -1659,7 +1659,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -1756,7 +1756,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {R}.)</i>\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Mountain",
@@ -1958,7 +1958,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -2954,7 +2954,7 @@
             "Plains"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {W}.)\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {W}.)</i>\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Plains",
@@ -3247,7 +3247,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -4063,7 +4063,7 @@
         "name_id": "Snapcaster Mage_25c2eb67-1208-5a6d-9417-780209e5bc9c",
         "names": null,
         "number": "50",
-        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "original_type": "Creature \u2014 Human Wizard",
         "power": "2",
         "printings": [
@@ -4107,7 +4107,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -4286,7 +4286,7 @@
             "Plains"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {W}.)\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {W}.)</i>\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Plains",
@@ -4630,7 +4630,7 @@
         "name": "Snapcaster Mage",
         "names": null,
         "number": "78",
-        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "original_type": "Creature \u2014 Human Wizard",
         "power": "2",
         "printings": [
@@ -4674,7 +4674,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -4997,7 +4997,7 @@
             "Island"
         ],
         "supertypes": [],
-        "text": "({T}: Add {W} or {U}.)\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {W} or {U}.)</i>\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Plains Island",
@@ -5317,7 +5317,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -5534,7 +5534,7 @@
             "Red",
             "White"
         ],
-        "flavor": "\"Rage is not the answer. Rage followed by fitting vengeance is the answer.\" \u2014Ajani Goldmane",
+        "flavor": "\"Rage is not the answer. Rage followed by fitting vengeance is the answer.\" \n\u2014Ajani Goldmane",
         "foreign_names": [
             {
                 "flavor": "\u300c\u6012\u308a\u306f\u7b54\u3068\u306a\u3089\u306a\u3044\u3002\u6012\u308a\u306b\u3075\u3055\u308f\u3057\u3044\u5fa9\u8b90\u304c\u4f34\u3048\u3070\u3001\u305d\u308c\u304c\u7b54\u3060\u3002\u300d \u2015\u2015\u9ec4\u91d1\u306e\u305f\u3066\u304c\u307f\u306e\u30a2\u30b8\u30e3\u30cb",
@@ -6935,7 +6935,7 @@
             "U"
         ],
         "colors": [],
-        "flavor": "\"We have inherited the mysteries of the Thran, but few of the answers.\" \u2014Jhoira",
+        "flavor": "\"We have inherited the mysteries of the Thran, but few of the answers.\" \n\u2014Jhoira",
         "foreign_names": [
             {
                 "flavor": "\u201eUns wurden viele der Mysterien von Thran \u00fcberliefert, doch nur wenige Antworten.\" \u2014Jhoira",
@@ -7678,7 +7678,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+2]: You may discard a card. If you do, draw a card.\n[\u22122]: Exile target enchantment, tapped artifact, or tapped creature.\n[\u22128]: Search your library for an artifact or creature card, put it onto the battlefield, then shuffle your library. It gains haste. Return it to your hand at the beginning of the next end step.",
+        "text": "+2: You may discard a card. If you do, draw a card.\n-2: Exile target enchantment, tapped artifact, or tapped creature.\n-8: Search your library for an artifact or creature card, put it onto the battlefield, then shuffle your library. It gains haste. Return it to your hand at the beginning of the next end step.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Nahiri",
@@ -8194,7 +8194,7 @@
             "Red",
             "White"
         ],
-        "flavor": "\"Rage is not the answer. Rage followed by fitting vengeance is the answer.\" \u2014Ajani",
+        "flavor": "\"Rage is not the answer. Rage followed by fitting vengeance is the answer.\" \n\u2014Ajani",
         "foreign_names": [],
         "hand": null,
         "id": "06af2982-e630-5b07-bea1-13b3100cd725",
@@ -8521,7 +8521,7 @@
             "Island"
         ],
         "supertypes": [],
-        "text": "({T}: Add {W} or {U}.)\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {W} or {U}.)</i>\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Plains Island",
@@ -8618,7 +8618,7 @@
             "Plains"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {W}.)\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {W}.)</i>\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Plains",
@@ -8783,7 +8783,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {R}.)</i>\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Mountain",
@@ -8980,7 +8980,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Until your next turn, prevent all damage target permanent would deal.\n[0]: Until end of turn, Gideon of the Trials becomes a 4/4 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n[0]: You get an emblem with \"As long as you control a Gideon planeswalker, you can't lose the game and your opponents can't win the game.\"",
+        "text": "+1: Until your next turn, prevent all damage target permanent would deal.\n0: Until end of turn, Gideon of the Trials becomes a 4/4 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n0: You get an emblem with \"As long as you control a Gideon planeswalker, you can't lose the game and your opponents can't win the game.\"",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Gideon",
@@ -9707,7 +9707,7 @@
         "name": "Hallowed Fountain",
         "names": null,
         "number": "251",
-        "original_text": "({T}: Add {W} or {U}.)\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "original_text": "<i>({T}: Add {W} or {U}.)</i>\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "original_type": "Land \u2014 Plains Island",
         "power": null,
         "printings": [
@@ -9738,7 +9738,7 @@
             "Island"
         ],
         "supertypes": [],
-        "text": "({T}: Add {W} or {U}.)\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {W} or {U}.)</i>\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Plains Island",
@@ -9876,7 +9876,7 @@
         "name": "Nahiri, the Harbinger",
         "names": null,
         "number": "247",
-        "original_text": "+2: You may discard a card. If you do, draw a card.\n\u22122: Exile target enchantment, tapped artifact, or tapped creature.\n\u22128: Search your library for an artifact or creature card, put it onto the battlefield, then shuffle your library. It gains haste. Return it to your hand at the beginning of the next end step.",
+        "original_text": "+2: You may discard a card. If you do, draw a card.\n-2: Exile target enchantment, tapped artifact, or tapped creature.\n-8: Search your library for an artifact or creature card, put it onto the battlefield, then shuffle your library. It gains haste. Return it to your hand at the beginning of the next end step.",
         "original_type": "Planeswalker \u2014 Nahiri",
         "power": null,
         "printings": [
@@ -9910,7 +9910,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+2]: You may discard a card. If you do, draw a card.\n[\u22122]: Exile target enchantment, tapped artifact, or tapped creature.\n[\u22128]: Search your library for an artifact or creature card, put it onto the battlefield, then shuffle your library. It gains haste. Return it to your hand at the beginning of the next end step.",
+        "text": "+2: You may discard a card. If you do, draw a card.\n-2: Exile target enchantment, tapped artifact, or tapped creature.\n-8: Search your library for an artifact or creature card, put it onto the battlefield, then shuffle your library. It gains haste. Return it to your hand at the beginning of the next end step.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Nahiri",
@@ -10088,7 +10088,7 @@
             "Plains"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {W}.)\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {W}.)</i>\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Plains",
@@ -10266,7 +10266,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {R}.)</i>\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Mountain",
@@ -10537,7 +10537,7 @@
             "Island"
         ],
         "supertypes": [],
-        "text": "({T}: Add {W} or {U}.)\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {W} or {U}.)</i>\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Plains Island",
@@ -10716,7 +10716,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {R}.)</i>\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Mountain",
@@ -10735,7 +10735,7 @@
             "U"
         ],
         "colors": [],
-        "flavor": "\"We have inherited the mysteries of the Thran, but few of the answers.\" \u2014Jhoira",
+        "flavor": "\"We have inherited the mysteries of the Thran, but few of the answers.\" \n\u2014Jhoira",
         "foreign_names": [],
         "hand": null,
         "id": "76b6d067-868f-50b7-afa2-c30d0ea482b7",
@@ -10817,7 +10817,7 @@
             "U"
         ],
         "colors": [],
-        "flavor": "\"We have inherited the mysteries of the Thran, but few of the answers.\" \u2014Jhoira",
+        "flavor": "\"We have inherited the mysteries of the Thran, but few of the answers.\" \n\u2014Jhoira",
         "foreign_names": [],
         "hand": null,
         "id": "5d536c7a-0e8c-5f1f-9661-e3156df2e988",

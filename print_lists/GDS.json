@@ -86,7 +86,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {R}.)\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {R}.)</i>\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Mountain",
@@ -252,7 +252,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "({B/P} can be paid with either {B} or 2 life.)\nTarget creature gets -5/-5 until end of turn.",
+        "text": "<i>({B/P} can be paid with either {B} or 2 life.)</i>\nTarget creature gets -5/-5 until end of turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -349,7 +349,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -682,7 +682,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -779,7 +779,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {R}.)</i>\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Mountain",
@@ -876,7 +876,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {B}.)\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {B}.)</i>\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Swamp",
@@ -976,7 +976,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -1156,7 +1156,7 @@
         "colors": [
             "Black"
         ],
-        "flavor": "\"Knowledge is such a burden. Release it. Release all your fears to me.\" \u2014Ashiok, Nightmare Weaver",
+        "flavor": "\"Knowledge is such a burden. Release it. Release all your fears to me.\" \n\u2014Ashiok, Nightmare Weaver",
         "foreign_names": [
             {
                 "flavor": "\u201eWissen ist solch eine B\u00fcrde. Mache dich frei davon. Befreie all deine \u00c4ngste und gib sie mir.\" \u2014Ashiok der Albtraumweber",
@@ -1362,7 +1362,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Draw a card, then discard a card.\n[+1]: Target creature gets +2/+0 and gains first strike and trample until end of turn.\n[\u22128]: Draw four cards. When you do, The Royal Scions deals damage to any target equal to the number of cards in your hand.",
+        "text": "+1: Draw a card, then discard a card.\n+1: Target creature gets +2/+0 and gains first strike and trample until end of turn.\n-8: Draw four cards. When you do, The Royal Scions deals damage to any target equal to the number of cards in your hand.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Will Rowan",
@@ -1524,7 +1524,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {B}.)\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {B}.)</i>\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Swamp",
@@ -1624,7 +1624,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -2089,7 +2089,7 @@
         "name_id": "Snapcaster Mage_25c2eb67-1208-5a6d-9417-780209e5bc9c",
         "names": null,
         "number": "50",
-        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "original_type": "Creature \u2014 Human Wizard",
         "power": "2",
         "printings": [
@@ -2133,7 +2133,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -2206,7 +2206,7 @@
         "name_id": "Dismember_dd2ba1ca-416f-5347-bfed-0adb17501566",
         "names": null,
         "number": "79",
-        "original_text": "({PB} can be paid with either {B} or 2 life.)\nTarget creature gets -5/-5 until end of turn.",
+        "original_text": "<i>({PB} can be paid with either {B} or 2 life.)</i>\nTarget creature gets -5/-5 until end of turn.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -2246,7 +2246,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "({B/P} can be paid with either {B} or 2 life.)\nTarget creature gets -5/-5 until end of turn.",
+        "text": "<i>({B/P} can be paid with either {B} or 2 life.)</i>\nTarget creature gets -5/-5 until end of turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -2265,7 +2265,7 @@
             "U"
         ],
         "colors": [],
-        "flavor": "\"I fear that as we scurry after phantoms, the Dimir pull nine puppet strings.\" \u2014Ral Zarek",
+        "flavor": "\"I fear that as we scurry after phantoms, the Dimir pull nine puppet strings.\" \n\u2014Ral Zarek",
         "foreign_names": [
             {
                 "flavor": "\u201eIch f\u00fcrchte, wir jagen Phantomen nach. Die Dimir ziehen an neun Marionettenf\u00e4den.\" \u2014Ral Zarek",
@@ -2425,7 +2425,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {B}.)\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {B}.)</i>\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Swamp",
@@ -2695,7 +2695,7 @@
         "name": "Snapcaster Mage",
         "names": null,
         "number": "78",
-        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "original_type": "Creature \u2014 Human Wizard",
         "power": "2",
         "printings": [
@@ -2739,7 +2739,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -2902,7 +2902,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {R}.)\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {R}.)</i>\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Mountain",
@@ -3011,7 +3011,7 @@
             "Fish"
         ],
         "supertypes": [],
-        "text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)",
+        "text": "Delve <i>(Each card you exile from your graveyard while casting this spell pays for {1}.)</i>",
         "timeshifted": null,
         "toughness": "5",
         "type": "Creature \u2014 Zombie Fish",
@@ -3120,7 +3120,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -3140,7 +3140,7 @@
         "colors": [
             "Blue"
         ],
-        "flavor": "\"As you inject the viscus vitae into the brain stem, don't let the spastic moaning bother you. It will soon become music to your ears.\" \u2014Stitcher Geralf",
+        "flavor": "\"As you inject the viscus vitae into the brain stem, don't let the spastic moaning bother you. It will soon become music to your ears.\" \n\u2014Stitcher Geralf",
         "foreign_names": [
             {
                 "flavor": "\u300c\u8133\u5e79\u306b\u81d3\u5668\u5264\u3092\u6ce8\u5165\u3059\u308c\u3070\u3001\u75d9\u6523\u6027\u306e\u3046\u3081\u304d\u58f0\u306a\u3069\u6c17\u306b\u306a\u3089\u306a\u304f\u306a\u308b\u3002\u3059\u3050\u306b\u97f3\u697d\u306e\u3088\u3046\u306b\u805e\u3053\u3048\u308b\u3060\u308d\u3046\u3002\u300d \u2015\u2015\u7e2b\u3044\u5e2b\u3001\u30b2\u30e9\u30eb\u30d5",
@@ -3948,7 +3948,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Undergrowth \u2014 Search your library for a black card with converted mana cost less than or equal to the number of creature cards in your graveyard, reveal it, put it into your hand, then shuffle your library.",
+        "text": "<i>Undergrowth \u2014 </i>Search your library for a black card with converted mana cost less than or equal to the number of creature cards in your graveyard, reveal it, put it into your hand, then shuffle your library.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -4228,7 +4228,7 @@
         "name_id": "Fatal Push_a5dd8396-709d-5279-980e-2b5021ced787",
         "names": null,
         "number": "57",
-        "original_text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "original_text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -4270,7 +4270,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -4941,7 +4941,7 @@
         "name_id": "Stubborn Denial_72035da2-eda1-5cb6-bc6d-46cb5b11ffe5",
         "names": null,
         "number": "56",
-        "original_text": "Counter target noncreature spell unless its controller pays {1}.\nFerocious \u2014 If you control a creature with power 4 or greater, counter that spell instead.",
+        "original_text": "Counter target noncreature spell unless its controller pays {1}.\n<i>Ferocious \u2014 </i>If you control a creature with power 4 or greater, counter that spell instead.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -4965,7 +4965,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Counter target noncreature spell unless its controller pays {1}.\nFerocious \u2014 If you control a creature with power 4 or greater, counter that spell instead.",
+        "text": "Counter target noncreature spell unless its controller pays {1}.\n<i>Ferocious \u2014 </i>If you control a creature with power 4 or greater, counter that spell instead.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -5062,7 +5062,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {R}.)\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {R}.)</i>\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Mountain",
@@ -5368,7 +5368,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {R}.)</i>\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Mountain",
@@ -5465,7 +5465,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {B}.)\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {B}.)</i>\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Swamp",
@@ -5525,7 +5525,7 @@
         "name_id": "Street Wraith_6ae4cb9b-fc4c-5795-a92f-6f8fe0c2cc5d",
         "names": null,
         "number": "99",
-        "original_text": "Swampwalk\nCycling\u2014Pay 2 life. (Pay 2 life, Discard this card: Draw a card.)",
+        "original_text": "Swampwalk\nCycling\u2014Pay 2 life. <i>(Pay 2 life, Discard this card: Draw a card.)</i>",
         "original_type": "Creature \u2014 Wraith",
         "power": "3",
         "printings": [
@@ -5549,7 +5549,7 @@
             "Wraith"
         ],
         "supertypes": [],
-        "text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nCycling\u2014Pay 2 life. (Pay 2 life, Discard this card: Draw a card.)",
+        "text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nCycling\u2014Pay 2 life. <i>(Pay 2 life, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": "4",
         "type": "Creature \u2014 Wraith",
@@ -5773,7 +5773,7 @@
         "name_id": "Gurmag Angler_50345bd2-1194-5c24-ad2f-e41db961b9c4",
         "names": null,
         "number": "72",
-        "original_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)",
+        "original_text": "Delve <i>(Each card you exile from your graveyard while casting this spell pays for {1}.)</i>",
         "original_type": "Creature \u2014 Zombie Fish",
         "power": "5",
         "printings": [
@@ -5813,7 +5813,7 @@
             "Fish"
         ],
         "supertypes": [],
-        "text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)",
+        "text": "Delve <i>(Each card you exile from your graveyard while casting this spell pays for {1}.)</i>",
         "timeshifted": null,
         "toughness": "5",
         "type": "Creature \u2014 Zombie Fish",
@@ -5911,7 +5911,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -5988,7 +5988,7 @@
         "name_id": "Street Wraith_fb2cfa2f-3bf3-5056-b6fe-d9d3acceb193",
         "names": null,
         "number": "108",
-        "original_text": "Swampwalk\nCycling\u2014Pay 2 life. (Pay 2 life, Discard this card: Draw a card.)",
+        "original_text": "Swampwalk\nCycling\u2014Pay 2 life. <i>(Pay 2 life, Discard this card: Draw a card.)</i>",
         "original_type": "Creature \u2014 Wraith",
         "power": "3",
         "printings": [
@@ -6012,7 +6012,7 @@
             "Wraith"
         ],
         "supertypes": [],
-        "text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nCycling\u2014Pay 2 life. (Pay 2 life, Discard this card: Draw a card.)",
+        "text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nCycling\u2014Pay 2 life. <i>(Pay 2 life, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": "4",
         "type": "Creature \u2014 Wraith",
@@ -6032,7 +6032,7 @@
         "colors": [
             "Blue"
         ],
-        "flavor": "\"As you inject the viscus vitae into the brain stem, don't let the spastic moaning bother you. It will soon become music to your ears.\" \u2014Stitcher Geralf",
+        "flavor": "\"As you inject the viscus vitae into the brain stem, don't let the spastic moaning bother you. It will soon become music to your ears.\" \n\u2014Stitcher Geralf",
         "foreign_names": [
             {
                 "flavor": "\u201eWenn du den viscus vitae in das Stammhirn spritzt, lass dich nicht vom krampfartigen St\u00f6hnen ablenken. Es wird bald schon Musik in deinen Ohren sein.\" \u2014Geralf der N\u00e4her",
@@ -6326,7 +6326,7 @@
         "name": "Blood Crypt",
         "names": null,
         "number": "245",
-        "original_text": "({T}: Add {B} or {R}.)\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "original_text": "<i>({T}: Add {B} or {R}.)</i>\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "original_type": "Land \u2014 Swamp Mountain",
         "power": null,
         "printings": [
@@ -6357,7 +6357,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {R}.)\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {R}.)</i>\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Mountain",
@@ -6494,7 +6494,7 @@
         "name_id": "Liliana, the Last Hope_63502ce7-0a22-5c6b-ba50-f0da858ac3e4",
         "names": [],
         "number": "93",
-        "original_text": "+1: Up to one target creature gets -2/-1 until your next turn.\n\u22122: Put the top two cards of your library into your graveyard, then you may return a creature card from your graveyard to your hand.\n\u22127: You get an emblem with \"At the beginning of your end step, put X 2/2 black Zombie creature tokens onto the battlefield, where X is two plus the number of Zombies you control.\"",
+        "original_text": "+1: Up to one target creature gets -2/-1 until your next turn.\n-2: Put the top two cards of your library into your graveyard, then you may return a creature card from your graveyard to your hand.\n-7: You get an emblem with \"At the beginning of your end step, put X 2/2 black Zombie creature tokens onto the battlefield, where X is two plus the number of Zombies you control.\"",
         "original_type": "Planeswalker \u2014 Liliana",
         "power": null,
         "printings": [
@@ -6529,7 +6529,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Up to one target creature gets -2/-1 until your next turn.\n[\u22122]: Put the top two cards of your library into your graveyard, then you may return a creature card from your graveyard to your hand.\n[\u22127]: You get an emblem with \"At the beginning of your end step, create X 2/2 black Zombie creature tokens, where X is two plus the number of Zombies you control.\"",
+        "text": "+1: Up to one target creature gets -2/-1 until your next turn.\n-2: Put the top two cards of your library into your graveyard, then you may return a creature card from your graveyard to your hand.\n-7: You get an emblem with \"At the beginning of your end step, create X 2/2 black Zombie creature tokens, where X is two plus the number of Zombies you control.\"",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -6714,7 +6714,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Undergrowth \u2014 Search your library for a black card with converted mana cost less than or equal to the number of creature cards in your graveyard, reveal it, put it into your hand, then shuffle your library.",
+        "text": "<i>Undergrowth \u2014 </i>Search your library for a black card with converted mana cost less than or equal to the number of creature cards in your graveyard, reveal it, put it into your hand, then shuffle your library.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -6892,7 +6892,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {R}.)</i>\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Mountain",
@@ -7070,7 +7070,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {B}.)\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {B}.)</i>\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Swamp",
@@ -7161,7 +7161,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Up to one target creature gets -2/-1 until your next turn.\n[\u22122]: Put the top two cards of your library into your graveyard, then you may return a creature card from your graveyard to your hand.\n[\u22127]: You get an emblem with \"At the beginning of your end step, create X 2/2 black Zombie creature tokens, where X is two plus the number of Zombies you control.\"",
+        "text": "+1: Up to one target creature gets -2/-1 until your next turn.\n-2: Put the top two cards of your library into your graveyard, then you may return a creature card from your graveyard to your hand.\n-7: You get an emblem with \"At the beginning of your end step, create X 2/2 black Zombie creature tokens, where X is two plus the number of Zombies you control.\"",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -7340,7 +7340,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {R}.)\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {R}.)</i>\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Mountain",
@@ -7519,7 +7519,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {R}.)</i>\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Mountain",

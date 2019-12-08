@@ -779,8 +779,13 @@ def main():
         print(deckName)
         printMissingArt(deckName, True)
     else:
+        from regexSets import Transform
         for deckName in [d for d in decks if decks[d].get("modern", True)]:
-            printMissingArt(deckName, False)
+            sset_dir = join("print_lists", f"{deckName}.json")
+            t = Transform(sset_dir)
+            new_cards = t.map()
+            jsonDumpTo(new_cards, sset_dir)
+            # printMissingArt(deckName, False)
             # print(deckName)
             # ddd = Deck.make(decks[deckName]["main"], decks[deckName]["side"],
             #         decks[deckName]["url"], decks[deckName].get("modern", True))

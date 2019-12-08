@@ -66,13 +66,12 @@ class Transform():
             "flashback": Rep(r"([F|f]lashback.*)(?<!<i>)(\(You may cast that card from your graveyard for its flashback cost\. Then exile it\.\))(?<!</i>)", r"\1<i>\2</i>", text_fields),
             "cycle": Rep(r"([C|c]ycl[e|ing].*)(?<!<i>)(\(.*[D|d]iscard this card: Draw a card\.\))(?<!</i>)", r"\1<i>\2</i>", text_fields),
             "ferocius": Rep(r"(?<!<i>)(Ferocious [-|\u2014] )(?<!</i>)(?=.*If you control a creature with power 4 or greater.*)", "<i>Ferocious \u2014 </i>", text_fields),
-            # "landwalk": Rep(r"([]walk)"),
             "cascade": Rep(r"([C|c]ascade.*)(?<!<i>)(\(When you cast this spell, exile cards from the top .* in a random order\.\))(?<!</i>)", r"\1<i>\2</i>", text_fields),
             "monstrous": Rep(r"(Monstrosity .*)(?<!<i>)(\(If this creature isn't monstrous.*and it becomes monstrous\.\))(?<!</i>)", r"\1<i>\2</i>", text_fields),
             "planeswalker": PlaneswalkerRep(),
             "phyrexian_mana": Rep(r"(?<!<i>)(\(\{.+\} can be paid with either.+life\.\))(?<!</i>)", r"<i>\1</i>", text_fields),
+            "retrace": Rep(r"([R|r]etrace.*)(?<!<i>)(\(You may cast instant and sorcery cards from your graveyard by discarding a land card in addition to paying their other costs\.\))(?<!</i>)", r"\1<i>\2</i>", text_fields)
         }
-        # "original_text": "Swampwalk\nCycling\u2014Pay 2 life. (Pay 2 life, Discard this card: Draw a card.)",
 
 class Rep():
     def __init__(self, search, replace, fields):
@@ -92,7 +91,7 @@ class PlaneswalkerRep():
     def substitute(self, card, field):
         if "Planeswalker" in card["types"]:
             card[field] = sub("\u2212", "-", card[field])
-            card[field] = sub(r"\[(.\d+)\]:", r"\1:", card[field])
+            card[field] = sub(r"\[(.*\d+)\]:", r"\1:", card[field])
             return card
         else:
             return card

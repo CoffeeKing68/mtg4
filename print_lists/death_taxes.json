@@ -86,7 +86,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {W} or {B}.)\nAs Godless Shrine enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {W} or {B}.)</i>\nAs Godless Shrine enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Plains Swamp",
@@ -538,7 +538,7 @@
         "cmc": 0.0,
         "color_identity": [],
         "colors": [],
-        "flavor": "\"We move because the earth does.\" \u2014Bruse Tarl, Goma Fada nomad",
+        "flavor": "\"We move because the earth does.\" \n\u2014Bruse Tarl, Goma Fada nomad",
         "foreign_names": [
             {
                 "flavor": "\u201eWir bewegen uns, wie es die Erde vormacht.\" \u2014Bruse Tarl, Nomade aus Goma Fada",
@@ -1475,7 +1475,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {W} or {B}.)\nAs Godless Shrine enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {W} or {B}.)</i>\nAs Godless Shrine enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Plains Swamp",
@@ -2527,7 +2527,7 @@
         "cmc": 0.0,
         "color_identity": [],
         "colors": [],
-        "flavor": "\"We move because the earth does.\" \u2014Bruse Tarl, Goma Fada nomad",
+        "flavor": "\"We move because the earth does.\" \n\u2014Bruse Tarl, Goma Fada nomad",
         "foreign_names": [
             {
                 "flavor": "\u201eWir bewegen uns, wie es die Erde vormacht.\" \u2014Bruse Tarl, Nomade aus Goma Fada",
@@ -4425,7 +4425,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {W} or {B}.)\nAs Godless Shrine enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {W} or {B}.)</i>\nAs Godless Shrine enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Plains Swamp",
@@ -5701,7 +5701,7 @@
         "name": "Godless Shrine",
         "names": null,
         "number": "248",
-        "original_text": "({T}: Add {W} or {B}.)\nAs Godless Shrine enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "original_text": "<i>({T}: Add {W} or {B}.)</i>\nAs Godless Shrine enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "original_type": "Land \u2014 Plains Swamp",
         "power": null,
         "printings": [
@@ -5732,7 +5732,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {W} or {B}.)\nAs Godless Shrine enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {W} or {B}.)</i>\nAs Godless Shrine enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Plains Swamp",
@@ -6152,7 +6152,7 @@
         "name": "Thraben Inspector",
         "names": [],
         "number": "44",
-        "original_text": "When Thraben Inspector enters the battlefield, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+        "original_text": "When Thraben Inspector enters the battlefield, investigate. <i>(Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")</i>",
         "original_type": "Creature \u2014 Human Soldier",
         "power": "1",
         "printings": [
@@ -6183,7 +6183,7 @@
             "Soldier"
         ],
         "supertypes": [],
-        "text": "When Thraben Inspector enters the battlefield, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
+        "text": "When Thraben Inspector enters the battlefield, investigate. <i>(Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Human Soldier",

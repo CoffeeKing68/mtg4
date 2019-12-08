@@ -244,7 +244,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -733,7 +733,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -995,7 +995,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {B}.)\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {B}.)</i>\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Swamp",
@@ -1095,7 +1095,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -1261,7 +1261,7 @@
         "colors": [
             "Black"
         ],
-        "flavor": "\"Knowledge is such a burden. Release it. Release all your fears to me.\" \u2014Ashiok, Nightmare Weaver",
+        "flavor": "\"Knowledge is such a burden. Release it. Release all your fears to me.\" \n\u2014Ashiok, Nightmare Weaver",
         "foreign_names": [
             {
                 "flavor": "\u201eWissen ist solch eine B\u00fcrde. Mache dich frei davon. Befreie all deine \u00c4ngste und gib sie mir.\" \u2014Ashiok der Albtraumweber",
@@ -1690,7 +1690,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {B}.)\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {B}.)</i>\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Swamp",
@@ -1959,7 +1959,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -2331,7 +2331,7 @@
         "name_id": "Snapcaster Mage_25c2eb67-1208-5a6d-9417-780209e5bc9c",
         "names": null,
         "number": "50",
-        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "original_type": "Creature \u2014 Human Wizard",
         "power": "2",
         "printings": [
@@ -2375,7 +2375,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -2394,7 +2394,7 @@
             "U"
         ],
         "colors": [],
-        "flavor": "\"I fear that as we scurry after phantoms, the Dimir pull nine puppet strings.\" \u2014Ral Zarek",
+        "flavor": "\"I fear that as we scurry after phantoms, the Dimir pull nine puppet strings.\" \n\u2014Ral Zarek",
         "foreign_names": [
             {
                 "flavor": "\u201eIch f\u00fcrchte, wir jagen Phantomen nach. Die Dimir ziehen an neun Marionettenf\u00e4den.\" \u2014Ral Zarek",
@@ -2554,7 +2554,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {B}.)\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {B}.)</i>\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Swamp",
@@ -2690,7 +2690,7 @@
         "name": "Snapcaster Mage",
         "names": null,
         "number": "78",
-        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "original_type": "Creature \u2014 Human Wizard",
         "power": "2",
         "printings": [
@@ -2734,7 +2734,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -3104,7 +3104,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -3124,7 +3124,7 @@
         "colors": [
             "Blue"
         ],
-        "flavor": "\"As you inject the viscus vitae into the brain stem, don't let the spastic moaning bother you. It will soon become music to your ears.\" \u2014Stitcher Geralf",
+        "flavor": "\"As you inject the viscus vitae into the brain stem, don't let the spastic moaning bother you. It will soon become music to your ears.\" \n\u2014Stitcher Geralf",
         "foreign_names": [
             {
                 "flavor": "\u300c\u8133\u5e79\u306b\u81d3\u5668\u5264\u3092\u6ce8\u5165\u3059\u308c\u3070\u3001\u75d9\u6523\u6027\u306e\u3046\u3081\u304d\u58f0\u306a\u3069\u6c17\u306b\u306a\u3089\u306a\u304f\u306a\u308b\u3002\u3059\u3050\u306b\u97f3\u697d\u306e\u3088\u3046\u306b\u805e\u3053\u3048\u308b\u3060\u308d\u3046\u3002\u300d \u2015\u2015\u7e2b\u3044\u5e2b\u3001\u30b2\u30e9\u30eb\u30d5",
@@ -4162,7 +4162,7 @@
         "name_id": "Fatal Push_a5dd8396-709d-5279-980e-2b5021ced787",
         "names": null,
         "number": "57",
-        "original_text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "original_text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -4204,7 +4204,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -5271,7 +5271,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {B}.)\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {B}.)</i>\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Swamp",
@@ -5619,7 +5619,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -5737,7 +5737,7 @@
         "colors": [
             "Blue"
         ],
-        "flavor": "\"As you inject the viscus vitae into the brain stem, don't let the spastic moaning bother you. It will soon become music to your ears.\" \u2014Stitcher Geralf",
+        "flavor": "\"As you inject the viscus vitae into the brain stem, don't let the spastic moaning bother you. It will soon become music to your ears.\" \n\u2014Stitcher Geralf",
         "foreign_names": [
             {
                 "flavor": "\u201eWenn du den viscus vitae in das Stammhirn spritzt, lass dich nicht vom krampfartigen St\u00f6hnen ablenken. Es wird bald schon Musik in deinen Ohren sein.\" \u2014Geralf der N\u00e4her",
@@ -6146,7 +6146,7 @@
             "Swamp"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {B}.)\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {B}.)</i>\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Swamp",

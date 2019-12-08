@@ -3789,7 +3789,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "Activated abilities of artifacts your opponents control can't be activated.\n[+1]: Until your next turn, up to one target noncreature artifact becomes an artifact creature with power and toughness each equal to its converted mana cost.\n[\u22122]: You may choose an artifact card you own from outside the game or in exile, reveal that card, and put it into your hand.",
+        "text": "Activated abilities of artifacts your opponents control can't be activated.\n+1: Until your next turn, up to one target noncreature artifact becomes an artifact creature with power and toughness each equal to its converted mana cost.\n-2: You may choose an artifact card you own from outside the game or in exile, reveal that card, and put it into your hand.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Karn",
@@ -3908,7 +3908,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "Activated abilities of artifacts your opponents control can't be activated.\n[+1]: Until your next turn, up to one target noncreature artifact becomes an artifact creature with power and toughness each equal to its converted mana cost.\n[\u22122]: You may choose an artifact card you own from outside the game or in exile, reveal that card, and put it into your hand.",
+        "text": "Activated abilities of artifacts your opponents control can't be activated.\n+1: Until your next turn, up to one target noncreature artifact becomes an artifact creature with power and toughness each equal to its converted mana cost.\n-2: You may choose an artifact card you own from outside the game or in exile, reveal that card, and put it into your hand.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Karn",

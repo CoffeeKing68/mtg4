@@ -86,7 +86,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -182,7 +182,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -378,7 +378,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {G}.)\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {G}.)</i>\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Forest",
@@ -548,7 +548,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
+        "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. <i>(It can deal excess combat damage to the player or planeswalker it's attacking.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -645,7 +645,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -782,7 +782,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
+        "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. <i>(It can deal excess combat damage to the player or planeswalker it's attacking.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -802,7 +802,7 @@
         "colors": [
             "Black"
         ],
-        "flavor": "\"Knowledge is such a burden. Release it. Release all your fears to me.\" \u2014Ashiok, Nightmare Weaver",
+        "flavor": "\"Knowledge is such a burden. Release it. Release all your fears to me.\" \n\u2014Ashiok, Nightmare Weaver",
         "foreign_names": [
             {
                 "flavor": "\u201eWissen ist solch eine B\u00fcrde. Mache dich frei davon. Befreie all deine \u00c4ngste und gib sie mir.\" \u2014Ashiok der Albtraumweber",
@@ -1107,7 +1107,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {G}.)\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {G}.)</i>\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Forest",
@@ -1163,7 +1163,7 @@
         "name_id": "Liliana of the Veil_443b815b-013d-58a6-8cbf-0dfb926e6430",
         "names": null,
         "number": "U10",
-        "original_text": "+1: Each player discards a card.\n\u22122: Target player sacrifices a creature.\n\u22126: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "original_text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "original_type": "Legendary Planeswalker \u2014 Liliana",
         "power": null,
         "printings": [
@@ -1204,7 +1204,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -1729,7 +1729,7 @@
         "name_id": "Liliana of the Veil_1de3243c-773e-5e4a-8de5-eb61e44b8431",
         "names": null,
         "number": "76",
-        "original_text": "+1: Each player discards a card.\n\u22122: Target player sacrifices a creature.\n\u22126: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of his or her choice.",
+        "original_text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of his or her choice.",
         "original_type": "Planeswalker \u2014 Liliana",
         "power": null,
         "printings": [
@@ -1770,7 +1770,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -2492,7 +2492,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -2662,7 +2662,7 @@
             "Snake"
         ],
         "supertypes": [],
-        "text": "Level up {1} ({1}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 3-7\n4/4\nProtection from instants\nLEVEL 8+\n6/6\nProtection from everything",
+        "text": "Level up {1} <i>({1}: Put a level counter on this. Level up only as a sorcery.)</i>\nLEVEL 3-7\n4/4\nProtection from instants\nLEVEL 8+\n6/6\nProtection from everything",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Snake",
@@ -2909,7 +2909,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
+        "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. <i>(It can deal excess combat damage to the player or planeswalker it's attacking.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -2974,7 +2974,7 @@
         "name_id": "Liliana of the Veil_530366ad-72c9-5ff6-b7e0-9a3e3498fec7",
         "names": null,
         "number": "104",
-        "original_text": "+1: Each player discards a card.\n\u22122: Target player sacrifices a creature.\n\u22126: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "original_text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "original_type": "Legendary Planeswalker \u2014 Liliana",
         "power": null,
         "printings": [
@@ -3015,7 +3015,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -3924,7 +3924,7 @@
         "name_id": "Fatal Push_a5dd8396-709d-5279-980e-2b5021ced787",
         "names": null,
         "number": "57",
-        "original_text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "original_text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -3966,7 +3966,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -4209,7 +4209,7 @@
             "Scout"
         ],
         "supertypes": [],
-        "text": "Whenever a land enters the battlefield under your control, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
+        "text": "Whenever a land enters the battlefield under your control, investigate. <i>(Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")</i>\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Human Scout",
@@ -4828,7 +4828,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {G}.)\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {G}.)</i>\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Forest",
@@ -4994,7 +4994,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -5147,7 +5147,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
+        "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. <i>(It can deal excess combat damage to the player or planeswalker it's attacking.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -5237,7 +5237,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
+        "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. <i>(It can deal excess combat damage to the player or planeswalker it's attacking.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -5375,7 +5375,7 @@
         "name": "Tireless Tracker",
         "names": [],
         "number": "233",
-        "original_text": "Whenever a land enters the battlefield under your control, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
+        "original_text": "Whenever a land enters the battlefield under your control, investigate. <i>(Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")</i>\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
         "original_type": "Creature \u2014 Human Scout",
         "power": "3",
         "printings": [
@@ -5407,7 +5407,7 @@
             "Scout"
         ],
         "supertypes": [],
-        "text": "Whenever a land enters the battlefield under your control, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
+        "text": "Whenever a land enters the battlefield under your control, investigate. <i>(Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")</i>\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Human Scout",
@@ -5809,7 +5809,7 @@
         "name_id": "Collective Brutality_86adb3f1-a165-5612-99e4-8ff2712ed58f",
         "names": null,
         "number": "85",
-        "original_text": "Escalate\u2014Discard a card. (Pay this cost for each mode chosen beyond the first.)\nChoose one or more \u2014\n\u2022 Target opponent reveals his or her hand. You choose an instant or sorcery card from it. That player discards that card.\n\u2022 Target creature gets -2/-2 until end of turn.\n\u2022 Target opponent loses 2 life and you gain 2 life.",
+        "original_text": "Escalate\u2014Discard a card. <i>(Pay this cost for each mode chosen beyond the first.)</i>\nChoose one or more \u2014\n\u2022 Target opponent reveals his or her hand. You choose an instant or sorcery card from it. That player discards that card.\n\u2022 Target creature gets -2/-2 until end of turn.\n\u2022 Target opponent loses 2 life and you gain 2 life.",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -5854,7 +5854,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Escalate\u2014Discard a card. (Pay this cost for each mode chosen beyond the first.)\nChoose one or more \u2014\n\u2022 Target opponent reveals their hand. You choose an instant or sorcery card from it. That player discards that card.\n\u2022 Target creature gets -2/-2 until end of turn.\n\u2022 Target opponent loses 2 life and you gain 2 life.",
+        "text": "Escalate\u2014Discard a card. <i>(Pay this cost for each mode chosen beyond the first.)</i>\nChoose one or more \u2014\n\u2022 Target opponent reveals their hand. You choose an instant or sorcery card from it. That player discards that card.\n\u2022 Target creature gets -2/-2 until end of turn.\n\u2022 Target opponent loses 2 life and you gain 2 life.",
         "timeshifted": null,
         "toughness": null,
         "type": "Sorcery",
@@ -6211,7 +6211,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {G}.)\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {G}.)</i>\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Forest",
@@ -6312,7 +6312,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Escalate\u2014Discard a card. (Pay this cost for each mode chosen beyond the first.)\nChoose one or more \u2014\n\u2022 Target opponent reveals their hand. You choose an instant or sorcery card from it. That player discards that card.\n\u2022 Target creature gets -2/-2 until end of turn.\n\u2022 Target opponent loses 2 life and you gain 2 life.",
+        "text": "Escalate\u2014Discard a card. <i>(Pay this cost for each mode chosen beyond the first.)</i>\nChoose one or more \u2014\n\u2022 Target opponent reveals their hand. You choose an instant or sorcery card from it. That player discards that card.\n\u2022 Target creature gets -2/-2 until end of turn.\n\u2022 Target opponent loses 2 life and you gain 2 life.",
         "timeshifted": null,
         "toughness": null,
         "type": "Sorcery",
@@ -6491,7 +6491,7 @@
             "Forest"
         ],
         "supertypes": [],
-        "text": "({T}: Add {B} or {G}.)\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {B} or {G}.)</i>\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Swamp Forest",

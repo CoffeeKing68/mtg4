@@ -853,7 +853,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\nDraw a card.",
+        "text": "Scry 1. <i>(Look at the top card of your library. You may put that card on the bottom of your library.)</i>\nDraw a card.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -1035,7 +1035,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -1132,7 +1132,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {R}.)</i>\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Mountain",
@@ -1312,7 +1312,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -1853,7 +1853,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -2538,7 +2538,7 @@
         "name_id": "Snapcaster Mage_25c2eb67-1208-5a6d-9417-780209e5bc9c",
         "names": null,
         "number": "50",
-        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "original_type": "Creature \u2014 Human Wizard",
         "power": "2",
         "printings": [
@@ -2582,7 +2582,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -2602,7 +2602,7 @@
         "colors": [
             "Blue"
         ],
-        "flavor": "\"There's a hole in your plan.\" \u2014Noyan Dar, Tazeem lullmage",
+        "flavor": "\"There's a hole in your plan.\" \n\u2014Noyan Dar, Tazeem lullmage",
         "foreign_names": [
             {
                 "flavor": "\u300c\u304a\u524d\u306e\u8a08\u753b\u306b\u306f\u7a74\u304c\u3042\u308b\u3002\u300d \u2015\u2015\u30bf\u30b8\u30fc\u30e0\u306e\u51ea\u9b54\u9053\u58eb\u3001\u30ce\u30e4\u30f3\u30fb\u30c0\u30fc\u30eb",
@@ -3147,7 +3147,7 @@
         "colors": [
             "Blue"
         ],
-        "flavor": "\"There's a hole in your plan.\" \u2014Noyan Dar, Tazeem lullmage",
+        "flavor": "\"There's a hole in your plan.\" \n\u2014Noyan Dar, Tazeem lullmage",
         "foreign_names": [
             {
                 "flavor": "\u201eDein Plan hat ein Loch.\" \u2014Noyan Dar, Ruhezauberer aus Tazeem",
@@ -3655,7 +3655,7 @@
         "name": "Snapcaster Mage",
         "names": null,
         "number": "78",
-        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "original_text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "original_type": "Creature \u2014 Human Wizard",
         "power": "2",
         "printings": [
@@ -3699,7 +3699,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -4207,7 +4207,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -4344,7 +4344,7 @@
         "name_id": "Nimble Obstructionist_b6240c5d-0e11-544c-a3a9-1a7058eb1680",
         "names": null,
         "number": "40",
-        "original_text": "Flash\nFlying\nCycling {2}{U} ({2}{U}, Discard this card: Draw a card.)\nWhen you cycle Nimble Obstructionist, counter target activated or triggered ability you don't control.",
+        "original_text": "Flash\nFlying\nCycling {2}{U} <i>({2}{U}, Discard this card: Draw a card.)</i>\nWhen you cycle Nimble Obstructionist, counter target activated or triggered ability you don't control.",
         "original_type": "Creature \u2014 Bird Wizard",
         "power": "3",
         "printings": [
@@ -4396,7 +4396,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nFlying\nCycling {2}{U} ({2}{U}, Discard this card: Draw a card.)\nWhen you cycle Nimble Obstructionist, counter target activated or triggered ability you don't control.",
+        "text": "Flash\nFlying\nCycling {2}{U} <i>({2}{U}, Discard this card: Draw a card.)</i>\nWhen you cycle Nimble Obstructionist, counter target activated or triggered ability you don't control.",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Bird Wizard",
@@ -4891,7 +4891,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\nDraw a card.",
+        "text": "Scry 1. <i>(Look at the top card of your library. You may put that card on the bottom of your library.)</i>\nDraw a card.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -5385,7 +5385,7 @@
         "name": "Opt",
         "names": null,
         "number": "60",
-        "original_text": "Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\nDraw a card.",
+        "original_text": "Scry 1. <i>(Look at the top card of your library. You may put that card on the bottom of your library.)</i>\nDraw a card.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -5405,7 +5405,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\nDraw a card.",
+        "text": "Scry 1. <i>(Look at the top card of your library. You may put that card on the bottom of your library.)</i>\nDraw a card.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -5425,7 +5425,7 @@
         "colors": [
             "Red"
         ],
-        "flavor": "\"The study of magic began when the first mage taught herself to throw lightning.\" \u2014Naban, dean of iteration",
+        "flavor": "\"The study of magic began when the first mage taught herself to throw lightning.\" \n\u2014Naban, dean of iteration",
         "foreign_names": [
             {
                 "flavor": "\u201eMit dem ersten erfolgreichen Blitz aus der Hand einer Magierin war das Studium der Magie geboren.\" \u2014Naban, Dekan der Iteration",
@@ -5717,7 +5717,7 @@
         "name": "Opt",
         "names": null,
         "number": "65",
-        "original_text": "Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\nDraw a card.",
+        "original_text": "Scry 1. <i>(Look at the top card of your library. You may put that card on the bottom of your library.)</i>\nDraw a card.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -5737,7 +5737,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\nDraw a card.",
+        "text": "Scry 1. <i>(Look at the top card of your library. You may put that card on the bottom of your library.)</i>\nDraw a card.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -5757,7 +5757,7 @@
         "colors": [
             "Blue"
         ],
-        "flavor": "\"A fool's fire is quickly quenched.\" \u2014Shaper Kumena",
+        "flavor": "\"A fool's fire is quickly quenched.\" \n\u2014Shaper Kumena",
         "foreign_names": [
             {
                 "flavor": "\u201eEinem \u00fcbereilten Zauber ist leicht beizukommen.\" \u2014Wandler Kumena",
@@ -6296,7 +6296,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {R}.)</i>\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Mountain",
@@ -7371,7 +7371,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {R}.)</i>\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Mountain",
@@ -7513,7 +7513,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\nDraw a card.",
+        "text": "Scry 1. <i>(Look at the top card of your library. You may put that card on the bottom of your library.)</i>\nDraw a card.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -7783,7 +7783,7 @@
             "Mountain"
         ],
         "supertypes": [],
-        "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {U} or {R}.)</i>\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Island Mountain",
@@ -7876,7 +7876,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\nDraw a card.",
+        "text": "Scry 1. <i>(Look at the top card of your library. You may put that card on the bottom of your library.)</i>\nDraw a card.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",

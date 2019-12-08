@@ -545,7 +545,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1\u2014{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+        "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1\u2014{R} <i>(Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Sorcery",
@@ -642,7 +642,7 @@
             "Plains"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {W}.)\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {W}.)</i>\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Plains",
@@ -748,7 +748,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Searing Blaze deals 1 damage to target player or planeswalker and 1 damage to target creature that player or that planeswalker's controller controls.\nLandfall \u2014 If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player or planeswalker and 3 damage to that creature instead.",
+        "text": "Searing Blaze deals 1 damage to target player or planeswalker and 1 damage to target creature that player or that planeswalker's controller controls.\n<i>Landfall \u2014 </i>If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player or planeswalker and 3 damage to that creature instead.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -873,7 +873,7 @@
         "name_id": "Searing Blaze_4e038342-7b39-5943-a020-66d735b5f1bd",
         "names": null,
         "number": "90",
-        "original_text": "Searing Blaze deals 1 damage to target player and 1 damage to target creature that player controls.\nLandfall \u2014 If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player and 3 damage to that creature instead.",
+        "original_text": "Searing Blaze deals 1 damage to target player and 1 damage to target creature that player controls.\n<i>Landfall \u2014 </i>If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player and 3 damage to that creature instead.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -920,7 +920,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Searing Blaze deals 1 damage to target player or planeswalker and 1 damage to target creature that player or that planeswalker's controller controls.\nLandfall \u2014 If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player or planeswalker and 3 damage to that creature instead.",
+        "text": "Searing Blaze deals 1 damage to target player or planeswalker and 1 damage to target creature that player or that planeswalker's controller controls.\n<i>Landfall \u2014 </i>If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player or planeswalker and 3 damage to that creature instead.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -1587,7 +1587,7 @@
             "Plains"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {W}.)\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {W}.)</i>\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Plains",
@@ -1609,7 +1609,7 @@
             "Red",
             "White"
         ],
-        "flavor": "\"Practice compassion and mercy. But know when they must end.\" \u2014Aurelia",
+        "flavor": "\"Practice compassion and mercy. But know when they must end.\" \n\u2014Aurelia",
         "foreign_names": [
             {
                 "flavor": "\u201e\u00dcbe Mitleid und Gnade. Aber wisse, wann es enden muss.\" \u2014Aurelia",
@@ -1933,7 +1933,7 @@
             "Plains"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {W}.)\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {W}.)</i>\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Plains",
@@ -2906,7 +2906,7 @@
         "name_id": "Rift Bolt_ab2c8057-2efc-5c36-a405-24848a5a6359",
         "names": null,
         "number": "17",
-        "original_text": "Rift Bolt deals 3 damage to target creature or player.\nSuspend 1\u2014{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+        "original_text": "Rift Bolt deals 3 damage to target creature or player.\nSuspend 1\u2014{R} <i>(Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</i>",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -2968,7 +2968,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1\u2014{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+        "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1\u2014{R} <i>(Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Sorcery",
@@ -3290,7 +3290,7 @@
             "Red",
             "White"
         ],
-        "flavor": "\"Rage is not the answer. Rage followed by fitting vengeance is the answer.\" \u2014Ajani Goldmane",
+        "flavor": "\"Rage is not the answer. Rage followed by fitting vengeance is the answer.\" \n\u2014Ajani Goldmane",
         "foreign_names": [
             {
                 "flavor": "\u300c\u6012\u308a\u306f\u7b54\u3068\u306a\u3089\u306a\u3044\u3002\u6012\u308a\u306b\u3075\u3055\u308f\u3057\u3044\u5fa9\u8b90\u304c\u4f34\u3048\u3070\u3001\u305d\u308c\u304c\u7b54\u3060\u3002\u300d \u2015\u2015\u9ec4\u91d1\u306e\u305f\u3066\u304c\u307f\u306e\u30a2\u30b8\u30e3\u30cb",
@@ -3443,7 +3443,7 @@
         "name": "Monastery Swiftspear",
         "names": null,
         "number": "140",
-        "original_text": "Haste\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+        "original_text": "Haste\nProwess <i>(Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)</i>",
         "original_type": "Creature \u2014 Human Monk",
         "power": "1",
         "printings": [
@@ -3475,7 +3475,7 @@
             "Monk"
         ],
         "supertypes": [],
-        "text": "Haste\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+        "text": "Haste\nProwess <i>(Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Human Monk",
@@ -3551,7 +3551,7 @@
         "name": "Rift Bolt",
         "names": null,
         "number": "143",
-        "original_text": "Rift Bolt deals 3 damage to target creature or player.\nSuspend 1\u2014{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+        "original_text": "Rift Bolt deals 3 damage to target creature or player.\nSuspend 1\u2014{R} <i>(Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</i>",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -3613,7 +3613,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1\u2014{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+        "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1\u2014{R} <i>(Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Sorcery",
@@ -4640,7 +4640,7 @@
         "name_id": "Monastery Swiftspear_82d8dbc3-9e94-5745-b427-a197a0c5cf9d",
         "names": null,
         "number": "118",
-        "original_text": "Haste\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+        "original_text": "Haste\nProwess <i>(Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)</i>",
         "original_type": "Creature \u2014 Human Monk",
         "power": "1",
         "printings": [
@@ -4672,7 +4672,7 @@
             "Monk"
         ],
         "supertypes": [],
-        "text": "Haste\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+        "text": "Haste\nProwess <i>(Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Human Monk",
@@ -4908,7 +4908,7 @@
             "Plains"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {W}.)\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {W}.)</i>\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Plains",
@@ -5010,7 +5010,7 @@
             "Red",
             "White"
         ],
-        "flavor": "\"Rage is not the answer. Rage followed by fitting vengeance is the answer.\" \u2014Ajani",
+        "flavor": "\"Rage is not the answer. Rage followed by fitting vengeance is the answer.\" \n\u2014Ajani",
         "foreign_names": [],
         "hand": null,
         "id": "06af2982-e630-5b07-bea1-13b3100cd725",
@@ -5135,7 +5135,7 @@
         "name_id": "Rift Bolt_c0ed624d-f541-5790-b9ed-0804dd78a1b8",
         "names": null,
         "number": "126",
-        "original_text": "Rift Bolt deals 3 damage to target creature or player.\nSuspend 1\u2014{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+        "original_text": "Rift Bolt deals 3 damage to target creature or player.\nSuspend 1\u2014{R} <i>(Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</i>",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -5197,7 +5197,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1\u2014{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+        "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1\u2014{R} <i>(Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Sorcery",
@@ -5673,7 +5673,7 @@
         "name": "Skewer the Critics",
         "names": null,
         "number": "115",
-        "original_text": "Spectacle {R} (You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn.)\nSkewer the Critics deals 3 damage to any target.",
+        "original_text": "Spectacle {R} <i>(You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn.)</i>\nSkewer the Critics deals 3 damage to any target.",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -5709,7 +5709,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Spectacle {R} (You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn.)\nSkewer the Critics deals 3 damage to any target.",
+        "text": "Spectacle {R} <i>(You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn.)</i>\nSkewer the Critics deals 3 damage to any target.",
         "timeshifted": null,
         "toughness": null,
         "type": "Sorcery",
@@ -5731,7 +5731,7 @@
             "Red",
             "White"
         ],
-        "flavor": "\"Practice compassion and mercy. But know when they must end.\" \u2014Aurelia",
+        "flavor": "\"Practice compassion and mercy. But know when they must end.\" \n\u2014Aurelia",
         "foreign_names": [
             {
                 "flavor": "\u201e\u00dcbe Mitleid und Gnade. Aber wisse, wann es enden muss.\"\u2014Aurelia",
@@ -6092,7 +6092,7 @@
             "Plains"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {W}.)\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {W}.)</i>\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Plains",
