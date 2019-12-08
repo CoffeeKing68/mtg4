@@ -63,7 +63,7 @@ def main():
     else:
         raise ValueError("sets.json not found.")
 
-    myset = "Jeskai_Nahiri"
+    myset = "wrenn_and_six"
     # JSON = join(RESOURCE_DIR, "card_data", f"{myset}.json")
     # JSON = join(RESOURCE_DIR, "card_data", f"mardu_aristocrats_M20.json")
     # TOKENS = join(RESOURCE_DIR, "card_data", f"tokens.json")
@@ -224,7 +224,7 @@ def main():
         start_time = time.time()
 
         count = 999
-        # openInScryfall(card)
+        openInScryfall(card)
         sset = [s for s in sets if s['code'] == card['set']]
         if len(sset) == 1:
             count = sset[0]["count"]
