@@ -1,0 +1,78 @@
+[
+    {
+        "artist": "Emrah Elmasli",
+        "border": null,
+        "cmc": 1.0,
+        "color_identity": [
+            "G"
+        ],
+        "colors": [
+            "Green"
+        ],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "002ff8e2-fbf4-500f-822a-326613b2859a",
+        "image_url": null,
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Pauper",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{G}",
+        "multiverse_id": null,
+        "name": "Ancient Stirrings",
+        "names": null,
+        "number": "70944",
+        "original_text": null,
+        "original_type": null,
+        "power": null,
+        "printings": [
+            "A25",
+            "PRM",
+            "ROE"
+        ],
+        "rarity": "Mythic",
+        "release_date": null,
+        "rulings": [],
+        "set": "PRM",
+        "set_name": "Magic Online Promos",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "Look at the top five cards of your library. You may reveal a colorless card from among them and put it into your hand. Then put the rest on the bottom of your library in any order. (Cards with no colored mana in their mana costs are colorless. Lands are also colorless.)",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Sorcery",
+        "types": [
+            "Sorcery"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

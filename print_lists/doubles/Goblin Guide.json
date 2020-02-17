@@ -1,0 +1,145 @@
+[
+    {
+        "artist": "Warren Mahy",
+        "border": null,
+        "cmc": 1.0,
+        "color_identity": [
+            "R"
+        ],
+        "colors": [
+            "Red"
+        ],
+        "flavor": "\"I've been all over this world. I even remember some of those places.\"",
+        "foreign_names": [
+            {
+                "flavor": "\u201eIch bin \u00fcberall auf dieser Welt gewesen. Einige dieser Orte erkenne ich sogar wieder.\"",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=204206&type=card",
+                "language": "German",
+                "multiverseid": 204206,
+                "name": "Goblin-Wegefinder",
+                "text": "Eile\nImmer wenn der Goblin-Wegefinder angreift, zeigt der verteidigende Spieler die oberste Karte seiner Bibliothek offen vor. Ist es ein Land, nimmt dieser Spieler diese Karte auf seine Hand."
+            },
+            {
+                "flavor": "\"He estado por todo el mundo. Incluso recuerdo algunos lugares.\"",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=202861&type=card",
+                "language": "Spanish",
+                "multiverseid": 202861,
+                "name": "Gu\u00eda trasgo",
+                "text": "Prisa.\nSiempre que el Gu\u00eda trasgo ataque, el jugador defensor muestra la primera carta de su biblioteca. Si es una carta de tierra, ese jugador la pone en su mano."
+            },
+            {
+                "flavor": "\u00ab J'ai bourlingu\u00e9 dans le monde entier. Je me souviens m\u00eame de quelques endroits. \u00bb",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=204475&type=card",
+                "language": "French",
+                "multiverseid": 204475,
+                "name": "Guide gobelin",
+                "text": "C\u00e9l\u00e9rit\u00e9\n\u00c0 chaque fois que le Guide gobelin attaque, le joueur d\u00e9fenseur r\u00e9v\u00e8le la carte du dessus de sa biblioth\u00e8que . Si c'est une carte de terrain, ce joueur la met dans sa main."
+            },
+            {
+                "flavor": "\"Sono stato ovunque in questo mondo. Ricordo perfino alcuni di questi posti.\"",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=203130&type=card",
+                "language": "Italian",
+                "multiverseid": 203130,
+                "name": "Guida Goblin",
+                "text": "Rapidit\u00e0\nOgniqualvolta la Guida Goblin attacca, il giocatore in difesa rivela la prima carta del suo grimorio. Se \u00e8 una carta terra, quel giocatore la aggiunge alla sua mano."
+            },
+            {
+                "flavor": "\u300c\u3053\u306e\u4e16\u754c\u306f\u5168\u90e8\u56de\u3063\u305f\u305e\u3002 \u305d\u306e\u4f55\u7b87\u6240\u304b\u306f\u899a\u3048\u3066\u308b\u3093\u3060\u305e\u3002\u300d",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=203937&type=card",
+                "language": "Japanese",
+                "multiverseid": 203937,
+                "name": "\u30b4\u30d6\u30ea\u30f3\u306e\u5148\u9054",
+                "text": "\u901f\u653b\n\u30b4\u30d6\u30ea\u30f3\u306e\u5148\u9054\u304c\u653b\u6483\u3059\u308b\u305f\u3073\u3001\u9632\u5fa1\u30d7\u30ec\u30a4\u30e4\u30fc\u306f\u81ea\u5206\u306e\u30e9\u30a4\u30d6\u30e9\u30ea\u30fc\u306e\u4e00\u756a\u4e0a\u306e\u30ab\u30fc\u30c9\u3092\u516c\u958b\u3059\u308b\u3002 \u305d\u308c\u304c\u571f\u5730\u30ab\u30fc\u30c9\u3067\u3042\u308b\u5834\u5408\u3001\u305d\u306e\u30d7\u30ec\u30a4\u30e4\u30fc\u306f\u305d\u308c\u3092\u81ea\u5206\u306e\u624b\u672d\u306b\u52a0\u3048\u308b\u3002"
+            },
+            {
+                "flavor": "\"Eu j\u00e1 estive nos quatro cantos do mundo. At\u00e9 me lembro de alguns daqueles lugares.\"",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=203668&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 203668,
+                "name": "Guia Goblin",
+                "text": "\u00cdmpeto\nToda vez que Guia Goblin ataca, o jogador defensor revela o card do topo de seu pr\u00f3prio grim\u00f3rio. Se for um card de terreno, aquele jogador o coloca na sua m\u00e3o."
+            },
+            {
+                "flavor": "\u00ab\u042f \u0438\u0437\u0431\u043e\u0440\u043e\u0437\u0434\u0438\u043b \u044d\u0442\u043e\u0442 \u043c\u0438\u0440 \u0432\u0434\u043e\u043b\u044c \u0438 \u043f\u043e\u043f\u0435\u0440\u0435\u043a. \u042f \u0434\u0430\u0436\u0435 \u043f\u043e\u043c\u043d\u044e \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043c\u0435\u0441\u0442\u0430\u00bb.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=203399&type=card",
+                "language": "Russian",
+                "multiverseid": 203399,
+                "name": "\u0413\u043e\u0431\u043b\u0438\u043d-\u041f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a",
+                "text": "\u0423\u0441\u043a\u043e\u0440\u0435\u043d\u0438\u0435\n\u041a\u0430\u0436\u0434\u044b\u0439 \u0440\u0430\u0437, \u043a\u043e\u0433\u0434\u0430 \u0413\u043e\u0431\u043b\u0438\u043d-\u041f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a \u0430\u0442\u0430\u043a\u0443\u0435\u0442, \u0437\u0430\u0449\u0438\u0449\u0430\u044e\u0449\u0438\u0439\u0441\u044f \u0438\u0433\u0440\u043e\u043a \u043f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0435\u0442 \u0432\u0435\u0440\u0445\u043d\u044e\u044e \u043a\u0430\u0440\u0442\u0443 \u0441\u0432\u043e\u0435\u0439 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0438. \u0415\u0441\u043b\u0438 \u044d\u0442\u043e \u043a\u0430\u0440\u0442\u0430 \u0437\u0435\u043c\u043b\u0438, \u0442\u043e\u0442 \u0438\u0433\u0440\u043e\u043a \u043a\u043b\u0430\u0434\u0435\u0442 \u0435\u0435 \u0432 \u0441\u0432\u043e\u044e \u0440\u0443\u043a\u0443."
+            },
+            {
+                "flavor": "\u300c\u6211\u5230\u8fc7\u4e16\u754c\u5404\u5904\u3002 \u6211\u8fd8\u53ef\u4ee5\u8bb0\u5f97\u5176\u4e2d\u7684\u4e00\u4e9b\u5730\u65b9\u3002\u300d",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=204744&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 204744,
+                "name": "\u9b3c\u602a\u5411\u5bfc",
+                "text": "\u654f\u6377\n\u6bcf\u5f53\u9b3c\u602a\u5411\u5bfc\u653b\u51fb\u65f6\uff0c\u9632\u5fa1\u724c\u624b\u5c55\u793a\u5176\u724c\u5e93\u9876\u724c\u3002 \u82e5\u5c55\u793a\u51fa\u5730\u724c\uff0c\u5219\u8be5\u724c\u624b\u5c06\u8be5\u724c\u7f6e\u4e8e\u5176\u624b\u4e0a\u3002"
+            }
+        ],
+        "hand": null,
+        "id": "2e87bfc5-5819-54df-8d5a-1bf0b2059cee",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=170987&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{R}",
+        "multiverse_id": 170987,
+        "name": "Goblin Guide",
+        "name_id": "Goblin Guide_2e87bfc5-5819-54df-8d5a-1bf0b2059cee",
+        "names": null,
+        "number": "126",
+        "original_text": "Haste\nWhenever Goblin Guide attacks, defending player reveals the top card of his or her library. If it's a land card, that player puts it into his or her hand.",
+        "original_type": "Creature \u2014 Goblin Scout",
+        "power": "2",
+        "printings": [
+            "MM3",
+            "PGPX",
+            "PRM",
+            "TD0",
+            "ZEN"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [],
+        "set": "ZEN",
+        "set_name": "Zendikar",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Goblin",
+            "Scout"
+        ],
+        "supertypes": [],
+        "text": "Haste\nWhenever Goblin Guide attacks, defending player reveals the top card of their library. If it's a land card, that player puts it into their hand.",
+        "timeshifted": null,
+        "toughness": "2",
+        "type": "Creature \u2014 Goblin Scout",
+        "types": [
+            "Creature"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

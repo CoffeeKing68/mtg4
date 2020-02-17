@@ -1,0 +1,101 @@
+[
+    {
+        "artist": "Kekai Kotaki",
+        "border": null,
+        "cmc": 1.0,
+        "color_identity": [
+            "R"
+        ],
+        "colors": [
+            "Red"
+        ],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "006801c6-87b2-5249-bdf4-6c9ec67dadfc",
+        "image_url": null,
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Pauper",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{R}",
+        "multiverse_id": null,
+        "name": "Lightning Bolt",
+        "name_id": "Lightning Bolt_006801c6-87b2-5249-bdf4-6c9ec67dadfc",
+        "names": null,
+        "number": "1",
+        "original_text": null,
+        "original_type": null,
+        "power": null,
+        "printings": [
+            "2ED",
+            "3ED",
+            "4BB",
+            "4ED",
+            "A25",
+            "ATH",
+            "BTD",
+            "CED",
+            "CEI",
+            "E01",
+            "FBB",
+            "JGP",
+            "LEA",
+            "LEB",
+            "M10",
+            "M11",
+            "ME1",
+            "MM2",
+            "P10",
+            "PD2",
+            "PF19",
+            "PRM",
+            "PTC",
+            "SUM",
+            "TD0"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [],
+        "set": "PF19",
+        "set_name": "MagicFest 2019",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "Lightning Bolt deals 3 damage to any target.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Instant",
+        "types": [
+            "Instant"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

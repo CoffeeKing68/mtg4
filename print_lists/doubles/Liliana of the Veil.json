@@ -1,0 +1,99 @@
+[
+    {
+        "artist": "Steve Argyle",
+        "border": null,
+        "cmc": 3.0,
+        "color_identity": [
+            "B"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "d284bfc2-91d1-5e10-aa83-9434c335b061",
+        "image_url": null,
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": "3",
+        "mana_cost": "{1}{B}{B}",
+        "multiverse_id": null,
+        "name": "Liliana of the Veil",
+        "name_id": "Liliana of the Veil_d284bfc2-91d1-5e10-aa83-9434c335b061",
+        "names": null,
+        "number": "2015",
+        "original_text": null,
+        "original_type": null,
+        "power": null,
+        "printings": [
+            "ISD",
+            "MM3",
+            "PPRO",
+            "PRM",
+            "PUMA",
+            "UMA"
+        ],
+        "rarity": "Mythic",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2018-12-07",
+                "text": "You can activate Liliana\u2019s first ability even if some or all players will be unable to discard a card."
+            },
+            {
+                "date": "2018-12-07",
+                "text": "When Liliana\u2019s first ability resolves, first the player whose turn it is chooses a card in hand without revealing it, then each other player in turn order does the same. Then all the chosen cards are discarded at the same time."
+            },
+            {
+                "date": "2018-12-07",
+                "text": "When Liliana\u2019s third ability resolves, you put each permanent the player controls into one of the two piles. For example, you could put a creature into one pile and an Aura enchanting that creature into the other pile."
+            },
+            {
+                "date": "2018-12-07",
+                "text": "A pile can be empty. If the player chooses an empty pile, no permanents will be sacrificed."
+            }
+        ],
+        "set": "PPRO",
+        "set_name": "Pro Tour Promos",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Liliana"
+        ],
+        "supertypes": [
+            "Legendary"
+        ],
+        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Legendary Planeswalker \u2014 Liliana",
+        "types": [
+            "Planeswalker"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "artist": "Joseph Meehan",
+        "border": null,
+        "cmc": 2.0,
+        "color_identity": [
+            "U"
+        ],
+        "colors": [
+            "Blue"
+        ],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "959d6de9-1171-542a-84f3-1a9fe4305532",
+        "image_url": null,
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{1}{U}",
+        "multiverse_id": null,
+        "name": "Snapcaster Mage",
+        "name_id": "Snapcaster Mage_959d6de9-1171-542a-84f3-1a9fe4305532",
+        "names": null,
+        "number": "2016",
+        "original_text": null,
+        "original_type": null,
+        "power": "2",
+        "printings": [
+            "ISD",
+            "MM3",
+            "PPRO",
+            "PRM",
+            "PUMA",
+            "UMA"
+        ],
+        "rarity": "Mythic",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2017-04-18",
+                "text": "For split cards, the flashback cost you pay is determined by the half you cast"
+            },
+            {
+                "date": "2018-12-07",
+                "text": "If you cast a spell from a graveyard using its flashback ability, you can\u2019t pay other alternative costs (such as that of Foil)."
+            },
+            {
+                "date": "2018-12-07",
+                "text": "If you cast an instant or sorcery with {X} in its mana cost this way, you still choose the value of X as part of casting the spell and pay that cost."
+            },
+            {
+                "date": "2018-12-07",
+                "text": "If an instant or sorcery card in your graveyard already has flashback, you may use either flashback ability to cast it from your graveyard."
+            },
+            {
+                "date": "2018-12-07",
+                "text": "You may pay any optional additional costs the spell has, such as kicker costs. You must pay any mandatory additional costs the spell has, such as that of Tormenting Voice."
+            }
+        ],
+        "set": "PPRO",
+        "set_name": "Pro Tour Promos",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Human",
+            "Wizard"
+        ],
+        "supertypes": [],
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "timeshifted": null,
+        "toughness": "1",
+        "type": "Creature \u2014 Human Wizard",
+        "types": [
+            "Creature"
+        ],
+        "variations": null,
+        "watermark": "wotc"
+    }
+]

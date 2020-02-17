@@ -1,5 +1,5 @@
 from shutil import copy2
-from os.path import join, isdir, expanduser
+from os.path import join, isdir, expanduser, isfile
 from os import makedirs, listdir
 from termcolor import cprint
 from json import load, dump, JSONDecodeError
@@ -576,6 +576,161 @@ decks = {
         "url": "https://www.jeffhoogland.com/decklists/ub-fae/",
         "modern": True
     },
+    "WB_taxes": {
+        "main": [
+            (4, "Aether Vial"),
+            (4, "Caves of Koilos"),
+            (4, "Concealed Courtyard"),
+            (4, "Eldrazi Displacer"),
+            (4, "Eldrazi Temple"),
+            (4, "Flickerwisp"),
+            (4, "Ghost Quarter"),
+            (1, "Godless Shrine"),
+            (2, "Kaya, Orzhov Usurper"),
+            (4, "Leonin Arbiter"),
+            (4, "Path to Exile"),
+            (2, "Plains"),
+            (3, "Shambling Vent"),
+            (1, "Swamp"),
+            (4, "Thalia, Guardian of Thraben"),
+            (4, "Thought-Knot Seer"),
+            (4, "Tidehollow Sculler"),
+            (3, "Wasteland Strangler"),
+        ],
+        "side": [
+            (2, "Burrenton Forge-Tender"),
+            (2, "Fatal Push"),
+            (1, "Fiend Hunter"),
+            (1, "Gideon, Ally of Zendikar"),
+            (2, "Kambal, Consul of Allocation"),
+            (1, "Orzhov Pontiff"),
+            (3, "Rest in Peace"),
+            (1, "Settle the Wreckage"),
+            (2, "Stony Silence"),
+        ],
+        "url": "https://www.mtggoldfish.com/deck/1757007#paper",
+        "modern": True,
+    },
+    "merfolk": {
+        "main": [
+            (2, "Brazen Borrower"),
+            (4, "Kumena's Speaker"),
+            (4, "Lord of Atlantis"),
+            (4, "Master of the Pearl Trident"),
+            (4, "Merfolk Mistbinder"),
+            (4, "Merfolk Trickster"),
+            (4, "Silvergill Adept"),
+            (4, "Aether Vial"),
+            (3, "Force of Negation"),
+            (4, "Spreading Seas"),
+            (3, "Oko, Thief of Crowns"),
+            (4, "Botanical Sanctum"),
+            (2, "Breeding Pool"),
+            (1, "Cavern of Souls"),
+            (2, "Flooded Strand"),
+            (4, "Island"),
+            (3, "Mutavault"),
+            (4, "Waterlogged Grove"),
+        ],
+        "side": [
+            (1, "Force of Negation"),
+            (2, "Chalice of the Void"),
+            (4, "Collector Ouphe"),
+            (2, "Deprive"),
+            (2, "Dismember"),
+            (2, "Grafdigger's Cage"),
+            (2, "Relic of Progenitus"),
+        ],
+        "url": "https://mtgdecks.net/Modern/merfolk-decklist-by-thealbertoz-911454",
+        "modern": True
+    },
+    "green_tron": {
+        "main": [
+            (4, "Ancient Stirrings"),
+            (1, "Blast Zone"),
+            (4, "Chromatic Sphere"),
+            (4, "Chromatic Star"),
+            (4, "Expedition Map"),
+            (4, "Forest"),
+            (4, "Karn Liberated"),
+            (4, "Oblivion Stone"),
+            (4, "Once Upon a Time"),
+            (1, "Sanctum of Ugin"),
+            (3, "Sylvan Scrying"),
+            (2, "Ugin, the Spirit Dragon"),
+            (2, "Ulamog, the Ceaseless Hunger"),
+            (4, "Urza's Mine"),
+            (4, "Urza's Power Plant"),
+            (4, "Urza's Tower"),
+            (3, "Walking Ballista"),
+            (1, "World Breaker"),
+            (3, "Wurmcoil Engine"),
+        ],
+        "side": [
+            (1, "Emrakul, the Promised End"),
+            (1, "Ghost Quarter"),
+            (3, "Nature's Claim"),
+            (2, "Thragtusk"),
+            (2, "Trinisphere"),
+            (1, "Veil of Summer"),
+            (3, "Warping Wail"),
+            (2, "Weather the Storm"),
+        ],
+        "url": "https://www.jeffhoogland.com/decklists/green-x-tron/",
+        "modern": True
+    },
+    "bant_eldrazi": {
+        "main": [
+            (2, "Ancient Stirrings"),
+            (1, "Breeding Pool"),
+            (2, "Brushland"),
+            (2, "Cavern of Souls"),
+            (2, "Drowner of Hope"),
+            (4, "Eldrazi Displacer"),
+            (4, "Eldrazi Temple"),
+            (1, "Forest"),
+            (1, "Hallowed Fountain"),
+            (1, "Island"),
+            (2, "Knight of Autumn"),
+            (4, "Noble Hierarch"),
+            (3, "Oko, Thief of Crowns"),
+            (4, "Once Upon a Time"),
+            (3, "Path to Exile"),
+            (1, "Plains"),
+            (4, "Prismatic Vista"),
+            (4, "Reality Smasher"),
+            (3, "Stubborn Denial"),
+            (1, "Temple Garden"),
+            (4, "Thought-Knot Seer"),
+            (2, "Thragtusk"),
+            (1, "Wastes"),
+            (2, "Windswept Heath"),
+            (2, "Yavimaya Coast"),
+        ],
+        "side": [
+            (2, "Collector Ouphe"),
+            (2, "Damping Sphere"),
+            (2, "Deputy of Detention"),
+            (2, "Engineered Explosives"),
+            (1, "Knight of Autumn"),
+            (2, "Rest in Peace"),
+            (2, "Thalia, Guardian of Thraben"),
+            (2, "Tireless Tracker"),
+        ],
+        "url": "https://www.jeffhoogland.com/decklists/bant-eldrazi/",
+        "modern": True
+    },
+    # "extras": {
+    #     "main": [
+    #         (1, "Azcanta, the Sunken Ruin"),
+    #         (6, "Elk"),
+    #         (4, "Food"),
+    #         (4, "Eldrazi Scion"),
+    #         (1, "Gideon of the Trials emblem"),
+    #         (1, "Lilana, the Last Hope emblem"),
+            
+    #     ]
+    # }
 }
 
 art_dir = join("resources", "art")
@@ -703,7 +858,7 @@ class Deck():
         cards = []
         if not isdir(save_to):
             makedirs(save_to)
-
+        
         for card in [c for c in self.main if c.name not in LANDS]:
             print(card.name)
             in_sets += findSets(card.name)
@@ -775,24 +930,89 @@ def main():
     if single:
         i = 8
         deckName = list(decks.keys())[i]
-        deckName = "burn"
+        deckName = "bant_eldrazi"
+        # deckName = "WB_taxes"
         print(deckName)
         printMissingArt(deckName, True)
     else:
         from regexSets import Transform
-        for deckName in [d for d in decks if decks[d].get("modern", True)]:
-            sset_dir = join("print_lists", f"{deckName}.json")
-            t = Transform(sset_dir)
-            new_cards = t.map()
-            jsonDumpTo(new_cards, sset_dir)
-            # printMissingArt(deckName, False)
-            # print(deckName)
-            # ddd = Deck.make(decks[deckName]["main"], decks[deckName]["side"],
-            #         decks[deckName]["url"], decks[deckName].get("modern", True))
+        from collections import defaultdict, Counter
+        from sortedcollections import SortedDict
+        
+        all_cards = defaultdict(lambda: 0)
+        print_decks = [
+            "burn", "GDS", 
+            "Jeskai_Nahiri", "jund",
+            "merfolk", "WB_taxes", 
+            "bant_eldrazi", 
+            # "wrenn_and_six", "GB_rock",
 
-            # ddd.saveDeckToJson(deckName)
+        ]
+        for deckName in print_decks:
+            print(deckName)
+            print(sum([c[0] for c in decks[deckName]["main"]]))
+            for q, cardName in decks[deckName]["main"]:
+                all_cards[cardName] += q
+            print(sum([v for v in all_cards.values()]))
+        
+        singles = []
+        doubles = []
+        for cardName, quantity in all_cards.items():
+            real_pdfs = [c for c in listdir("test_images/pdfs/all_deck") if c.startswith(cardName)]
+            if len(real_pdfs):
+                artAmount = len(real_pdfs)
+                howManyDecks = [d for d in print_decks if cardName in [c[1] for c in decks[d]["main"]]]
+                if artAmount == 1:
+                    c = "green"
+                    singles.append([quantity / len(real_pdfs),cardName,real_pdfs[0]])
+                elif quantity == 1:
+                    c = "yellow"
+                else:
+                    for r in real_pdfs:
+                        doubles.append([quantity / len(real_pdfs), cardName, r])
+                    c = "red"
+                cprint(f"{cardName}: {quantity}, {artAmount}, {len(howManyDecks)}: {howManyDecks}", c)
+
+        # from csv import writer
+        with open("singles.csv") as f:
+            from csv import DictReader
+            r = DictReader(f)
+            for row in r:
+                src = f"test_images/pdfs/all_deck/{row['name_long']}"
+                dest = f"test_images/final_print/{row['name_long']}"
+                copy2(src, dest)
+        # with open("singles.csv", "w") as f:
+        #     w = writer(f)
+        #     w.writerows(singles)
+        # with open("doubles.csv", "w") as f:
+        #     w = writer(f)
+        #     w.writerows(doubles)
+
+        # print(sum([r[0] for r in singles]))
+        # print(sum([r[0] for r in doubles]))
+        # print(len(print_decks) * 60)
+        # print(sum([c[0] for c in new_counter.values()]))
+        # pprint(new_counter)
+        # singles = []
+        
+        # print_list_sset_dir = "print_lists"
+        # for card in all_cards_json:
+        #     dupes = []
+        #     print(card['name'])
+        #     # Find art in sets
+        #     in_sets = [c['set'] for c in all_cards_json if c['name'] == card['name']]
+        #     if len(in_sets) == 1:
+        #         singles.append(card)
+        #     else:
+        #         dupes.append(card)
+        #     jsonDumpTo(dupes, f"print_lists/doubles/{card['name']}.json")
+        
+        # jsonDumpTo(singles, "print_lists/singles/singles.json")
+            
+                    
+                
+                
 
 
 if __name__ == "__main__":
     main()
-

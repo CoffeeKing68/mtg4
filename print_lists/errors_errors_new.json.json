@@ -61,7 +61,7 @@
         "name": "Monastery Swiftspear",
         "names": null,
         "number": "140",
-        "original_text": "Haste\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+        "original_text": "Haste\nProwess <i>(Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)</i>",
         "original_type": "Creature \u2014 Human Monk",
         "power": "1",
         "printings": [
@@ -93,7 +93,7 @@
             "Monk"
         ],
         "supertypes": [],
-        "text": "Haste\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+        "text": "Haste\nProwess <i>(Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Human Monk",
@@ -169,7 +169,7 @@
         "name": "Rift Bolt",
         "names": null,
         "number": "143",
-        "original_text": "Rift Bolt deals 3 damage to target creature or player.\nSuspend 1\u2014{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+        "original_text": "Rift Bolt deals 3 damage to target creature or player.\nSuspend 1\u2014{R} <i>(Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</i>",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -231,7 +231,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1\u2014{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+        "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1\u2014{R} <i>(Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Sorcery",
@@ -409,7 +409,7 @@
             "Plains"
         ],
         "supertypes": [],
-        "text": "({T}: Add {R} or {W}.)\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "text": "<i>({T}: Add {R} or {W}.)</i>\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
         "timeshifted": null,
         "toughness": null,
         "type": "Land \u2014 Mountain Plains",
@@ -534,7 +534,7 @@
         "name_id": "Searing Blaze_4e038342-7b39-5943-a020-66d735b5f1bd",
         "names": null,
         "number": "90",
-        "original_text": "Searing Blaze deals 1 damage to target player and 1 damage to target creature that player controls.\nLandfall \u2014 If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player and 3 damage to that creature instead.",
+        "original_text": "Searing Blaze deals 1 damage to target player and 1 damage to target creature that player controls.\n<i>Landfall \u2014 </i>If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player and 3 damage to that creature instead.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -581,7 +581,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Searing Blaze deals 1 damage to target player or planeswalker and 1 damage to target creature that player or that planeswalker's controller controls.\nLandfall \u2014 If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player or planeswalker and 3 damage to that creature instead.",
+        "text": "Searing Blaze deals 1 damage to target player or planeswalker and 1 damage to target creature that player or that planeswalker's controller controls.\n<i>Landfall \u2014 </i>If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player or planeswalker and 3 damage to that creature instead.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -733,7 +733,7 @@
         "name": "Skewer the Critics",
         "names": null,
         "number": "115",
-        "original_text": "Spectacle {R} (You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn.)\nSkewer the Critics deals 3 damage to any target.",
+        "original_text": "Spectacle {R} <i>(You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn.)</i>\nSkewer the Critics deals 3 damage to any target.",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -769,7 +769,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Spectacle {R} (You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn.)\nSkewer the Critics deals 3 damage to any target.",
+        "text": "Spectacle {R} <i>(You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn.)</i>\nSkewer the Critics deals 3 damage to any target.",
         "timeshifted": null,
         "toughness": null,
         "type": "Sorcery",
@@ -906,7 +906,7 @@
         "name_id": "Collective Brutality_86adb3f1-a165-5612-99e4-8ff2712ed58f",
         "names": null,
         "number": "85",
-        "original_text": "Escalate\u2014Discard a card. (Pay this cost for each mode chosen beyond the first.)\nChoose one or more \u2014\n\u2022 Target opponent reveals his or her hand. You choose an instant or sorcery card from it. That player discards that card.\n\u2022 Target creature gets -2/-2 until end of turn.\n\u2022 Target opponent loses 2 life and you gain 2 life.",
+        "original_text": "Escalate\u2014Discard a card. <i>(Pay this cost for each mode chosen beyond the first.)</i>\nChoose one or more \u2014\n\u2022 Target opponent reveals his or her hand. You choose an instant or sorcery card from it. That player discards that card.\n\u2022 Target creature gets -2/-2 until end of turn.\n\u2022 Target opponent loses 2 life and you gain 2 life.",
         "original_type": "Sorcery",
         "power": null,
         "printings": [
@@ -951,7 +951,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Escalate\u2014Discard a card. (Pay this cost for each mode chosen beyond the first.)\nChoose one or more \u2014\n\u2022 Target opponent reveals their hand. You choose an instant or sorcery card from it. That player discards that card.\n\u2022 Target creature gets -2/-2 until end of turn.\n\u2022 Target opponent loses 2 life and you gain 2 life.",
+        "text": "Escalate\u2014Discard a card. <i>(Pay this cost for each mode chosen beyond the first.)</i>\nChoose one or more \u2014\n\u2022 Target opponent reveals their hand. You choose an instant or sorcery card from it. That player discards that card.\n\u2022 Target creature gets -2/-2 until end of turn.\n\u2022 Target opponent loses 2 life and you gain 2 life.",
         "timeshifted": null,
         "toughness": null,
         "type": "Sorcery",
@@ -1088,7 +1088,7 @@
         "name_id": "Fatal Push_a5dd8396-709d-5279-980e-2b5021ced787",
         "names": null,
         "number": "57",
-        "original_text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "original_text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -1130,7 +1130,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\n<i>Revolt</i> \u2014 Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -1300,7 +1300,7 @@
             "Snake"
         ],
         "supertypes": [],
-        "text": "Level up {1} ({1}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 3-7\n4/4\nProtection from instants\nLEVEL 8+\n6/6\nProtection from everything",
+        "text": "Level up {1} <i>({1}: Put a level counter on this. Level up only as a sorcery.)</i>\nLEVEL 3-7\n4/4\nProtection from instants\nLEVEL 8+\n6/6\nProtection from everything",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Snake",
@@ -1320,7 +1320,7 @@
         "colors": [
             "Black"
         ],
-        "flavor": "\"Knowledge is such a burden. Release it. Release all your fears to me.\" \u2014Ashiok, Nightmare Weaver",
+        "flavor": "\"Knowledge is such a burden. Release it. Release all your fears to me.\" \n\u2014Ashiok, Nightmare Weaver",
         "foreign_names": [
             {
                 "flavor": "\u201eWissen ist solch eine B\u00fcrde. Mache dich frei davon. Befreie all deine \u00c4ngste und gib sie mir.\" \u2014Ashiok der Albtraumweber",
@@ -1550,7 +1550,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
+        "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. <i>(It can deal excess combat damage to the player or planeswalker it's attacking.)</i>",
         "timeshifted": null,
         "toughness": null,
         "type": "Land",
@@ -1686,7 +1686,7 @@
         "name": "Tireless Tracker",
         "names": [],
         "number": "233",
-        "original_text": "Whenever a land enters the battlefield under your control, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
+        "original_text": "Whenever a land enters the battlefield under your control, investigate. <i>(Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")</i>\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
         "original_type": "Creature \u2014 Human Scout",
         "power": "3",
         "printings": [
@@ -1718,7 +1718,7 @@
             "Scout"
         ],
         "supertypes": [],
-        "text": "Whenever a land enters the battlefield under your control, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
+        "text": "Whenever a land enters the battlefield under your control, investigate. <i>(Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")</i>\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Human Scout",
@@ -1859,7 +1859,7 @@
         "name_id": "Gurmag Angler_50345bd2-1194-5c24-ad2f-e41db961b9c4",
         "names": null,
         "number": "72",
-        "original_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)",
+        "original_text": "Delve <i>(Each card you exile from your graveyard while casting this spell pays for {1}.)</i>",
         "original_type": "Creature \u2014 Zombie Fish",
         "power": "5",
         "printings": [
@@ -1899,7 +1899,7 @@
             "Fish"
         ],
         "supertypes": [],
-        "text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)",
+        "text": "Delve <i>(Each card you exile from your graveyard while casting this spell pays for {1}.)</i>",
         "timeshifted": null,
         "toughness": "5",
         "type": "Creature \u2014 Zombie Fish",
@@ -2084,7 +2084,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Undergrowth \u2014 Search your library for a black card with converted mana cost less than or equal to the number of creature cards in your graveyard, reveal it, put it into your hand, then shuffle your library.",
+        "text": "<i>Undergrowth \u2014 </i>Search your library for a black card with converted mana cost less than or equal to the number of creature cards in your graveyard, reveal it, put it into your hand, then shuffle your library.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -2281,7 +2281,7 @@
             "Wizard"
         ],
         "supertypes": [],
-        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+        "text": "Flash\nWhen Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. <i>(You may cast that card from your graveyard for its flashback cost. Then exile it.)</i>",
         "timeshifted": null,
         "toughness": "1",
         "type": "Creature \u2014 Human Wizard",
@@ -2358,7 +2358,7 @@
         "name_id": "Street Wraith_fb2cfa2f-3bf3-5056-b6fe-d9d3acceb193",
         "names": null,
         "number": "108",
-        "original_text": "Swampwalk\nCycling\u2014Pay 2 life. (Pay 2 life, Discard this card: Draw a card.)",
+        "original_text": "Swampwalk\nCycling\u2014Pay 2 life. <i>(Pay 2 life, Discard this card: Draw a card.)</i>",
         "original_type": "Creature \u2014 Wraith",
         "power": "3",
         "printings": [
@@ -2382,7 +2382,7 @@
             "Wraith"
         ],
         "supertypes": [],
-        "text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nCycling\u2014Pay 2 life. (Pay 2 life, Discard this card: Draw a card.)",
+        "text": "Swampwalk <i>(This creature can't be blocked as long as defending player controls a Swamp.)</i>\nCycling\u2014Pay 2 life. <i>(Pay 2 life, Discard this card: Draw a card.)</i>",
         "timeshifted": null,
         "toughness": "4",
         "type": "Creature \u2014 Wraith",
@@ -2523,7 +2523,7 @@
         "name_id": "Stubborn Denial_72035da2-eda1-5cb6-bc6d-46cb5b11ffe5",
         "names": null,
         "number": "56",
-        "original_text": "Counter target noncreature spell unless its controller pays {1}.\nFerocious \u2014 If you control a creature with power 4 or greater, counter that spell instead.",
+        "original_text": "Counter target noncreature spell unless its controller pays {1}.\n<i>Ferocious \u2014 </i>If you control a creature with power 4 or greater, counter that spell instead.",
         "original_type": "Instant",
         "power": null,
         "printings": [
@@ -2547,7 +2547,7 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "Counter target noncreature spell unless its controller pays {1}.\nFerocious \u2014 If you control a creature with power 4 or greater, counter that spell instead.",
+        "text": "Counter target noncreature spell unless its controller pays {1}.\n<i>Ferocious \u2014 </i>If you control a creature with power 4 or greater, counter that spell instead.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
@@ -2788,7 +2788,7 @@
         "name_id": "Bloodbraid Elf_8f7b27b1-4ab0-5769-b370-87048140f6bb",
         "names": null,
         "number": "84",
-        "original_text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)",
+        "original_text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)</i>",
         "original_type": "Creature \u2014 Elf Berserker",
         "power": "3",
         "printings": [
@@ -2841,7 +2841,7 @@
             "Berserker"
         ],
         "supertypes": [],
-        "text": "Haste\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "text": "Haste\nCascade <i>(When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</i>",
         "timeshifted": null,
         "toughness": "2",
         "type": "Creature \u2014 Elf Berserker",
@@ -2977,7 +2977,7 @@
         "name": "Stormbreath Dragon",
         "names": null,
         "number": "143",
-        "original_text": "Flying, haste, protection from white\n{5}{R}{R}: Monstrosity 3. (If this creature isn't monstrous, put three +1/+1 counters on it and it becomes monstrous.)\nWhen Stormbreath Dragon becomes monstrous, it deals damage to each opponent equal to the number of cards in that player's hand.",
+        "original_text": "Flying, haste, protection from white\n{5}{R}{R}: Monstrosity 3. <i>(If this creature isn't monstrous, put three +1/+1 counters on it and it becomes monstrous.)</i>\nWhen Stormbreath Dragon becomes monstrous, it deals damage to each opponent equal to the number of cards in that player's hand.",
         "original_type": "Creature \u2014 Dragon",
         "power": "4",
         "printings": [
@@ -3011,7 +3011,7 @@
             "Dragon"
         ],
         "supertypes": [],
-        "text": "Flying, haste, protection from white\n{5}{R}{R}: Monstrosity 3. (If this creature isn't monstrous, put three +1/+1 counters on it and it becomes monstrous.)\nWhen Stormbreath Dragon becomes monstrous, it deals damage to each opponent equal to the number of cards in that player's hand.",
+        "text": "Flying, haste, protection from white\n{5}{R}{R}: Monstrosity 3. <i>(If this creature isn't monstrous, put three +1/+1 counters on it and it becomes monstrous.)</i>\nWhen Stormbreath Dragon becomes monstrous, it deals damage to each opponent equal to the number of cards in that player's hand.",
         "timeshifted": null,
         "toughness": "4",
         "type": "Creature \u2014 Dragon",
@@ -3188,7 +3188,7 @@
         "supertypes": [
             "Legendary"
         ],
-        "text": "[+1]: Each player discards a card.\n[\u22122]: Target player sacrifices a creature.\n[\u22126]: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+        "text": "+1: Each player discards a card.\n-2: Target player sacrifices a creature.\n-6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
         "timeshifted": null,
         "toughness": null,
         "type": "Legendary Planeswalker \u2014 Liliana",
@@ -3283,12 +3283,850 @@
         "starter": null,
         "subtypes": [],
         "supertypes": [],
-        "text": "({B/P} can be paid with either {B} or 2 life.)\nTarget creature gets -5/-5 until end of turn.",
+        "text": "<i>({B/P} can be paid with either {B} or 2 life.)</i>\nTarget creature gets -5/-5 until end of turn.",
         "timeshifted": null,
         "toughness": null,
         "type": "Instant",
         "types": [
             "Instant"
+        ],
+        "variations": null,
+        "watermark": null
+    },
+    {
+        "artist": "David Eugene",
+        "border": null,
+        "cmc": 3.0,
+        "color_identity": [
+            "B"
+        ],
+        "colors": [],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "a8541fd0-9ef5-539a-af1a-95a18f0b80ab",
+        "image_url": null,
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{2}{B}",
+        "multiverse_id": null,
+        "name": "Wasteland Strangler",
+        "name_id": "Wasteland Strangler_a8541fd0-9ef5-539a-af1a-95a18f0b80ab",
+        "names": null,
+        "number": "102s",
+        "original_text": null,
+        "original_type": null,
+        "power": "3",
+        "printings": [
+            "BFZ",
+            "PBFZ"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2015-08-25",
+                "text": "Cards with devoid use frames that are variations of the transparent frame traditionally used for Eldrazi. The top part of the card features some color over a background based on the texture of the hedrons that once imprisoned the Eldrazi. This coloration is intended to aid deckbuilding and game play."
+            },
+            {
+                "date": "2015-08-25",
+                "text": "A card with devoid is just colorless. It\u2019s not colorless and the colors of mana in its mana cost."
+            },
+            {
+                "date": "2015-08-25",
+                "text": "Other cards and abilities can give a card with devoid color. If that happens, it\u2019s just the new color, not that color and colorless."
+            },
+            {
+                "date": "2015-08-25",
+                "text": "Devoid works in all zones, not just on the battlefield."
+            },
+            {
+                "date": "2015-08-25",
+                "text": "If a card loses devoid, it will still be colorless. This is because effects that change an object\u2019s color (like the one created by devoid) are considered before the object loses devoid."
+            },
+            {
+                "date": "2015-08-25",
+                "text": "If a spell or ability requires that you put more than one exiled card into the graveyard, you may choose cards owned by different opponents. Each card chosen will be put into its owner\u2019s graveyard."
+            },
+            {
+                "date": "2015-08-25",
+                "text": "If a replacement effect will cause cards that would be put into a graveyard from anywhere to be exiled instead (such as the one created by Anafenza, the Foremost), you can still put an exiled card into its opponent\u2019s graveyard. The card becomes a new object and remains in exile. In this situation, you can\u2019t use a single exiled card if required to put more than one exiled card into the graveyard. Conversely, you could use the same card in this situation if two separate spells or abilities each required you to put a single exiled card into its owner\u2019s graveyard."
+            },
+            {
+                "date": "2015-08-25",
+                "text": "You can\u2019t look at face-down cards in exile unless an effect allows you to."
+            },
+            {
+                "date": "2015-08-25",
+                "text": "Face-down cards in exile are grouped using two criteria: what caused them to be exiled face down and when they were exiled face down. If you want to put a face-down card in exile into its owner\u2019s graveyard, you must first choose one of these groups and then choose a card from within that group at random. For example, say an artifact causes your opponent to exile their hand of three cards face down. Then on a later turn, that artifact causes your opponent to exile another two cards face down. If you use Wasteland Strangler to put one of those cards into their graveyard, you would pick the first or second pile and put a card chosen at random from that pile into the graveyard."
+            }
+        ],
+        "set": "PBFZ",
+        "set_name": "Battle for Zendikar Promos",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Eldrazi",
+            "Processor"
+        ],
+        "supertypes": [],
+        "text": "Devoid <i>(This card has no color.)</i>\nWhen Wasteland Strangler enters the battlefield, you may put a card an opponent owns from exile into that player's graveyard. If you do, target creature gets -3/-3 until end of turn.",
+        "timeshifted": null,
+        "toughness": "2",
+        "type": "Creature \u2014 Eldrazi Processor",
+        "types": [
+            "Creature"
+        ],
+        "variations": null,
+        "watermark": null
+    },
+    {
+        "artist": "Daarken",
+        "border": null,
+        "cmc": 3.0,
+        "color_identity": [
+            "W"
+        ],
+        "colors": [],
+        "flavor": null,
+        "foreign_names": [
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=408081&type=card",
+                "language": "German",
+                "multiverseid": 408081,
+                "name": "Eldrazi-Verdr\u00e4nger",
+                "text": "Fahl (Diese Karte hat keine Farbe.)\n{2}{C}: Schicke eine andere Kreatur deiner Wahl ins Exil und bringe sie dann unter der Kontrolle ihres Besitzers getappt ins Spiel zur\u00fcck. ({C} steht f\u00fcr farbloses Mana.)"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409383&type=card",
+                "language": "Spanish",
+                "multiverseid": 409383,
+                "name": "Desplazador eldrazi",
+                "text": "Vac\u00edo. (Esta carta no tiene ning\u00fan color.)\n{2}{C}: Exilia otra criatura objetivo y luego regr\u00e9sala al campo de batalla girada bajo el control de su propietario. ({C} representa man\u00e1 incoloro.)"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=408267&type=card",
+                "language": "French",
+                "multiverseid": 408267,
+                "name": "Supplanteur eldrazi",
+                "text": "Carence (Cette carte n'a pas de couleur.)\n{2}{C} : Exilez une autre cr\u00e9ature cibl\u00e9e, puis renvoyez-la sur le champ de bataille, engag\u00e9e, sous le contr\u00f4le de son propri\u00e9taire. ({C} repr\u00e9sente un mana incolore.)"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=408453&type=card",
+                "language": "Italian",
+                "multiverseid": 408453,
+                "name": "Dislocatore Eldrazi",
+                "text": "Vacuit\u00e0 (Questa carta non ha colore.)\n{2}{C}: Esilia un'altra creatura bersaglio, poi rimettila sul campo di battaglia TAPpata sotto il controllo del suo proprietario. ({C} rappresenta mana incolore.)"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=408639&type=card",
+                "language": "Japanese",
+                "multiverseid": 408639,
+                "name": "\u5909\u4f4d\u30a8\u30eb\u30c9\u30e9\u30fc\u30b8",
+                "text": "\u6b20\u8272\uff08\u3053\u306e\u30ab\u30fc\u30c9\u306f\u7121\u8272\u3067\u3042\u308b\u3002\uff09\n{2}{C}\uff1a\u4ed6\u306e\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\uff11\u4f53\u3092\u5bfe\u8c61\u3068\u3057\u3001\u305d\u308c\u3092\u8ffd\u653e\u3057\u3001\u305d\u306e\u5f8c\u305d\u308c\u3092\u30aa\u30fc\u30ca\u30fc\u306e\u30b3\u30f3\u30c8\u30ed\u30fc\u30eb\u4e0b\u3067\u30bf\u30c3\u30d7\u72b6\u614b\u3067\u6226\u5834\u306b\u623b\u3059\u3002\uff08{C}\u306f\u7121\u8272\u30de\u30ca\u3092\u8868\u3059\u3002\uff09"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=408825&type=card",
+                "language": "Korean",
+                "multiverseid": 408825,
+                "name": "\uc5d8\ub4dc\ub77c\uc9c0 \uc774\ub3d9\uc790",
+                "text": "\uacb0\uc5ec (\uc774 \uce74\ub4dc\ub294 \ubb34\uc0c9\uc774\ub2e4.)\n{2}{C}: \ub2e4\ub978 \uc0dd\ubb3c\uc744 \ubaa9\ud45c\ub85c \uc815\ud55c\ub2e4. \uadf8 \uc0dd\ubb3c\uc744 \ucd94\ubc29\ud55c \ud6c4 \uc18c\uc720\uc790\uc758 \uc870\uc885\ud558\uc5d0 \ud0ed\ub41c \ucc44\ub85c \uc804\uc7a5\uc73c\ub85c \ub418\ub3cc\ub9b0\ub2e4. ({C}\ub294 \ubb34\uc0c9 \ub9c8\ub098\ub97c \ub098\ud0c0\ub0b8\ub2e4.)"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409011&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 409011,
+                "name": "Deslocador Eldrazi",
+                "text": "Desprovido (Este card n\u00e3o tem cor.)\n{2}{C}: Exile outra criatura alvo e, depois, devolva-a ao campo de batalha virada sob o controle de seu dono. ({C} representa mana incolor.)"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409197&type=card",
+                "language": "Russian",
+                "multiverseid": 409197,
+                "name": "\u042d\u043b\u044c\u0434\u0440\u0430\u0437\u0438-\u0421\u043c\u0435\u0441\u0442\u0438\u0442\u0435\u043b\u044c",
+                "text": "\u041b\u0438\u0448\u0435\u043d\u0438\u0435 (\u0423 \u044d\u0442\u043e\u0439 \u043a\u0430\u0440\u0442\u044b \u043d\u0435\u0442 \u0446\u0432\u0435\u0442\u0430.)\n{2}{C}: \u0438\u0437\u0433\u043e\u043d\u0438\u0442\u0435 \u0434\u0440\u0443\u0433\u043e\u0435 \u0446\u0435\u043b\u0435\u0432\u043e\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043e, \u0437\u0430\u0442\u0435\u043c \u0432\u0435\u0440\u043d\u0438\u0442\u0435 \u0435\u0433\u043e \u043d\u0430 \u043f\u043e\u043b\u0435 \u0431\u0438\u0442\u0432\u044b \u043f\u043e\u0432\u0435\u0440\u043d\u0443\u0442\u044b\u043c \u043f\u043e\u0434 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u0435\u043c \u0435\u0433\u043e \u0432\u043b\u0430\u0434\u0435\u043b\u044c\u0446\u0430. ({C} \u043e\u0431\u043e\u0437\u043d\u0430\u0447\u0430\u0435\u0442 \u0431\u0435\u0441\u0446\u0432\u0435\u0442\u043d\u0443\u044e \u043c\u0430\u043d\u0443.)"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=407709&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 407709,
+                "name": "\u5965\u672d\u5947\u632a\u79fb\u4f53",
+                "text": "\u865a\u8272\uff08\u6b64\u724c\u6ca1\u6709\u989c\u8272\u3002\uff09\n{2}{C}\uff1a\u653e\u9010\u53e6\u4e00\u4e2a\u76ee\u6807\u751f\u7269\uff0c\u7136\u540e\u5c06\u5b83\u5728\u5176\u62e5\u6709\u8005\u7684\u64cd\u63a7\u4e0b\u6a2a\u7f6e\u79fb\u56de\u6218\u573a\u3002\uff08{C}\u4ee3\u8868\u65e0\u8272\u6cd5\u672f\u529b\u3002\uff09"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=407895&type=card",
+                "language": "Chinese Traditional",
+                "multiverseid": 407895,
+                "name": "\u5967\u672d\u5947\u632a\u79fb\u9ad4",
+                "text": "\u865b\u8272\uff08\u6b64\u724c\u6c92\u6709\u984f\u8272\u3002\uff09\n{2}{C}\uff1a\u653e\u9010\u53e6\u4e00\u500b\u76ee\u6a19\u751f\u7269\uff0c\u7136\u5f8c\u5c07\u5b83\u5728\u5176\u64c1\u6709\u8005\u7684\u64cd\u63a7\u4e0b\u6a6b\u7f6e\u79fb\u56de\u6230\u5834\u3002\uff08{C}\u4ee3\u8868\u7121\u8272\u9b54\u6cd5\u529b\u3002\uff09"
+            }
+        ],
+        "hand": null,
+        "id": "24eb80ce-07cf-53ce-852b-c37b568c2a15",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=407523&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{2}{W}",
+        "multiverse_id": 407523,
+        "name": "Eldrazi Displacer",
+        "names": null,
+        "number": "13",
+        "original_text": "Devoid <i>(This card has no color.)</i>\n{2}{C}: Exile another target creature, then return it to the battlefield tapped under its owner's control. <i>({C} represents colorless mana.)</i>",
+        "original_type": "Creature \u2014 Eldrazi",
+        "power": "3",
+        "printings": [
+            "OGW",
+            "POGW"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2016-01-22",
+                "text": "If a creature token is exiled this way, it will cease to exist and will not return to the battlefield."
+            },
+            {
+                "date": "2016-01-22",
+                "text": "After the creature returns to the battlefield, it will be a new object with no connection to the creature that was exiled. It won\u2019t be in combat or have any additional abilities it may have had when it was exiled. Any +1/+1 counters on it or Auras attached to it are removed, and any Equipment will no longer be attached."
+            }
+        ],
+        "set": "OGW",
+        "set_name": "Oath of the Gatewatch",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Eldrazi"
+        ],
+        "supertypes": [],
+        "text": "Devoid <i>(This card has no color.)</i>\n{2}{C}: Exile another target creature, then return it to the battlefield tapped under its owner's control. <i>({C} represents colorless mana.)</i>",
+        "timeshifted": null,
+        "toughness": "3",
+        "type": "Creature \u2014 Eldrazi",
+        "types": [
+            "Creature"
+        ],
+        "variations": null,
+        "watermark": null
+    },
+    {
+        "artist": "Gabor Szikszai",
+        "border": null,
+        "cmc": 2.0,
+        "color_identity": [
+            "U"
+        ],
+        "colors": [
+            "Blue"
+        ],
+        "flavor": "A master of tactics, the Lord of Atlantis makes his people bold in battle merely by arriving to lead them.",
+        "foreign_names": [],
+        "hand": null,
+        "id": "2f4e6451-9584-5033-be4f-901629a1f81f",
+        "image_url": null,
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{U}{U}",
+        "multiverse_id": null,
+        "name": "Lord of Atlantis",
+        "name_id": "Lord of Atlantis_2f4e6451-9584-5033-be4f-901629a1f81f",
+        "names": null,
+        "number": "6",
+        "original_text": null,
+        "original_type": null,
+        "power": "2",
+        "printings": [
+            "2ED",
+            "3ED",
+            "4BB",
+            "4ED",
+            "5ED",
+            "6ED",
+            "7ED",
+            "CED",
+            "CEI",
+            "FBB",
+            "J18",
+            "LEA",
+            "LEB",
+            "PRM",
+            "PSUS",
+            "SUM",
+            "TSB",
+            "WC01"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [],
+        "set": "J18",
+        "set_name": "Judge Gift Cards 2018",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Merfolk"
+        ],
+        "supertypes": [],
+        "text": "Other Merfolk get +1/+1 and have islandwalk. <i>(They can't be blocked as long as defending player controls an Island.)</i>",
+        "timeshifted": null,
+        "toughness": "2",
+        "type": "Creature \u2014 Merfolk",
+        "types": [
+            "Creature"
+        ],
+        "variations": null,
+        "watermark": "wotc"
+    },
+    {
+        "artist": "Ryan Pancoast",
+        "border": null,
+        "cmc": 2.0,
+        "color_identity": [
+            "U"
+        ],
+        "colors": [
+            "Blue"
+        ],
+        "flavor": "\"Let the land dwellers know the coast is no longer the border between our realms. A new age of empire has begun.\"",
+        "foreign_names": [
+            {
+                "flavor": "\u201eLasst die Landbewohner wissen, dass die K\u00fcste nicht l\u00e4nger die Grenze zwischen unseren Reichen ist. Ein neues imperiales Zeitalter hat begonnen.\"",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=332181&type=card",
+                "language": "German",
+                "multiverseid": 332181,
+                "name": "Meister des Perlendreizacks",
+                "text": "Andere Meervolk-Kreaturen, die du kontrollierst, erhalten +1/+1 und haben Inseltarnung. (Sie sind unblockbar, solange der verteidigende Spieler eine Insel kontrolliert.)"
+            },
+            {
+                "flavor": "\"Que los terrenales sepan que la costa ya no es la frontera entre nuestros reinos. Una nueva era del imperio ha comenzado.\"",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=332430&type=card",
+                "language": "Spanish",
+                "multiverseid": 332430,
+                "name": "Maestro del Tridente Perlado",
+                "text": "Las otras criaturas Trit\u00f3n que controlas obtienen +1/+1 y tienen la habilidad de cruzar islas. (Son imbloqueables mientras el jugador defensor controle una isla.)"
+            },
+            {
+                "flavor": "\u00ab Faites savoir aux habitants des terres que la c\u00f4te n'est plus la fronti\u00e8re entre nos royaumes respectifs. Une nouvelle \u00e8re commence pour notre empire. \u00bb",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=331683&type=card",
+                "language": "French",
+                "multiverseid": 331683,
+                "name": "Ma\u00eetre du Trident de perles",
+                "text": "Les autres cr\u00e9atures Ondin que vous contr\u00f4lez gagnent +1/+1 et ont la travers\u00e9e des \u00eeles. (Elles sont imblocables tant que le joueur d\u00e9fenseur contr\u00f4le au moins une \u00eele.)"
+            },
+            {
+                "flavor": "\"Che gli abitanti della terra sappiano che le coste non sono pi\u00f9 il confine tra i nostri regni. L'era di un nuovo impero sta sorgendo.\"",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=332679&type=card",
+                "language": "Italian",
+                "multiverseid": 332679,
+                "name": "Signore del Tridente Perlaceo",
+                "text": "Le altre creature Tritone che controlli prendono +1/+1 e hanno passa-Isole. (Non possono essere bloccate fintanto che il giocatore in difesa controlla un'Isola.)"
+            },
+            {
+                "flavor": "\u300c\u5730\u306b\u4f4f\u307e\u3044\u3057\u8005\u306b\u77e5\u3089\u3057\u3081\u3088\u3001\u6d77\u5cb8\u306f\u3082\u306f\u3084\u6211\u3089\u306e\u4e16\u754c\u306e\u5883\u3067\u306f\u306a\u3044\u3068\u3002\u5e1d\u56fd\u306e\u65b0\u6642\u4ee3\u306e\u5e55\u958b\u3051\u3060\u3002\u300d",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=332928&type=card",
+                "language": "Japanese",
+                "multiverseid": 332928,
+                "name": "\u771f\u73e0\u4e09\u53c9\u77db\u306e\u9054\u4eba",
+                "text": "\u3042\u306a\u305f\u304c\u30b3\u30f3\u30c8\u30ed\u30fc\u30eb\u3059\u308b\u4ed6\u306e\u30de\u30fc\u30d5\u30a9\u30fc\u30af\u30fb\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\u306f\u3001\uff0b\uff11/\uff0b\uff11\u306e\u4fee\u6574\u3092\u53d7\u3051\u308b\u3068\u3068\u3082\u306b\u5cf6\u6e21\u308a\u3092\u6301\u3064\u3002\uff08\u305d\u308c\u3089\u306f\u9632\u5fa1\u30d7\u30ec\u30a4\u30e4\u30fc\u304c\u5cf6\u3092\u30b3\u30f3\u30c8\u30ed\u30fc\u30eb\u3057\u3066\u3044\u308b\u304b\u304e\u308a\u30d6\u30ed\u30c3\u30af\u3055\u308c\u306a\u3044\u3002\uff09"
+            },
+            {
+                "flavor": "\"\uc721\uc9c0\uc758 \uac70\uc8fc\ubbfc\ub4e4\uc5d0\uac8c \ud574\uc548\uc774 \uc601\uc5ed \uc0ac\uc774\uc758 \uacbd\uacc4\uac00 \ub418\ub294 \uc2dc\ub300\ub294 \uc774\uc81c \uc9c0\ub0ac\uc74c\uc744 \uc54c\ub824\ub77c. \uc0c8\ub85c\uc6b4 \uc81c\uad6d\uc758 \uc2dc\ub300\uac00 \uc5f4\ub838\ub178\ub77c.\"",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=330687&type=card",
+                "language": "Korean",
+                "multiverseid": 330687,
+                "name": "\uc9c4\uc8fc \ucc3d\uc758 \uc9c0\ubc30\uc790",
+                "text": "\ub2f9\uc2e0\uc774 \uc870\uc885\ud558\ub294 \ub2e4\ub978 \uc778\uc5b4 \uc0dd\ubb3c\ub4e4\uc740 +1/+1\uc744 \ubc1b\uace0 \uc12c\uc7a0\uc785 \ub2a5\ub825\uc744 \uac00\uc9c4\ub2e4. (\uc218\ube44\ud50c\ub808\uc774\uc5b4\uac00 \uc12c\uc744 \uc870\uc885\ud558\ub294 \ud55c, \uadf8 \uc0dd\ubb3c\ub4e4\uc740 \ubc29\uc5b4\ub420 \uc218 \uc5c6\ub2e4.)"
+            },
+            {
+                "flavor": "\"Que os moradores da terra saibam que a costa n\u00e3o \u00e9 mais a fronteira entre nossos reinos. Uma nova era do imp\u00e9rio come\u00e7ou.\"",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=331434&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 331434,
+                "name": "Mestre do Tridente Perolado",
+                "text": "As outras criaturas do tipo Trit\u00e3o que voc\u00ea controla recebem +1/+1 e t\u00eam travessia de ilha. (Elas n\u00e3o poder\u00e3o ser bloqueadas enquanto o jogador defensor controlar uma Ilha.)"
+            },
+            {
+                "flavor": "\u00ab\u041f\u0443\u0441\u0442\u044c \u0436\u0438\u0442\u0435\u043b\u0438 \u0441\u0443\u0448\u0438 \u0443\u0437\u043d\u0430\u044e\u0442, \u0447\u0442\u043e \u0431\u0435\u0440\u0435\u0433 \u0431\u043e\u043b\u044c\u0448\u0435 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 \u0433\u0440\u0430\u043d\u0438\u0446\u0435\u0439 \u043c\u0435\u0436\u0434\u0443 \u043d\u0430\u0448\u0438\u043c\u0438 \u0446\u0430\u0440\u0441\u0442\u0432\u0430\u043c\u0438. \u041d\u0430\u0447\u0430\u043b\u0430\u0441\u044c \u043d\u043e\u0432\u0430\u044f \u044d\u043f\u043e\u0445\u0430 \u0438\u043c\u043f\u0435\u0440\u0438\u0438\u00bb.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=331932&type=card",
+                "language": "Russian",
+                "multiverseid": 331932,
+                "name": "\u041f\u043e\u0432\u0435\u043b\u0438\u0442\u0435\u043b\u044c \u0416\u0435\u043c\u0447\u0443\u0436\u043d\u043e\u0433\u043e \u0422\u0440\u0435\u0437\u0443\u0431\u0446\u0430",
+                "text": "\u0414\u0440\u0443\u0433\u0438\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0430-\u041c\u0435\u0440\u0444\u043e\u043b\u043a\u0438 \u043f\u043e\u0434 \u0432\u0430\u0448\u0438\u043c \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u0435\u043c \u043f\u043e\u043b\u0443\u0447\u0430\u044e\u0442 +1/+1 \u0438 \u0438\u043c\u0435\u044e\u0442 \u0417\u043d\u0430\u043d\u0438\u0435 \u041e\u0441\u0442\u0440\u043e\u0432\u043e\u0432. (\u041e\u043d\u0438 \u043d\u0435 \u043c\u043e\u0433\u0443\u0442 \u0431\u044b\u0442\u044c \u0437\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\u044b, \u043f\u043e\u043a\u0430 \u0437\u0430\u0449\u0438\u0449\u0430\u044e\u0449\u0438\u0439\u0441\u044f \u0438\u0433\u0440\u043e\u043a \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u0438\u0440\u0443\u0435\u0442 \u041e\u0441\u0442\u0440\u043e\u0432.)"
+            },
+            {
+                "flavor": "\u300c\u8ba9\u9646\u5730\u7684\u5c45\u6c11\u660e\u767d\uff0c\u6d77\u5cb8\u5df2\u4e0d\u518d\u662f\u6211\u4eec\u4e4b\u95f4\u7684\u7586\u754c\u3002\u65b0\u7684\u5e1d\u56fd\u65f6\u4ee3\u5df2\u7ecf\u5f00\u59cb\u3002\u300d",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=330438&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 330438,
+                "name": "\u73cd\u73e0\u4e09\u53c9\u621f\u5927\u5e08",
+                "text": "\u7531\u4f60\u64cd\u63a7\u7684\u5176\u4ed6\u4eba\u9c7c\u751f\u7269\u5f97+1/+1\u5e76\u5177\u6709\u6d77\u5c9b\u884c\u8005\u5f02\u80fd\u3002\uff08\u53ea\u8981\u9632\u5fa1\u724c\u624b\u64cd\u63a7\u6d77\u5c9b\uff0c\u5b83\u4eec\u5c31\u4e0d\u80fd\u88ab\u963b\u6321\u3002\uff09"
+            },
+            {
+                "flavor": "\u300c\u8b93\u9678\u5730\u7684\u5c45\u6c11\u660e\u767d\uff0c\u6d77\u5cb8\u5df2\u4e0d\u518d\u662f\u6211\u5011\u4e4b\u9593\u7684\u7586\u754c\u3002\u65b0\u7684\u5e1d\u570b\u6642\u4ee3\u5df2\u7d93\u958b\u59cb\u3002\u300d",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=330936&type=card",
+                "language": "Chinese Traditional",
+                "multiverseid": 330936,
+                "name": "\u73cd\u73e0\u4e09\u53c9\u621f\u5927\u5e2b",
+                "text": "\u7531\u4f60\u64cd\u63a7\u7684\u5176\u4ed6\u4eba\u9b5a\u751f\u7269\u5f97+1/+1\u4e26\u5177\u6709\u6d77\u5cf6\u884c\u8005\u7570\u80fd\u3002\uff08\u53ea\u8981\u9632\u79a6\u73a9\u5bb6\u64cd\u63a7\u6d77\u5cf6\uff0c\u5b83\u5011\u5c31\u4e0d\u80fd\u88ab\u963b\u64cb\u3002\uff09"
+            }
+        ],
+        "hand": null,
+        "id": "7b9b32e0-7ddf-5865-a225-4a349c7ace5f",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=279901&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{U}{U}",
+        "multiverse_id": 279901,
+        "name": "Master of the Pearl Trident",
+        "name_id": "Master of the Pearl Trident_7b9b32e0-7ddf-5865-a225-4a349c7ace5f",
+        "names": null,
+        "number": "59",
+        "original_text": "Other Merfolk creatures you control get +1/+1 and have islandwalk. (They are unblockable as long as defending player controls an Island.)",
+        "original_type": "Creature \u2014 Merfolk",
+        "power": "2",
+        "printings": [
+            "DDT",
+            "M13"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [],
+        "set": "M13",
+        "set_name": "Magic 2013",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Merfolk"
+        ],
+        "supertypes": [],
+        "text": "Other Merfolk creatures you control get +1/+1 and have islandwalk. <i>(They can't be blocked as long as defending player controls an Island.)</i>",
+        "timeshifted": null,
+        "toughness": "2",
+        "type": "Creature \u2014 Merfolk",
+        "types": [
+            "Creature"
+        ],
+        "variations": null,
+        "watermark": null
+    },
+    {
+        "artist": "Emrah Elmasli",
+        "border": null,
+        "cmc": 1.0,
+        "color_identity": [
+            "G"
+        ],
+        "colors": [
+            "Green"
+        ],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "002ff8e2-fbf4-500f-822a-326613b2859a",
+        "image_url": null,
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Pauper",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{G}",
+        "multiverse_id": null,
+        "name": "Ancient Stirrings",
+        "names": null,
+        "number": "70944",
+        "original_text": null,
+        "original_type": null,
+        "power": null,
+        "printings": [
+            "A25",
+            "PRM",
+            "ROE"
+        ],
+        "rarity": "Mythic",
+        "release_date": null,
+        "rulings": [],
+        "set": "PRM",
+        "set_name": "Magic Online Promos",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "Look at the top five cards of your library. You may reveal a colorless card from among them and put it into your hand. Then put the rest on the bottom of your library in any order. <i>(Cards with no colored mana in their mana costs are colorless. Lands are also colorless.)</i>",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Sorcery",
+        "types": [
+            "Sorcery"
+        ],
+        "variations": null,
+        "watermark": null
+    },
+    {
+        "artist": "Mark Zug",
+        "border": null,
+        "cmc": 1.0,
+        "color_identity": [
+            "G",
+            "U",
+            "W"
+        ],
+        "colors": [
+            "Green"
+        ],
+        "flavor": "She protects the sacred groves from blight, drought, and the Unbeholden.",
+        "foreign_names": [
+            {
+                "flavor": "\u5f7c\u5973\u306f\u8056\u306a\u308b\u6728\u7acb\u3092\u3001\u75ab\u75c5\u3084\u65f1\u9b43\u3084\u4e0b\u5c64\u306e\u4eba\u3005\u304b\u3089\u5b88\u3063\u3066\u3044\u308b\u3002",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=457024&type=card",
+                "language": "Japanese",
+                "multiverseid": 457024,
+                "name": "\u8cb4\u65cf\u306e\u6559\u4e3b",
+                "text": "\u8cdb\u7f8e\uff08\u3042\u306a\u305f\u304c\u30b3\u30f3\u30c8\u30ed\u30fc\u30eb\u3057\u3066\u3044\u308b\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\u304c\u5358\u72ec\u3067\u653b\u6483\u3059\u308b\u305f\u3073\u3001\u30bf\u30fc\u30f3\u7d42\u4e86\u6642\u307e\u3067\u3001\u305d\u306e\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\u306f\uff0b\uff11/\uff0b\uff11\u306e\u4fee\u6574\u3092\u53d7\u3051\u308b\u3002\uff09\n{T}\uff1a{G}\u304b{W}\u304b{U}\u3092\u52a0\u3048\u308b\u3002"
+            }
+        ],
+        "hand": null,
+        "id": "27ff16d3-3501-550f-be0a-7833b22cebef",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=456770&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{G}",
+        "multiverse_id": 456770,
+        "name": "Noble Hierarch",
+        "name_id": "Noble Hierarch_27ff16d3-3501-550f-be0a-7833b22cebef",
+        "names": null,
+        "number": "174",
+        "original_text": "Exalted <i>(Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.)</i>\n{T}: Add {G}, {W}, or {U}.",
+        "original_type": "Creature \u2014 Human Druid",
+        "power": "0",
+        "printings": [
+            "CON",
+            "J12",
+            "MM2",
+            "PPRO",
+            "PRM",
+            "PUMA",
+            "UMA"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [],
+        "set": "UMA",
+        "set_name": "Ultimate Masters",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Human",
+            "Druid"
+        ],
+        "supertypes": [],
+        "text": "Exalted <i>(Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.)</i>\n{T}: Add {G}, {W}, or {U}.",
+        "timeshifted": null,
+        "toughness": "1",
+        "type": "Creature \u2014 Human Druid",
+        "types": [
+            "Creature"
+        ],
+        "variations": null,
+        "watermark": null
+    },
+    {
+        "artist": "Jason Rainville",
+        "border": null,
+        "cmc": 5.0,
+        "color_identity": [],
+        "colors": [],
+        "flavor": "As easy to stop as it is to comprehend.",
+        "foreign_names": [
+            {
+                "flavor": "Es ist genauso unaufhaltsam wie unbregreiflich.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=408075&type=card",
+                "language": "German",
+                "multiverseid": 408075,
+                "name": "Realit\u00e4tsbrecher",
+                "text": "({C} steht f\u00fcr farbloses Mana.)\nVerursacht Trampelschaden, Eile\nImmer wenn der Realit\u00e4tsbrecher das Ziel eines Zauberspruchs wird, den ein Gegner kontrolliert, neutralisiere diesen Zauberspruch, falls sein Beherrscher nicht eine Karte abwirft."
+            },
+            {
+                "flavor": "Es tan f\u00e1cil detenerlo como comprenderlo.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409377&type=card",
+                "language": "Spanish",
+                "multiverseid": 409377,
+                "name": "Aniquilador de realidades",
+                "text": "({C} representa man\u00e1 incoloro.)\nArrolla, prisa.\nSiempre que el Aniquilador de realidades sea objetivo de un hechizo que controla un oponente, contrarresta ese hechizo a menos que su controlador descarte una carta."
+            },
+            {
+                "flavor": "Aussi facile \u00e0 arr\u00eater qu'\u00e0 comprendre.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=408261&type=card",
+                "language": "French",
+                "multiverseid": 408261,
+                "name": "Fracasseur de r\u00e9alit\u00e9",
+                "text": "({C} repr\u00e9sente un mana incolore.)\nPi\u00e9tinement, c\u00e9l\u00e9rit\u00e9\n\u00c0 chaque fois que le Fracasseur de r\u00e9alit\u00e9 devient la cible d'un sort qu'un adversaire contr\u00f4le, contrecarrez ce sort \u00e0 moins que son contr\u00f4leur ne se d\u00e9fausse d'une carte."
+            },
+            {
+                "flavor": "Fermarlo \u00e8 semplice quanto comprenderlo.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=408447&type=card",
+                "language": "Italian",
+                "multiverseid": 408447,
+                "name": "Frantumatore di Realt\u00e0",
+                "text": "({C} rappresenta mana incolore.)\nTravolgere, rapidit\u00e0\nOgniqualvolta il Frantumatore di Realt\u00e0 diventa bersaglio di una magia controllata da un avversario, neutralizza quella magia a meno che il suo controllore non scarti una carta."
+            },
+            {
+                "flavor": "\u3042\u308c\u3092\u7406\u89e3\u3059\u308b\u306e\u306f\u3001\u98df\u3044\u6b62\u3081\u308b\u306e\u3068\u540c\u3058\u304f\u3089\u3044\u306b\u56f0\u96e3\u3067\u3042\u308b\u3002",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=408633&type=card",
+                "language": "Japanese",
+                "multiverseid": 408633,
+                "name": "\u73fe\u5b9f\u3092\u7815\u304f\u3082\u306e",
+                "text": "\uff08{C}\u306f\u7121\u8272\u30de\u30ca\u3092\u8868\u3059\u3002\uff09\n\u30c8\u30e9\u30f3\u30d7\u30eb\u3001\u901f\u653b\n\u73fe\u5b9f\u3092\u7815\u304f\u3082\u306e\u304c\u5bfe\u6226\u76f8\u624b\u304c\u30b3\u30f3\u30c8\u30ed\u30fc\u30eb\u3059\u308b\u546a\u6587\uff11\u3064\u306e\u5bfe\u8c61\u3068\u306a\u308b\u305f\u3073\u3001\u305d\u306e\u546a\u6587\u306e\u30b3\u30f3\u30c8\u30ed\u30fc\u30e9\u30fc\u304c\u30ab\u30fc\u30c9\u3092\uff11\u679a\u6368\u3066\u306a\u3044\u304b\u304e\u308a\u305d\u308c\u3092\u6253\u3061\u6d88\u3059\u3002"
+            },
+            {
+                "flavor": "\uc774 \ub140\uc11d\uc744 \uba48\ucd94\ub294 \uac83\uc740 \uc774\ud574\ud558\ub294 \uac83\ub9cc\ud07c \uc5b4\ub835\ub2e4.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=408819&type=card",
+                "language": "Korean",
+                "multiverseid": 408819,
+                "name": "\ud604\uc2e4 \ud30c\uad34\uc790",
+                "text": "({C}\ub294 \ubb34\uc0c9 \ub9c8\ub098\ub97c \ub098\ud0c0\ub0b8\ub2e4.)\n\ub3cc\uc9c4, \uc2e0\uc18d\n\ud604\uc2e4 \ud30c\uad34\uc790\uac00 \uc0c1\ub300\uac00 \uc870\uc885\ud558\ub294 \uc8fc\ubb38\uc758 \ubaa9\ud45c\uac00 \ub420 \ub54c\ub9c8\ub2e4, \uadf8 \uc8fc\ubb38\uc758 \uc870\uc885\uc790\uac00 \uce74\ub4dc \ud55c \uc7a5\uc744 \ubc84\ub9ac\uc9c0 \uc54a\uc73c\uba74 \uadf8 \uc8fc\ubb38\uc744 \ubb34\ud6a8\ud654\ud55c\ub2e4."
+            },
+            {
+                "flavor": "T\u00e3o f\u00e1cil de deter quanto de compreender.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409005&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 409005,
+                "name": "Arrebentador da Realidade",
+                "text": "({C} representa mana incolor.)\nAtropelar, \u00edmpeto\nToda vez que Arrebentador da Realidade se tornar alvo de uma m\u00e1gica que um oponente controla, anule aquela m\u00e1gica a menos que seu controlador descarte um card."
+            },
+            {
+                "flavor": "\u0427\u0442\u043e\u0431\u044b \u043e\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0435\u0433\u043e, \u043d\u0443\u0436\u043d\u043e \u0435\u0433\u043e \u043f\u043e\u043d\u044f\u0442\u044c.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409191&type=card",
+                "language": "Russian",
+                "multiverseid": 409191,
+                "name": "\u041a\u0440\u0443\u0448\u0438\u0442\u0435\u043b\u044c \u0420\u0435\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438",
+                "text": "({C} \u043e\u0431\u043e\u0437\u043d\u0430\u0447\u0430\u0435\u0442 \u0431\u0435\u0441\u0446\u0432\u0435\u0442\u043d\u0443\u044e \u043c\u0430\u043d\u0443.)\n\u041f\u0440\u043e\u0431\u0438\u0432\u043d\u043e\u0439 \u0443\u0434\u0430\u0440, \u0423\u0441\u043a\u043e\u0440\u0435\u043d\u0438\u0435\n\u041a\u0430\u0436\u0434\u044b\u0439 \u0440\u0430\u0437, \u043a\u043e\u0433\u0434\u0430 \u041a\u0440\u0443\u0448\u0438\u0442\u0435\u043b\u044c \u0420\u0435\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438 \u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0441\u044f \u0446\u0435\u043b\u044c\u044e \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u044f \u043f\u043e\u0434 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u0435\u043c \u043e\u043f\u043f\u043e\u043d\u0435\u043d\u0442\u0430, \u043e\u0442\u043c\u0435\u043d\u0438\u0442\u0435 \u0442\u043e \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0435, \u0435\u0441\u043b\u0438 \u0442\u043e\u043b\u044c\u043a\u043e \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u0438\u0440\u0443\u044e\u0449\u0438\u0439 \u0435\u0433\u043e \u0438\u0433\u0440\u043e\u043a \u043d\u0435 \u0441\u0431\u0440\u043e\u0441\u0438\u0442 \u043a\u0430\u0440\u0442\u0443."
+            },
+            {
+                "flavor": "\u60f3\u963b\u6b62\u5b83\u5c31\u50cf\u60f3\u770b\u900f\u5b83\u4e00\u6837\u56f0\u96be\u3002",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=407703&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 407703,
+                "name": "\u788e\u5b9e\u6076\u4f53",
+                "text": "\uff08{C}\u4ee3\u8868\u65e0\u8272\u6cd5\u672f\u529b\u3002\uff09\n\u8df5\u8e0f\uff0c\u654f\u6377\n\u6bcf\u5f53\u788e\u5b9e\u6076\u4f53\u6210\u4e3a\u7531\u5bf9\u624b\u64cd\u63a7\u4e4b\u5492\u8bed\u7684\u76ee\u6807\u65f6\uff0c\u9664\u975e\u8be5\u5492\u8bed\u7684\u64cd\u63a7\u8005\u5f03\u4e00\u5f20\u724c\uff0c\u5426\u5219\u53cd\u51fb\u4e4b\u3002"
+            },
+            {
+                "flavor": "\u60f3\u963b\u6b62\u5b83\u5c31\u50cf\u60f3\u770b\u900f\u5b83\u4e00\u6a23\u56f0\u96e3\u3002",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=407889&type=card",
+                "language": "Chinese Traditional",
+                "multiverseid": 407889,
+                "name": "\u788e\u5be6\u60e1\u9ad4",
+                "text": "\uff08{C}\u4ee3\u8868\u7121\u8272\u9b54\u6cd5\u529b\u3002\uff09\n\u8e10\u8e0f\uff0c\u654f\u6377\n\u6bcf\u7576\u788e\u5be6\u60e1\u9ad4\u6210\u70ba\u7531\u5c0d\u624b\u64cd\u63a7\u4e4b\u5492\u8a9e\u7684\u76ee\u6a19\u6642\uff0c\u9664\u975e\u8a72\u5492\u8a9e\u7684\u64cd\u63a7\u8005\u68c4\u4e00\u5f35\u724c\uff0c\u5426\u5247\u53cd\u64ca\u4e4b\u3002"
+            }
+        ],
+        "hand": null,
+        "id": "18e954e0-08f0-5e42-b583-f126c22eee1b",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=407517&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{4}{C}",
+        "multiverse_id": 407517,
+        "name": "Reality Smasher",
+        "names": null,
+        "number": "7",
+        "original_text": "<i>({C} represents colorless mana.)</i>\nTrample, haste\nWhenever Reality Smasher becomes the target of a spell an opponent controls, counter that spell unless its controller discards a card.",
+        "original_type": "Creature \u2014 Eldrazi",
+        "power": "5",
+        "printings": [
+            "OGW",
+            "POGW"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2016-01-22",
+                "text": "The last ability will trigger due to any spell controlled by an opponent (including an Aura spell) that targets Reality Smasher."
+            }
+        ],
+        "set": "OGW",
+        "set_name": "Oath of the Gatewatch",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Eldrazi"
+        ],
+        "supertypes": [],
+        "text": "<i>({C} represents colorless mana.)</i>\nTrample, haste\nWhenever Reality Smasher becomes the target of a spell an opponent controls, counter that spell unless its controller discards a card.",
+        "timeshifted": null,
+        "toughness": "5",
+        "type": "Creature \u2014 Eldrazi",
+        "types": [
+            "Creature"
         ],
         "variations": null,
         "watermark": null

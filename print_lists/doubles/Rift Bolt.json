@@ -1,0 +1,124 @@
+[
+    {
+        "artist": "Daniel Ljunggren",
+        "border": null,
+        "cmc": 3.0,
+        "color_identity": [
+            "R"
+        ],
+        "colors": [
+            "Red"
+        ],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "c0ed624d-f541-5790-b9ed-0804dd78a1b8",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=370469&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Pauper",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{2}{R}",
+        "multiverse_id": 370469,
+        "name": "Rift Bolt",
+        "name_id": "Rift Bolt_c0ed624d-f541-5790-b9ed-0804dd78a1b8",
+        "names": null,
+        "number": "126",
+        "original_text": "Rift Bolt deals 3 damage to target creature or player.\nSuspend 1\u2014{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+        "original_type": "Sorcery",
+        "power": null,
+        "printings": [
+            "DDS",
+            "F10",
+            "IMA",
+            "MMA",
+            "PRM",
+            "TD0",
+            "TSP"
+        ],
+        "rarity": "Common",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2013-06-07",
+                "text": "You can exile a card in your hand using suspend any time you could cast that card. Consider its card type, any effect that affects when you could cast it (such as flash) and any other effects that could stop you from casting it (such as Meddling Mage\u2019s effect) to determine if and when you can do this. Whether or not you could actually complete all steps in casting the card is irrelevant. For example, you can exile a card with suspend that has no mana cost or requires a target even if no legal targets are available at that time."
+            },
+            {
+                "date": "2013-06-07",
+                "text": "Exiling a card with suspend isn\u2019t casting that card. This action doesn\u2019t use the stack and can\u2019t be responded to."
+            },
+            {
+                "date": "2013-06-07",
+                "text": "If the spell requires any targets, those targets are chosen when the spell is finally cast, not when it\u2019s exiled."
+            },
+            {
+                "date": "2013-06-07",
+                "text": "If the first triggered ability of suspend (the one that removes time counters) is countered, no time counter is removed. The ability will trigger again during the card\u2019s owner\u2019s next upkeep."
+            },
+            {
+                "date": "2013-06-07",
+                "text": "When the last time counter is removed, the second triggered ability of suspend will trigger. It doesn\u2019t matter why the last time counter was removed or what effect removed it."
+            },
+            {
+                "date": "2013-06-07",
+                "text": "If the second triggered ability of suspend (the one that lets you cast the card) is countered, the card can\u2019t be cast. It remains exiled with no time counters on it, and it\u2019s no longer suspended."
+            },
+            {
+                "date": "2013-06-07",
+                "text": "As the second triggered ability resolves, you must cast the card if able. Timing restrictions based on the card\u2019s type are ignored."
+            },
+            {
+                "date": "2013-06-07",
+                "text": "If you can\u2019t cast the card, perhaps because there are no legal targets available, it remains exiled with no time counters on it, and it\u2019s no longer suspended."
+            },
+            {
+                "date": "2013-06-07",
+                "text": "If the spell has any mandatory additional costs, you must pay those if able. However, if an additional cost includes a mana payment, you are forced to pay that cost only if there\u2019s enough mana in your mana pool at the time you cast the spell. You aren\u2019t forced to activate any mana abilities, although you may do so if you wish."
+            },
+            {
+                "date": "2013-06-07",
+                "text": "A creature cast using suspend will enter the battlefield with haste. It will have haste until another player gains control of it (or, in some rare cases, gains control of the creature spell itself)."
+            }
+        ],
+        "set": "MMA",
+        "set_name": "Modern Masters",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1\u2014{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Sorcery",
+        "types": [
+            "Sorcery"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

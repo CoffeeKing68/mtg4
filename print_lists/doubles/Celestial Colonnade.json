@@ -1,0 +1,158 @@
+[
+    {
+        "artist": "Eric Deschamps",
+        "border": null,
+        "cmc": 0.0,
+        "color_identity": [
+            "U",
+            "W"
+        ],
+        "colors": [],
+        "flavor": null,
+        "foreign_names": [
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=210692&type=card",
+                "language": "German",
+                "multiverseid": 210692,
+                "name": "Himmlische S\u00e4ulenreihe",
+                "text": "Die Himmlische S\u00e4ulenreihe kommt getappt ins Spiel.\n{T}: Erh\u00f6he deinen Manavorrat um {W} oder {U}.\n{3}{W}{U}: Bis zum Ende des Zuges wird die Himmlische S\u00e4ulenreihe zu einer 4/4 wei\u00dfen und blauen fliegenden Elementarwesen-Kreatur mit Wachsamkeit. Sie ist immer noch ein Land."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=211707&type=card",
+                "language": "Spanish",
+                "multiverseid": 211707,
+                "name": "Columnata celestial",
+                "text": "La Columnata celestial entra al campo de batalla girada.\n{T}: Agrega {W} o {U} a tu reserva de man\u00e1.\n{3}{W}{U}: Hasta el final del turno, la Columnata celestial es una criatura Elemental blanca y azul 4/4 con las habilidades de volar y vigilancia. Sigue siendo una tierra."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=211417&type=card",
+                "language": "French",
+                "multiverseid": 211417,
+                "name": "Colonnade c\u00e9leste",
+                "text": "La Colonnade c\u00e9leste arrive sur le champ de bataille engag\u00e9e.\n{T} : Ajoutez {W} ou {U} \u00e0 votre r\u00e9serve.\n{3}{W}{U} : Jusqu'\u00e0 la fin du tour, la Colonnade c\u00e9leste devient une cr\u00e9ature 4/4 blanche et bleue \u00c9l\u00e9mental avec le vol et la vigilance. C'est toujours un terrain."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=211272&type=card",
+                "language": "Italian",
+                "multiverseid": 211272,
+                "name": "Colonnato Celeste",
+                "text": "Il Colonnato Celeste entra nel campo di battaglia TAPpato.\n{T}: Aggiungi {W} o {U} alla tua riserva di mana.\n{3}{W}{U}: Fino alla fine del turno, il Colonnato Celeste diventa una creatura Elementale 4/4 bianca e blu con volare e cautela. \u00c8 ancora una terra."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=210837&type=card",
+                "language": "Japanese",
+                "multiverseid": 210837,
+                "name": "\u5929\u754c\u306e\u5217\u67f1",
+                "text": "\u5929\u754c\u306e\u5217\u67f1\u306f\u30bf\u30c3\u30d7\u72b6\u614b\u3067\u6226\u5834\u306b\u51fa\u308b\u3002\n{T}\uff1a\u3042\u306a\u305f\u306e\u30de\u30ca\u30fb\u30d7\u30fc\u30eb\u306b{W}\u304b{U}\u3092\u52a0\u3048\u308b\u3002\n{3}{W}{U}\uff1a\u30bf\u30fc\u30f3\u7d42\u4e86\u6642\u307e\u3067\u3001\u5929\u754c\u306e\u5217\u67f1\u306f\u98db\u884c\u3068\u8b66\u6212\u3092\u6301\u3064\u767d\u3067\u3042\u308a\u9752\u3067\u3042\u308b\uff14/\uff14\u306e\u30a8\u30ec\u30e1\u30f3\u30bf\u30eb\u30fb\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\u306b\u306a\u308b\u3002 \u305d\u308c\u306f\u571f\u5730\u3067\u3082\u3042\u308b\u3002"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=210982&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 210982,
+                "name": "Colunata Celestial",
+                "text": "Colunata Celestial entra no campo de batalha virado.\n{T}: Adicione {W} ou {U} \u00e0 sua reserva de mana.\n{3}{W}{U}: At\u00e9 o final do turno, Colunata Celestial torna-se uma criatura branca e azul 4/4 do tipo Elemental com voar e vigil\u00e2ncia. Ela ainda conta como um terreno."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=211562&type=card",
+                "language": "Russian",
+                "multiverseid": 211562,
+                "name": "\u041d\u0435\u0431\u0435\u0441\u043d\u0430\u044f \u041a\u043e\u043b\u043e\u043d\u043d\u0430\u0434\u0430",
+                "text": "\u041d\u0435\u0431\u0435\u0441\u043d\u0430\u044f \u041a\u043e\u043b\u043e\u043d\u043d\u0430\u0434\u0430 \u0432\u044b\u0445\u043e\u0434\u0438\u0442 \u043d\u0430 \u043f\u043e\u043b\u0435 \u0431\u0438\u0442\u0432\u044b \u043f\u043e\u0432\u0435\u0440\u043d\u0443\u0442\u043e\u0439.\n{T}: \u0434\u043e\u0431\u0430\u0432\u044c\u0442\u0435 {W} \u0438\u043b\u0438 {U} \u0432 \u0432\u0430\u0448\u0435 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435 \u043c\u0430\u043d\u044b.\n{3}{W}{U}: \u0434\u043e \u043a\u043e\u043d\u0446\u0430 \u0445\u043e\u0434\u0430 \u041d\u0435\u0431\u0435\u0441\u043d\u0430\u044f \u041a\u043e\u043b\u043e\u043d\u043d\u0430\u0434\u0430 \u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0441\u044f \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043e\u043c 4/4 \u0431\u0435\u043b\u044b\u0439 \u0438 \u0441\u0438\u043d\u0438\u0439 \u042d\u043b\u0435\u043c\u0435\u043d\u0442\u0430\u043b\u044c \u0441 \u041f\u043e\u043b\u0435\u0442\u043e\u043c \u0438 \u0411\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c\u044e. \u041f\u0440\u0438 \u044d\u0442\u043e\u043c \u043e\u043d\u0430 \u043e\u0441\u0442\u0430\u0435\u0442\u0441\u044f \u0437\u0435\u043c\u043b\u0435\u0439."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=211127&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 211127,
+                "name": "\u5929\u754c\u67f1\u5eca",
+                "text": "\u5929\u754c\u67f1\u5eca\u987b\u6a2a\u7f6e\u8fdb\u6218\u573a\u3002\n{T}\uff1a\u52a0{W}\u6216{U}\u5230\u4f60\u7684\u6cd5\u672f\u529b\u6c60\u4e2d\u3002\n{3}{W}{U}\uff1a\u76f4\u5230\u56de\u5408\u7ed3\u675f\uff0c\u5929\u754c\u67f1\u5eca\u6210\u4e3a4/4\u767d\u84dd\u53cc\u8272\uff0c\u5177\u98de\u884c\u4e0e\u8b66\u6212\u5f02\u80fd\u7684\u5143\u7d20\u751f\u7269\u3002 \u5b83\u4ecd\u7136\u662f\u5730\u3002"
+            }
+        ],
+        "hand": null,
+        "id": "036928ca-8461-5331-b472-d428060b7d66",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=177545&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": null,
+        "multiverse_id": 177545,
+        "name": "Celestial Colonnade",
+        "name_id": "Celestial Colonnade_036928ca-8461-5331-b472-d428060b7d66",
+        "names": null,
+        "number": "133",
+        "original_text": "Celestial Colonnade enters the battlefield tapped.\n{T}: Add {W} or {U} to your mana pool.\n{3}{W}{U}: Until end of turn, Celestial Colonnade becomes a 4/4 white and blue Elemental creature with flying and vigilance. It's still a land.",
+        "original_type": "Land",
+        "power": null,
+        "printings": [
+            "PRM",
+            "PUMA",
+            "PWWK",
+            "UMA",
+            "WWK"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2010-03-01",
+                "text": "A land that becomes a creature may be affected by \u201csummoning sickness.\u201d You can\u2019t attack with it or use any of its {T} abilities (including its mana abilities) unless it began your most recent turn on the battlefield under your control. Note that summoning sickness cares about when that permanent came under your control, not when it became a creature."
+            },
+            {
+                "date": "2010-03-01",
+                "text": "When a land becomes a creature, that doesn\u2019t count as having a creature enter the battlefield. The permanent was already on the battlefield; it only changed its types. Abilities that trigger whenever a creature enters the battlefield won\u2019t trigger."
+            },
+            {
+                "date": "2018-12-07",
+                "text": "Once Celestial Colonnade has attacked, tapping it for mana won\u2019t remove it from combat."
+            },
+            {
+                "date": "2018-12-07",
+                "text": "If Celestial Colonnade can\u2019t attack unless you pay a cost that includes a mana payment, you may attack with it and tap it to pay for that cost. It will still attack in this case."
+            }
+        ],
+        "set": "WWK",
+        "set_name": "Worldwake",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "Celestial Colonnade enters the battlefield tapped.\n{T}: Add {W} or {U}.\n{3}{W}{U}: Until end of turn, Celestial Colonnade becomes a 4/4 white and blue Elemental creature with flying and vigilance. It's still a land.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Land",
+        "types": [
+            "Land"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

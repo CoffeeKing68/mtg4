@@ -20,3 +20,10 @@
 /Users/ashleyminshall/PythonProgramming/mtg4/resources/art/THS/Stormbreath Dragon_a242ea35-175c-50fb-b2cf-06e8c107f532.jpg
 /Users/ashleyminshall/PythonProgramming/mtg4/resources/art/ISD/Liliana of the Veil_654cdf16-5c43-5e64-9653-5849d8a6d460.jpg
 /Users/ashleyminshall/PythonProgramming/mtg4/resources/art/PRM/Dismember_56f0effb-a01b-5ee6-a9dd-4f7518b428d5.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/PBFZ/Wasteland Strangler_a8541fd0-9ef5-539a-af1a-95a18f0b80ab.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/OGW/Eldrazi Displacer_24eb80ce-07cf-53ce-852b-c37b568c2a15.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/J18/Lord of Atlantis_2f4e6451-9584-5033-be4f-901629a1f81f.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/M13/Master of the Pearl Trident_7b9b32e0-7ddf-5865-a225-4a349c7ace5f.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/PRM/Ancient Stirrings_002ff8e2-fbf4-500f-822a-326613b2859a.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/UMA/Noble Hierarch_27ff16d3-3501-550f-be0a-7833b22cebef.jpg
+/Users/ashleyminshall/PythonProgramming/mtg4/resources/art/OGW/Reality Smasher_18e954e0-08f0-5e42-b583-f126c22eee1b.jpg

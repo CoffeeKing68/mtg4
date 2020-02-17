@@ -1,0 +1,100 @@
+[
+    {
+        "artist": "Heather Hudson",
+        "border": null,
+        "cmc": 0.0,
+        "color_identity": [
+            "B"
+        ],
+        "colors": [],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "a9107fc5-fc02-5802-9853-9ccdcefef5e1",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=430461&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Pauper",
+                "legality": "Legal"
+            },
+            {
+                "format": "Penny",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": null,
+        "multiverse_id": 430461,
+        "name": "Barren Moor",
+        "name_id": "Barren Moor_a9107fc5-fc02-5802-9853-9ccdcefef5e1",
+        "names": null,
+        "number": "242",
+        "original_text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "original_type": "Land",
+        "power": null,
+        "printings": [
+            "ARC",
+            "C13",
+            "C14",
+            "C15",
+            "C18",
+            "C19",
+            "CM2",
+            "CMA",
+            "CMD",
+            "DDC",
+            "DDJ",
+            "DVD",
+            "MH1",
+            "ONS",
+            "TD0",
+            "VMA",
+            "WC03"
+        ],
+        "rarity": "Common",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2008-10-01",
+                "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
+            }
+        ],
+        "set": "CMA",
+        "set_name": "Commander Anthology",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Land",
+        "types": [
+            "Land"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

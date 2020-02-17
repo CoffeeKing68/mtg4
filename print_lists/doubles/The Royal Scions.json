@@ -1,0 +1,65 @@
+[
+    {
+        "artist": "Howard Lyon",
+        "border": null,
+        "cmc": 3.0,
+        "color_identity": [
+            "R",
+            "U"
+        ],
+        "colors": [
+            "Red",
+            "Blue"
+        ],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "6d3476d8-bd98-5cbb-9103-1507f641bbd1",
+        "image_url": null,
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Future",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": "5",
+        "mana_cost": "{1}{U}{R}",
+        "multiverse_id": null,
+        "name": "The Royal Scions",
+        "name_id": "The Royal Scions_6d3476d8-bd98-5cbb-9103-1507f641bbd1",
+        "names": null,
+        "number": "272",
+        "original_text": null,
+        "original_type": null,
+        "power": null,
+        "printings": [
+            "CELD",
+            "ELD"
+        ],
+        "rarity": "Mythic",
+        "release_date": null,
+        "rulings": [],
+        "set": "CELD",
+        "set_name": "ELD Collector Boosters",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Will",
+            "Rowan"
+        ],
+        "supertypes": [
+            "Legendary"
+        ],
+        "text": "[+1]: Draw a card, then discard a card.\n[+1]: Target creature gets +2/+0 and gains first strike and trample until end of turn.\n[\u22128]: Draw four cards. When you do, The Royal Scions deals damage to any target equal to the number of cards in your hand.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Legendary Planeswalker \u2014 Will Rowan",
+        "types": [
+            "Planeswalker"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

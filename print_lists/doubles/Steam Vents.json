@@ -1,0 +1,180 @@
+[
+    {
+        "artist": "Jonas De Ro",
+        "border": null,
+        "cmc": 0.0,
+        "color_identity": [
+            "R",
+            "U"
+        ],
+        "colors": [],
+        "flavor": "\"A massive new Izzet building project with an unstated purpose? Probably fine.\"\n\u2014Zija, Simic mutationist",
+        "foreign_names": [
+            {
+                "flavor": "\u201eEin riesiges neues Izzet-Bauprojekt mit unbekanntem Zweck? Wird schon passen.\"\n\u2014Zija, Simic-Mutationsspezialist",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=453266&type=card",
+                "language": "German",
+                "multiverseid": 453266,
+                "name": "Dampfschlote",
+                "text": "({T}: Erzeuge {U} oder {R}.)\nSowie die Dampfschlote ins Spiel kommen, kannst du 2 Lebenspunkte bezahlen. Falls du dies nicht tust, kommen sie getappt ins Spiel."
+            },
+            {
+                "flavor": "\"\u00bfUn nuevo y enorme edificio \u00edzzet cuyo objetivo no se explicit\u00f3? Seguro que no es nada\".\n\u2014Zija, mutacionista simic",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=453525&type=card",
+                "language": "Spanish",
+                "multiverseid": 453525,
+                "name": "Respiraderos de vapor",
+                "text": "({T}: Agrega {U} o {R}.)\nEn cuanto los Respiraderos de vapor entren al campo de batalla, puedes pagar 2 vidas. Si no lo haces, entran al campo de batalla girados."
+            },
+            {
+                "flavor": "\u00ab Un projet pour un nouveau b\u00e2timent d'Izzet immense dont l'objectif n'est pas pr\u00e9cis\u00e9 ? Je suis s\u00fbre que tout va bien. \u00bb\n\u2014Zija, mutationniste simic",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=453784&type=card",
+                "language": "French",
+                "multiverseid": 453784,
+                "name": "Conduits de vapeur",
+                "text": "({T} : Ajoutez {U} ou {R}.)\nAu moment o\u00f9 les Conduits de vapeur arrivent sur le champ de bataille, vous pouvez payer 2 points de vie. Si vous ne le faites pas, ils arrivent sur le champ de bataille engag\u00e9s."
+            },
+            {
+                "flavor": "\"Un nuovo colossale cantiere degli Izzet dallo scopo non meglio definito? Non prevedo alcun problema.\"\n\u2014Zija, mutazionista Simic",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=454043&type=card",
+                "language": "Italian",
+                "multiverseid": 454043,
+                "name": "Fumarie di Vapore",
+                "text": "({T}: Aggiungi {U} o {R}.)\nMentre le Fumarie di Vapore entrano nel campo di battaglia, puoi pagare 2 punti vita. Se non lo fai, entrano nel campo di battaglia TAPpate."
+            },
+            {
+                "flavor": "\u300c\u30a4\u30bc\u30c3\u30c8\u56e3\u306b\u3088\u308b\u7528\u9014\u4e0d\u660e\u306e\u5de8\u5927\u306a\u5efa\u8a2d\u8a08\u753b\uff1f\u307e\u3041\u3001\u5927\u4e08\u592b\u3067\u3057\u3087\u3046\u3002\u300d\n\u2015\u2015\u30b7\u30df\u30c3\u30af\u306e\u5909\u7570\u8853\u5e2b\u3001\u30b8\u30b8\u30e3",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=454302&type=card",
+                "language": "Japanese",
+                "multiverseid": 454302,
+                "name": "\u84b8\u6c17\u5b54",
+                "text": "\uff08{T}\uff1a{U}\u304b{R}\u3092\u52a0\u3048\u308b\u3002\uff09\n\u84b8\u6c17\u5b54\u304c\u6226\u5834\u306b\u51fa\u308b\u306b\u969b\u3057\u3001\u3042\u306a\u305f\u306f\uff12\u70b9\u306e\u30e9\u30a4\u30d5\u3092\u652f\u6255\u3063\u3066\u3082\u3088\u3044\u3002\u305d\u3046\u3057\u306a\u3044\u306a\u3089\u3001\u3053\u308c\u306f\u30bf\u30c3\u30d7\u72b6\u614b\u3067\u6226\u5834\u306b\u51fa\u308b\u3002"
+            },
+            {
+                "flavor": "\"\ubaa9\uc801\uc744 \ubc1d\ud788\uc9c0 \uc54a\uc740 \ucc44\ub85c \uc2e0\uaddc \uc774\uc82f \uac74\ucd95\ubb3c\uc744 \uc9d3\ub294 \ub300\uaddc\ubaa8 \uacc4\ud68d\uc774\ub77c\uace0? \uc544\ub9c8\ub3c4 \uad1c\ucc2e\uc744 \uac70\uc57c.\"\n\u2014\uc2dc\ubbf9 \ub3cc\uc5f0\ubcc0\uc774 \uc5f0\uad6c\uc790 \uc9c0\uc790",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=454561&type=card",
+                "language": "Korean",
+                "multiverseid": 454561,
+                "name": "\uc99d\uae30 \ud658\uae30\uad6c",
+                "text": "({T}: {U} \ub610\ub294 {R}\ub97c \ucd94\uac00\ud55c\ub2e4.)\n\uc99d\uae30 \ud658\uae30\uad6c\uac00 \uc804\uc7a5\uc5d0 \ub4e4\uc5b4\uc624\uba74\uc11c, \ub2f9\uc2e0\uc740 \uc0dd\uba85 2\uc810\uc744 \uc9c0\ubd88\ud560 \uc218 \uc788\ub2e4. \uadf8\ub7ec\uc9c0 \uc54a\uc73c\uba74, \uc99d\uae30 \ud658\uae30\uad6c\ub294 \ud0ed\ub41c \ucc44\ub85c \uc804\uc7a5\uc5d0 \ub4e4\uc5b4\uc628\ub2e4."
+            },
+            {
+                "flavor": "\"Um novo projeto de constru\u00e7\u00e3o dos Izzet, imenso e de prop\u00f3sito desconhecido? Provavelmente est\u00e1 tudo bem.\"\n\u2014 Zija, mutacionista Simic",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=454820&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 454820,
+                "name": "Bueiros de Vapor",
+                "text": "({T}: Adicione {U} ou {R}.)\nConforme Bueiros de Vapor entra no campo de batalha, voc\u00ea pode pagar 2 pontos de vida. Se n\u00e3o fizer isso, ele entrar\u00e1 no campo de batalha virado."
+            },
+            {
+                "flavor": "\u00ab\u041d\u043e\u0432\u0430\u044f \u0438\u0441\u043f\u043e\u043b\u0438\u043d\u0441\u043a\u0430\u044f \u043f\u043e\u0441\u0442\u0440\u043e\u0439\u043a\u0430 \u0418\u0437\u0437\u0435\u0442\u043e\u0432 \u0441 \u043d\u0435\u043f\u043e\u043d\u044f\u0442\u043d\u044b\u043c \u043f\u0440\u0435\u0434\u043d\u0430\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435\u043c? \u041d\u0430\u0432\u0435\u0440\u043d\u043e\u0435, \u043d\u0438\u0447\u0435\u0433\u043e \u0441\u0442\u0440\u0430\u0448\u043d\u043e\u0433\u043e\u00bb.\n\u2014 \u0417\u0438\u044f, \u043c\u0443\u0442\u0430\u0442\u043e\u0440 \u0421\u0438\u043c\u0438\u043a\u043e\u0432",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=455079&type=card",
+                "language": "Russian",
+                "multiverseid": 455079,
+                "name": "\u041f\u0430\u0440\u043e\u0432\u044b\u0435 \u041e\u0442\u0434\u0443\u0448\u0438\u043d\u044b",
+                "text": "({T}: \u0434\u043e\u0431\u0430\u0432\u044c\u0442\u0435 {U} \u0438\u043b\u0438 {R}.)\n\u041f\u0440\u0438 \u0432\u044b\u0445\u043e\u0434\u0435 \u041f\u0430\u0440\u043e\u0432\u044b\u0445 \u041e\u0442\u0434\u0443\u0448\u0438\u043d \u043d\u0430 \u043f\u043e\u043b\u0435 \u0431\u0438\u0442\u0432\u044b \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0437\u0430\u043f\u043b\u0430\u0442\u0438\u0442\u044c 2 \u0436\u0438\u0437\u043d\u0438. \u0415\u0441\u043b\u0438 \u0432\u044b \u044d\u0442\u043e\u0433\u043e \u043d\u0435 \u0434\u0435\u043b\u0430\u0435\u0442\u0435, \u043e\u043d\u0438 \u0432\u044b\u0445\u043e\u0434\u044f\u0442 \u043d\u0430 \u043f\u043e\u043b\u0435 \u0431\u0438\u0442\u0432\u044b \u043f\u043e\u0432\u0435\u0440\u043d\u0443\u0442\u044b\u043c\u0438."
+            },
+            {
+                "flavor": "\u300c\u4f0a\u6377\u610f\u56fe\u4e0d\u660e\u7684\u5168\u65b0\u5927\u578b\u5efa\u8bbe\u8ba1\u5212\uff1f\u5e94\u8be5\u6ca1\u4ec0\u4e48\u8e4a\u8df7\u3002\u300d\n\uff5e\u6790\u7c73\u514b\u7a81\u53d8\u5e08\u742a\u4f73",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=455338&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 455338,
+                "name": "\u84b8\u6c14\u55b7\u53d1\u53e3",
+                "text": "\uff08{T}\uff1a\u52a0{U}\u6216{R}\u3002\uff09\n\u4e8e\u84b8\u6c14\u55b7\u53d1\u53e3\u8fdb\u6218\u573a\u65f6\uff0c\u4f60\u53ef\u4ee5\u652f\u4ed82\u70b9\u751f\u547d\u3002\u5982\u679c\u4f60\u672a\u5982\u6b64\u4f5c\uff0c\u5219\u84b8\u6c14\u55b7\u53d1\u53e3\u987b\u6a2a\u7f6e\u8fdb\u6218\u573a\u3002"
+            },
+            {
+                "flavor": "\u300c\u4f0a\u6377\u610f\u5716\u4e0d\u660e\u7684\u5168\u65b0\u5927\u578b\u5efa\u8a2d\u8a08\u5283\uff1f\u61c9\u8a72\u6c92\u4ec0\u9ebc\u8e4a\u8e7a\u3002\u300d\n\uff5e\u6790\u7c73\u514b\u7a81\u8b8a\u5e2b\u742a\u4f73",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=455597&type=card",
+                "language": "Chinese Traditional",
+                "multiverseid": 455597,
+                "name": "\u84b8\u6c23\u5674\u767c\u53e3",
+                "text": "\uff08{T}\uff1a\u52a0{U}\u6216{R}\u3002\uff09\n\u65bc\u84b8\u6c23\u5674\u767c\u53e3\u9032\u6230\u5834\u6642\uff0c\u4f60\u53ef\u4ee5\u652f\u4ed82\u9ede\u751f\u547d\u3002\u5982\u679c\u4f60\u672a\u5982\u6b64\u4f5c\uff0c\u5247\u84b8\u6c23\u5674\u767c\u53e3\u9808\u6a6b\u7f6e\u9032\u6230\u5834\u3002"
+            }
+        ],
+        "hand": null,
+        "id": "c056edff-90ba-54fd-9354-3a4feee5c2d3",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=453007&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Frontier",
+                "legality": "Legal"
+            },
+            {
+                "format": "Future",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Standard",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": null,
+        "multiverse_id": 453007,
+        "name": "Steam Vents",
+        "names": null,
+        "number": "257",
+        "original_text": "<i>({T}: Add {U} or {R}.)</i>\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "original_type": "Land \u2014 Island Mountain",
+        "power": null,
+        "printings": [
+            "EXP",
+            "GPT",
+            "GRN",
+            "PRM",
+            "RTR"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2018-10-05",
+                "text": "Unlike most dual lands, this land has two basic land types. It\u2019s not basic, so cards such as District Guide can\u2019t find it, but it does have the appropriate land types for effects such as that of Drowned Catacomb (from the Ixalan set)."
+            },
+            {
+                "date": "2018-10-05",
+                "text": "If an effect puts this land onto the battlefield tapped, you may pay 2 life, but it still enters tapped."
+            }
+        ],
+        "set": "GRN",
+        "set_name": "Guilds of Ravnica",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Island",
+            "Mountain"
+        ],
+        "supertypes": [],
+        "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Land \u2014 Island Mountain",
+        "types": [
+            "Land"
+        ],
+        "variations": null,
+        "watermark": "izzet"
+    }
+]

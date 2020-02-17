@@ -1,0 +1,136 @@
+[
+    {
+        "artist": "Vance Kovacs",
+        "border": null,
+        "cmc": 0.0,
+        "color_identity": [],
+        "colors": [],
+        "flavor": null,
+        "foreign_names": [
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=204309&type=card",
+                "language": "German",
+                "multiverseid": 204309,
+                "name": "Bl\u00fchende Katakomben",
+                "text": "{T}, bezahle 1 Lebenspunkt, opfere die Bl\u00fchenden Katakomben: Durchsuche deine Bibliothek nach einem Sumpf oder einem Wald und bringe die Karte ins Spiel. Mische danach deine Bibliothek."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=202964&type=card",
+                "language": "Spanish",
+                "multiverseid": 202964,
+                "name": "Catacumbas verdes",
+                "text": "{T}, pagar 1 vida, sacrificar las Catacumbas verdes: Busca en tu biblioteca una carta de pantano o bosque y ponla en el campo de batalla. Luego baraja tu biblioteca."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=204578&type=card",
+                "language": "French",
+                "multiverseid": 204578,
+                "name": "Catacombes verdoyantes",
+                "text": "{T}, payez 1 point de vie, sacrifiez les Catacombes verdoyantes : Cherchez dans votre biblioth\u00e8que une carte de marais ou de for\u00eat et mettez-la sur le champ de bataille. M\u00e9langez ensuite votre biblioth\u00e8que."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=203233&type=card",
+                "language": "Italian",
+                "multiverseid": 203233,
+                "name": "Catacombe Verdeggianti",
+                "text": "{T}, Paga 1 punto vita, Sacrifica le Catacombe Verdeggianti: Passa in rassegna il tuo grimorio per una carta Palude o Foresta e mettila sul campo di battaglia. Poi rimescola il tuo grimorio."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=204040&type=card",
+                "language": "Japanese",
+                "multiverseid": 204040,
+                "name": "\u65b0\u7dd1\u306e\u5730\u4e0b\u5893\u5730",
+                "text": "{T}, \u30e9\u30a4\u30d5\u3092\uff11\u70b9\u652f\u6255\u3046, \u65b0\u7dd1\u306e\u5730\u4e0b\u5893\u5730\u3092\u751f\u3051\u8d04\u306b\u6367\u3052\u308b\uff1a\u3042\u306a\u305f\u306e\u30e9\u30a4\u30d6\u30e9\u30ea\u30fc\u304b\u3089\u6cbc\u30ab\u30fc\u30c9\u304b\u68ee\u30ab\u30fc\u30c9\u3092\uff11\u679a\u63a2\u3057\u3001\u305d\u308c\u3092\u6226\u5834\u306b\u51fa\u3059\u3002 \u305d\u306e\u5f8c\u3042\u306a\u305f\u306e\u30e9\u30a4\u30d6\u30e9\u30ea\u30fc\u3092\u5207\u308a\u76f4\u3059\u3002"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=203771&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 203771,
+                "name": "Catacumbas Verdejantes",
+                "text": "{T}, Pague 1 ponto de vida, Sacrifique Catacumbas Verdejantes: Procure um card de P\u00e2ntano ou Floresta em seu grim\u00f3rio e coloque-o no campo de batalha. Depois, embaralhe seu grim\u00f3rio."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=203502&type=card",
+                "language": "Russian",
+                "multiverseid": 203502,
+                "name": "\u0417\u0435\u043b\u0435\u043d\u0435\u044e\u0449\u0438\u0435 \u041a\u0430\u0442\u0430\u043a\u043e\u043c\u0431\u044b",
+                "text": "{T}, \u0437\u0430\u043f\u043b\u0430\u0442\u0438\u0442\u0435 1 \u0436\u0438\u0437\u043d\u044c, \u043f\u043e\u0436\u0435\u0440\u0442\u0432\u0443\u0439\u0442\u0435 \u0417\u0435\u043b\u0435\u043d\u0435\u044e\u0449\u0438\u0435 \u041a\u0430\u0442\u0430\u043a\u043e\u043c\u0431\u044b: \u043d\u0430\u0439\u0434\u0438\u0442\u0435 \u0432 \u0432\u0430\u0448\u0435\u0439 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0435 \u043a\u0430\u0440\u0442\u0443 \u0411\u043e\u043b\u043e\u0442\u0430 \u0438\u043b\u0438 \u041b\u0435\u0441\u0430 \u0438 \u043f\u043e\u043b\u043e\u0436\u0438\u0442\u0435 \u0435\u0435 \u043d\u0430 \u043f\u043e\u043b\u0435 \u0431\u0438\u0442\u0432\u044b. \u0417\u0430\u0442\u0435\u043c \u043f\u0435\u0440\u0435\u0442\u0430\u0441\u0443\u0439\u0442\u0435 \u0432\u0430\u0448\u0443 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0443."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=204847&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 204847,
+                "name": "\u65b0\u7eff\u9675\u5893",
+                "text": "{T}\uff0c\u652f\u4ed81\u70b9\u751f\u547d\uff0c\u727a\u7272\u65b0\u7eff\u9675\u5893\uff1a\u4ece\u4f60\u7684\u724c\u5e93\u4e2d\u641c\u5bfb\u4e00\u5f20\u6cbc\u6cfd\u6216\u6811\u6797\u724c\uff0c\u5e76\u5c06\u4e4b\u653e\u8fdb\u6218\u573a\u3002 \u7136\u540e\u5c06\u4f60\u7684\u724c\u5e93\u6d17\u724c\u3002"
+            }
+        ],
+        "hand": null,
+        "id": "9503a786-8981-5424-9c7a-66c24b8a935e",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=193400&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": null,
+        "multiverse_id": 193400,
+        "name": "Verdant Catacombs",
+        "name_id": "Verdant Catacombs_9503a786-8981-5424-9c7a-66c24b8a935e",
+        "names": null,
+        "number": "229",
+        "original_text": "{T}, Pay 1 life, Sacrifice Verdant Catacombs: Search your library for a Swamp or Forest card and put it onto the battlefield. Then shuffle your library.",
+        "original_type": "Land",
+        "power": null,
+        "printings": [
+            "EXP",
+            "MM3",
+            "ZEN"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [],
+        "set": "ZEN",
+        "set_name": "Zendikar",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "{T}, Pay 1 life, Sacrifice Verdant Catacombs: Search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle your library.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Land",
+        "types": [
+            "Land"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

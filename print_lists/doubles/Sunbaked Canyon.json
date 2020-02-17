@@ -1,0 +1,152 @@
+[
+    {
+        "artist": "Yeong-Hao Han",
+        "border": null,
+        "cmc": 0.0,
+        "color_identity": [
+            "R",
+            "W"
+        ],
+        "colors": [],
+        "flavor": "Since the river ran dry, travelers wander where fish once swam.",
+        "foreign_names": [
+            {
+                "flavor": "Seit der Fluss ausgetrocknet ist, wandern Reisende dort entlang, wo einst Fische schwammen.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=464450&type=card",
+                "language": "German",
+                "multiverseid": 464450,
+                "name": "Ausged\u00f6rrte Schlucht",
+                "text": "{T}, bezahle 1 Lebenspunkt: Erzeuge {R} oder {W}.\n{1}, {T}, opfere die Ausged\u00f6rrte Schlucht: Ziehe eine Karte."
+            },
+            {
+                "flavor": "Desde que el r\u00edo se sec\u00f3, los viajeros peregrinan por donde antes nadaban los peces.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=464704&type=card",
+                "language": "Spanish",
+                "multiverseid": 464704,
+                "name": "Ca\u00f1\u00f3n soleado",
+                "text": "{T}, pagar 1 vida: Agrega {R} o {W}.\n{1}, {T}, sacrificar el Ca\u00f1\u00f3n soleado: Roba una carta."
+            },
+            {
+                "flavor": "Depuis l'ass\u00e8chement de la rivi\u00e8re, les voyageurs passent o\u00f9 les poissons nageaient autrefois.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=464958&type=card",
+                "language": "French",
+                "multiverseid": 464958,
+                "name": "Canyon s\u00e9ch\u00e9 par le soleil",
+                "text": "{T}, payez 1 point de vie : Ajoutez {R} ou {W}.\n{1}, {T}, sacrifiez le Canyon s\u00e9ch\u00e9 par le soleil : Piochez une carte."
+            },
+            {
+                "flavor": "Da quando il fiume si \u00e8 prosciugato, dove un tempo nuotavano pesci ora camminano viaggiatori.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=465212&type=card",
+                "language": "Italian",
+                "multiverseid": 465212,
+                "name": "Canyon Riarso",
+                "text": "{T}, Paga 1 punto vita: Aggiungi {R} o {W}.\n{1}, {T}, Sacrifica il Canyon Riarso: Pesca una carta."
+            },
+            {
+                "flavor": "\u5ddd\u306f\u5b8c\u5168\u306b\u5e72\u4e0a\u304c\u308a\u3001\u65c5\u4eba\u306b\u306f\u3001\u304b\u3064\u3066\u9b5a\u304c\u6cf3\u3044\u3060\u5834\u6240\u3068\u306f\u5206\u304b\u3089\u306a\u3044\u3002",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=465466&type=card",
+                "language": "Japanese",
+                "multiverseid": 465466,
+                "name": "\u707c\u967d\u5927\u5ce1\u8c37",
+                "text": "{T}, \uff11\u70b9\u306e\u30e9\u30a4\u30d5\u3092\u652f\u6255\u3046\uff1a\u3042\u306a\u305f\u306e\u30de\u30ca\u30fb\u30d7\u30fc\u30eb\u306b{R}\u304b{W}\u3092\u52a0\u3048\u308b\u3002\n{1}, {T}, \u707c\u967d\u5927\u5ce1\u8c37\u3092\u751f\u3051\u8d04\u306b\u6367\u3052\u308b\uff1a\u30ab\u30fc\u30c9\u3092\uff11\u679a\u5f15\u304f\u3002"
+            },
+            {
+                "flavor": "\uac15\ubb3c\uc774 \ub9d0\ub77c\ubd99\uc5c8\uae30\uc5d0, \uc5ec\ud589\uc790\ub4e4\uc740 \ud55c\ub54c \ubb3c\uace0\uae30\uac00 \ud5e4\uc5c4\uce58\ub358 \uacf3\uc744 \ub3cc\uc544\ub2e4\ub2cc\ub2e4.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=465720&type=card",
+                "language": "Korean",
+                "multiverseid": 465720,
+                "name": "\ubc14\uc9dd \ub9c8\ub978 \ud611\uace1",
+                "text": "{T}, \uc0dd\uba85 1\uc810\uc744 \uc9c0\ubd88\ud55c\ub2e4: {R} \ub610\ub294 {W}\ub97c \ucd94\uac00\ud55c\ub2e4.\n{1}, {T}, \ubc14\uc9dd \ub9c8\ub978 \ud611\uace1\uc744 \ud76c\uc0dd\ud55c\ub2e4: \uce74\ub4dc \ud55c \uc7a5\uc744 \ubf51\ub294\ub2e4."
+            },
+            {
+                "flavor": "Desde que o rio secou, viajantes vagam onde outrora nadavam peixes.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=465974&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 465974,
+                "name": "Desfiladeiro Calcinado pelo Sol",
+                "text": "{T}, pague 1 ponto de vida: Adicione {R} ou {W}.\n{1}, {T}, sacrifique Desfiladeiro Calcinado pelo Sol: Compre um card."
+            },
+            {
+                "flavor": "\u0421 \u0442\u0435\u0445 \u043f\u043e\u0440 \u043a\u0430\u043a \u0440\u0435\u043a\u0430 \u043f\u0435\u0440\u0435\u0441\u043e\u0445\u043b\u0430, \u043f\u0443\u0442\u043d\u0438\u043a\u0438 \u043f\u0440\u043e\u0445\u043e\u0434\u044f\u0442 \u0442\u0430\u043c, \u0433\u0434\u0435 \u043a\u043e\u0433\u0434\u0430-\u0442\u043e \u043f\u043b\u0430\u0432\u0430\u043b\u0438 \u0440\u044b\u0431\u044b.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=466228&type=card",
+                "language": "Russian",
+                "multiverseid": 466228,
+                "name": "\u0412\u044b\u0436\u0436\u0435\u043d\u043d\u044b\u0439 \u041a\u0430\u043d\u044c\u043e\u043d",
+                "text": "{T}, \u0437\u0430\u043f\u043b\u0430\u0442\u0438\u0442\u0435 1 \u0436\u0438\u0437\u043d\u044c: \u0434\u043e\u0431\u0430\u0432\u044c\u0442\u0435 {R} \u0438\u043b\u0438 {W}.\n{1}, {T}, \u043f\u043e\u0436\u0435\u0440\u0442\u0432\u0443\u0439\u0442\u0435 \u0412\u044b\u0436\u0436\u0435\u043d\u043d\u044b\u0439 \u041a\u0430\u043d\u044c\u043e\u043d: \u0432\u043e\u0437\u044c\u043c\u0438\u0442\u0435 \u043a\u0430\u0440\u0442\u0443."
+            },
+            {
+                "flavor": "\u6b64\u5730\u6cb3\u6d41\u65e9\u5df2\u5e72\u6db8\uff0c\u539f\u672c\u9c7c\u7c7b\u751f\u606f\u4e4b\u6240\u5df2\u6210\u65c5\u4eba\u811a\u4e0b\u9053\u8def\u3002",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=466482&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 466482,
+                "name": "\u65e5\u707c\u5ce1\u8c37",
+                "text": "{T}\uff0c\u652f\u4ed81\u70b9\u751f\u547d\uff1a\u52a0{R}\u6216{W}\u3002\n{1}\uff0c{T}\uff0c\u727a\u7272\u65e5\u707c\u5ce1\u8c37\uff1a\u6293\u4e00\u5f20\u724c\u3002"
+            },
+            {
+                "flavor": "\u6b64\u5730\u6cb3\u6d41\u65e9\u5df2\u4e7e\u6db8\uff0c\u539f\u672c\u9b5a\u985e\u751f\u606f\u4e4b\u6240\u5df2\u6210\u65c5\u4eba\u8173\u4e0b\u9053\u8def\u3002",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=466736&type=card",
+                "language": "Chinese Traditional",
+                "multiverseid": 466736,
+                "name": "\u65e5\u707c\u5cfd\u8c37",
+                "text": "{T}\uff0c\u652f\u4ed81\u9ede\u751f\u547d\uff1a\u52a0{R}\u6216{W}\u3002\n{1}\uff0c{T}\uff0c\u72a7\u7272\u65e5\u707c\u5cfd\u8c37\uff1a\u62bd\u4e00\u5f35\u724c\u3002"
+            }
+        ],
+        "hand": null,
+        "id": "96cc2a60-2382-5ac0-b9cf-67b270352513",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=464196&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": null,
+        "multiverse_id": 464196,
+        "name": "Sunbaked Canyon",
+        "names": null,
+        "number": "247",
+        "original_text": "{T}, Pay 1 life: Add {R} or {W}.\n{1}, {T}, Sacrifice Sunbaked Canyon: Draw a card.",
+        "original_type": "Land",
+        "power": null,
+        "printings": [
+            "MH1"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [],
+        "set": "MH1",
+        "set_name": "Modern Horizons",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "{T}, Pay 1 life: Add {R} or {W}.\n{1}, {T}, Sacrifice Sunbaked Canyon: Draw a card.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Land",
+        "types": [
+            "Land"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

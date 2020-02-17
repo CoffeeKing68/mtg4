@@ -1,0 +1,122 @@
+[
+    {
+        "artist": "Scott Bailey",
+        "border": null,
+        "cmc": 0.0,
+        "color_identity": [
+            "G",
+            "W"
+        ],
+        "colors": [],
+        "flavor": null,
+        "foreign_names": [
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=182966&type=card",
+                "language": "German",
+                "multiverseid": 182966,
+                "name": "Gestr\u00fcppland",
+                "text": "{T}: Erh\u00f6he deinen Manavorrat um ein farbloses Mana.\n{T}: Erh\u00f6he deinen Manavorrat um {G} oder {W}. Das Gestr\u00fcppland f\u00fcgt dir 1 Schadenspunkt zu."
+            },
+            {
+                "flavor": null,
+                "imageUrl": null,
+                "language": "Spanish",
+                "multiverseid": null,
+                "name": "Matorrales",
+                "text": null
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=184382&type=card",
+                "language": "French",
+                "multiverseid": 184382,
+                "name": "Broussaille",
+                "text": "{T}: Ajoutez un mana incolore \u00e0 votre r\u00e9serve.\n{T}: Ajoutez {G} ou {W} \u00e0 votre r\u00e9serve. La Broussaille vous inflige 1 blessure."
+            },
+            {
+                "flavor": null,
+                "imageUrl": null,
+                "language": "Japanese",
+                "multiverseid": null,
+                "name": "\u4f4e\u6728\u6797\u5730",
+                "text": null
+            },
+            {
+                "flavor": null,
+                "imageUrl": null,
+                "language": "Portuguese (Brazil)",
+                "multiverseid": null,
+                "name": "Macegal",
+                "text": null
+            }
+        ],
+        "hand": null,
+        "id": "bbe253f7-0fa4-584c-8f15-88f5571e5c99",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=11191&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": null,
+        "multiverse_id": 11191,
+        "name": "Brushland",
+        "name_id": "Brushland_bbe253f7-0fa4-584c-8f15-88f5571e5c99",
+        "names": null,
+        "number": "326",
+        "original_text": "ocT: Add one colorless mana to your mana pool.\nocT: Add oG or oW to your mana pool. Brushland deals 1 damage to you.",
+        "original_type": "Land",
+        "power": null,
+        "printings": [
+            "10E",
+            "5ED",
+            "6ED",
+            "7ED",
+            "9ED",
+            "ATH",
+            "ICE",
+            "PTC",
+            "WC00",
+            "WC02"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [],
+        "set": "7ED",
+        "set_name": "Seventh Edition",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "{T}: Add {C}.\n{T}: Add {G} or {W}. Brushland deals 1 damage to you.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Land",
+        "types": [
+            "Land"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

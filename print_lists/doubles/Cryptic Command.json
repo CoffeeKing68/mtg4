@@ -1,0 +1,88 @@
+[
+    {
+        "artist": "Wayne England",
+        "border": null,
+        "cmc": 4.0,
+        "color_identity": [
+            "U"
+        ],
+        "colors": [
+            "Blue"
+        ],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "7cb194a1-9f28-53a0-b489-4fbe7adad52d",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=370439&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{1}{U}{U}{U}",
+        "multiverse_id": 370439,
+        "name": "Cryptic Command",
+        "name_id": "Cryptic Command_7cb194a1-9f28-53a0-b489-4fbe7adad52d",
+        "names": null,
+        "number": "38",
+        "original_text": "Choose two \u2014 Counter target spell; or return target permanent to its owner's hand; or tap all creatures your opponents control; or draw a card.",
+        "original_type": "Instant",
+        "power": null,
+        "printings": [
+            "IMA",
+            "LRW",
+            "MM2",
+            "MMA",
+            "MP2",
+            "P09",
+            "PRM"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2017-11-17",
+                "text": "You choose both modes as you cast Cryptic Command. You must choose two different modes."
+            },
+            {
+                "date": "2017-11-17",
+                "text": "Look at both chosen modes to determine how many targets Cryptic Command has, if any. If it has at least one target, and all its targets are illegal when it tries to resolve, then it won\u2019t resolve and none of its effects will happen. For example, if you choose the second and fourth modes, and the permanent is an illegal target when Cryptic Command tries to resolve, you won\u2019t draw a card."
+            }
+        ],
+        "set": "MMA",
+        "set_name": "Modern Masters",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "Choose two \u2014\n\u2022 Counter target spell.\n\u2022 Return target permanent to its owner's hand.\n\u2022 Tap all creatures your opponents control.\n\u2022 Draw a card.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Instant",
+        "types": [
+            "Instant"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

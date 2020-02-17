@@ -1,0 +1,90 @@
+[
+    {
+        "artist": "Eric Deschamps",
+        "border": null,
+        "cmc": 3.0,
+        "color_identity": [
+            "G"
+        ],
+        "colors": [
+            "Green"
+        ],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "03a364a7-9a4f-54c4-857d-3988db880e1b",
+        "image_url": null,
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{2}{G}",
+        "multiverse_id": null,
+        "name": "Tireless Tracker",
+        "name_id": "Tireless Tracker_03a364a7-9a4f-54c4-857d-3988db880e1b",
+        "names": null,
+        "number": "233s",
+        "original_text": null,
+        "original_type": null,
+        "power": "3",
+        "printings": [
+            "PSOI",
+            "SOI"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2016-04-08",
+                "text": "The token is named Clue and has the artifact subtype Clue. Clue isn\u2019t a creature type."
+            },
+            {
+                "date": "2016-04-08",
+                "text": "The tokens are normal artifacts. For example, they can be sacrificed to cast Angelic Purge or targeted by Root Out."
+            },
+            {
+                "date": "2016-04-08",
+                "text": "If you sacrifice a Clue for another card\u2019s cost or effect, such as that of Angelic Purge or Tamiyo\u2019s Journal, you can\u2019t also pay {2} and sacrifice it to draw a card."
+            }
+        ],
+        "set": "PSOI",
+        "set_name": "Shadows over Innistrad Promos",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Human",
+            "Scout"
+        ],
+        "supertypes": [],
+        "text": "Whenever a land enters the battlefield under your control, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
+        "timeshifted": null,
+        "toughness": "2",
+        "type": "Creature \u2014 Human Scout",
+        "types": [
+            "Creature"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

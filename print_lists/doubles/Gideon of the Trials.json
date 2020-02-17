@@ -1,0 +1,199 @@
+[
+    {
+        "artist": "Izzy",
+        "border": null,
+        "cmc": 3.0,
+        "color_identity": [
+            "W"
+        ],
+        "colors": [
+            "White"
+        ],
+        "flavor": null,
+        "foreign_names": [
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=426985&type=card",
+                "language": "German",
+                "multiverseid": 426985,
+                "name": "Gideon der Gepr\u00fcfte",
+                "text": "+1: Verhindere bis zu deinem n\u00e4chsten Zug allen Schaden, den eine bleibende Karte deiner Wahl zuf\u00fcgen w\u00fcrde.\n0: Bis zum Ende des Zuges wird Gideon der Gepr\u00fcfte zu einer 4/4 Mensch-Soldat-Kreatur mit Unzerst\u00f6rbarkeit, die immer noch ein Planeswalker ist. Verhindere allen Schaden, der ihm in diesem Zug zugef\u00fcgt w\u00fcrde.\n0: Du erh\u00e4ltst ein Emblem mit \u201eSolange du einen Gideon-Planeswalker kontrollierst, kannst du die Partie nicht verlieren und deine Gegner k\u00f6nnen die Partie nicht gewinnen.\""
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=427254&type=card",
+                "language": "Spanish",
+                "multiverseid": 427254,
+                "name": "Gideon de las pruebas",
+                "text": "+1: Hasta tu pr\u00f3ximo turno, prev\u00e9n todo el da\u00f1o que el permanente objetivo fuera a hacer.\n0: Hasta el final del turno, Gideon de las pruebas se convierte en una criatura Soldado Humano 4/4 con la habilidad de indestructible que sigue siendo un planeswalker. Prev\u00e9n todo el da\u00f1o que se le fuera a hacer este turno.\n0: Obtienes un emblema con \"Mientras controles un planeswalker Gideon, no puedes perder el juego y tus oponentes no pueden ganar el juego\"."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=427523&type=card",
+                "language": "French",
+                "multiverseid": 427523,
+                "name": "Gideon des \u00c9preuves",
+                "text": "+1 : Jusqu'\u00e0 votre prochain tour, pr\u00e9venez toutes les blessures que le permanent cibl\u00e9 devrait infliger.\n0 : Jusqu'\u00e0 la fin du tour, Gideon des \u00c9preuves devient une cr\u00e9ature 4/4 Humain et Soldat avec l'indestructible qui est toujours un planeswalker. Pr\u00e9venez toutes les blessures qui devraient lui \u00eatre inflig\u00e9es ce tour-ci.\n0 : Vous gagnez un embl\u00e8me avec \u00ab Tant que vous contr\u00f4lez un planeswalker Gideon, vous ne pouvez pas perdre la partie et vos adversaires ne peuvent pas la gagner. \u00bb"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=427792&type=card",
+                "language": "Italian",
+                "multiverseid": 427792,
+                "name": "Gideon delle Ordalie",
+                "text": "+1: Fino al tuo prossimo turno, previeni tutto il danno che un permanente bersaglio infliggerebbe.\n0: Fino alla fine del turno, Gideon delle Ordalie diventa una creatura Soldato Umano 4/4 con indistruttibile che \u00e8 ancora un planeswalker. Previeni tutto il danno che gli verrebbe inflitto in questo turno.\n0: Ottieni un emblema con \"Fintanto che controlli un planeswalker Gideon, non puoi perdere la partita e i tuoi avversari non possono vincere la partita\"."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=428061&type=card",
+                "language": "Japanese",
+                "multiverseid": 428061,
+                "name": "\u8a66\u7df4\u306b\u81e8\u3080\u30ae\u30c7\u30aa\u30f3",
+                "text": "+1\uff1a\u30d1\u30fc\u30de\u30cd\u30f3\u30c8\uff11\u3064\u3092\u5bfe\u8c61\u3068\u3059\u308b\u3002\u3042\u306a\u305f\u306e\u6b21\u306e\u30bf\u30fc\u30f3\u307e\u3067\u3001\u305d\u308c\u304c\u4e0e\u3048\u308b\u30c0\u30e1\u30fc\u30b8\u3092\u3059\u3079\u3066\u8efd\u6e1b\u3059\u308b\u3002\n0\uff1a\u30bf\u30fc\u30f3\u7d42\u4e86\u6642\u307e\u3067\u3001\u8a66\u7df4\u306b\u81e8\u3080\u30ae\u30c7\u30aa\u30f3\u306f\u7834\u58ca\u4e0d\u80fd\u3092\u6301\u3064\uff14/\uff14\u306e\u4eba\u9593\u30fb\u5175\u58eb\u30fb\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\u306b\u306a\u308b\u3002\u3053\u308c\u306f\u30d7\u30ec\u30a4\u30f3\u30ba\u30a6\u30a9\u30fc\u30ab\u30fc\u3067\u3082\u3042\u308b\u3002\u3053\u306e\u30bf\u30fc\u30f3\u3001\u3053\u308c\u306b\u4e0e\u3048\u3089\u308c\u308b\u30c0\u30e1\u30fc\u30b8\u3092\u3059\u3079\u3066\u8efd\u6e1b\u3059\u308b\u3002\n0\uff1a\u3042\u306a\u305f\u306f\u300c\u3042\u306a\u305f\u304c\u30ae\u30c7\u30aa\u30f3\u30fb\u30d7\u30ec\u30a4\u30f3\u30ba\u30a6\u30a9\u30fc\u30ab\u30fc\u3092\u30b3\u30f3\u30c8\u30ed\u30fc\u30eb\u3057\u3066\u3044\u308b\u304b\u304e\u308a\u3001\u3042\u306a\u305f\u306f\u3053\u306e\u30b2\u30fc\u30e0\u306b\u6557\u5317\u3067\u304d\u305a\u3001\u5bfe\u6226\u76f8\u624b\u306f\u3053\u306e\u30b2\u30fc\u30e0\u306b\u52dd\u5229\u3067\u304d\u306a\u3044\u3002\u300d\u3092\u6301\u3064\u7d0b\u7ae0\u3092\u5f97\u308b\u3002"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=428330&type=card",
+                "language": "Korean",
+                "multiverseid": 428330,
+                "name": "\uc2dc\ud5d8\uc5d0 \ub4e0 \uae30\ub514\uc628",
+                "text": "+1: \uc9c0\uc18d\ubb3c\uc744 \ubaa9\ud45c\ub85c \uc815\ud55c\ub2e4. \ub2f9\uc2e0\uc758 \ub2e4\uc74c \ud134\uae4c\uc9c0 \uadf8 \uc9c0\uc18d\ubb3c\uc774 \uc785\ud788\ub824\uace0 \ud558\ub294 \ubaa8\ub4e0 \ud53c\ud574\ub97c \ubc29\uc9c0\ud55c\ub2e4.\n0: \ud134\uc885\ub8cc\uae4c\uc9c0, \uc2dc\ud5d8\uc5d0 \ub4e0 \uae30\ub514\uc628\uc740 \ubb34\uc801\uc744 \uac00\uc9c4 4/4 \uc778\uac04 \ubcd1\uc0ac \uc0dd\ubb3c\uc774 \ub41c\ub2e4. \uc2dc\ud5d8\uc5d0 \ub4e0 \uae30\ub514\uc628\uc740 \uc5ec\uc804\ud788 \ud50c\ub808\uc778\uc988\uc6cc\ucee4\uc774\ub2e4. \uc774 \ud134\uc5d0 \uae30\ub514\uc628\uc774 \uc785\uc73c\ub824\uace0 \ud558\ub294 \ubaa8\ub4e0 \ud53c\ud574\ub97c \ubc29\uc9c0\ud55c\ub2e4.\n0: \ub2f9\uc2e0\uc740 \"\ub2f9\uc2e0\uc774 \uae30\ub514\uc628 \ud50c\ub808\uc778\uc988\uc6cc\ucee4\ub97c \uc870\uc885\ud558\ub294 \ud55c, \ub2f9\uc2e0\uc740 \uac8c\uc784\uc5d0\uc11c \ud328\ubc30\ud560 \uc218 \uc5c6\uc73c\uba70 \ub2f9\uc2e0\uc758 \uc0c1\ub300\ub4e4\uc740 \uac8c\uc784\uc5d0\uc11c \uc2b9\ub9ac\ud560 \uc218 \uc5c6\ub2e4.\"\ub97c \uac00\uc9c4 \ud718\uc7a5\uc744 \uc5bb\ub294\ub2e4."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=428599&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 428599,
+                "name": "Gideon das Provas",
+                "text": "+1: At\u00e9 seu pr\u00f3ximo turno, previna todo o dano que a permanente alvo causaria.\n0: At\u00e9 o final do turno, Gideon das Provas torna-se uma criatura 4/4 do tipo Humano Soldado com indestrut\u00edvel que ainda \u00e9 um planeswalker. Previna todo o dano que seria causado a ele neste turno.\n0: Voc\u00ea recebe um emblema com \"Enquanto voc\u00ea controlar um planeswalker Gideon, voc\u00ea n\u00e3o poder\u00e1 perder o jogo e seus oponentes n\u00e3o poder\u00e3o vencer o jogo.\"."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=428868&type=card",
+                "language": "Russian",
+                "multiverseid": 428868,
+                "name": "\u0413\u0438\u0434\u0435\u043e\u043d, \u0423\u0447\u0430\u0441\u0442\u043d\u0438\u043a \u0418\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0439",
+                "text": "+1: \u0434\u043e \u0432\u0430\u0448\u0435\u0433\u043e \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u0433\u043e \u0445\u043e\u0434\u0430 \u043f\u0440\u0435\u0434\u043e\u0442\u0432\u0440\u0430\u0442\u0438\u0442\u0435 \u0432\u0441\u0435 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u044f, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0434\u043e\u043b\u0436\u0435\u043d \u043d\u0430\u043d\u0435\u0441\u0442\u0438 \u0446\u0435\u043b\u0435\u0432\u043e\u0439 \u043f\u0435\u0440\u043c\u0430\u043d\u0435\u043d\u0442.\n0: \u0434\u043e \u043a\u043e\u043d\u0446\u0430 \u0445\u043e\u0434\u0430 \u0413\u0438\u0434\u0435\u043e\u043d, \u0423\u0447\u0430\u0441\u0442\u043d\u0438\u043a \u0418\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0439 \u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0441\u044f \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043e\u043c 4/4 \u0427\u0435\u043b\u043e\u0432\u0435\u043a \u0421\u043e\u043b\u0434\u0430\u0442 \u0441 \u041d\u0435\u0440\u0430\u0437\u0440\u0443\u0448\u0438\u043c\u043e\u0441\u0442\u044c\u044e, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u043e\u0441\u0442\u0430\u0435\u0442\u0441\u044f planeswalker-\u043e\u043c. \u041f\u0440\u0435\u0434\u043e\u0442\u0432\u0440\u0430\u0442\u0438\u0442\u0435 \u0432\u0441\u0435 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u044f, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0434\u043e\u043b\u0436\u043d\u044b \u0431\u044b\u0442\u044c \u043d\u0430\u043d\u0435\u0441\u0435\u043d\u044b \u0435\u043c\u0443 \u0432 \u044d\u0442\u043e\u043c \u0445\u043e\u0434\u0443.\n0: \u0432\u044b \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442\u0435 \u044d\u043c\u0431\u043b\u0435\u043c\u0443 \u0441\u043e \u0441\u043f\u043e\u0441\u043e\u0431\u043d\u043e\u0441\u0442\u044c\u044e \u00ab\u041f\u043e\u043a\u0430 \u0432\u044b \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u0438\u0440\u0443\u0435\u0442\u0435 planeswalker-\u0430 \u0413\u0438\u0434\u0435\u043e\u043d\u0430, \u0432\u044b \u043d\u0435 \u043c\u043e\u0436\u0435\u0442\u0435 \u043f\u0440\u043e\u0438\u0433\u0440\u0430\u0442\u044c \u043f\u0430\u0440\u0442\u0438\u044e, \u0430 \u0432\u0430\u0448\u0438 \u043e\u043f\u043f\u043e\u043d\u0435\u043d\u0442\u044b \u043d\u0435 \u043c\u043e\u0433\u0443\u0442 \u0432\u044b\u0438\u0433\u0440\u0430\u0442\u044c \u043f\u0430\u0440\u0442\u0438\u044e\u00bb."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=429137&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 429137,
+                "name": "\u7940\u70bc\u57fa\u5b9a",
+                "text": "+1\uff1a\u76f4\u5230\u4f60\u7684\u4e0b\u4e00\u4e2a\u56de\u5408\uff0c\u9632\u6b62\u76ee\u6807\u6c38\u4e45\u7269\u5c06\u9020\u6210\u7684\u6240\u6709\u4f24\u5bb3\u3002\n0\uff1a\u76f4\u5230\u56de\u5408\u7ed3\u675f\uff0c\u7940\u70bc\u57fa\u5b9a\u6210\u4e3a4/4\uff0c\u5177\u4e0d\u706d\u5f02\u80fd\u7684\u4eba\u7c7b\uff0f\u58eb\u5175\u751f\u7269\uff0c\u4e14\u4ecd\u7136\u662f\u9e4f\u6d1b\u5ba2\u3002\u9632\u6b62\u672c\u56de\u5408\u4e2d\u5c06\u5bf9\u4ed6\u9020\u6210\u7684\u6240\u6709\u4f24\u5bb3\u3002\n0\uff1a\u4f60\u83b7\u5f97\u5177\u6709\u300c\u53ea\u8981\u4f60\u64cd\u63a7\u57fa\u5b9a\u9e4f\u6d1b\u5ba2\uff0c\u4f60\u8fd9\u76d8\u6e38\u620f\u4e0d\u4f1a\u8f93\uff0c\u5bf9\u624b\u4e5f\u4e0d\u4f1a\u8d62\u300d\u7684\u5fbd\u8bb0\u3002"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=429406&type=card",
+                "language": "Chinese Traditional",
+                "multiverseid": 429406,
+                "name": "\u7940\u7149\u57fa\u5b9a",
+                "text": "+1\uff1a\u76f4\u5230\u4f60\u7684\u4e0b\u4e00\u500b\u56de\u5408\uff0c\u9632\u6b62\u76ee\u6a19\u6c38\u4e45\u7269\u5c07\u9020\u6210\u7684\u6240\u6709\u50b7\u5bb3\u3002\n0\uff1a\u76f4\u5230\u56de\u5408\u7d50\u675f\uff0c\u7940\u7149\u57fa\u5b9a\u6210\u70ba4/4\uff0c\u5177\u4e0d\u6ec5\u7570\u80fd\u7684\u4eba\u985e\uff0f\u58eb\u5175\u751f\u7269\uff0c\u4e14\u4ecd\u7136\u662f\u9d6c\u6d1b\u5ba2\u3002\u9632\u6b62\u672c\u56de\u5408\u4e2d\u5c07\u5c0d\u4ed6\u9020\u6210\u7684\u6240\u6709\u50b7\u5bb3\u3002\n0\uff1a\u4f60\u7372\u5f97\u5177\u6709\u300c\u53ea\u8981\u4f60\u64cd\u63a7\u57fa\u5b9a\u9d6c\u6d1b\u5ba2\uff0c\u4f60\u9019\u76e4\u904a\u6232\u4e0d\u6703\u8f38\uff0c\u5c0d\u624b\u4e5f\u4e0d\u6703\u8d0f\u300d\u7684\u5fbd\u8a18\u3002"
+            }
+        ],
+        "hand": null,
+        "id": "ba15790c-7d8c-5528-9de4-6faf60f2a981",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=426716&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": "3",
+        "mana_cost": "{1}{W}{W}",
+        "multiverse_id": 426716,
+        "name": "Gideon of the Trials",
+        "name_id": "Gideon of the Trials_ba15790c-7d8c-5528-9de4-6faf60f2a981",
+        "names": [],
+        "number": "14",
+        "original_text": "+1: Until your next turn, prevent all damage target permanent would deal.\n0: Until end of turn, Gideon of the Trials becomes a 4/4 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n0: You get an emblem with \"As long as you control a Gideon planeswalker, you can't lose the game and your opponents can't win the game.\"",
+        "original_type": "Planeswalker - Gideon",
+        "power": null,
+        "printings": [
+            "AKH",
+            "PAKH",
+            "PRM",
+            "PS17",
+            "PS18"
+        ],
+        "rarity": "Mythic",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2017-04-18",
+                "text": "Gideon\u2019s first ability will continue to prevent damage dealt by the target permanent even if Gideon leaves the battlefield before your next turn."
+            },
+            {
+                "date": "2017-04-18",
+                "text": "Gideon\u2019s second ability doesn\u2019t count as a creature entering the battlefield. Gideon was already on the battlefield; he only changed his types."
+            },
+            {
+                "date": "2017-04-18",
+                "text": "If Gideon becomes a creature the same turn he enters the battlefield, you can\u2019t attack with him or use any of his {T} abilities (if he gains any)."
+            },
+            {
+                "date": "2017-04-18",
+                "text": "Gideon\u2019s second ability causes him to become a creature with the creature types Human and Soldier. He remains a planeswalker with the planeswalker type Gideon. (He also retains any other card types or subtypes he may have had.) Each subtype is correlated to the proper card type: planeswalker is only a type (not a creature type), and Human and Soldier are just creature types (not planeswalker types)."
+            },
+            {
+                "date": "2017-04-18",
+                "text": "If damage that can\u2019t be prevented is dealt to Gideon after his second ability has resolved, that damage will have all applicable results: specifically, the damage is marked on Gideon (since he\u2019s a creature) and that damage causes that many loyalty counters to be removed from him (since he\u2019s a planeswalker). Even though he has indestructible, if Gideon has no loyalty counters on him, he\u2019s put into his owner\u2019s graveyard."
+            },
+            {
+                "date": "2017-04-18",
+                "text": "If Gideon leaves the battlefield after giving you his emblem, you\u2019ll keep the emblem. Its effect will apply again later if another Gideon comes under your control."
+            },
+            {
+                "date": "2017-04-18",
+                "text": "No game effect can cause you to lose the game or cause any opponent to win the game while Gideon\u2019s emblem is in effect. It doesn\u2019t matter whether you have 0 or less life, you\u2019re forced to draw a card while your library is empty, you have ten or more poison counters, you\u2019re at your Glorious End, your opponent casts a second Approach of the Second Sun, or so on. You keep playing."
+            },
+            {
+                "date": "2017-04-18",
+                "text": "Other circumstances can still cause you to lose the game. You will lose a game if you concede, if you\u2019re penalized with a Game Loss or a Match Loss during a sanctioned tournament due to a DCI rules infraction, or if your Magic Online\u00ae game clock runs out of time."
+            },
+            {
+                "date": "2017-04-18",
+                "text": "If you have Gideon\u2019s emblem in a Two-Headed Giant game and control a Gideon planeswalker, your team can\u2019t lose the game and the opposing team can\u2019t win the game. If your teammate controls a Gideon planeswalker but you do not, your emblem\u2019s effect doesn\u2019t apply."
+            }
+        ],
+        "set": "AKH",
+        "set_name": "Amonkhet",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Gideon"
+        ],
+        "supertypes": [
+            "Legendary"
+        ],
+        "text": "[+1]: Until your next turn, prevent all damage target permanent would deal.\n[0]: Until end of turn, Gideon of the Trials becomes a 4/4 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n[0]: You get an emblem with \"As long as you control a Gideon planeswalker, you can't lose the game and your opponents can't win the game.\"",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Legendary Planeswalker \u2014 Gideon",
+        "types": [
+            "Planeswalker"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

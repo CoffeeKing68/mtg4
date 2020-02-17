@@ -1,0 +1,156 @@
+[
+    {
+        "artist": "Todd Lockwood",
+        "border": null,
+        "cmc": 0.0,
+        "color_identity": [
+            "G",
+            "R"
+        ],
+        "colors": [],
+        "flavor": null,
+        "foreign_names": [
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=210700&type=card",
+                "language": "German",
+                "multiverseid": 210700,
+                "name": "Tosende Klamm",
+                "text": "Die Tosende Klamm kommt getappt ins Spiel.\n{T}: Erh\u00f6he deinen Manavorrat um {R} oder {G}.\n{2}{R}{G}: Bis zum Ende des Zuges wird die Tosende Klamm eine 3/3 rote und gr\u00fcne Elementarwesen-Kreatur mit \u201eImmer wenn diese Kreatur angreift, lege eine +1/+1-Marke auf sie.\" Sie ist immer noch ein Land."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=211715&type=card",
+                "language": "Spanish",
+                "multiverseid": 211715,
+                "name": "Hondonada furiosa",
+                "text": "La Hondonada furiosa entra al campo de batalla girada.\n{T}: Agrega {R} o {G} a tu reserva de man\u00e1.\n{2}{R}{G}: Hasta el final del turno, la Hondonada furiosa es una criatura Elemental roja y verde 3/3 con \"Siempre que esta criatura ataque, pon un contador +1/+1 sobre ella\". Sigue siendo una tierra."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=211425&type=card",
+                "language": "French",
+                "multiverseid": 211425,
+                "name": "Ravin enrag\u00e9",
+                "text": "Le Ravin enrag\u00e9 arrive sur le champ de bataille engag\u00e9.\n{T} : Ajoutez {R} ou {G} \u00e0 votre r\u00e9serve.\n{2}{R}{G} : Jusqu'\u00e0 la fin du tour, le Ravin enrag\u00e9 devient une cr\u00e9ature 3/3 rouge et verte \u00c9l\u00e9mental avec \u00ab \u00c0 chaque fois que cette cr\u00e9ature attaque, mettez un marqueur +1/+1 sur elle. \u00bb C'est toujours un terrain."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=211280&type=card",
+                "language": "Italian",
+                "multiverseid": 211280,
+                "name": "Gola Furente",
+                "text": "La Gola Furente entra nel campo di battaglia TAPpata.\n{T}: Aggiungi {R} o {G} alla tua riserva di mana.\n{2}{R}{G}: Fino alla fine del turno, la Gola Furente diventa una creatura Elementale 3/3 rossa e verde con \"Ogniqualvolta questa creatura attacca, metti un segnalino +1/+1 su di essa\". \u00c8 ancora una terra."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=210845&type=card",
+                "language": "Japanese",
+                "multiverseid": 210845,
+                "name": "\u6012\u308a\u72c2\u3046\u5c71\u5ce1",
+                "text": "\u6012\u308a\u72c2\u3046\u5c71\u5ce1\u306f\u30bf\u30c3\u30d7\u72b6\u614b\u3067\u6226\u5834\u306b\u51fa\u308b\u3002\n{T}\uff1a\u3042\u306a\u305f\u306e\u30de\u30ca\u30fb\u30d7\u30fc\u30eb\u306b{R}\u304b{G}\u3092\u52a0\u3048\u308b\u3002\n{2}{R}{G}\uff1a\u30bf\u30fc\u30f3\u7d42\u4e86\u6642\u307e\u3067\u3001\u6012\u308a\u72c2\u3046\u5c71\u5ce1\u306f\u300c\u3053\u306e\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\u304c\u653b\u6483\u3059\u308b\u305f\u3073\u3001\u305d\u308c\u306e\u4e0a\u306b\uff0b\uff11/\uff0b\uff11\u30ab\u30a6\u30f3\u30bf\u30fc\u3092\uff11\u500b\u7f6e\u304f\u3002\u300d\u3092\u6301\u3064\u8d64\u3067\u3042\u308a\u7dd1\u3067\u3042\u308b\uff13/\uff13\u306e\u30a8\u30ec\u30e1\u30f3\u30bf\u30eb\u30fb\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\u306b\u306a\u308b\u3002 \u305d\u308c\u306f\u571f\u5730\u3067\u3082\u3042\u308b\u3002"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=210990&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 210990,
+                "name": "Ravina Enfurecida",
+                "text": "Ravina Enfurecida entra no campo de batalha virado.\n{T}: Adicione {R} ou {G} \u00e0 sua reserva de mana.\n{2}{R}{G}: At\u00e9 o final do turno, Ravina Enfurecida torna-se uma criatura vermelha e verde 3/3 do tipo Elemental com \"Toda vez que esta criatura atacar, coloque um marcador +1/+1 nela.\" Ela ainda conta como um terreno."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=211570&type=card",
+                "language": "Russian",
+                "multiverseid": 211570,
+                "name": "\u0420\u0430\u0437\u044a\u044f\u0440\u0435\u043d\u043d\u043e\u0435 \u0423\u0449\u0435\u043b\u044c\u0435",
+                "text": "\u0420\u0430\u0437\u044a\u044f\u0440\u0435\u043d\u043d\u043e\u0435 \u0423\u0449\u0435\u043b\u044c\u0435 \u0432\u044b\u0445\u043e\u0434\u0438\u0442 \u043d\u0430 \u043f\u043e\u043b\u0435 \u0431\u0438\u0442\u0432\u044b \u043f\u043e\u0432\u0435\u0440\u043d\u0443\u0442\u044b\u043c.\n{T}: \u0434\u043e\u0431\u0430\u0432\u044c\u0442\u0435 {R} \u0438\u043b\u0438 {G} \u0432 \u0432\u0430\u0448\u0435 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435 \u043c\u0430\u043d\u044b.\n{2}{R}{G}: \u0434\u043e \u043a\u043e\u043d\u0446\u0430 \u0445\u043e\u0434\u0430 \u0420\u0430\u0437\u044a\u044f\u0440\u0435\u043d\u043d\u043e\u0435 \u0423\u0449\u0435\u043b\u044c\u0435 \u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0441\u044f \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043e\u043c 3/3 \u043a\u0440\u0430\u0441\u043d\u044b\u0439 \u0438 \u0437\u0435\u043b\u0435\u043d\u044b\u0439 \u042d\u043b\u0435\u043c\u0435\u043d\u0442\u0430\u043b\u044c \u0441\u043e \u0441\u043f\u043e\u0441\u043e\u0431\u043d\u043e\u0441\u0442\u044c\u044e \u00ab\u041a\u0430\u0436\u0434\u044b\u0439 \u0440\u0430\u0437 \u043a\u043e\u0433\u0434\u0430 \u044d\u0442\u043e \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043e \u0430\u0442\u0430\u043a\u0443\u0435\u0442, \u043f\u043e\u043b\u043e\u0436\u0438\u0442\u0435 \u043d\u0430 \u043d\u0435\u0433\u043e \u043e\u0434\u0438\u043d \u0436\u0435\u0442\u043e\u043d +1/+1\u00bb. \u041f\u0440\u0438 \u044d\u0442\u043e\u043c \u043e\u043d\u043e \u043e\u0441\u0442\u0430\u0435\u0442\u0441\u044f \u0437\u0435\u043c\u043b\u0435\u0439."
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=211135&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 211135,
+                "name": "\u5954\u817e\u6df1\u8c37",
+                "text": "\u5954\u817e\u6df1\u8c37\u987b\u6a2a\u7f6e\u8fdb\u6218\u573a\u3002\n{T}\uff1a\u52a0{R}\u6216{G}\u5230\u4f60\u7684\u6cd5\u672f\u529b\u6c60\u4e2d\u3002\n{2}{R}{G}\uff1a\u76f4\u5230\u56de\u5408\u7ed3\u675f\uff0c\u5954\u817e\u6df1\u8c37\u6210\u4e3a3/3\u7ea2\u7eff\u53cc\u8272\u7684\u5143\u7d20\u751f\u7269\uff0c\u5e76\u5177\u6709\u300c\u6bcf\u5f53\u6b64\u751f\u7269\u653b\u51fb\u65f6\uff0c\u5728\u5176\u4e0a\u653e\u7f6e\u4e00\u4e2a+1/+1\u6307\u793a\u7269\u3002\u300d \u5b83\u4ecd\u7136\u662f\u5730\u3002"
+            }
+        ],
+        "hand": null,
+        "id": "9b9fff36-2dc1-5143-aef4-cf81c8575c81",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=177583&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": null,
+        "multiverse_id": 177583,
+        "name": "Raging Ravine",
+        "name_id": "Raging Ravine_9b9fff36-2dc1-5143-aef4-cf81c8575c81",
+        "names": null,
+        "number": "141",
+        "original_text": "Raging Ravine enters the battlefield tapped.\n{T}: Add {R} or {G} to your mana pool.\n{2}{R}{G}: Until end of turn, Raging Ravine becomes a 3/3 red and green Elemental creature with \"Whenever this creature attacks, put a +1/+1 counter on it.\" It's still a land.",
+        "original_type": "Land",
+        "power": null,
+        "printings": [
+            "PUMA",
+            "UMA",
+            "WWK"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2010-03-01",
+                "text": "A land that becomes a creature may be affected by \u201csummoning sickness.\u201d You can\u2019t attack with it or use any of its {T} abilities (including its mana abilities) unless it began your most recent turn on the battlefield under your control. Note that summoning sickness cares about when that permanent came under your control, not when it became a creature."
+            },
+            {
+                "date": "2010-03-01",
+                "text": "When a land becomes a creature, that doesn\u2019t count as having a creature enter the battlefield. The permanent was already on the battlefield; it only changed its types. Abilities that trigger whenever a creature enters the battlefield won\u2019t trigger."
+            },
+            {
+                "date": "2018-12-07",
+                "text": "Each time you activate Raging Ravine\u2019s last ability, it gains an instance of the triggered ability. For example, if you activate the last ability twice and then attack with Raging Ravine, both of the triggered abilities it gained will trigger. It will get a total of two +1/+1 counters."
+            },
+            {
+                "date": "2018-12-07",
+                "text": "Any +1/+1 counters put on Raging Ravine remain on it even after it stops being a creature. They\u2019ll have no effect until it becomes a creature again."
+            }
+        ],
+        "set": "WWK",
+        "set_name": "Worldwake",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "Raging Ravine enters the battlefield tapped.\n{T}: Add {R} or {G}.\n{2}{R}{G}: Until end of turn, Raging Ravine becomes a 3/3 red and green Elemental creature with \"Whenever this creature attacks, put a +1/+1 counter on it.\" It's still a land.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Land",
+        "types": [
+            "Land"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

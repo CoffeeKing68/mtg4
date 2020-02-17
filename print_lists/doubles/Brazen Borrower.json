@@ -1,0 +1,64 @@
+[
+    {
+        "artist": "Iris Compiet",
+        "border": null,
+        "cmc": 3.0,
+        "color_identity": [
+            "U"
+        ],
+        "colors": [
+            "Blue"
+        ],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "973fb2bb-f6ce-5639-b282-25a62dbb6dd6",
+        "image_url": null,
+        "layout": "adventure",
+        "legalities": [
+            {
+                "format": "Future",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{1}{U}{U}",
+        "multiverse_id": null,
+        "name": "Brazen Borrower",
+        "name_id": "Brazen Borrower_973fb2bb-f6ce-5639-b282-25a62dbb6dd6",
+        "names": [
+            "Brazen Borrower",
+            "Petty Theft"
+        ],
+        "number": "281",
+        "original_text": null,
+        "original_type": null,
+        "power": "3",
+        "printings": [
+            "CELD",
+            "ELD"
+        ],
+        "rarity": "Mythic",
+        "release_date": null,
+        "rulings": [],
+        "set": "CELD",
+        "set_name": "ELD Collector Boosters",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Faerie",
+            "Rogue"
+        ],
+        "supertypes": [],
+        "text": "Flash\nFlying\nBrazen Borrower can block only creatures with flying.",
+        "timeshifted": null,
+        "toughness": "1",
+        "type": "Creature \u2014 Faerie Rogue",
+        "types": [
+            "Creature"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

@@ -7,6 +7,10 @@ from wand.color import Color
 from wand.image import Image
 from wand.drawing import Drawing
 
+from TextReplacer import TextMapper 
+
+from pprint import pprint
+
 class Rules():
     def __init__(self, string):
         self.string = string
@@ -16,6 +20,7 @@ class Rules():
 
     def __str__(self):
         return "Rules:\n" + "\n".join([f" {i} {p.__str__()}" for i, p in enumerate(self.paragraphs)])
+
 
 class Paragraph():
     pmana = re.compile("{.+?}")
@@ -38,7 +43,8 @@ class Paragraph():
                 mital = Paragraph.pital.search(t)
                 mitalend = Paragraph.pitalend.search(t)
 
-                matches = sorted([mmana, mital, mitalend], key=lambda m: len(t) + 1 if m is None else m.start())
+                matches = sorted([mmana, mital, mitalend], key=lambda m: len(
+                    t) + 1 if m is None else m.start())
                 match = matches[0]
 
                 if match is None:
@@ -46,9 +52,10 @@ class Paragraph():
                     t = ""
                 else:
                     if match.start() > 0:
-                        w.append(ItalicsText(t[:match.start()]) if ital else Text(t[:match.start()]))
+                        w.append(ItalicsText(t[:match.start()])
+                                 if ital else Text(t[:match.start()]))
 
-                    if match.group()[0] == "{": # Mana
+                    if match.group()[0] == "{":  # Mana
                         w.append(ManaText(t[match.start():match.end()]))
                         t = t[match.end():]
                     elif match.group() == "<i>":
@@ -58,7 +65,8 @@ class Paragraph():
                             ital = True
                             t = ""
                         else:
-                            w.append(ItalicsText(t[match.end():match1.start()]))
+                            w.append(ItalicsText(
+                                t[match.end():match1.start()]))
                             if match1.group() == "</i>":
                                 t = t[match1.end():]
                             else:
@@ -68,6 +76,7 @@ class Paragraph():
                         ital = False
 
             self.words.append([ww for ww in w if ww.string])
+
 
 class Text():
     def __init__(self, string):
@@ -82,10 +91,12 @@ class Text():
     def __str__(self):
         return f"{self.__class__.__name__}: '{self.string}'"
 
+
 class ItalicsText(Text):
     pass
     # def __str__(self):
     #     return f"ItalicsText: {self.string}"
+
 
 class ManaText(Text):
     def __init__(self, string):
@@ -102,7 +113,7 @@ class ManaText(Text):
 
 class ManaCost(PointLayer):
     def __init__(self, name, *args, mana_size=35, mana_gap=2, font=None,
-            font_size=None, font_color=None, **kwargs):
+                 font_size=None, font_color=None, **kwargs):
         self.mana_size = mana_size
         self.mana_gap = mana_gap
         self.font = font
@@ -113,12 +124,13 @@ class ManaCost(PointLayer):
         super().__init__(name, *args, **kwargs)
 
     def render(self, fresh=False):
-        if not fresh and self.pre_render is not None: # if fresh is false and there is a pre_render
+        if not fresh and self.pre_render is not None:  # if fresh is false and there is a pre_render
             return self.pre_render
         if self.content is not None:
             self.mana = ManaText.getManaList(self.content)
             # width = (len(self.mana) * (self.mana_gap + self.mana_size)) - self.mana_gap
-            width = int(len(self.mana) * (self.mana_gap + self.mana_size)) + 100
+            width = int(len(self.mana) *
+                        (self.mana_gap + self.mana_size)) + 100
             height = int(self.mana_size) + 100
             image = Image(width=width, height=height)
             # antialias = False
@@ -126,7 +138,7 @@ class ManaCost(PointLayer):
             offset = 0
             for mana in self.mana:
                 if mana.mana_string == "DoubleSlash":
-                     with Drawing() as draw:
+                    with Drawing() as draw:
                         # draw.font = "Arial"
                         # draw.font_size = self.mana_size * 1.4
                         # draw.fill_color = Color("White")
@@ -134,27 +146,30 @@ class ManaCost(PointLayer):
                         draw.font_size = self.font_size
                         draw.fill_color = self.font_color
                         with Image(width=1, height=1) as img:
-                            tw = int(draw.get_font_metrics(img, "//").text_width)
+                            tw = int(draw.get_font_metrics(
+                                img, "//").text_width)
                         draw.text(offset - 1, self.mana_size, "//")
                         draw(image)
                         offset += tw - 1
                 else:
                     msrc = join(self.template.resource_dir, self.template.mana_image_format,
-                        f"{mana.mana_string}.{self.template.mana_image_format}")
+                                f"{mana.mana_string}.{self.template.mana_image_format}")
                     mana_image = Image(width=self.mana_size, height=self.mana_size,
-                        background=Color("Transparent"), filename=msrc, resolution=300)
+                                       background=Color("Transparent"), filename=msrc, resolution=300)
                     image.composite(mana_image, left=offset, top=0)
                     offset += self.mana_size + self.mana_gap
             image.trim()
             self.pre_render = image
             return image
         else:
-            raise NotReadyToRenderError(f"{self.name} is not ready to render right now.")
+            raise NotReadyToRenderError(
+                f"{self.name} is not ready to render right now.")
+
 
 class RulesText(XDefinedLayer):
     def __init__(self, name, font=None, italics_font=None, size=None,
-            color=None, mana_size=None, line_gap=None, word_gap=5, mana_gap=2,
-            paragraph_gap=2, *args, **kwargs):
+                 color=None, mana_size=None, line_gap=None, word_gap=5, mana_gap=2,
+                 paragraph_gap=2, *args, **kwargs):
         self.font = font
         self.italics_font = italics_font
         self.size = size
@@ -181,28 +196,30 @@ class RulesText(XDefinedLayer):
     def get_text_width(self, text):
         with Drawing() as draw:
             draw.font = self.font
-            if type(text) != Text: # if italics
+            if type(text) != Text:  # if italics
                 draw.font = self.italics_font
             draw.font_size = self.size
             with Image(width=1, height=1) as img:
                 return draw.get_font_metrics(img, text.string).text_width
 
     def render(self, fresh=False):
-        if not fresh and self.pre_render is not None: # if fresh is false and there is a pre_render
+        if not fresh and self.pre_render is not None:  # if fresh is false and there is a pre_render
             return self.pre_render
         if self.content is None:
-            raise NotReadyToRenderError(f"{self.name} is not ready to render right now.")
-        self.rules = Rules(self.content)
-        self.x.update_bounds() # set width TODO maybe remove this
+            raise NotReadyToRenderError(
+                f"{self.name} is not ready to render right now.")
+        replacer = TextMapper()
+        self.rules = Rules(replacer.map(self.content).formattedText)
+        self.x.update_bounds()  # set width TODO maybe remove this
         r = []
         Y = 0
         for paragraph in self.rules.paragraphs:
             p = []
             s = []
-            X = 0 # New line
+            X = 0  # New line
             for word in paragraph.words:
                 WW = self.get_word_width(word)
-                if X + WW + self.word_gap > self["width"]: # overflow on width
+                if X + WW + self.word_gap > self["width"]:  # overflow on width
                     X = WW
                     Y += self.line_gap
                     p.append(s)
@@ -215,7 +232,7 @@ class RulesText(XDefinedLayer):
             r.append(p)
 
         image = Image(background=Color("Transparent"), width=int(self["width"]),
-            height=int(Y+self.size+100))
+                      height=int(Y+self.size+100))
         CY = self.size + 20
         for p in r:
             for s in p:
@@ -227,24 +244,26 @@ class RulesText(XDefinedLayer):
                         if isinstance(text, ManaText):
                             # not last text item in word and next text is mana
                             mana_image = Image(width=self.mana_size, height=self.mana_size,
-                                filename=join(self.template.resource_dir,
-                                    self.template.mana_image_format,
-                                    f"{text.mana_string}.{self.template.mana_image_format}"),
-                                background=Color("Transparent"))
+                                               filename=join(self.template.resource_dir,
+                                                             self.template.mana_image_format,
+                                                             f"{text.mana_string}.{self.template.mana_image_format}"),
+                                               background=Color("Transparent"))
                             mana_image.antialias = True
-                            image.composite(mana_image, left=CX, top=CY - self.mana_size + 2)
+                            image.composite(mana_image, left=CX,
+                                            top=CY - self.mana_size + 2)
                             if i < len(w) - 1 and isinstance(w[i + 1], ManaText):
                                 CX += 2
                             CX += self.mana_size
                         else:
                             with Drawing() as draw:
                                 draw.font = self.font
-                                if type(text) != Text: # if italics
+                                if type(text) != Text:  # if italics
                                     draw.font = self.italics_font
                                 draw.font_size = self.size
                                 draw.fill_color = self.color
                                 with Image(width=1, height=1) as img:
-                                    tw = int(draw.get_font_metrics(img, text.string).text_width)
+                                    tw = int(draw.get_font_metrics(
+                                        img, text.string).text_width)
                                 draw.text(CX, CY, text.string)
                                 draw(image)
                                 CX += tw

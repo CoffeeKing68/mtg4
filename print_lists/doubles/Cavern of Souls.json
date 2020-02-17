@@ -1,0 +1,98 @@
+[
+    {
+        "artist": "Richard Wright",
+        "border": null,
+        "cmc": 0.0,
+        "color_identity": [],
+        "colors": [],
+        "flavor": null,
+        "foreign_names": [
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=426555&type=card",
+                "language": "Japanese",
+                "multiverseid": 426555,
+                "name": "\u9b42\u306e\u6d1e\u7a9f",
+                "text": "\u9b42\u306e\u6d1e\u7a9f\u304c\u6226\u5834\u306b\u51fa\u308b\u306b\u969b\u3057\u3001\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\u30fb\u30bf\u30a4\u30d7\uff11\u3064\u3092\u9078\u3076\u3002\n{T}\uff1a\u3042\u306a\u305f\u306e\u30de\u30ca\u30fb\u30d7\u30fc\u30eb\u306b{C}\u3092\u52a0\u3048\u308b\u3002\n{T}\uff1a\u3042\u306a\u305f\u306e\u30de\u30ca\u30fb\u30d7\u30fc\u30eb\u306b\u3001\u597d\u304d\u306a\u8272\uff11\u8272\u306e\u30de\u30ca\uff11\u70b9\u3092\u52a0\u3048\u308b\u3002\u3053\u306e\u30de\u30ca\u306f\u3001\u9078\u3070\u308c\u305f\u30bf\u30a4\u30d7\u306e\u30af\u30ea\u30fc\u30c1\u30e3\u30fc\u30fb\u546a\u6587\u3092\u5531\u3048\u308b\u305f\u3081\u306b\u306e\u307f\u4f7f\u7528\u3067\u304d\u3001\u305d\u306e\u546a\u6587\u306f\u6253\u3061\u6d88\u3055\u308c\u306a\u3044\u3002"
+            },
+            {
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=426306&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 426306,
+                "name": "\u7075\u9b42\u6d1e\u7a9f",
+                "text": "\u4e8e\u7075\u9b42\u6d1e\u7a9f\u8fdb\u6218\u573a\u65f6\uff0c\u9009\u62e9\u4e00\u4e2a\u751f\u7269\u7c7b\u522b\u3002\n{T}\uff1a\u52a0{C}\u5230\u4f60\u7684\u6cd5\u672f\u529b\u6c60\u4e2d\u3002\n{T}\uff1a\u52a0\u4e00\u70b9\u4efb\u610f\u989c\u8272\u7684\u6cd5\u672f\u529b\u5230\u4f60\u7684\u6cd5\u672f\u529b\u6c60\u4e2d\u3002\u6b64\u6cd5\u672f\u529b\u53ea\u80fd\u7528\u6765\u65bd\u653e\u8be5\u7c7b\u522b\u7684\u751f\u7269\u5492\u8bed\uff0c\u4e14\u8be5\u5492\u8bed\u4e0d\u80fd\u88ab\u53cd\u51fb\u3002"
+            }
+        ],
+        "hand": null,
+        "id": "5753a6c6-cfbf-5111-a7ef-cfcc6c11fe48",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=426057&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": null,
+        "multiverse_id": 426057,
+        "name": "Cavern of Souls",
+        "name_id": "Cavern of Souls_5753a6c6-cfbf-5111-a7ef-cfcc6c11fe48",
+        "names": null,
+        "number": "232",
+        "original_text": "As Cavern of Souls enters the battlefield, choose a creature type.\n{T}: Add {C} to your mana pool.\n{T}: Add one mana of any color to your mana pool. Spend this mana only to cast a creature spell of the chosen type, and that spell can't be countered.",
+        "original_type": "Land",
+        "power": null,
+        "printings": [
+            "AVR",
+            "MM3",
+            "PUMA",
+            "UMA"
+        ],
+        "rarity": "Mythic",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2018-12-07",
+                "text": "You must choose an existing creature type, such as Human or Warrior. Card types such as artifact can\u2019t be chosen."
+            },
+            {
+                "date": "2018-12-07",
+                "text": "The spell can\u2019t be countered if the mana produced by Cavern of Souls is spent to cover any cost of the spell, even an additional cost such as a kicker cost. This is true even if you use the mana to pay an additional cost while casting a spell \u201cwithout paying its mana cost.\u201d"
+            }
+        ],
+        "set": "MM3",
+        "set_name": "Modern Masters 2017",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "As Cavern of Souls enters the battlefield, choose a creature type.\n{T}: Add {C}.\n{T}: Add one mana of any color. Spend this mana only to cast a creature spell of the chosen type, and that spell can't be countered.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Land",
+        "types": [
+            "Land"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

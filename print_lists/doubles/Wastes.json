@@ -1,0 +1,103 @@
+[
+    {
+        "artist": "Raymond Swanland",
+        "border": null,
+        "cmc": 0.0,
+        "color_identity": [],
+        "colors": [],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "6cf785c7-6bd9-57e7-b269-8c4cf71059ff",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=407695&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Pauper",
+                "legality": "Legal"
+            },
+            {
+                "format": "Penny",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": null,
+        "multiverse_id": 407695,
+        "name": "Wastes",
+        "names": null,
+        "number": "184a",
+        "original_text": "C",
+        "original_type": "Basic Land",
+        "power": null,
+        "printings": [
+            "OGW"
+        ],
+        "rarity": "Common",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2016-01-22",
+                "text": "The mana ability of Wastes doesn\u2019t appear on the printed cards, but it is in its official Oracle text. (A card\u2019s Oracle text (in English) can be found using the Gatherer card database at Gatherer.Wizards.com.) The printed cards display a large colorless mana symbol in a design that\u2019s similar to other basic land cards."
+            },
+            {
+                "date": "2016-01-22",
+                "text": "Because Wastes is a basic land, you can include as many of them as you like in your Constructed decks."
+            },
+            {
+                "date": "2016-01-22",
+                "text": "In Limited events (including Sealed Deck and Booster Draft), Wastes must be in your card pool to be included in your deck. You can\u2019t add Wastes to your card pool in the same way that you can add other basic lands."
+            },
+            {
+                "date": "2016-01-22",
+                "text": "Wastes is not a land type. If something asks you to name a land type, you can\u2019t choose Wastes."
+            },
+            {
+                "date": "2016-01-22",
+                "text": "Similarly, colorless is not a color. If something asks you to choose a color, you can\u2019t choose colorless."
+            }
+        ],
+        "set": "OGW",
+        "set_name": "Oath of the Gatewatch",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [
+            "Basic"
+        ],
+        "text": "{T}: Add {C}.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Basic Land",
+        "types": [
+            "Land"
+        ],
+        "variations": [
+            "6d342da8-9fdf-54a6-b18b-39c025b23fcf",
+            "2e818035-0257-52b4-a1ca-adac65a337f8",
+            "1ee4a08c-d4bb-5798-bb9c-671e1617fe5f"
+        ],
+        "watermark": null
+    }
+]

@@ -31,14 +31,14 @@ def makeCopyofError(now=None):
     return dest
 
 text_fields = ["text", "original_text"]
-class Transform():
+# class Transform():
     def __init__(self, path):
         self.path = path
 
     def map(self):
         cards = jsonLoadFrom(self.path)
         new_cards = []
-        for card in cards:
+        for card in cards:self
             for rep in self.transformations().values():
                 for field in rep.fields:
                     if card[field] is not None:
@@ -70,7 +70,15 @@ class Transform():
             "monstrous": Rep(r"(Monstrosity .*)(?<!<i>)(\(If this creature isn't monstrous.*and it becomes monstrous\.\))(?<!</i>)", r"\1<i>\2</i>", text_fields),
             "planeswalker": PlaneswalkerRep(),
             "phyrexian_mana": Rep(r"(?<!<i>)(\(\{.+\} can be paid with either.+life\.\))(?<!</i>)", r"<i>\1</i>", text_fields),
-            "retrace": Rep(r"([R|r]etrace.*)(?<!<i>)(\(You may cast instant and sorcery cards from your graveyard by discarding a land card in addition to paying their other costs\.\))(?<!</i>)", r"\1<i>\2</i>", text_fields)
+            "retrace": Rep(r"([R|r]etrace.*)(?<!<i>)(\(You may cast instant and sorcery cards from your graveyard by discarding a land card in addition to paying their other costs\.\))(?<!</i>)", r"\1<i>\2</i>", text_fields),
+            "devoid": Rep(r"([D|d]evoid.*)(?<!<i>)(\(This card has no color.\))(?<!</i>)", r"\1<i>\2</i>", text_fields),
+            "colorless_mana": Rep(r"(?<!<i>)(\(\{C\} represents colorless mana.\))(?<!</i>)", r"<i>\1</i>", text_fields),
+            "landwalk": Rep(r"(walk.*)(?<!<i>)(\(\D+ be blocked as long as defending player controls a\D+\.\))(?<!</i>)", 
+                r"\1<i>\2</i>", text_fields),
+            "colorless_cards": Rep(r"(?<!<i>)(\((Cards with no colored mana in their mana costs are colorless\D*\.)\))(?<!</i>)",
+                r"<i>\1</i>", text_fields),
+            "exalted": Rep(r"([E|e]xalted.*)(?<!<i>)(\(Whenever a creature you control attacks alone, that creature gets \+1/\+1 until end of turn\.\))(?<!</i>)",
+                r"\1<i>\2</i>", text_fields),
         }
 
 class Rep():
@@ -98,14 +106,14 @@ class PlaneswalkerRep():
 
 
 def main():
-    # makeErrorJson(join("print_lists", "errors.txt"))
-    # new = join("print_lists", "errors_2019-12-08 16/19/58.263690.json")
+        # makeErrorJson(join("print_lists", "errors.txt"))
     new = makeCopyofError("errors_new.json")
     # print(new)
     trans = Transform(new)
     new_cards = trans.map()
 
-    jsonDumpTo(new_cards, join("print_lists", "errors_transformed.json"))
+    pprint(new_cards[15]["text"])
+    jsonDumpTo(new_cards, new)
 
 if __name__ == "__main__":
     main()

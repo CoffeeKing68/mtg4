@@ -1,0 +1,85 @@
+[
+    {
+        "artist": "James Ryman",
+        "border": null,
+        "cmc": 1.0,
+        "color_identity": [
+            "B"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "2654ecd8-82ca-596a-996c-1c67703cc632",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=430680&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": "{B}",
+        "multiverse_id": 430680,
+        "name": "Thoughtseize",
+        "name_id": "Thoughtseize_2654ecd8-82ca-596a-996c-1c67703cc632",
+        "names": null,
+        "number": "45",
+        "original_text": "Target player reveals his or her hand. You choose a nonland card from it. That player discards that card. You lose 2 life.",
+        "original_type": "Sorcery",
+        "power": null,
+        "printings": [
+            "IMA",
+            "LRW",
+            "MP2",
+            "THS"
+        ],
+        "rarity": "Mythic",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2013-09-15",
+                "text": "The loss of life is part of the spell\u2019s effect. It\u2019s not an additional cost. If Thoughtseize doesn\u2019t resolve, you won\u2019t lose life."
+            },
+            {
+                "date": "2014-02-01",
+                "text": "If you target yourself with this spell, you must reveal your entire hand to the other players just as any other player would."
+            }
+        ],
+        "set": "MP2",
+        "set_name": "Amonkhet Invocations",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "Target player reveals their hand. You choose a nonland card from it. That player discards that card. You lose 2 life.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Sorcery",
+        "types": [
+            "Sorcery"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

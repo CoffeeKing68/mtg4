@@ -58,7 +58,7 @@
     },
     {
         "code": "ELD",
-        "count": 356
+        "count": 269
     },
     {
         "code": "KTK",
@@ -146,7 +146,7 @@
     },
     {
         "code": "SOI",
-        "count": 302
+        "count": 297
     },
     {
         "code": "G09",
@@ -185,10 +185,6 @@
         "count": 1
     },
     {
-        "code": "AKH",
-        "count": 287
-    },
-    {
         "code": "DIS",
         "count": 180
     },
@@ -207,5 +203,41 @@
     {
         "code": "SS2",
         "count": 8
+    },
+    {
+        "code": "10E",
+        "count": 383
+    },
+    {
+        "code": "CELD",
+        "count": 269
+    },
+    {
+        "code": "C17",
+        "count": 309
+    },
+    {
+        "code": "MPS",
+        "count": 54
+    },
+    {
+        "code": "J18",
+        "count": 8
+    },
+    {
+        "code": "OGW",
+        "count": 186
+    },
+    {
+        "code": "M13",
+        "count": 54
+    },
+    {
+        "code": "PBFZ",
+        "count": 78
+    },
+    {
+        "code": "PRW2",
+        "count": 10
     }
 ]

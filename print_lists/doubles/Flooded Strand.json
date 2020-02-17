@@ -1,0 +1,75 @@
+[
+    {
+        "artist": "V\u00e9ronique Meignaud",
+        "border": null,
+        "cmc": 0.0,
+        "color_identity": [],
+        "colors": [],
+        "flavor": null,
+        "foreign_names": [],
+        "hand": null,
+        "id": "72989c4b-fb0f-5e44-88af-1278decbf0e6",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=405098&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": null,
+        "multiverse_id": 405098,
+        "name": "Flooded Strand",
+        "names": null,
+        "number": "16",
+        "original_text": "{T}, Pay 1 life, Sacrifice Flooded Strand: Search your library for a Plains or Island card and put it onto the battlefield. Then shuffle your library.",
+        "original_type": "Land",
+        "power": null,
+        "printings": [
+            "EXP",
+            "G09",
+            "KTK",
+            "ONS",
+            "PNAT",
+            "PRM",
+            "WC03",
+            "WC04"
+        ],
+        "rarity": "Mythic",
+        "release_date": null,
+        "rulings": [],
+        "set": "EXP",
+        "set_name": "Zendikar Expeditions",
+        "source": null,
+        "starter": null,
+        "subtypes": [],
+        "supertypes": [],
+        "text": "{T}, Pay 1 life, Sacrifice Flooded Strand: Search your library for a Plains or Island card, put it onto the battlefield, then shuffle your library.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Land",
+        "types": [
+            "Land"
+        ],
+        "variations": null,
+        "watermark": null
+    }
+]

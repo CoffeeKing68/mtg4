@@ -1,0 +1,180 @@
+[
+    {
+        "artist": "Jedd Chevrier",
+        "border": null,
+        "cmc": 0.0,
+        "color_identity": [
+            "U",
+            "W"
+        ],
+        "colors": [],
+        "flavor": "The ever-watchful center of a growing web of eyes.",
+        "foreign_names": [
+            {
+                "flavor": "Das wachsame Zentrum eines stets wachsenden Netzwerks aus Beobachtern.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=457654&type=card",
+                "language": "German",
+                "multiverseid": 457654,
+                "name": "Geheiligter Springbrunnen",
+                "text": "({T}: Erzeuge {W} oder {U}.)\nSowie der Geheiligte Springbrunnen ins Spiel kommt, kannst du 2 Lebenspunkte bezahlen. Falls du dies nicht tust, kommt er getappt ins Spiel."
+            },
+            {
+                "flavor": "El centro siempre vigilante de una creciente red de ojos.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=457913&type=card",
+                "language": "Spanish",
+                "multiverseid": 457913,
+                "name": "Fuente consagrada",
+                "text": "({T}: Agrega {W} o {U}.)\nEn cuanto la Fuente consagrada entre al campo de batalla, puedes pagar 2 vidas. Si no lo haces, entra al campo de batalla girada."
+            },
+            {
+                "flavor": "Le centre toujours alerte d'un r\u00e9seau d'yeux grandissant.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=458172&type=card",
+                "language": "French",
+                "multiverseid": 458172,
+                "name": "Fontaine sacr\u00e9e",
+                "text": "({T} : Ajoutez {W} ou {U}.)\nAu moment o\u00f9 la Fontaine sacr\u00e9e arrive sur le champ de bataille, vous pouvez payer 2 points de vie. Si vous ne le faites pas, elle arrive sur le champ de bataille engag\u00e9e."
+            },
+            {
+                "flavor": "Il centro sempre vigile di una rete di occhi in continua crescita.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=458431&type=card",
+                "language": "Italian",
+                "multiverseid": 458431,
+                "name": "Fontana Santificata",
+                "text": "({T}: Aggiungi {W} o {U}.)\nMentre la Fontana Santificata entra nel campo di battaglia, puoi pagare 2 punti vita. Se non lo fai, entra nel campo di battaglia TAPpata."
+            },
+            {
+                "flavor": "\u7d76\u3048\u305a\u76e3\u8996\u3092\u7d9a\u3051\u308b\u3001\u62e1\u5927\u3059\u308b\u76ee\u306e\u7db2\u306e\u4e2d\u5fc3\u3002",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=458690&type=card",
+                "language": "Japanese",
+                "multiverseid": 458690,
+                "name": "\u795e\u8056\u306a\u308b\u6cc9",
+                "text": "\uff08{T}\uff1a{W}\u304b{U}\u3092\u52a0\u3048\u308b\u3002\uff09\n\u795e\u8056\u306a\u308b\u6cc9\u304c\u6226\u5834\u306b\u51fa\u308b\u306b\u969b\u3057\u3001\u3042\u306a\u305f\u306f\uff12\u70b9\u306e\u30e9\u30a4\u30d5\u3092\u652f\u6255\u3063\u3066\u3082\u3088\u3044\u3002\u305d\u3046\u3057\u306a\u3044\u306a\u3089\u3001\u3053\u308c\u306f\u30bf\u30c3\u30d7\u72b6\u614b\u3067\u6226\u5834\u306b\u51fa\u308b\u3002"
+            },
+            {
+                "flavor": "\uac10\uc2dc\ub97c \ub2a6\ucd94\uc9c0 \uc54a\ub294 \ube5b\ub098\ub294 \ub208\ub4e4\ub85c \ub9cc\ub4e4\uc5b4\uc9c4 \uadf8\ubb3c\uc758 \uc815\uc911\uc559.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=458949&type=card",
+                "language": "Korean",
+                "multiverseid": 458949,
+                "name": "\uc2e0\uc131\ud55c \ubd84\uc218\ub300",
+                "text": "({T}: {W} \ub610\ub294 {U}\ub97c \ucd94\uac00\ud55c\ub2e4.)\n\uc2e0\uc131\ud55c \ubd84\uc218\ub300\uac00 \uc804\uc7a5\uc5d0 \ub4e4\uc5b4\uc624\uba74\uc11c, \ub2f9\uc2e0\uc740 \uc0dd\uba85 2\uc810\uc744 \uc9c0\ubd88\ud560 \uc218 \uc788\ub2e4. \uadf8\ub7ec\uc9c0 \uc54a\uc73c\uba74, \uc2e0\uc131\ud55c \ubd84\uc218\ub300\ub294 \ud0ed\ub41c \ucc44\ub85c \uc804\uc7a5\uc5d0 \ub4e4\uc5b4\uc628\ub2e4."
+            },
+            {
+                "flavor": "O centro sempre vigilante de uma teia crescente de olhos.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=459208&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 459208,
+                "name": "Fonte Santificada",
+                "text": "{T}: Adicione {W} ou {U}.\nConforme Fonte Santificada entra no campo de batalha, voc\u00ea pode pagar 2 pontos de vida. Se n\u00e3o fizer isso, ela entrar\u00e1 no campo de batalha virada."
+            },
+            {
+                "flavor": "\u0412\u0441\u0435\u0432\u0438\u0434\u044f\u0449\u0435\u0435 \u044f\u0434\u0440\u043e \u0440\u0430\u0441\u0442\u0443\u0449\u0435\u0439 \u043f\u0430\u0443\u0442\u0438\u043d\u044b \u0433\u043b\u0430\u0437.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=459467&type=card",
+                "language": "Russian",
+                "multiverseid": 459467,
+                "name": "\u041e\u0441\u0432\u044f\u0449\u0435\u043d\u043d\u044b\u0439 \u0424\u043e\u043d\u0442\u0430\u043d",
+                "text": "({T}: \u0434\u043e\u0431\u0430\u0432\u044c\u0442\u0435 {W} \u0438\u043b\u0438 {U}.)\n\u041f\u0440\u0438 \u0432\u044b\u0445\u043e\u0434\u0435 \u041e\u0441\u0432\u044f\u0449\u0435\u043d\u043d\u043e\u0433\u043e \u0424\u043e\u043d\u0442\u0430\u043d\u0430 \u043d\u0430 \u043f\u043e\u043b\u0435 \u0431\u0438\u0442\u0432\u044b, \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0437\u0430\u043f\u043b\u0430\u0442\u0438\u0442\u044c 2 \u0436\u0438\u0437\u043d\u0438. \u0415\u0441\u043b\u0438 \u0432\u044b \u044d\u0442\u043e\u0433\u043e \u043d\u0435 \u0434\u0435\u043b\u0430\u0435\u0442\u0435, \u043e\u043d \u0432\u044b\u0445\u043e\u0434\u0438\u0442 \u043d\u0430 \u043f\u043e\u043b\u0435 \u0431\u0438\u0442\u0432\u044b \u043f\u043e\u0432\u0435\u0440\u043d\u0443\u0442\u044b\u043c."
+            },
+            {
+                "flavor": "\u6269\u5f20\u773c\u7ebf\u7f57\u7f51\u7684\u8b66\u6212\u4e2d\u5fc3\u3002",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=459726&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 459726,
+                "name": "\u5d07\u5723\u55b7\u6cc9",
+                "text": "\uff08{T}\uff1a\u52a0{W}\u6216{U}\u3002\uff09\n\u4e8e\u5d07\u5723\u55b7\u6cc9\u8fdb\u6218\u573a\u65f6\uff0c\u4f60\u53ef\u4ee5\u652f\u4ed82\u70b9\u751f\u547d\u3002\u5982\u679c\u4f60\u672a\u5982\u6b64\u4f5c\uff0c\u5219\u5d07\u5723\u55b7\u6cc9\u987b\u6a2a\u7f6e\u8fdb\u6218\u573a\u3002"
+            },
+            {
+                "flavor": "\u64f4\u5f35\u773c\u7dda\u7f85\u7db2\u7684\u8b66\u6212\u4e2d\u5fc3\u3002",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=459985&type=card",
+                "language": "Chinese Traditional",
+                "multiverseid": 459985,
+                "name": "\u5d07\u8056\u5674\u6cc9",
+                "text": "\uff08{T}\uff1a\u52a0{W}\u6216{U}\u3002\uff09\n\u65bc\u5d07\u8056\u5674\u6cc9\u9032\u6230\u5834\u6642\uff0c\u4f60\u53ef\u4ee5\u652f\u4ed82\u9ede\u751f\u547d\u3002\u5982\u679c\u4f60\u672a\u5982\u6b64\u4f5c\uff0c\u5247\u5d07\u8056\u5674\u6cc9\u9808\u6a6b\u7f6e\u9032\u6230\u5834\u3002"
+            }
+        ],
+        "hand": null,
+        "id": "c50c05e8-3765-5a87-9a3a-15cd33d27e1b",
+        "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=457395&type=card",
+        "layout": "normal",
+        "legalities": [
+            {
+                "format": "Brawl",
+                "legality": "Legal"
+            },
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Future",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Standard",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "life": null,
+        "loyalty": null,
+        "mana_cost": null,
+        "multiverse_id": 457395,
+        "name": "Hallowed Fountain",
+        "names": null,
+        "number": "251",
+        "original_text": "({T}: Add {W} or {U}.)\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "original_type": "Land \u2014 Plains Island",
+        "power": null,
+        "printings": [
+            "DIS",
+            "EXP",
+            "PRM",
+            "RNA",
+            "RTR"
+        ],
+        "rarity": "Rare",
+        "release_date": null,
+        "rulings": [
+            {
+                "date": "2018-10-05",
+                "text": "Unlike most dual lands, this land has two basic land types. It\u2019s not basic, so cards such as District Guide can\u2019t find it, but it does have the appropriate land types for effects such as that of Drowned Catacomb (from the Ixalan set)."
+            },
+            {
+                "date": "2018-10-05",
+                "text": "If an effect puts this land onto the battlefield tapped, you may pay 2 life, but it still enters tapped."
+            }
+        ],
+        "set": "RNA",
+        "set_name": "Ravnica Allegiance",
+        "source": null,
+        "starter": null,
+        "subtypes": [
+            "Plains",
+            "Island"
+        ],
+        "supertypes": [],
+        "text": "({T}: Add {W} or {U}.)\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+        "timeshifted": null,
+        "toughness": null,
+        "type": "Land \u2014 Plains Island",
+        "types": [
+            "Land"
+        ],
+        "variations": null,
+        "watermark": "azorius"
+    }
+]
