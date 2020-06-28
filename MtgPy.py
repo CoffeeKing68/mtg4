@@ -7,7 +7,7 @@ from wand.color import Color
 from wand.image import Image
 from wand.drawing import Drawing
 
-from TextReplacer import TextMapper 
+from TextReplacer import TextMapper
 
 from pprint import pprint
 
@@ -170,6 +170,7 @@ class RulesText(XDefinedLayer):
     def __init__(self, name, font=None, italics_font=None, size=None,
                  color=None, mana_size=None, line_gap=None, word_gap=5, mana_gap=2,
                  paragraph_gap=2, *args, **kwargs):
+        self.rules = []
         self.font = font
         self.italics_font = italics_font
         self.size = size
@@ -209,7 +210,18 @@ class RulesText(XDefinedLayer):
             raise NotReadyToRenderError(
                 f"{self.name} is not ready to render right now.")
         replacer = TextMapper()
+        # full_rules = self.content
+        # print(">>>>> full_rules")
+        # print(repr(full_rules))
+        # formatted_rules = replacer.map(full_rules).formattedText
+        # print(">>>>> formatted_rules")
+        # print(repr(formatted_rules))
+        # print(">>>>> splitlines_rules")
+        # for line in formatted_rules.splitlines():
+        #     print(repr(line))
+        # # print()
         self.rules = Rules(replacer.map(self.content).formattedText)
+        # print(self.rules)
         self.x.update_bounds()  # set width TODO maybe remove this
         r = []
         Y = 0
