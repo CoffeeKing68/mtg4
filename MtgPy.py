@@ -2,7 +2,8 @@ import re
 from os.path import join
 
 from layers.base_layers import XDefinedLayer, PointLayer
-
+from layers.exceptions import NotEvaluatedError, InsufficientBoundsError
+from layers.dimensions import YDimension
 from wand.color import Color
 from wand.image import Image
 from wand.drawing import Drawing
@@ -10,6 +11,7 @@ from wand.drawing import Drawing
 from TextReplacer import TextMapper
 
 from pprint import pprint
+
 
 class Rules():
     def __init__(self, string):
@@ -166,6 +168,39 @@ class ManaCost(PointLayer):
                 f"{self.name} is not ready to render right now.")
 
 
+class RulesLayerYDimension(YDimension):
+    def __init__(self, amount, layer, bounds=None, **attributes):
+        self.idm_mapping = {"base": "base_temporary_value"}
+        for key, value in self.idm_mapping.items():
+            self.mapping[key] = value
+
+        super(YDimension, self).__init__(
+            "y", "YP", self.mapping, amount, layer, bounds, **attributes)
+
+    def update_bounds(self, **kwargs):
+        try:  # go super()
+            super().update_bounds(**kwargs)
+        except InsufficientBoundsError:  # idm bound is set or real InsufficientBoundsError
+            has_idm_attributes = len(
+                set(self.attributes) & set(self.idm_mapping)) > 0
+            if all([a.is_evaluated for a in self.attributes.values()]) and has_idm_attributes and self.layer.pre_render is not None:
+                bottom_base_difference = self.layer.estimated_height - self.layer.pre_render.height
+                # print(bottom_base_difference)
+                # print(self.attributes["base"].evaluated_value)
+                # print(self.layer.content)
+                kwargs["end"] = self.attributes["base"].evaluated_value - \
+                    bottom_base_difference
+                # print(">>>> Final height")
+                # print(self.layer.pre_render.height)
+                # pprint(self.__dict__)
+                # pprint(self.attributes)
+                # pprint(self.mapping)
+                # print(self.idm_mapping)
+                super().update_bounds(**kwargs)
+            else:
+                return None
+
+
 class RulesText(XDefinedLayer):
     def __init__(self, name, font=None, italics_font=None, size=None,
                  color=None, mana_size=None, line_gap=None, word_gap=5, mana_gap=2,
@@ -180,7 +215,10 @@ class RulesText(XDefinedLayer):
         self.line_gap = size if line_gap is None else line_gap
         self.paragraph_gap = paragraph_gap
         self.mana_gap = mana_gap
+        self.estimated_height = 0
         super().__init__(name, *args, **kwargs)
+        self.dimensions["y"] = RulesLayerYDimension(
+            self.y_attributes_required, self, **kwargs)
 
     def get_word_width(self, word):
         WW = 0
@@ -204,11 +242,13 @@ class RulesText(XDefinedLayer):
                 return draw.get_font_metrics(img, text.string).text_width
 
     def render(self, fresh=False):
+        # print(">>>>>>>>> Asked to render")
         if not fresh and self.pre_render is not None:  # if fresh is false and there is a pre_render
             return self.pre_render
         if self.content is None:
             raise NotReadyToRenderError(
                 f"{self.name} is not ready to render right now.")
+
         replacer = TextMapper()
         # full_rules = self.content
         # print(">>>>> full_rules")
@@ -221,7 +261,6 @@ class RulesText(XDefinedLayer):
         #     print(repr(line))
         # # print()
         self.rules = Rules(replacer.map(self.content).formattedText)
-        # print(self.rules)
         self.x.update_bounds()  # set width TODO maybe remove this
         r = []
         Y = 0
@@ -243,6 +282,7 @@ class RulesText(XDefinedLayer):
             Y += self.paragraph_gap + self.line_gap
             r.append(p)
 
+        self.estimated_height = Y
         image = Image(background=Color("Transparent"), width=int(self["width"]),
                       height=int(Y+self.size+100))
         CY = self.size + 20
@@ -277,18 +317,26 @@ class RulesText(XDefinedLayer):
                                     tw = int(draw.get_font_metrics(
                                         img, text.string).text_width)
                                 draw.text(CX, CY, text.string)
+                                # print(f"CY >>>> {CY}")
                                 draw(image)
                                 CX += tw
                 CY += self.line_gap
             CY += self.paragraph_gap
-        self.bottom_base = CY
+        # self.bottom_base = CY
+        # print(f"image.height {image.height}")
+        # print(f"estimated_end {Y}")
+        # print(offset)
         image.trim()
+        # print(image.height)
+        # print("CY - estimated_end")
+        # print(CY - (CY - Y))
+        # print(Y - image.height)
         self.pre_render = image
         return image
 
     def __getitem__(self, key):
         if key == "bottom_base":
-            pass
+            return self.bottom_base
         else:
             return super().__getitem__(key)
 

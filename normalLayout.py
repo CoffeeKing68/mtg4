@@ -146,7 +146,7 @@ class NormalLayout():
             "type": PTL("type", self.BELEREN, self.TYPE_SIZE, self.FC, left=NA(self.BORDER), base=AA(SA("rules.top"), NA(-10))),
             "rules": RulesText("rules", self.MPLANTIN, self.MPLANTIN_ITAL, self.RULES_TEXT_SIZE, self.FC,
                                self.RULES_TEXT_SIZE - 4, left=NA(self.RULES_BORDER), right=NA(self.WIDTH-self.RULES_BORDER),
-                               bottom=AA(SA("rarity.cap"), NA(-10)))}
+                               base=AA(SA("rarity.cap"), NA(-6)))}
 
         adventure_rules = {
             "rules_box": Template("rules_box", *[
@@ -170,7 +170,7 @@ class NormalLayout():
                 ], left=NA(self.RULES_BORDER), right=AA(SA("rules.left"), NA(-10)),
                     ycenter=SA("template.ycenter"), height=SA("null.height")),
             ], left=NA(0), width=NA(self.WIDTH),
-                bottom=AA(SA("self.height"), SA("rarity.cap"), NA(-10),
+                base=AA(SA("self.height"), SA("rarity.cap"), NA(-6),
                           MA(SA("rules.bottom"), SA("adventure_box.bottom"), negative=True)),
                 height=SA("template.height")
             ),
@@ -287,6 +287,7 @@ class NormalLayout():
                                                                     radius=4, color="Black")
             image.composite(render_text_shadow, left=0, top=0)
         render_text = temp.get_layer("text_temp").render()
+        render_text.save(filename="text.png")
         image.composite(render_text, left=0, top=0)
         # END setting content
 

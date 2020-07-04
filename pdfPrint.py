@@ -39,6 +39,8 @@ if __name__ == "__main__":
     
     with open(args.filename, "r") as f:
         deck = json.load(f)
+        deck = sorted(deck, key=lambda c: c["name"])
         # deck = [c for c in deck if c['flavor_name'] == "Tywin, Warden of the West"]
+        # deck = [deck[0]]
         # deck = [c for c in deck if c['flavor_name'] == "Cersei Lannister, Queen Regent"]
         makeCards(deck, args.filename.split('/')[-1].split('.')[0])
