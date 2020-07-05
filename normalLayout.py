@@ -76,7 +76,10 @@ class NormalLayout():
         self.HEIGHT = 1080
         self.WIDTH = 773
 
-        self.SPLIT_HEIGHT = 870 - 460
+        self.SPLIT_CENTER = 460
+        self.SPLIT_END = 870
+        self.SPLIT_HEIGHT = self.SPLIT_END - self.SPLIT_CENTER
+        self.SPLIT_SHADOW_SIZE = 50
 
         self.OUTER_X_BORDER = (self.WIDTH - self.INNER_WIDTH) / 2
         self.TOTAL_Y_BORDER = (self.HEIGHT - self.INNER_HEIGHT)
@@ -150,23 +153,32 @@ class NormalLayout():
             "type": PTL("type", self.BELEREN, self.TYPE_SIZE, self.FC, left=NA(self.BORDER), base=AA(SA("rules.top"), NA(-10))),
             "rules": RulesText("rules", self.MPLANTIN, self.MPLANTIN_ITAL, self.RULES_TEXT_SIZE, self.FC,
                                self.RULES_TEXT_SIZE - 4, left=NA(self.RULES_BORDER), right=NA(self.WIDTH-self.RULES_BORDER),
-                               base=AA(SA("rarity.cap"), NA(-6)))}
+                               base=AA(SA("rarity.cap"), NA(-6)))
+        }
         split_text_layers = {
-            # "split_name": "",
-            # "split_rules": "",
-            # "split_mana_cost": "",
-            # "split_type": "",
+            "split_name": PTL("split_name", self.BELEREN, self.NAME_SIZE, self.FC, left=SA("name.left"),
+                              base=NA(self.SPLIT_CENTER + self.NAME_SIZE)),
+            "split_mana_cost": ManaCost("split_mana_cost", font=self.BELEREN, font_size=self.NAME_SIZE, font_color=self.FC,
+                                        right=SA("mana_cost.right"), bottom=AA(SA("split_name.base"), NA(4))),
+            "split_type": PTL("split_type", self.BELEREN, self.TYPE_SIZE, self.FC, left=SA("type.left"), base=AA(SA("split_rules.top"), NA(-10))),
+            "split_rules": RulesText("split_rules", self.MPLANTIN, self.MPLANTIN_ITAL, self.RULES_TEXT_SIZE, self.FC,
+                                     self.RULES_TEXT_SIZE - 4, left=SA("rules.left"), right=SA("rules.right"),
+                                     base=AA(SA("split_name.cap"), NA(-6)))
         }
 
         split_kwargs = {"left": NA(0), "order": -5,
                         "width": NA(self.B_ART_WIDTH),
                         "height": NA(self.SPLIT_HEIGHT)}
         top_split_kwargs = {
-            **split_kwargs, "YP50": NA((self.B + self.TOP_OUTER_BORDER + 460) / 2)}
-        bottom_split_kwargs = {**split_kwargs, "YP50": NA((460 + 870 - 2) / 2)}
+            **split_kwargs, "YP50": NA((self.B + self.TOP_OUTER_BORDER + self.SPLIT_CENTER) / 2)}
+        bottom_split_kwargs = {
+            **split_kwargs, "YP50": NA((self.SPLIT_CENTER + self.SPLIT_END - 2) / 2)}
+
         split_art_layers = {
-            # "split_divider_top": "",
-            # "split_divider_bottom": "",
+            "split_divider_top": GradL("split_divider_top", start="RGBA(0,0,0,0.0)", end=self.SHADOW_COLOR,
+                                       left=NA(0), width=NA(self.WIDTH), bottom=NA(self.SPLIT_CENTER), height=NA(self.SPLIT_SHADOW_SIZE)),
+            "split_divider_bottom": GradL("split_divider_bottom", start=self.SHADOW_COLOR, end="RGBA(0,0,0,0.0)",
+                                          left=NA(0), width=NA(self.WIDTH), top=NA(self.SPLIT_CENTER - 1), height=NA(self.SPLIT_SHADOW_SIZE)),
             "split_art_top": Mask("split_art_top_mask", FillIL("split_art_top", **top_split_kwargs), **top_split_kwargs),
             "split_art_bottom": Mask("split_art_bottom_mask", FillIL("split_art_bottom", **bottom_split_kwargs), **bottom_split_kwargs)
         }
@@ -286,6 +298,14 @@ class NormalLayout():
                 "split_art_top").content = card["card_faces"][0]["image_location"]
             temp.get_layer(
                 "split_art_bottom").content = card["card_faces"][1]["image_location"]
+            temp.get_layer(
+                "split_name").content = card["card_faces"][1]["name"]
+            temp.get_layer(
+                "split_mana_cost").content = card["card_faces"][1]["mana_cost"]
+            temp.get_layer(
+                "split_type").content = card["card_faces"][0]["type_line"]
+            temp.get_layer(
+                "split_rules").content = card["card_faces"][0]["oracle_text"]
 
         # generic
         if "Creature" in card["type"]:
