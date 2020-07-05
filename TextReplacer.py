@@ -91,8 +91,9 @@ class TextMapper():
             "first_strike": Rep(r"(First strike )(?<!<i>)(\(This creature deals .+ first strike\.\))(?<!</i>)", r"\1<i>\2</i>"),
             "converge": Rep(r"(?<!<i>)(Converge)(?<!</i>)( \u2014 .+ where X is the number of colors of mana spent .+)", r"<i>\1</i>\2"),
             "morph": Rep(r"([M|m]orph .+)(?<!</i>)(\(You may cast this card .+\. Turn it face up any time for its morph cost\.\))(?<!</i>)", r"\1<i>\2</i>"),
-            # "morph": Rep(r"([M|m]orph .+)(?<!</i>)(\(You may cast this card .+\.\))(?<!</i>)", r"\1<i>\2</i>"),
-            
+            "fuse": Rep(r"([F|f]use .*)(?<!</i>)(\(You may cast one or both halves of this card from your hand.\))(?<!</i>)", r"\1<i>\2</i>"),
+            "aftermath": Rep(r"([A|a]ftermath .*)(?<!</i>)(\(Cast this spell only from your graveyard. Then exile it.\))(?<!</i>)", r"\1<i>\2</i>"),
+
             # "remove_partner_with": Rep(r"(Partner with .+)( <i>\(When this .+\.\)</i>)", r"\1"),
             "remove_partner_with": Rep(r"(Partner with .+)( <i>\(When this .+\.\)</i>)", r"\1"),
         }
@@ -128,6 +129,7 @@ class TextMapper():
                         newText[i].append(RegularText(word))
         return newText
 
+
 def test_replacement(mechanic, index, flavor=False):
     if flavor:
         tests = flavor_tests
@@ -135,7 +137,7 @@ def test_replacement(mechanic, index, flavor=False):
         tests = rules_tests
     replacer = TextMapper()
     print(repr(replacer.map(tests[mechanic][index][0], flavor).formattedText))
-    
+
     equals = []
     for i, (before, after) in enumerate(tests[mechanic]):
         print(i)
@@ -148,8 +150,9 @@ def test_replacement(mechanic, index, flavor=False):
         equals.append(eq)
     print(all(equals))
 
+
 if __name__ == "__main__":
-    flavor_tests= {
+    flavor_tests = {
         "flavor_dash": [
             [
                 "\"Only the weak imprison themselves behind walls. We live free under the wind, and our freedom makes us strong.\" \u2014Zurgo, khan of the Mardu",
@@ -204,9 +207,20 @@ if __name__ == "__main__":
                 "Create five 1/1 white Human creature tokens. If this spell was cast from a graveyard, create ten of those tokens instead.\nFlashback {7}{W}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
                 "Create five 1/1 white Human creature tokens. If this spell was cast from a graveyard, create ten of those tokens instead.\nFlashback {7}{W}{W} <i>(You may cast this card from your graveyard for its flashback cost. Then exile it.)</i>",
             ]
+        ],
+        "fuse": [
+            [
+                "Destroy target artifact.\nFuse (You may cast one or both halves of this card from your hand.)",
+                "Destroy target artifact.\nFuse <i>(You may cast one or both halves of this card from your hand.)</i>",
+            ]
+        ],
+        "aftermath":[
+            [
+                "Aftermath (Cast this spell only from your graveyard. Then exile it.)\nTap up to two target creatures your opponents control. Creatures you control gain vigilance until end of turn.",
+                "Aftermath <i>(Cast this spell only from your graveyard. Then exile it.)</i>\nTap up to two target creatures your opponents control. Creatures you control gain vigilance until end of turn.",
+            ]
         ]
     }
-    
-    test_replacement("flashback", 0, False)
+
+    test_replacement("aftermath", 0, False)
     # text = "\"Only the weak imprison themselves behind walls. We live free under the wind, and our freedom makes us strong.\" \u2014Zurgo, khan of the Mardu"
-    

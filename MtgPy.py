@@ -3,7 +3,7 @@ from os.path import join
 
 from layers.base_layers import XDefinedLayer, PointLayer
 from layers.exceptions import NotEvaluatedError, InsufficientBoundsError
-from layers.dimensions import YDimension
+from layers.dimensions import YDimension, XDimension
 from wand.color import Color
 from wand.image import Image
 from wand.drawing import Drawing
@@ -216,7 +216,9 @@ class RulesText(XDefinedLayer):
         self.paragraph_gap = paragraph_gap
         self.mana_gap = mana_gap
         self.estimated_height = 0
-        super().__init__(name, *args, **kwargs)
+        self.set_defaults(name, 2, 1, *args, **kwargs)
+        # super().__init__(name, *args, **kwargs)
+        self.dimensions["x"] = XDimension(self.x_attributes_required, self, **kwargs)
         self.dimensions["y"] = RulesLayerYDimension(
             self.y_attributes_required, self, **kwargs)
 

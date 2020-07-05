@@ -1,4 +1,5 @@
 from layers.template import Template
+from layers.mask import Mask
 from layers.color import ColorBackgroundLayer, ColorLayer
 from layers.color import GradientLayer as GradL
 from layers.image import ImageLayer
@@ -17,7 +18,7 @@ from wand.color import Color
 from wand.image import Image
 from wand.drawing import Drawing
 from layers.bounds import Bounds
-from mtgpy import ManaCost, RulesText
+from MtgPy import ManaCost, RulesText
 from TextReplacer import TextMapper
 
 import json
@@ -33,7 +34,7 @@ import numpy as np
 from copy import deepcopy
 from pprint import pprint
 
-from templates.adventure import adventure
+# from templates.adventure import adventure
 from subprocess import call
 
 
@@ -56,6 +57,7 @@ class NormalLayout():
         self.RELAY = join(self.RESOURCE_DIR, "fonts", "Relay_medium.ttf")
         self.FC = "White"
         self.FLAVOR_SPLIT_COLOR = "RGBA(255, 255, 255, 0.6)"
+        self.SHADOW_COLOR = "#181510"
         self.FLAVOR_SPLIT_OFFSET = 40
 
         self.SET_DOT_LANG_WIDTH = 5
@@ -73,6 +75,8 @@ class NormalLayout():
 
         self.HEIGHT = 1080
         self.WIDTH = 773
+
+        self.SPLIT_HEIGHT = 870 - 460
 
         self.OUTER_X_BORDER = (self.WIDTH - self.INNER_WIDTH) / 2
         self.TOTAL_Y_BORDER = (self.HEIGHT - self.INNER_HEIGHT)
@@ -113,14 +117,14 @@ class NormalLayout():
 
     def layers(self, card):
         art_layers = {
-            "bg": ColorBackgroundLayer("bg", content=Color("#181510")),
+            "bg": ColorBackgroundLayer("bg", content=Color(self.SHADOW_COLOR)),
             "art": FillIL("art", order=-5, XP50=NA(self.WIDTH / 2), top=NA(self.B + self.TOP_OUTER_BORDER),
                           width=NA(self.B_ART_WIDTH), height=NA(self.MIN_ART_HEIGHT)),
             "border": ImageLayer("border", content=self.BORDER_PATH, left=NA(0), top=NA(0))
         }
         layers = {
-            "dot": PTL("dot", self.RELAY, 25, self.FC, content=".", left=AA(SA("set.right"),
-                                                                            NA(self.SET_DOT_LANG_WIDTH)), ycenter=SA("set.ycenter")),
+            "dot": PTL("dot", self.RELAY, 25, self.FC, content=".",
+                       left=AA(SA("set.right"), NA(self.SET_DOT_LANG_WIDTH)), ycenter=SA("set.ycenter")),
             "language": PTL("language", self.RELAY, self.INFO_SIZE, self.FC, content="EN",
                             left=AA(SA("dot.right"), NA(self.SET_DOT_LANG_WIDTH)), base=self.BOTTOM_BASE_INFO),
             "artist_brush": ResizeIL("artist_brush", content=join(self.RESOURCE_DIR, "artist_brush_white.png"),
@@ -147,7 +151,25 @@ class NormalLayout():
             "rules": RulesText("rules", self.MPLANTIN, self.MPLANTIN_ITAL, self.RULES_TEXT_SIZE, self.FC,
                                self.RULES_TEXT_SIZE - 4, left=NA(self.RULES_BORDER), right=NA(self.WIDTH-self.RULES_BORDER),
                                base=AA(SA("rarity.cap"), NA(-6)))}
+        split_text_layers = {
+            # "split_name": "",
+            # "split_rules": "",
+            # "split_mana_cost": "",
+            # "split_type": "",
+        }
 
+        split_kwargs = {"left": NA(0), "order": -5,
+                        "width": NA(self.B_ART_WIDTH),
+                        "height": NA(self.SPLIT_HEIGHT)}
+        top_split_kwargs = {
+            **split_kwargs, "YP50": NA((self.B + self.TOP_OUTER_BORDER + 460) / 2)}
+        bottom_split_kwargs = {**split_kwargs, "YP50": NA((460 + 870 - 2) / 2)}
+        split_art_layers = {
+            # "split_divider_top": "",
+            # "split_divider_bottom": "",
+            "split_art_top": Mask("split_art_top_mask", FillIL("split_art_top", **top_split_kwargs), **top_split_kwargs),
+            "split_art_bottom": Mask("split_art_bottom_mask", FillIL("split_art_bottom", **bottom_split_kwargs), **bottom_split_kwargs)
+        }
         adventure_rules = {
             "rules_box": Template("rules_box", *[
                 RulesText("rules", self.MPLANTIN, self.MPLANTIN_ITAL, self.RULES_TEXT_SIZE, self.FC,
@@ -171,7 +193,7 @@ class NormalLayout():
                     ycenter=SA("template.ycenter"), height=SA("null.height")),
             ], left=NA(0), width=NA(self.WIDTH),
                 base=AA(SA("self.height"), SA("rarity.cap"), NA(-6),
-                          MA(SA("rules.bottom"), SA("adventure_box.bottom"), negative=True)),
+                        MA(SA("rules.bottom"), SA("adventure_box.bottom"), negative=True)),
                 height=SA("template.height")
             ),
             "type": PTL("type", self.BELEREN, self.TYPE_SIZE, self.FC, left=NA(self.BORDER),
@@ -179,6 +201,9 @@ class NormalLayout():
         }
         if card['layout'] == 'adventure':
             layers = {**layers, **adventure_rules}
+        elif card["layout"] == "split":
+            layers = {**layers, **standard_rules, **split_text_layers}
+            art_layers = {**art_layers, **split_art_layers}
         else:
             layers = {**layers, **standard_rules}
 
@@ -219,7 +244,7 @@ class NormalLayout():
 
         # START setting content
         rules = self.getRules(card)
-        
+
         temp.get_layer("rules").content = rules
 
         for name in temp.get_layer("text_temp").layers:
@@ -250,6 +275,17 @@ class NormalLayout():
             temp.get_layer("adventure_name").content = adventure_card["name"]
             temp.get_layer(
                 "adventure_mana_cost").content = adventure_card["mana_cost"]
+        elif card["layout"] == "split":
+            temp.get_layer("name").content = card["card_faces"][0]["name"]
+            temp.get_layer("type").content = card["card_faces"][0]["type_line"]
+            temp.get_layer(
+                "mana_cost").content = card["card_faces"][0]["mana_cost"]
+            temp.get_layer(
+                "rules").content = card["card_faces"][1]["oracle_text"]
+            temp.get_layer(
+                "split_art_top").content = card["card_faces"][0]["image_location"]
+            temp.get_layer(
+                "split_art_bottom").content = card["card_faces"][1]["image_location"]
 
         # generic
         if "Creature" in card["type"]:
@@ -282,12 +318,11 @@ class NormalLayout():
 
         render_bg = temp.get_layer("art_temp").render()
         image = render_bg.clone()
-        if temp.get_layer("art").content is not None:
-            render_text_shadow = temp.get_layer("text_temp").shadow(-4, 4, sigma=2,
-                                                                    radius=4, color="Black")
-            image.composite(render_text_shadow, left=0, top=0)
+        # if temp.get_layer("art").content is not None:
+        render_text_shadow = temp.get_layer("text_temp").shadow(-4, 4, sigma=2,
+                                                                radius=4, color="Black")
+        image.composite(render_text_shadow, left=0, top=0)
         render_text = temp.get_layer("text_temp").render()
-        render_text.save(filename="text.png")
         image.composite(render_text, left=0, top=0)
         # END setting content
 
