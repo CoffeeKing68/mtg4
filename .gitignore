@@ -2,10 +2,13 @@ __pycache__/
 test_images/
 .DS_Store
 scraped_data/
+
 resources/art/
-resources/extra_art/
-resources/set_data/
 resources/card_data/
+resources/card_lists
+resources/extra_art/
+resources/examples/
+resources/set_data/
 .vscode/
 downloads/
 print_lists/
