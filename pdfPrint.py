@@ -42,5 +42,5 @@ if __name__ == "__main__":
         deck = sorted(deck, key=lambda c: c["name"])
         # deck = [c for c in deck if c['flavor_name'] == "Tywin, Warden of the West"]
         # deck = [deck[0]]
-        # deck = [c for c in deck if c['flavor_name'] == "Cersei Lannister, Queen Regent"]
+        # deck = [c for c in deck if c['name'] == "Dusk // Dawn"]
         makeCards(deck, args.filename.split('/')[-1].split('.')[0])
